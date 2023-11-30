@@ -1,0 +1,26 @@
+---
+title: Autoconsumption
+subtitle: LSE EC442 AT 2023
+author:
+  - name: Luca Barbato
+  - name: Marina S. Feliciano
+  - name: Diego Ferreras-Gaucho
+  - name: José-Ignacio González-Rojas
+format:
+  revealjs: 
+    theme: slides.scss
+    slide-number: true
+    date-format: long
+    width: 1440
+    height: 1080
+bibliography: bibliography.bib
+date: December 4, 2023
+csl: apa.csl
+---
+
+## Motivation
+### Increasing availability of firm production networks data! 
+
+![Countries with firm production networks data](images/map_data_availability.png){#fig-map_data_availability}
+
+
