@@ -27,6 +27,7 @@ format:
 bibliography: bibliography.bib
 date: October 4, 2023
 csl: apa.csl
+layout: default
 ---
 
 ## Motivation
