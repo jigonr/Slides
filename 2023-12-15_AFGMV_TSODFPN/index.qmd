@@ -24,7 +24,9 @@ format:
     date-format: long
     width: 1440
     height: 1080
-    self-contained: true
+    progress: true
+    history: true
+    embed-resources: true
 bibliography: bibliography.bib
 date: October 4, 2023
 csl: apa.csl
