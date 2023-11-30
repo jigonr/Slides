@@ -20,7 +20,3 @@ csl: apa.csl
 
 ## Motivation
 ### Increasing availability of firm production networks data! 
-
-![Countries with firm production networks data](images/map_data_availability.png){#fig-map_data_availability}
-
-

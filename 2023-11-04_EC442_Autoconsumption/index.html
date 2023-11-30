@@ -10,13 +10,12 @@
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <meta name="author" content="Alonso Alfaro-Ureña">
-  <meta name="author" content="Mariany Fuentes">
-  <meta name="author" content="José Ignacio González Rojas">
-  <meta name="author" content="Isabela Manelici">
-  <meta name="author" content="José P. Vásquez">
-  <meta name="dcterms.date" content="2023-10-04">
-  <title>The structure of domestic firm production networks</title>
+  <meta name="author" content="Luca Barbato">
+  <meta name="author" content="Marina S. Feliciano">
+  <meta name="author" content="Diego Ferreras-Gaucho">
+  <meta name="author" content="José-Ignacio González-Rojas">
+  <meta name="dcterms.date" content="2023-12-04">
+  <title>Autoconsumption</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -34,26 +33,7 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for citations */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-    }
-    .hanging-indent div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }  </style>
+  </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -349,541 +329,37 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">The structure of domestic firm production networks</h1>
-  <p class="subtitle">A-Club DoM LSE</p>
+  <h1 class="title">Autoconsumption</h1>
+  <p class="subtitle">LSE EC442 AT 2023</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Alonso Alfaro-Ureña 
+Luca Barbato 
 </div>
-<div class="quarto-title-author-email">
-<a href="mailto:alfaroua@bccr.fi.cr">alfaroua@bccr.fi.cr</a>
 </div>
-        <p class="quarto-title-affiliation">
-            Central Bank of Costa Rica and University of Costa Rica
-          </p>
-    </div>
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Mariany Fuentes 
+Marina S. Feliciano 
 </div>
-<div class="quarto-title-author-email">
-<a href="mailto:marianyf@umich.edu">marianyf@umich.edu</a>
 </div>
-        <p class="quarto-title-affiliation">
-            University of Michigan
-          </p>
-    </div>
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-José Ignacio González Rojas 
+Diego Ferreras-Gaucho 
 </div>
-<div class="quarto-title-author-email">
-<a href="mailto:j.i.gonzalez-rojas@lse.ac.uk">j.i.gonzalez-rojas@lse.ac.uk</a>
 </div>
-        <p class="quarto-title-affiliation">
-            LSE
-          </p>
-    </div>
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Isabela Manelici 
+José-Ignacio González-Rojas 
 </div>
-<div class="quarto-title-author-email">
-<a href="mailto:i.manelici@lse.ac.uk">i.manelici@lse.ac.uk</a>
 </div>
-        <p class="quarto-title-affiliation">
-            LSE, CEP and CEPR
-          </p>
-    </div>
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-José P. Vásquez 
-</div>
-<div class="quarto-title-author-email">
-<a href="mailto:j.p.vasquez@lse.ac.uk">j.p.vasquez@lse.ac.uk</a>
-</div>
-        <p class="quarto-title-affiliation">
-            LSE, CEP and CEPR
-          </p>
-    </div>
 </div>
 
-  <p class="date">October 4, 2023</p>
+  <p class="date">December 4, 2023</p>
 </section>
 <section id="motivation" class="slide level2">
 <h2>Motivation</h2>
 <h3 id="increasing-availability-of-firm-production-networks-data">Increasing availability of firm production networks data!</h3>
-
-<img data-src="images/map_data_availability.png" class="r-stretch quarto-figure-center"><p class="caption">Figure&nbsp;1: Countries with firm production networks data</p></section>
-<section id="motivation-1" class="slide level2">
-<h2>Motivation</h2>
-<h3 id="exciting-research-agendas">Exciting research agendas</h3>
-<ul>
-<li><span class="alert"><strong>Tax compliance:</strong></span> <span class="citation" data-cites="almuniaStrategicConfusedFirmsforthcoming">Almunia et al. (<a href="#/references" role="doc-biblioref" onclick="">forthcoming</a>)</span> and <span class="citation" data-cites="carrilloGhostingTaxAuthority2022">Carrillo et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span>.</li>
-<li><span class="alert"><strong>Transmission of micro and macroeconomic shocks through production networks:</strong></span> <span class="citation" data-cites="Acemoglu2012TheFluctuations">Acemoglu et al. (<a href="#/references" role="doc-biblioref" onclick="">2012</a>)</span>, <span class="citation" data-cites="Huneeus2020ProductionShocks">Huneeus (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span>, <span class="citation" data-cites="Dhyne2022ForeignImpacts">Dhyne et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span>, <span class="citation" data-cites="CevallosFujiy2022ProductionSubstitution">Cevallos Fujiy et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span>, <span class="citation" data-cites="Dhyne2021TradeNetworks">Dhyne et al. (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span>, and <span class="citation" data-cites="Demir2022FinancialNetworks">Demir et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span>.</li>
-<li><span class="alert"><strong>Earnings inequality:</strong></span> <span class="citation" data-cites="adaoImportsExportsEarnings2022">Adão et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span> and <span class="citation" data-cites="Huneeus2022EarningsNetworks">Huneeus et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span>.</li>
-<li><span class="alert"><strong>Endogenous network formation:</strong></span> <span class="citation" data-cites="Panagrahi2022EndogenousProductivity">Panigrahi (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span>, <span class="citation" data-cites="Arkolakis2021SpatialNetworks">Arkolakis et al. (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span>, <span class="citation" data-cites="Bernard2022TheApproach">Bernard et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span>, <span class="citation" data-cites="Bernard2019ProductionPerformance">Bernard et al. (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></li>
-<li><span class="alert"><strong>Supply chain disruptions:</strong></span> <span class="citation" data-cites="Carvalho2021SupplyEarthquake">Carvalho et al. (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span> and <span class="citation" data-cites="CevallosFujiy2022ProductionSubstitution">Cevallos Fujiy et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span>.</li>
-</ul>
-</section>
-<section id="motivation-2" class="slide level2">
-<h2>Motivation</h2>
-<h3 id="are-the-results-obtained-in-one-country-applicable-to-all-of-them">Are the results obtained in one country applicable to all of them?</h3>
-<h4 id="threats-to-our-study.">Threats to our study.</h4>
-<ul>
-<li><span class="bg">Data collection.</span></li>
-<li><span class="bg">Informality.</span></li>
-<li><span class="bg">Auditing:</span> <span class="citation" data-cites="almuniaStrategicConfusedFirmsforthcoming">Almunia et al. (<a href="#/references" role="doc-biblioref" onclick="">forthcoming</a>)</span> and <span class="citation" data-cites="pomeranzNoTaxationInformation2015">Pomeranz (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span>.</li>
-<li><span class="bg">Institutions.</span></li>
-</ul>
-</section>
-<section id="motivation-3" class="slide level2">
-<h2>Motivation</h2>
-<h3 id="are-the-results-obtained-in-one-country-applicable-to-all-of-them-1">Are the results obtained in one country applicable to all of them?</h3>
-<h4 id="different-topographies-and-geographies">Different topographies and geographies</h4>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/map_belgium.jpg" style="width:3in"></p>
-<figcaption>Belgium</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/map_kenya.jpg" style="width:3in"></p>
-<figcaption>Kenya</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/map_costa_rica.jpg" style="width:3in"></p>
-<figcaption>Costa Rica</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="motivation-4" class="slide level2">
-<h2>Motivation</h2>
-<h3 id="are-the-results-obtained-in-one-country-applicable-to-all-of-them-2">Are the results obtained in one country applicable to all of them?</h3>
-<h4 id="different-trade-openness">Different trade openness</h4>
-
-<img data-src="images/map_trade_openness.svg" style="width:12in" class="r-stretch quarto-figure-center"><p class="caption">Trade openness index (2019)</p></section>
-<section id="motivation-5" class="slide level2">
-<h2>Motivation</h2>
-<h3 id="are-the-results-obtained-in-one-country-applicable-to-all-of-them-3">Are the results obtained in one country applicable to all of them?</h3>
-<h4 id="other-very-important-considerations">Other very important considerations</h4>
-<ul>
-<li>Data collection.</li>
-<li>Informality.</li>
-<li>Auditing: <span class="citation" data-cites="almuniaStrategicConfusedFirmsforthcoming">Almunia et al. (<a href="#/references" role="doc-biblioref" onclick="">forthcoming</a>)</span> and <span class="citation" data-cites="pomeranzNoTaxationInformation2015">Pomeranz (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span>.</li>
-<li>Institutions.</li>
-</ul>
-</section>
-<section id="this-paper" class="slide level2">
-<h2>This paper</h2>
-<ol type="1">
-<li>Describe the coverage and cleaning of the data.</li>
-<li>Describe the firms and their relationships in formal sector of Costa Rica.</li>
-</ol>
-<ul>
-<li>Number of workers</li>
-<li>Total sales.</li>
-<li>Firm-to-firm transactions: sales and purchases.</li>
-<li>Number of customers and suppliers.</li>
-</ul>
-</section>
-<section id="this-paper-1" class="slide level2">
-<h2>This paper</h2>
-<ol start="3" type="1">
-<li>Replicate and provide 15 (new) stylised facts found in developed countries’ production networks.</li>
-</ol>
-<ul>
-<li>Firm-to-firm relationships.</li>
-<li>The role of geography in these relationships.</li>
-<li>Exposure to international trade.</li>
-</ul>
-<ol start="4" type="1">
-<li>Compare these stylised facts to those reported in other countries.</li>
-<li>Provide replication package to other researchers.</li>
-</ol>
-</section>
-<section id="this-paper-2" class="slide level2">
-<h2>This paper</h2>
-<h3 id="today">Today</h3>
-<ol type="1">
-<li><span class="bg">Describe the coverage and cleaning of the data.</span></li>
-<li>Replicate and provide 15 (new) stylised facts found in developed countries’ production networks.</li>
-</ol>
-<ul>
-<li><span class="bg">Firm-to-firm relationships.</span></li>
-<li><span class="bg">The role of geography in these relationships.</span></li>
-<li>Exposure to international trade.</li>
-</ul>
-</section>
-<section id="crash-course-on-production-networks" class="slide level2">
-<h2>Crash course on production networks</h2>
-<h3 id="weighted-directed-networkgraph.">Weighted directed network/graph.</h3>
-<ul>
-<li><span class="fg">Firms:</span> Nodes</li>
-<li><span class="fg">Firm-to-firm relationships:</span> Edges.</li>
-</ul>
-
-<img data-src="images/fig_production_network.svg" class="r-stretch quarto-figure-center"><p class="caption">Simple production network</p></section>
-<section id="data" class="slide level2">
-<h2>Data</h2>
-<h3 id="available-in-costa-rica">Available in Costa Rica</h3>
-
-<img data-src="images/fig_production_network_agents.png" class="r-stretch quarto-figure-center"><p class="caption">Agents</p></section>
-<section id="data-1" class="slide level2">
-<h2>Data</h2>
-<h3 id="sources">Sources</h3>
-<ul>
-<li><span class="fg">Employer-Employee Administrative Data (2006-2019):</span> wage, firm industry, plant location.</li>
-<li><span class="fg">VAT Administrative data (2008-2019):</span> annual firm-to-firm transactions, customers, suppliers, firm industry, administrative location. At least 2.5 million Costa Rican colones. (~$4,200)</li>
-<li><span class="fg">Corporate Tax Administrative data (2008-2019):</span> Balances sheets with revenue, profits, costs, fixed assets, others.</li>
-<li><span class="fg">Customs data (2008-2019):</span> yearly firm-level imports and exports.</li>
-</ul>
-</section>
-<section id="data-2" class="slide level2">
-<h2>Data</h2>
-<h3 id="sample-selection">Sample selection</h3>
-<ul>
-<li>Firms with one permanent worker anually.</li>
-<li>Exclude the Diplomatics Activities sector.</li>
-</ul>
-<p><strong>After cleaning procedure we capture in a given year between</strong></p>
-<ul>
-<li>94.5 and 97.4% of total sales.</li>
-<li>81.5 and 87.9% of network sales across firms.</li>
-<li>78.5 and 84.8% of transactions across firms.</li>
-</ul>
-<p><strong>Agents in the economy</strong></p>
-<ul>
-<li>96,177 businesses and 3,839,030 connections between buyers and suppliers.</li>
-<li>About 38 thousand businesses and 300 thousand transactions in a given year.</li>
-</ul>
-</section>
-<section id="data-3" class="slide level2">
-<h2>Data</h2>
-<h3 id="sectoral-composition-is-persistent-in-time">Sectoral composition is persistent in time</h3>
-
-<img data-src="images/figure_A4.png" style="width:5in" class="r-stretch quarto-figure-center"><p class="caption">Total sales</p></section>
-<section id="data-4" class="slide level2">
-<h2>Data</h2>
-<h3 id="share-of-buyers-andor-sellers-is-also-persistent-in-time">Share of buyers and/or sellers is also persistent in time</h3>
-
-<img data-src="images/figure_A2.png" style="width:5in" class="r-stretch quarto-figure-center"><p class="caption">Total sales</p></section>
-<section id="data-5" class="slide level2">
-<h2>Data</h2>
-<h3 id="upstream-downstream-sectors-are-more-likely-to-be-only-sell-buy-from-other-firms">Upstream (downstream) sectors are more likely to be only sell (buy) from other firms</h3>
-
-<img data-src="images/figure_A3.png" style="width:5in" class="r-stretch quarto-figure-center"><p class="caption">Total sales</p></section>
-<section id="stylised-facts" class="slide level2">
-<h2>Stylised facts</h2>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Main message</strong></p>
-</div>
-<div class="callout-content">
-<p>The number of customers/suppliers is the key driver of a firm-to-firm sales.</p>
-</div>
-</div>
-</div>
-<h3 id="domestic-firm-to-firm-trade">Domestic firm-to-firm trade</h3>
-<ol type="1">
-<li>Domestic production networks are sparse.</li>
-<li>The distributions of firm sales, network sales and purchases, and buyer-supplier connections show substantial dispersion.</li>
-<li>Firm size is positively correlated to the number of connections to other firms.</li>
-<li>Firm size is positively correlated to the number of municipalities and number of industries with which a firm trades.</li>
-<li>The number of links accounts for more than half of the variation in the total value of firm-to-firm sales and purchases. As we aggregate sales and purchases from the firm-level to the industry-level, the value of the average transaction with buyers or suppliers becomes more important.</li>
-</ol>
-</section>
-<section id="stylised-facts-1" class="slide level2">
-<h2>Stylised facts</h2>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Main message</strong></p>
-</div>
-<div class="callout-content">
-<p>The number of customers/suppliers is the key driver of a firm-to-firm sales.</p>
-</div>
-</div>
-</div>
-<h3 id="domestic-firm-to-firm-trade-1">Domestic firm-to-firm trade</h3>
-<ol start="6" type="1">
-<li>The distribution of sales (purchases) among customers (suppliers) does not vary substantially with the number of customers (suppliers).</li>
-<li>The production network displays negative degree assortativity between sellers and buyers.</li>
-<li>Top customers (suppliers) account for a high percentage of a firm’s sales (purchases).</li>
-<li>The persistence of firm-to-firm linkages increases with firm size.</li>
-</ol>
-</section>
-<section id="stylised-facts-2" class="slide level2">
-<h2>Stylised facts</h2>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Main message</strong></p>
-</div>
-<div class="callout-content">
-<p>The number of customers/suppliers is the key driver of a firm-to-firm sales.</p>
-</div>
-</div>
-</div>
-<h3 id="the-geography-of-domestic-firm-to-firm-trade">The geography of domestic firm-to-firm trade</h3>
-<ol start="10" type="1">
-<li>Most firm-to-firm linkages are formed between nearby firms.</li>
-<li>Trade flows between municipalities increase in the geographical proximity between the municipalities.</li>
-<li>The number of connections decays with distance and travel time faster than the average transaction.</li>
-</ol>
-<h3 id="firm-to-firm-trade-within-and-across-borders">Firm-to-firm trade within and across borders</h3>
-<ol start="13" type="1">
-<li>Importer (exporter) firms are larger than non-importer (non-exporter) firms.</li>
-<li>Most firms do not import or export directly, but most do so indirectly.</li>
-<li>Direct and total export and import shares increase with firm size.</li>
-</ol>
-</section>
-<section id="stylised-facts-3" class="slide level2">
-<h2>Stylised facts</h2>
-<h3 id="today-1">Today</h3>
-<ol type="1">
-<li>The distributions of firm sales, network sales and purchases, and buyer-supplier connections show substantial dispersion.</li>
-<li>Firm size is positively correlated to the number of connections to other firms.</li>
-<li>The production network displays negative degree assortativity between sellers and buyers.</li>
-<li>The persistence of firm-to-firm linkages increases with firm size.</li>
-<li>The number of connections decays with distance and travel time faster than the average transaction.</li>
-</ol>
-</section>
-<section id="stylised-facts-4" class="slide level2">
-<h2>Stylised facts</h2>
-<h3 id="firms-within-a-sector-are-heterogenous">Firms within a sector are heterogenous</h3>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/figure_1_a.png" style="width:5in"></p>
-<figcaption>Total sales</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/figure_1_b.png" style="width:5in"></p>
-<figcaption>Network sales</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/figure_1_d.png" style="width:5in"></p>
-<figcaption>Number of customers</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/figure_1_d.png" style="width:5in"></p>
-<figcaption>Number of suppliers</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="stylised-facts-5" class="slide level2">
-<h2>Stylised facts</h2>
-<h3 id="the-number-of-links-explains-more-than-half-of-the-variation-of-network-transactions">The number of links explains more than half of the variation of network transactions</h3>
-<p><span class="math display">\[X_{i} = \text{number of links} \cdot \text{average transaction}\]</span></p>
-<div class="fragment">
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/figure_2_a.png" style="width:10in"></p>
-<figcaption>Number of link</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/figure_2_b.png" style="width:10in"></p>
-<figcaption>Average transaction</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="stylised-facts-6" class="slide level2">
-<h2>Stylised facts</h2>
-<h3 id="a-customer-supplier-firm-connects-with-many-suppliers-customers-but-those-suppliers-would-on-average-have-fewer-customers-suppliers">A customer (supplier) firm connects with many suppliers (customers); but those suppliers would, on average, have fewer customers (suppliers)</h3>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/figure_5_a.png" style="width:10in"></p>
-<figcaption>Customers and the suppliers of customers</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/figure_5_b.png" style="width:10in"></p>
-<figcaption>Suppliers and the customers of suppliers</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="stylised-facts-7" class="slide level2">
-<h2>Stylised facts</h2>
-<h3 id="the-persistence-of-firm-to-firm-linkages-increases-with-firm-size">The persistence of firm-to-firm linkages increases with firm size</h3>
-
-<img data-src="images/fig_venn_diagram.png" style="width:15in" class="r-stretch quarto-figure-center"><p class="caption">Destruction (A), survival (Both) and creation (B) of links</p></section>
-<section id="stylised-facts-8" class="slide level2">
-<h2>Stylised facts</h2>
-<h3 id="the-persistence-of-firm-to-firm-linkages-increases-with-firm-size-1">The persistence of firm-to-firm linkages increases with firm size</h3>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/figure_7_a.png" style="width:10in"></p>
-<figcaption>Survival</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/figure_7_b.png" style="width:10in"></p>
-<figcaption>Creation</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="stylised-facts-9" class="slide level2">
-<h2>Stylised facts</h2>
-<h3 id="the-number-of-connections-decays-with-distance-and-travel-time-faster-than-the-average-transaction">The number of connections decays with distance and travel time faster than the average transaction</h3>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/figure_10_a.png" style="width:6in"></p>
-<figcaption>Network sales</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/figure_10_b.png" style="width:6in"></p>
-<figcaption>Number of connections</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/figure_10_c.png" style="width:6in"></p>
-<figcaption>Average transaction</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="references" class="slide level2 smaller scrollable">
-<h2>References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
-<div id="ref-Acemoglu2012TheFluctuations" class="csl-entry" role="listitem">
-Acemoglu, D., Carvalho, V. M., Ozdaglar, A., &amp; Tahbaz-Salehi, A. (2012). The <span>Network Origins</span> of <span>Aggregate Fluctuations</span>. <em>Econometrica</em>, <em>80</em>(5), 1977–2016. <a href="https://doi.org/10.3982/ecta9623">https://doi.org/10.3982/ecta9623</a>
-</div>
-<div id="ref-adaoImportsExportsEarnings2022" class="csl-entry" role="listitem">
-Adão, R., Carrillo, P., Costinot, A., Donaldson, D., &amp; Pomeranz, D. (2022). Imports, <span>Exports</span>, and <span>Earnings Inequality</span>: <span>Measures</span> of <span>Exposure</span> and <span>Estimates</span> of <span>Incidence</span>. <em>The Quarterly Journal of Economics</em>, <em>137</em>(3), 1553–1614. <a href="https://doi.org/10.1093/qje/qjac012">https://doi.org/10.1093/qje/qjac012</a>
-</div>
-<div id="ref-almuniaStrategicConfusedFirmsforthcoming" class="csl-entry" role="listitem">
-Almunia, M., Hjort, J., Knebelmann, J., &amp; Tian, L. (forthcoming). Strategic or <span>Confused Firms</span>? <span>Evidence</span> from <span>“<span>Missing</span>”</span> <span>Transactions</span> in <span>Uganda</span>. <em>Review of Economics and Statistics</em>. Forthcoming. <a href="https://doi.org/10.1162/rest_a_01180">https://doi.org/10.1162/rest_a_01180</a>
-</div>
-<div id="ref-Arkolakis2021SpatialNetworks" class="csl-entry" role="listitem">
-Arkolakis, C., Huneeus, F., &amp; Miyauchi, Y. (2021). <em>Spatial <span>Production Networks</span></em>.
-</div>
-<div id="ref-Bernard2022TheApproach" class="csl-entry" role="listitem">
-Bernard, A. B., Dhyne, E., Magerman, G., Manova, K., &amp; Moxnes, A. (2022). The <span>Origins</span> of <span>Firm Heterogeneity</span>: <span>A Production Network Approach</span>. <em>Journal of Political Economy</em>, <em>130</em>(7), 1765–1804. <a href="https://doi.org/10.1086/719759">https://doi.org/10.1086/719759</a>
-</div>
-<div id="ref-Bernard2019ProductionPerformance" class="csl-entry" role="listitem">
-Bernard, A. B., Moxnes, A., &amp; Saito, Y. U. (2019). Production <span>Networks</span>, <span>Geography</span>, and <span>Firm Performance</span>. <em>Journal of Political Economy</em>, <em>127</em>(21), 639–688. <a href="https://doi.org/10.1086/700764">https://doi.org/10.1086/700764</a>
-</div>
-<div id="ref-carrilloGhostingTaxAuthority2022" class="csl-entry" role="listitem">
-Carrillo, P., Donaldson, D., Pomeranz, D., &amp; Singhal, M. (2022). <em>Ghosting the <span>Tax Authority</span>: <span>Fake Firms</span> and <span>Tax Fraud</span></em> (No. 30242). <span>National Bureau of Economic Research</span>. <a href="https://doi.org/10.3386/w30242">https://doi.org/10.3386/w30242</a>
-</div>
-<div id="ref-Carvalho2021SupplyEarthquake" class="csl-entry" role="listitem">
-Carvalho, V. M., Nirei, M., Saito, Y. U., &amp; Tahbaz-Salehi, A. (2021). Supply <span>Chain Disruptions</span>: <span>Evidence</span> from the <span>Great East Japan</span> earthquake. <em>Quarterly Journal of Economics</em>, <em>136</em>(2), 1255–1321. <a href="https://doi.org/10.1093/qje/qjaa044">https://doi.org/10.1093/qje/qjaa044</a>
-</div>
-<div id="ref-CevallosFujiy2022ProductionSubstitution" class="csl-entry" role="listitem">
-Cevallos Fujiy, B., Ghose, D., &amp; Khanna, G. (2022). <em>Production <span>Networks</span> and <span class="nocase">Firm-level Elasticities</span> of <span>Substitution</span></em>. <a href="https://drive.google.com/file/d/1fnXWQ0bYwK-yvaYM-t120sYfUTOd7oKC/view">https://drive.google.com/file/d/1fnXWQ0bYwK-yvaYM-t120sYfUTOd7oKC/view</a>
-</div>
-<div id="ref-Demir2022FinancialNetworks" class="csl-entry" role="listitem">
-Demir, B., Javorcik, B., Michalski, T. K., &amp; Ors, E. (2022). Financial <span>Constraints</span> and <span>Propagation</span> of <span>Shocks</span> in <span>Production Networks</span>. <em>Review of Economics and Statistics</em>, 1–46. <a href="https://doi.org/10.1162/rest_a_01162">https://doi.org/10.1162/rest_a_01162</a>
-</div>
-<div id="ref-Dhyne2022ForeignImpacts" class="csl-entry" role="listitem">
-Dhyne, E., Kikkawa, A. K., Komatsu, T., Mogstad, M., &amp; Tintelnot, F. (2022). <em>Foreign <span>Demand Shocks</span> to <span>Production Networks</span>: <span>Firm Responses</span> and <span>Worker Impacts</span></em>. <a href="http://felix-tintelnot.wdfiles.com/local--files/files/Tintelnot%20Production%20Network">http://felix-tintelnot.wdfiles.com/local--files/files/Tintelnot%20Production%20Network</a>
-</div>
-<div id="ref-Dhyne2021TradeNetworks" class="csl-entry" role="listitem">
-Dhyne, E., Kikkawa, A. K., Mogstad, M., &amp; Tintelnot, F. (2021). Trade and <span>Domestic Production Networks</span>. <em>Review of Economic Studies</em>, <em>88</em>(2), 643–668. <a href="https://doi.org/10.1093/restud/rdaa062">https://doi.org/10.1093/restud/rdaa062</a>
-</div>
-<div id="ref-Huneeus2020ProductionShocks" class="csl-entry" role="listitem">
-Huneeus, F. (2020). <em>Production <span>Network Dynamics</span> and the <span>Propagation</span> of <span>Shocks</span></em>.
-</div>
-<div id="ref-Huneeus2022EarningsNetworks" class="csl-entry" role="listitem">
-Huneeus, F., Kroft, K., &amp; Lim, K. (2022). <em>Earnings <span>Inequality</span> in <span>Production Networks</span></em>. <span>National Bureau of Economic Research</span>. <a href="https://doi.org/10.3386/w28424">https://doi.org/10.3386/w28424</a>
-</div>
-<div id="ref-Panagrahi2022EndogenousProductivity" class="csl-entry" role="listitem">
-Panigrahi, P. (2022). <em>Endogenous <span>Spatial Production Networks</span>: <span>Quantitative Implications</span> for <span>Trade</span> and <span>Productivity</span></em>.
-</div>
-<div id="ref-pomeranzNoTaxationInformation2015" class="csl-entry" role="listitem">
-Pomeranz, D. (2015). No <span>Taxation</span> without <span>Information</span>: <span>Deterrence</span> and <span>Self-Enforcement</span> in the <span>Value Added Tax</span>. <em>American Economic Review</em>, <em>105</em>(8), 2539–2569. <a href="https://doi.org/10.1257/aer.20130393">https://doi.org/10.1257/aer.20130393</a>
-</div>
-</div>
 <div class="footer footer-default">
 
 </div>
@@ -1065,7 +541,7 @@ Pomeranz, D. (2015). No <span>Taxation</span> without <span>Information</span>: 
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1920,
+        width: 1440,
 
         height: 1080,
 

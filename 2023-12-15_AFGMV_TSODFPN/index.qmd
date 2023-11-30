@@ -39,7 +39,7 @@ csl: apa.csl
 
 - [**Tax compliance:**]{.alert} @almuniaStrategicConfusedFirmsforthcoming and @carrilloGhostingTaxAuthority2022. 
 - [**Transmission of micro and macroeconomic shocks through production networks:**]{.alert} @Acemoglu2012TheFluctuations, @Huneeus2020ProductionShocks, @Dhyne2022ForeignImpacts, @CevallosFujiy2022ProductionSubstitution, @Dhyne2021TradeNetworks, and @Demir2022FinancialNetworks. 
-- [**Earnings inequality:**]{.alert} @adaoImportsExportsEarnings2022 and@Huneeus2022EarningsNetworks. 
+- [**Earnings inequality:**]{.alert} @adaoImportsExportsEarnings2022 and @Huneeus2022EarningsNetworks. 
 - [**Endogenous network formation:**]{.alert} @Panagrahi2022EndogenousProductivity, @Arkolakis2021SpatialNetworks, @Bernard2022TheApproach, @Bernard2019ProductionPerformance
 - [**Supply chain disruptions:**]{.alert} @Carvalho2021SupplyEarthquake and @CevallosFujiy2022ProductionSubstitution. 
 
