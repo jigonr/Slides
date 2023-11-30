@@ -22,8 +22,9 @@ format:
     theme: slides.scss
     slide-number: true
     date-format: long
-    width: 1920
+    width: 1440
     height: 1080
+    self-contained: true
 bibliography: bibliography.bib
 date: October 4, 2023
 csl: apa.csl
