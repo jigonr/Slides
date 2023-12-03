@@ -3,9 +3,9 @@ title: Autoconsumption in Mexico
 subtitle: LSE EC442 AT 2023
 author:
   - name: Luca Barbato
-  - name: Marina S. Feliciano
   - name: Diego Ferreras Garrucho
   - name: José Ignacio González Rojas
+  - name: Marina Santos Feliciano
 format:
   revealjs: 
     theme: slides.scss
