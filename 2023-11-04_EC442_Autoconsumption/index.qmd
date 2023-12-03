@@ -1,11 +1,11 @@
 ---
-title: Autoconsumption
+title: Autoconsumption in Mexico
 subtitle: LSE EC442 AT 2023
 author:
   - name: Luca Barbato
   - name: Marina S. Feliciano
-  - name: Diego Ferreras-Gaucho
-  - name: José-Ignacio González-Rojas
+  - name: Diego Ferreras Garrucho
+  - name: José Ignacio González Rojas
 format:
   revealjs: 
     theme: slides.scss
@@ -13,10 +13,29 @@ format:
     date-format: long
     width: 1440
     height: 1080
+    progress: true
+    history: true
+    embed-resources: true
 bibliography: bibliography.bib
 date: December 4, 2023
 csl: apa.csl
 ---
 
-## Motivation
-### Increasing availability of firm production networks data! 
+## Substantial autoconsumption across the income distribution
+### National Survey of Households' Income and Expenditure (ENIGH) [2018-2022] ~90,000 households. 
+
+![](figures/graph1_notitle.png){#fig-autoconsumption fig-align="center"}
+
+## Home and market production coexist
+![](figures/graph7_notitle.png){#fig-homemarket fig-align="center"}
+
+## Discussion
+### Potential Explanations
+- Employment and demography composition effects. 
+- Informality. 
+- Non-monetary value. 
+
+### Relevance for (macro) economics 
+- Expenditure-only measures may overstate consumption inequality. 
+- HHs that engage in autoconsumption able to hedge from idiosyncratic food price shocks. 
+- HHs facing labour market hardship substitute towards home production. 
