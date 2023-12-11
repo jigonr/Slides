@@ -1,21 +1,16 @@
 ---
 title: The structure of domestic firm production networks
-subtitle: A-Club DoM LSE
+subtitle: EconCR 23
 author:
   - name: Alonso Alfaro-Ureña
-    email: alfaroua@bccr.fi.cr
     affiliations: Central Bank of Costa Rica and University of Costa Rica
   - name: Mariany Fuentes
-    email: marianyf@umich.edu
     affiliations: University of Michigan
   - name: José Ignacio González Rojas
-    email: j.i.gonzalez-rojas@lse.ac.uk
     affiliations: LSE
   - name: Isabela Manelici
-    email: i.manelici@lse.ac.uk
     affiliations: LSE, CEP and CEPR
   - name: José P. Vásquez
-    email: j.p.vasquez@lse.ac.uk
     affiliations: LSE, CEP and CEPR
 format:
   revealjs: 
@@ -28,7 +23,7 @@ format:
     history: true
     embed-resources: true
 bibliography: bibliography.bib
-date: October 4, 2023
+date: December 15, 2023
 csl: apa.csl
 layout: default
 ---
