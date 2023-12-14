@@ -1,12 +1,14 @@
 ---
-title: The structure of domestic firm production networks
+title: |
+    | The structure of domestic firm 
+    | production networks
 subtitle: EconCR 23
 author:
   - name: Alonso Alfaro-Ureña
     affiliations: Central Bank of Costa Rica and University of Costa Rica
   - name: Mariany Fuentes
     affiliations: University of Michigan
-  - name: José Ignacio González Rojas
+  - name: José Ignacio González
     affiliations: LSE
   - name: Isabela Manelici
     affiliations: LSE, CEP and CEPR
@@ -29,240 +31,204 @@ layout: default
 ---
 
 ## Motivation
-### Increasing availability of firm production networks data! 
 
-![Countries with firm production networks data](images/map_data_availability.png){#fig-map_data_availability}
+- COVID-19 pandemic showed that we are not prepared to face global supply chain disruptions. 
+- Climate crisis and natural disasters are also a threat to local supply chains. 
+- Better understanding on the transmission of shocks through the production network. 
+- How can we improve the resilience of the production network? [First, we must understand its structure.]{.bg}
 
-## Motivation
-### Exciting research agendas
+## The structure of domestic firm production networks
+### Costa Rica (2008-2019)
 
-- [**Tax compliance:**]{.alert} @almuniaStrategicConfusedFirmsforthcoming and @carrilloGhostingTaxAuthority2022. 
-- [**Transmission of micro and macroeconomic shocks through production networks:**]{.alert} @Acemoglu2012TheFluctuations, @Huneeus2020ProductionShocks, @Dhyne2022ForeignImpacts, @CevallosFujiy2022ProductionSubstitution, @Dhyne2021TradeNetworks, and @Demir2022FinancialNetworks. 
-- [**Earnings inequality:**]{.alert} @adaoImportsExportsEarnings2022 and @Huneeus2022EarningsNetworks. 
-- [**Endogenous network formation:**]{.alert} @Panagrahi2022EndogenousProductivity, @Arkolakis2021SpatialNetworks, @Bernard2022TheApproach, @Bernard2019ProductionPerformance
-- [**Supply chain disruptions:**]{.alert} @Carvalho2021SupplyEarthquake and @CevallosFujiy2022ProductionSubstitution. 
-
-## Motivation
-### Are the results obtained in one country applicable to all of them?
-#### Threats to our study. 
-
-- [Data collection.]{.bg} 
-- [Informality. ]{.bg} 
-- [Auditing:]{.bg}  @almuniaStrategicConfusedFirmsforthcoming and @pomeranzNoTaxationInformation2015. 
-- [Institutions. ]{.bg} 
-
-## Motivation
-### Are the results obtained in one country applicable to all of them?
-#### Different topographies and geographies
-
-::: {layout="[[1,1], [1]]"}
-![Belgium](images/map_belgium.jpg){width=3in}
-
-![Kenya](images/map_kenya.jpg){width=3in}
-
-![Costa Rica](images/map_costa_rica.jpg){width=3in}
-:::
-
-## Motivation
-### Are the results obtained in one country applicable to all of them?
-#### Different trade openness
-
-![Trade openness index (2019)](images/map_trade_openness.svg){width=12in}
-
-## Motivation
-### Are the results obtained in one country applicable to all of them?
-#### Other very important considerations
-
-- Data collection. 
-- Informality. 
-- Auditing: @almuniaStrategicConfusedFirmsforthcoming and @pomeranzNoTaxationInformation2015. 
-- Institutions. 
-
-## This paper
-1. Describe the coverage and cleaning of the data. 
-2. Describe the firms and their relationships in formal sector of Costa Rica. 
-  - Number of workers
+- **Describe the distribution of the firm size of Costa Rican domestic formal firms by industry and year:** 
+  - Number of customers. 
+  - Number of suppliers. 
+  - Network sales. 
+  - Network purchases. 
   - Total sales. 
-  - Firm-to-firm transactions: sales and purchases. 
-  - Number of customers and suppliers. 
 
-## This paper
-3. Replicate and provide 15 (new) stylised facts found in developed countries' production networks. 
-  - Firm-to-firm relationships. 
-  - The role of geography in these relationships. 
-  - Exposure to international trade. 
-4. Compare these stylised facts to those reported in other countries. 
-5. Provide replication package to other researchers. 
+## The structure of domestic firm production networks
+### Costa Rica (2008-2019)
+- **Characterize firm and customer-supplier relationships patterns with stylized facts:** 
+  - Firm-to-firm trade (9 facts). 
+  - The geography of firm-to-firm trade (3 facts). 
+  - Firm-to-firm trade within and across borders (3 facts). 
+- **Compare these stylized facts to those reported in other countries.**
 
-## This paper
-### Today
-1. [Describe the coverage and cleaning of the data. ]{.bg} 
-2. Replicate and provide 15 (new) stylised facts found in developed countries' production networks. 
-  - [Firm-to-firm relationships. ]{.bg}
-  - [The role of geography in these relationships. ]{.bg}
-  - Exposure to international trade. 
-
-## Crash course on production networks
-### Weighted directed network/graph. 
-
-- [Firms:]{.fg} Nodes
-- [Firm-to-firm relationships:]{.fg} Edges. 
-
-![Simple production network](images/fig_production_network.svg)
-
-## Data
-### Available in Costa Rica
-![Agents](images/fig_production_network_agents.png)
-
-## Data
-### Sources
-- [Employer-Employee Administrative Data (2006-2019):]{.fg} wage, firm industry,  plant location. 
-- [VAT Administrative data (2008-2019):]{.fg} annual firm-to-firm transactions, customers, suppliers, firm industry, administrative location. At least 2.5 million Costa Rican colones. (~$4,200)
-- [Corporate Tax Administrative data (2008-2019):]{.fg} Balances sheets with revenue, profits, costs, fixed assets, others. 
-- [Customs data (2008-2019):]{.fg} yearly firm-level imports and exports. 
-
-## Data
-### Sample selection
-- Firms with one permanent worker anually. 
-- Exclude the Diplomatics Activities sector. 
-
-**After cleaning procedure we capture in a given year between**
-
-- 94.5 and 97.4% of total sales. 
-- 81.5 and 87.9% of network sales across firms. 
-- 78.5 and 84.8% of transactions across firms. 
-
-**Agents in the economy**
-
-- 96,177 businesses and 3,839,030 connections between buyers and suppliers. 
-- About 38 thousand businesses and 300 thousand transactions in a given year. 
-
-
-## Data
-### Sectoral composition is persistent in time
-
-![Total sales](images/figure_A4.png){width=5in}
-
-## Data
-### Share of buyers and/or sellers is also persistent in time
-
-![Total sales](images/figure_A2.png){width=5in}
-
-## Data
-### Upstream (downstream) sectors are more likely to be only sell (buy) from other firms
-
-![Total sales](images/figure_A3.png){width=5in}
-
-## Stylised facts
-
-::: {.callout-note title="Main message"}
-The number of customers/suppliers is the key driver of a firm-to-firm sales. 
-:::
-
-### Domestic firm-to-firm trade
-1. Domestic production networks are sparse. 
-2. The distributions of firm sales, network sales and purchases, and buyer-supplier connections show substantial dispersion. 
-3. Firm size is positively correlated to the number of connections to other firms. 
+## Main results
+### Firm-to-firm trade I
+1. [The distribution of firm size within an industry shows substantial dispersion.]{.bg} 
+2. [Domestic production networks are sparse.]{.bg} 
+3. [Firm size is positively correlated to the number of connections to other firms and their average transaction.]{.bg} 
 4. Firm size is positively correlated to the number of municipalities and number of industries with which a firm trades. 
-5. The number of links accounts for more than half of the variation in the total value of firm-to-firm sales and purchases. As we aggregate sales and purchases from the firm-level to the industry-level, the value of the average transaction with buyers or suppliers becomes more important. 
+5. Both the extensive and intensive margins significantly explain the variation of networks sales and purchases. As we aggregate from the firm- to the industry-level, the intensive margin becomes more important. 
 
-## Stylised facts
+## Main results
+### Firm-to-firm trade II
+6. Network sales (purchases) is positively correlated with the number of customers (suppliers). 
+7. [On average, well-connected firms tend to trade with poorly-connected firms.]{.bg} 
+8. Top customers (suppliers) account for a high percentage of a firm’s network sales (purchases). 
+9. [The persistence of firm-to-firm linkages increases with firm size.]{.bg} 
 
-::: {.callout-note title="Main message"}
-The number of customers/suppliers is the key driver of a firm-to-firm sales. 
-:::
-
-### Domestic firm-to-firm trade
-
-6. The distribution of sales (purchases) among customers (suppliers) does not vary substantially with the number of customers (suppliers). 
-7. The production network displays negative degree assortativity between sellers and buyers. 
-8. Top customers (suppliers) account for a high percentage of a firm’s sales (purchases). 
-9. The persistence of firm-to-firm linkages increases with firm size. 
-
-## Stylised facts
-
-::: {.callout-note title="Main message"}
-The number of customers/suppliers is the key driver of a firm-to-firm sales. 
-:::
-
-### The geography of domestic firm-to-firm trade
-
-10. Most firm-to-firm linkages are formed between nearby firms. 
+## Main results
+### The geography of firm-to-firm trade
+10. Most firm-to-firm linkages are formed between nearby firms.
 11. Trade flows between municipalities increase in the geographical proximity between the municipalities. 
-12. The number of connections decays with distance and travel time faster than the average transaction. 
+12. [The number of connections decays with distance and travel time faster than the average transaction.]{.bg} 
 
+## Main results
 ### Firm-to-firm trade within and across borders
 13. Importer (exporter) firms are larger than non-importer (non-exporter) firms. 
-14. Most firms do not import or export directly, but most do so indirectly. 
+14. [Most firms do not import or export directly. Most firms import indirectly, and very few export indirectly.]{.bg} 
 15. Direct and total export and import shares increase with firm size. 
 
-## Stylised facts
-### Today
-1. The distributions of firm sales, network sales and purchases, and buyer-supplier connections show substantial dispersion. 
-2. Firm size is positively correlated to the number of connections to other firms. 
-3. The production network displays negative degree assortativity between sellers and buyers. 
-4. The persistence of firm-to-firm linkages increases with firm size. 
-5. The number of connections decays with distance and travel time faster than the average transaction. 
+## Related literature
+### Factors that shape the structure of the production network
+- [Firm heterogeneity:]{.fg} @Bernard2009TheTrade, @Oberfield2018AArchitecture, @Acemoglu2020EndogenousNetworks, @Bernard2022TheApproach. 
+- [Spatial distribution of firms:]{.fg} @Bernard2009TheTrade, @Chaney2014TheTrade, @Bernard2019ProductionPerformance, @Eaton2022FirmMarket, @Arkolakis2023SpatialNetworks, @Miyauchi2023MatchingTrade. 
 
-## Stylised facts
-### Firms within a sector are heterogenous
+### Indirect foreign trade
+- [Access the foreign market through the domestic firm production network:]{.fg} @Blaum2018TheImporters, @Dhyne2021TradeNetworks, @Dhyne2022ForeignImpacts. 
 
-::: {layout="[[1, 1], [1, 1]]"}
-![Total sales](images/figure_1_a.png){width=5in}
+## Contributions
+- **Characterize several patterns present in the structure of the production networks.** 
+    - Estimate every fact in a less-developed country. 
+    - Apply a consistent methodology, and sample selection. 
+    - Domestic firm production network. 
+- **Account for the complex geography and poor road infrastructure of Costa Rica.** 
+    - New distance and travel time measures between municipalities using @OpenStreetMap2023CostaDump. 
 
-![Network sales](images/figure_1_b.png){width=5in}
+## Outline
+1. [Data:]{.bg}
+    1. BCCR datasets. 
+    2. Sample selection. 
+    3. Route distance and travel time between municipalities. 
+2. [Stylized facts:]{.bg} 
+    1. Firm-to-firm trade. 
+    2. The geography of firm-to-firm trade. 
+    3. Firm-to-firm trade within and across borders. 
+3. [Conclusion.]{.bg} 
 
-![Number of customers](images/figure_1_d.png){width=5in}
+# Data {background-color="#0077BB"}
+## Data
+### BCCR datasets (2008-2019)
+1. **VAT transaction data (Ministry of Finance):** Annual transactions between formal firms. 
+2. **Firm balance sheets (Ministry of Finance):** Total sales, 4-digit industry, and district-level location. 
+3. **Employment and wagebill (CCSS).** 
+4. **Firm-level international trade data (Customs):** Annual imports and exports by firm. 
+5. **Shared ownership data (BCCR).** 
 
-![Number of suppliers](images/figure_1_d.png){width=5in}
-:::
+### Sample selection
+- At least one permanent worker during the year. 
+- Exclude firms in the "Diplomatic Activities" industry. 
 
-## Stylised facts
-### The number of links explains more than half of the variation of network transactions
-$$X_{i} = \text{number of links} \cdot \text{average transaction}$$
+## {background-image="images/roads.png" background-size="75%"}
 
+## Data
+### @OpenStreetMap2023CostaDump: Talamanca, Limón to Coto Brus, Puntarenas
+- **Fastest route:** 8 1/3 hours vs. **Naïve point-to-point:** 1 1/2 hours. 
 
-::: {.fragment}
-::: {layout="[1, 1]"}
-![Number of link](images/figure_2_a.png){width=10in}
+![](images/roads.png){fig-align="center"}
 
-![Average transaction](images/figure_2_b.png){width=10in}
-:::
-:::
+## Data
+### @OpenStreetMap2023CostaDump
+- $\text{Distance}_{od}$ and $\text{Travel time}_{od}$: Shortest path between municipalities miniziming the travel time. 
+- $\text{Distance}_{oo} = \frac{2}{3} \sqrt{\text{Area} \cdot \pi}$ [@Ahlfeldt2016TheGravity]. 
+- $\text{Travel time}_{oo} = \frac{\text{Distance}_{oo}}{\text{Speed}_{oo}}$. 
+- $\text{Speed}_{oo}$: Weighted average of lanes' speed by its length. 
 
-## Stylised facts
-### A customer (supplier) firm connects with many suppliers (customers); but those suppliers would, on average, have fewer customers (suppliers) 
+# Stylized facts: <br> Domestic firm-to-firm trade {background-color="#0077BB"}
+## The distribution of firm size within an industry shows substantial dispersion
+![](images/figure_1_a.png){fig-align="center"}
 
-::: {layout="[1, 1]"}
+## The distribution of firm size within an industry shows substantial dispersion
+![](images/figure_1_b.png){fig-align="center"}
 
-![Customers and the suppliers of customers](images/figure_5_a.png){width=10in}
+## The distribution of firm size within an industry shows substantial dispersion
+![](images/figure_1_c.png){fig-align="center"}
 
-![Suppliers and the customers of suppliers](images/figure_5_b.png){width=10in}
-:::
+## The distribution of firm size within an industry shows substantial dispersion
+![](images/figure_1_d.png){fig-align="center"}
 
-## Stylised facts
-### The persistence of firm-to-firm linkages increases with firm size
-![Destruction (A), survival (Both) and creation (B) of links](images/fig_venn_diagram.png){width=15in}
+## The distribution of firm size within an industry shows substantial dispersion
+![](images/figure_1_e.png){fig-align="center"}
 
-## Stylised facts
-### The persistence of firm-to-firm linkages increases with firm size
+## Production networks are sparse
+### 32,000-48,000 firms in a given year. ~96,000 unique firms. 
+On average, 1 in 5,500 of the possible connections are realized.
 
-::: {layout="[1, 1]"}
-![Survival](images/figure_7_a.png){width=10in}
+![](images/motivation.png){fig-align="center"}
 
-![Creation](images/figure_7_b.png){width=10in}
-:::
+## Firm size is positively correlated to the number of connections to other firms.
+![](images/figure_2_a.png){fig-align="center"}
 
-## Stylised facts
-### The number of connections decays with distance and travel time faster than the average transaction
+## Firm size is positively correlated to the average transaction.
+![](images/figure_2_b.png){fig-align="center"}
 
-::: {layout="[[1], [1, 1]]"}
-![Network sales](images/figure_10_a.png){width=6in}
+## Well-connected firms tend to trade with poorly-connected firms. 
+### Suppliers
+![](images/figure_5_a.png){fig-align="center"}
 
-![Number of connections](images/figure_10_b.png){width=6in}
+## Well-connected firms tend to trade with poorly-connected firms. 
+### Customers
+![](images/figure_5_b.png){fig-align="center"}
 
-![Average transaction](images/figure_10_c.png){width=6in}
-:::
+## The persistence of firm-to-firm linkages increases with firm size.
+### Survival
+![](images/figure_7_a.png){fig-align="center"}
+
+## The persistence of firm-to-firm linkages increases with firm size.
+### Creation
+![](images/figure_7_b.png){fig-align="center"}
+
+# Stylized facts: <br> The geography of firm-to-firm trade {background-color="#0077BB"}
+
+## Flows decay with distance and travel time. 
+$$\log(\text{Total flows})_{ijt} = \beta \log(\tau)_{ij} + \alpha_{it} + \gamma_{jt} + \varepsilon_{ijt}$$
+
+![](images/figure_10_a.png){fig-align="center" width="70%"}
+
+## The number of connections decays with distance and travel time... 
+$$\log(N)_{ijt} = \beta \log(\tau)_{ij} + \alpha_{it} + \gamma_{jt} + \varepsilon_{ijt}$$
+
+![](images/figure_10_b.png){fig-align="center" width="70%"}
+
+## ... faster than the average transaction. 
+$$\log(\text{Avg trans})_{ijt} = \beta \log(\tau)_{ij} + \alpha_{it} + \gamma_{jt} + \varepsilon_{ijt}$$
+
+![](images/figure_10_c.png){fig-align="center"}
+
+# Stylized facts: <br> Firm-to-firm trade within and across borders{background-color="#0077BB"}
+## Direct and total import shares [@Dhyne2021TradeNetworks]. 
+$$s^{\text{Total}}_{Fj} = s_{Fj} + \sum_{i}s_{ij}s^{\text{Total}}_{Fi}$$
+
+- $s_{Fj} = \frac{\text{Imports}_{j}}{\text{Imports}_{j} + \text{Wagebill}_{j} + \sum_{i} \text{Transactions}_{ij}}$
+- $s_{ij} = \frac{\text{Transactions}_{ij}}{\text{Imports}_{j} + \text{Wagebill}_{j} + \sum_{i} \text{Transactions}_{ij}}$
+- Solve for $s^{\text{Total}}_{Fj}$. 
+
+## Most firms do not import directly, but do so indirectly. 
+![](images/figure_12_b.png){fig-align="center"}
+
+## Direct and total export shares [@Dhyne2021TradeNetworks]. 
+$$r^{\text{Total}}_{jF} = r_{jF} + \sum_{i}r_{ji}r^{\text{Total}}_{iF}$$
+
+- $r_{jF} = \frac{\text{Exports}_{j}}{\text{Exports}_{j} + \text{Sales to households}_{j} + \sum_{i} \text{Transactions}_{ji}}$
+- $r_{ji} = \frac{\text{Transactions}_{ji}}{\text{Exports}_{j} + \text{Sales to households}_{j} + \sum_{i} \text{Transactions}_{ji}}$. 
+
+## Most firms do not export at all. 
+![](images/figure_12_a.png){fig-align="center"}
+
+# Conclusion {background-color="#0077BB"}
+## Conclusion
+- We characterize several patterns present in the structure of the production networks. 
+    - The patterns are not random at all. 
+    - The extensive margin is very important in Costa Rica.  
+- Measurement matters: 
+    - Microdata vs input-output tables. 
+    - Complex geography of Costa Rica. 
+    - Firm exposure to international trade. 
+
+# Thank you! <br> <a href="mailto:j.i.gonzalez-rojas@lse.ac.uk"> j.i.gonzalez-rojas@lse.ac.uk </a> {background-color="#EE7733"}
 
 ## References
 
