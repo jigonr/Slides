@@ -1,7 +1,7 @@
 ---
 title: |
-    | The structure of domestic firm 
-    | production networks
+    The structure of domestic firm \
+    production networks
 subtitle: EconCR 23
 author:
   - name: Alonso Alfaro-Ureña
@@ -23,6 +23,7 @@ format:
     height: 1080
     progress: true
     history: true
+    html-math-method: mathjax
     embed-resources: true
 bibliography: bibliography.bib
 date: December 15, 2023

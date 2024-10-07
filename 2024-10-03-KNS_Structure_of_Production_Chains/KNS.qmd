@@ -1,0 +1,143 @@
+---
+title: |
+  Span of control, transaction costs, and the structure of \
+  production chains 
+subtitle: Kikuchi, Nishimura, and Stachurski (2018)
+author:
+  - name: José Ignacio González Rojas
+    affiliations: London School of Economics and Political Science
+    email: j.i.gonzalez-rojas@lse.ac.uk
+format:
+  revealjs: 
+    theme: slides.scss
+    slide-number: true
+    date-format: long
+    width: 1920
+    height: 1080
+    progress: true
+    history: true
+    html-math-method: mathjax
+    embed-resources: true
+date: October 3, 2024
+layout: default
+---
+
+## Research question
+What are the determinants of the number and size of firms and how are tasks allocated across firms in production chains coordinated by prices?
+
+Coase's (1937) explanation.  
+
+## Model 
+- Countable infinity of price-taking firms $i \in \{1, 2, \ldots\}$. 
+- Produce a single unit of a final good. 
+
+::: {layout-ncol=2}
+![Recursive allocation of production tasks](figures/allocation.png)
+
+![Notation](figures/notation.png)
+:::
+
+## Make-or-buy decision
+- Firm chooses upstream boundary, i.e., how far to integrate backward into the input production. 
+- Firms face two types of costs: 
+
+### In-house production costs
+- Diminishing returns to management. 
+- $c(\ell)$ is the cost of carrying out $\ell$ tasks in-house. 
+- $c(\cdot)$ is strictly increasing, strictly convex, and continuously differentiable. 
+- $c(0) = 0$, and $c'(0) > 0$ . 
+
+### Transaction costs
+- Buying and selling through the market. 
+- Wedge $\delta > 1$ between buyer's and seller's prices. "Deadweight loss." 
+
+## Equilibrium
+Given 
+
+1. Price of good at each processing stage $p: [0, 1] \to \mathbb{R}_{+}$. 
+2. Feasible allocation of tasks $\{\ell_{i}\}_{i \in \mathbb{N}}$. 
+3. Profits $\pi_{i} = p(t_{i-1}) - c(\ell_{i}) - \delta p(t_{i})$, $t_{0} = 0$, and $t_{i} = t_{i-1} - \ell_{i}$. 
+
+Then, $(p, \mathbf{\ell})$ is an equilibrium for the production chain if 
+
+1. $p(0) = 0$. Zero profit for suppliers of initial inputs. 
+2. $\pi_i = 0$. Active firms make zero profits. 
+3. $p(s)\leq c(s-t) + \delta p(t) \; \forall s, t, \; 0 \leq s \leq t \leq 1$. No intention to deviate, and inactive firms cannot enter and make profits. 
+
+## Equilibrium exists and it's unique
+### Existence
+**Constructive proof:** 
+
+#### Price function
+$$T p(s) = \min_{t \in (0, s]} \{c(s-t) + \delta p(t)\} \; \forall s \in [0, 1]$$
+
+The operator $T$ has a unique fixed point. Then, we're done with $p^{*}(s)$. 
+
+#### Feasible allocation
+Construct an allocation $\{\ell_{i}\}_{i \in \mathbb{N}}$ from the policy function $t^{*}(s)$. 
+
+## Equilibrium exists and it's unique
+#### Number of firms 
+$$n^{*} = \inf \{i \in \mathbb{N} | t^{*}_{i} = 0\} < \infty$$
+
+then, $\{\ell_{i}\}_{i \in \mathbb{N}}$ is feasible and $(p, \mathbf{\ell})$ is an equilibrium for the production chain. $\square$
+
+### Uniqueness
+**Intuition:** 
+
+- Another price function should be large enough to sustain nonnegative profits. Then, inactive firms could enter the market and make profits. Therefore, we would have another allocation. 
+- Conversely, if there was another price function that sustains the allocation, it eliminates all profit opportunities. Hence, that price function would be lower than the optimal one. 
+
+## Features
+### Price of the final good
+The minimal cost of producing the whole product when all firms make zero profits
+and transaction costs cannot be avoided.
+$$p^{*}(1) = c(\ell_{1}^{*}) + \delta c(\ell_{2}^{*}) + \cdots + \delta^{n-1} c(\ell_{n}^{*})$$
+
+### Marginal conditions
+#### Envelope condition
+The marginal price of stage $s$ is equal to the marginal cost of the range of tasks carried on up to $s$. 
+$$p'^{*}(s) = c'^{*}(\ell^{*}(s))$$
+
+## Features
+### Marginal conditions
+#### Coase-Euler equation
+The marginal in-house cost per task at a given firm is equal to that of its
+upstream partner multiplied by gross transaction cost. 
+$$\delta c'^{*}(\ell^{*}_{i+1})= c'^{*}(\ell^{*}_{i})$$
+
+### Downstream firms are always larger than upstream firms. 
+- Since the equilibrium price function is strictly convex, the marginal cost of these inputs rises as we move from upstream to downstream. 
+- Hence downstream firms choose to do more in-house.
+
+## Comparative statics
+The higher the transactions costs $\delta$, 
+
+### Higher price
+![Price function](figures/price.png)
+
+## Comparative statics
+The higher the transactions costs $\delta$, 
+
+### Higher input integration
+![Optimal range of in-house tasks](figures/input_integration.png)
+
+## Comparative statics
+The higher the transactions costs $\delta$, 
+
+### Lower number of firms
+
+::: {layout="[[1], [1]]" style="text-align:center;"}
+
+![$\delta = 1.02$](figures/n_firms_1.png)
+
+![$\delta = 1.2$](figures/n_firms_2.png)
+
+Number of active firms
+
+:::
+
+## Discussion
+- Tractable and elegant model to study the structure of production chains, in particular, the boundaries of the firm. 
+- They have an extension with multiple upstream partners that generates realistic supply chain networks. 
+- The supply chain network structure is as rich as in the production networks literature, with ex-ante identical firms.  
