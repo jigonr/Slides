@@ -445,7 +445,7 @@
 
   <meta name="author" content="José Ignacio González Rojas">
   <meta name="dcterms.date" content="2024-10-14">
-  <title>Topic 2 Part I The Linear Regression Model</title>
+  <title>Topic 2 Part 1-2 The Linear Regression Model</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -1144,7 +1144,7 @@ margin-right: 0; }
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Topic 2 Part I The Linear Regression Model</h1>
+  <h1 class="title">Topic 2 Part 1-2 The Linear Regression Model</h1>
   <p class="subtitle">MG205 Econometrics Theory and Applications</p>
 
 <div class="quarto-title-authors">
@@ -1192,21 +1192,20 @@ José Ignacio González Rojas
 <li><span class="math inline">\(\text{var(x)} &gt; 0\)</span>.</li>
 <li><span class="math inline">\(\text{var(y)} &gt; 0\)</span>.</li>
 </ul>
-<h4 id="goal">Goal</h4>
-<ul>
-<li><span class="math inline">\(\beta &lt; 0\)</span>.</li>
-</ul>
 </section>
 <section id="question-1-1" class="slide level2">
 <h2>Question 1</h2>
 <h3 id="prove-that-if-the-simple-correlation-between-y-and-x-is-negative-the-slope-of-regressing-y-on-x-will-also-be-negative.-1">Prove that if the simple correlation between y and x is negative, the slope of regressing y on x will also be negative.</h3>
+<h4 id="goal">Goal</h4>
+<ul>
+<li><span class="math inline">\(\beta &lt; 0\)</span>.</li>
+</ul>
 <h4 id="proof">Proof</h4>
 <p>Let <span class="math inline">\(\rho(x,y) &lt; 0\)</span>. Then,</p>
 <p><span class="math display">\[
 \begin{align*}
   \rho(x,y) &amp;&lt; 0 \\
-  \frac{\text{cov}(x,y)}{\sqrt{\text{var}(x)}\cdot\sqrt{\text{var}(y)}} &amp;&lt; 0 \\
-  \frac{\text{cov}(x,y)}{\sqrt{\text{var}(x)}\cdot\sqrt{\text{var}(y)}} \cdot \underbrace{\sqrt{\text{var}(y)}}_{+} &amp;&lt; 0 \cdot \underbrace{\sqrt{\text{var}(y)}}_{+}.
+  \frac{\text{cov}(x,y)}{\sqrt{\text{var}(x)}\cdot\sqrt{\text{var}(y)}} &amp;&lt; 0
 \end{align*}
 \]</span></p>
 </section>
@@ -1214,15 +1213,13 @@ José Ignacio González Rojas
 <h2>Question 1</h2>
 <h3 id="prove-that-if-the-simple-correlation-between-y-and-x-is-negative-the-slope-of-regressing-y-on-x-will-also-be-negative.-2">Prove that if the simple correlation between y and x is negative, the slope of regressing y on x will also be negative.</h3>
 <h4 id="proof-1">Proof</h4>
-<p>Let <span class="math inline">\(\rho(x,y) &lt; 0\)</span>. Then,</p>
 <p><span class="math display">\[
 \begin{align*}
+  \frac{\text{cov}(x,y)}{\sqrt{\text{var}(x)}\cdot\sqrt{\text{var}(y)}} \cdot \underbrace{\sqrt{\text{var}(y)}}_{+} &amp;&lt; 0 \cdot \underbrace{\sqrt{\text{var}(y)}}_{+} \\
   \frac{\text{cov}(x,y)}{\sqrt{\text{var}(x)}} \cdot \underbrace{\frac{1}{\sqrt{\text{var}(x)}}}_{+} &amp;&lt; 0 \cdot \underbrace{\frac{1}{\sqrt{\text{var}(x)}}}_{+} \\
   \beta = \rho \cdot \frac{\sigma_{y}}{\sigma_{x}} = \frac{\text{cov}(x,y)}{\text{var}(x)} &amp;&lt; 0.
 \end{align*}
 \]</span></p>
-<h4 id="intuition">Intuition</h4>
-<p>The covariance between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> determines the sign of the slope.</p>
 </section>
 <section id="question-2" class="slide level2">
 <h2>Question 2</h2>
@@ -1239,28 +1236,30 @@ José Ignacio González Rojas
 <li><span class="math inline">\(Y_{i} = \beta_{0} + \beta_{1} X_{1i} + \epsilon_{i}, \; \forall i\)</span>.</li>
 <li><span class="math inline">\(\mathbb{E}[e|X] = 0\)</span>.</li>
 </ul></li>
+</ul>
+</section>
+<section id="question-2-1" class="slide level2">
+<h2>Question 2</h2>
+<h3 id="while-the-error-terms-and-the-ols-residuals-are-clearly-not-the-same-thing-it-is-always-the-case-that-sum_i1n-epsilon_i-sum_i1n-hatepsilon_i-0-discuss.-1">While the error terms and the OLS residuals are clearly not the same thing, it is always the case that <span class="math inline">\(\sum_{i=1}^{n} \epsilon_{i} = \sum_{i=1}^{n} \hat{\epsilon}_{i} = 0\)</span> Discuss.</h3>
+<h4 id="assumptions-2">Assumptions</h4>
+<ul>
 <li><strong>Ordinary Least Squares estimator:</strong>
 <ul>
 <li><span class="math inline">\((\hat{\beta}_{0}, \hat{\beta}_{1}) = \arg\min_{(b_{0}, b_{1})} \sum_{i=1}^{n} (Y_{i} - b_{0} \cdot 1 - b_{1} \cdot X_{1i})^2\)</span>.</li>
 <li><span class="math inline">\(Y_{i} = X_{i}&#39; \hat{\beta} + \hat{\epsilon}_{i} = \hat{Y}_{i} + \hat{\epsilon}_{i}\)</span>.</li>
 </ul></li>
 </ul>
-</section>
-<section id="question-2-1" class="slide level2">
-<h2>Question 2</h2>
-<h3 id="while-the-error-terms-and-the-ols-residuals-are-clearly-not-the-same-thing-it-is-always-the-case-that-sum_i1n-epsilon_i-sum_i1n-hatepsilon_i-0-discuss.-1">While the error terms and the OLS residuals are clearly not the same thing, it is always the case that <span class="math inline">\(\sum_{i=1}^{n} \epsilon_{i} = \sum_{i=1}^{n} \hat{\epsilon}_{i} = 0\)</span> Discuss.</h3>
 <h4 id="goal-1">Goal</h4>
 <ol type="1">
 <li><span class="math inline">\(\sum_{i=1}^{n} \epsilon_{i} \; ? \; 0\)</span>.</li>
 <li><span class="math inline">\(\sum_{i=1}^{n} \hat{\epsilon}_{i} \; ? \; 0\)</span>.</li>
 </ol>
-<h4 id="goal-1.">Goal 1.</h4>
-<p>No. This property only holds in expectation. From the assumptions, we know <span class="math inline">\(\mathbb{E}[e|X] = 0\)</span>. Then, we apply the Law of Iterated Expectations: <span class="math display">\[\mathbb{E}[\mathbb{E}[e|X]] = \mathbb{E}[0]\]</span> <span class="math display">\[\mathbb{E}[e] = 0\]</span></p>
 </section>
 <section id="question-2-2" class="slide level2">
 <h2>Question 2</h2>
 <h3 id="while-the-error-terms-and-the-ols-residuals-are-clearly-not-the-same-thing-it-is-always-the-case-that-sum_i1n-epsilon_i-sum_i1n-hatepsilon_i-0-discuss.-2">While the error terms and the OLS residuals are clearly not the same thing, it is always the case that <span class="math inline">\(\sum_{i=1}^{n} \epsilon_{i} = \sum_{i=1}^{n} \hat{\epsilon}_{i} = 0\)</span> Discuss.</h3>
-<h4 id="goal-1.-1">Goal 1.</h4>
+<h4 id="goal-1.">Goal 1.</h4>
+<p>No. This property only holds in expectation. From the assumptions, we know <span class="math inline">\(\mathbb{E}[e|X] = 0\)</span>. Then, we apply the Law of Iterated Expectations: <span class="math display">\[\mathbb{E}[\mathbb{E}[e|X]] = \mathbb{E}[0]\]</span> <span class="math display">\[\mathbb{E}[e] = 0. \]</span></p>
 <ul>
 <li>If you don’t know the Law of Iterated Expectations, you had it as Assumption 4 on the Lecture Slides.</li>
 <li>Another way of thinking about it is that if it holds for each <span class="math inline">\(X\)</span>, it must hold in general/unconditionally.</li>
@@ -1389,7 +1388,7 @@ José Ignacio González Rojas
 </section>
 <section id="next-week" class="slide level2">
 <h2>Next week</h2>
-<p>Remaining exercises of topic 2</p>
+<p>Remaining exercises of topic 2.</p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
