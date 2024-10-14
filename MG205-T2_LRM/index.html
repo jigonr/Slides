@@ -1228,12 +1228,12 @@ José Ignacio González Rojas
 <ul>
 <li><strong>Linear regression model:</strong>
 <ul>
-<li><strong>Variables <span class="math inline">\(X_{i}\)</span>:</strong>
+<li><strong>Variables:</strong>
 <ul>
-<li><strong>Independent:</strong> <span class="math inline">\(Y_{i}\)</span>.</li>
-<li><strong>Dependent:</strong> <span class="math inline">\((1, X_{1i})\)</span>.</li>
+<li><strong>Dependent:</strong> <span class="math inline">\(Y_{i}\)</span>.</li>
+<li><strong>Independent:</strong> <span class="math inline">\((1, X_{1i})\)</span>.</li>
 </ul></li>
-<li><span class="math inline">\(Y_{i} = \beta_{0} + \beta_{1} X_{1i} + \epsilon_{i}, \; \forall i\)</span>.</li>
+<li><span class="math inline">\(Y_{i} = \beta_{0} + \beta_{1} X_{1i} + e_{i}, \; \forall i\)</span>.</li>
 <li><span class="math inline">\(\mathbb{E}[e|X] = 0\)</span>.</li>
 </ul></li>
 </ul>
@@ -1251,7 +1251,7 @@ José Ignacio González Rojas
 </ul>
 <h4 id="goal-1">Goal</h4>
 <ol type="1">
-<li><span class="math inline">\(\sum_{i=1}^{n} \epsilon_{i} \; ? \; 0\)</span>.</li>
+<li><span class="math inline">\(\sum_{i=1}^{n} e_{i} \; ? \; 0\)</span>.</li>
 <li><span class="math inline">\(\sum_{i=1}^{n} \hat{\epsilon}_{i} \; ? \; 0\)</span>.</li>
 </ol>
 </section>
@@ -1272,8 +1272,8 @@ José Ignacio González Rojas
 <p>Yes, this property always holds. It is a property of the OLS estimator.</p>
 <ul>
 <li><strong>First-order condition:</strong> <span class="math inline">\(-2\sum_{i=1}^{n}X_{i}Y_{i} + 2\sum_{i=1}^{n}X_{i}X_{i}&#39;\hat{\beta} = 0\)</span>.</li>
-<li><strong>Simplify the 2’s and substitute the model:</strong> <span class="math inline">\(-\sum_{i=1}^{n}X_{i}X_{i}&#39;\hat{\beta} + \sum_{i=1}^{n}X_{i}X_{i}&#39;\hat{\beta} + \sum_{i=1}^{n}X_{i}\hat{e}_{i} = 0\)</span>.</li>
-<li><strong>Consider the case for the variable 1:</strong> <span class="math inline">\(\sum_{i=1}^{n}1\cdot\hat{e}_{i} = 0\)</span>.</li>
+<li><strong>Simplify the 2’s and substitute the model:</strong> <span class="math inline">\(-\sum_{i=1}^{n}X_{i}X_{i}&#39;\hat{\beta} + \sum_{i=1}^{n}X_{i}X_{i}&#39;\hat{\beta} + \sum_{i=1}^{n}X_{i}\hat{\epsilon}_{i} = 0\)</span>.</li>
+<li><strong>Consider the case for the variable 1:</strong> <span class="math inline">\(\sum_{i=1}^{n}1\cdot\hat{\epsilon}_{i} = 0\)</span>.</li>
 </ul>
 </section>
 <section id="question-3a" class="slide level2">
@@ -1336,11 +1336,11 @@ José Ignacio González Rojas
 <h2>Question 5</h2>
 <h3 id="write-down-the-formula-for-the-simple-correlation-between-y-and-haty.-show-that-this-simple-correlation-is-equal-to-the-square-root-of-r2.-1">Write down the formula for the simple correlation between <span class="math inline">\(y\)</span> and <span class="math inline">\(\hat{y}\)</span>. Show that this simple correlation is equal to the square root of <span class="math inline">\(R^{2}\)</span>.</h3>
 <h4 id="proof-2">Proof</h4>
-<p>First, we calculate the variance of <span class="math inline">\(y\)</span>.</p>
+<p>First, we calculate the variance of <span class="math inline">\(y\)</span>. <span class="bg">Look at the additional notes for further derivations.</span></p>
 <p><span class="math display">\[
 \begin{align*}
   \text{var}(y) &amp;= \text{var}(\hat{y} + \hat{\epsilon}) \\
-  &amp;= \text{var}(\hat{y}) + \text{var}(\hat{\epsilon}) + 2\underbrace{\text{cov}(\hat{y}, \hat{\epsilon})}_{0} \\
+  &amp;= \text{var}(\hat{y}) + \text{var}(\hat{\epsilon}) + 2\cdot\underbrace{\text{cov}(\hat{y}, \hat{\epsilon})}_{0} \\
   &amp;= \text{var}(\hat{y}) + \text{var}(\hat{\epsilon})
 \end{align*}
 \]</span></p>
@@ -1353,7 +1353,7 @@ José Ignacio González Rojas
 \begin{align*}
   \rho(y, \hat{y}) &amp;= \frac{\text{cov}(y, \hat{y})}{\sqrt{\text{var}(y)}\cdot\sqrt{\text{var}(\hat{y})}} \\
   &amp;= \frac{\text{cov}(\hat{y} + \hat{\epsilon}, \hat{y})}{\sqrt{\text{var}(\hat{y} + \hat{\epsilon})}\cdot\sqrt{\text{var}(\hat{y})}} \\
-  &amp;= \frac{\overbrace{\text{cov}(\hat{y},\hat{y})}^{\text{var}(\hat{y})} + \overbrace{\text{cov}(\hat{\epsilon}, \hat{y})}^{0}}{\sqrt{\text{var}(\hat{y}) + \text{var}(\hat{\epsilon})}\cdot\sqrt{\text{var}(\hat{y})}}
+  &amp;= \frac{\overbrace{\text{cov}(\hat{y},\hat{y})}^{\text{var}(\hat{y})} + \overbrace{\text{cov}(\hat{\epsilon}, \hat{y})}^{0}}{\sqrt{\text{var}(y)}\cdot\sqrt{\text{var}(\hat{y})}}
 \end{align*}
 \]</span></p>
 </section>
@@ -1382,8 +1382,8 @@ José Ignacio González Rojas
 <section id="menti" class="slide level2">
 <h2>Menti</h2>
 <ul>
-<li><a href="https://www.mentimeter.com/app/presentation/n/alviv3xkjd2psza3gep2u3ho5g9peoho/embed">Class 11</a></li>
-<li><a href="https://www.mentimeter.com/app/presentation/n/ale8r491waowjy6mfev2mru2j46z5kje/embed">Class 12</a></li>
+<li><a href="https://www.mentimeter.com/app/presentation/n/al16o9pz1mbeu2xfi2duawj8x82s91wu/embed">Class 11</a></li>
+<li><a href="https://www.mentimeter.com/app/presentation/n/aluxm9jxyuodmuqghw3vhppnny66tp4h/embed">Class 12</a></li>
 </ul>
 </section>
 <section id="next-week" class="slide level2">
