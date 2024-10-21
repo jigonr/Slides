@@ -1514,7 +1514,7 @@ Figure 1: From population to sample
 <p><span class="math display">\[
 \begin{align*}
   \mathbb{E}[\hat{\beta}_{0} - \beta_{0}] &amp;= \underbrace{\mathbb{E}[\bar{e}]}_{0} - \mathbb{E}[(\hat{\beta}_{1} - \beta_{1})\bar{x}] \\
-  &amp;= - \underbrace{\mathbb{E}[(\hat{\beta}_{1} - \beta_{1})]}\bar{x} \\
+  &amp;= - \underbrace{\mathbb{E}[(\hat{\beta}_{1} - \beta_{1})]}_{0}\bar{x} \\
   &amp;= 0
 \end{align*}
 \]</span></p>
@@ -1550,7 +1550,7 @@ Figure 1: From population to sample
 \begin{align*}
   \text{var}(\hat{\beta}_{0}) &amp;= \frac{\sigma^{2}}{n} \cdot \frac{\bar{x}^{2}}{\text{var}(x)} + \frac{\sigma^{2}}{n} \\
   &amp;=\frac{\sigma^{2}}{n} \cdot \left(1 + \frac{\bar{x}^{2}}{\text{var}(x)}\right) \\
-  &amp;=\frac{\sigma^{2}}{n} \cdot \left(1 + \frac{\bar{x}^{2}}{n (\sum_{i=1}^{n}x_{i}^2-n\bar{x}^{2})}\right)
+  &amp;=\frac{\sigma^{2}}{n} \cdot \left(1 + \frac{\bar{x}^{2}}{\frac{1}{n} (\sum_{i=1}^{n}x_{i}^2-n\bar{x}^{2})}\right)
 \end{align*}
 \]</span></p>
 </section>
@@ -1584,7 +1584,7 @@ Figure 1: From population to sample
 </ul>
 <h4 id="previous-results-2">Previous results</h4>
 <ul>
-<li><span class="math inline">\(\hat{y} = \hat{\beta}_{0} + \hat{\beta}_{1}\bar{x}\)</span></li>
+<li><span class="math inline">\(\bar{y} = \hat{\beta}_{0} + \hat{\beta}_{1}\bar{x}\)</span></li>
 </ul>
 </section>
 <section id="question-13-1" class="slide level2">
@@ -1593,9 +1593,9 @@ Figure 1: From population to sample
 <h4 id="proof-14">Proof</h4>
 <p><span class="math display">\[
 \begin{align*}
-  \hat{y}_{i}^{*} - \hat{y} &amp;= \hat{\beta}_{1} (x_{i}^{*} - \hat{x}) \\
-  \text{var}(\hat{y}_{i}^{*} - \hat{y}) &amp;= \text{var}(\hat{\beta}_{1} (x_{i}^{*} - \hat{x})) \\
-  \text{var}(\hat{y}_{i}^{*}) &amp;= (x_{i}^{*} - \hat{x})^{2} \text{var}(\hat{\beta}_{1})
+  \hat{y}_{i}^{*} - \bar{y} &amp;= \hat{\beta}_{1} (x_{i}^{*} - \bar{x}) \\
+  \text{var}(\hat{y}_{i}^{*} - \bar{y}) &amp;= \text{var}(\hat{\beta}_{1} (x_{i}^{*} - \bar{x})) \\
+  \text{var}(\hat{y}_{i}^{*}) &amp;= (x_{i}^{*} - \bar{x})^{2} \text{var}(\hat{\beta}_{1})
 \end{align*}
 \]</span></p>
 </section>
