@@ -1,0 +1,161 @@
+---
+title: |
+  Identification and Estimation of Demand Models \ 
+  with Endogenous Product Entry and Exit
+subtitle: Aguirregabiria, Iaria, and Sokullu (2024)
+author:
+  - name: José Ignacio González Rojas
+    affiliations: London School of Economics and Political Science
+    email: j.i.gonzalez-rojas@lse.ac.uk
+format:
+  revealjs: 
+    theme: slides.scss
+    slide-number: true
+    date-format: long
+    width: 1920
+    height: 1080
+    progress: true
+    history: true
+    html-math-method: mathjax
+    embed-resources: true
+date: October 29, 2024
+bibliography: bibliography.bib
+csl: apa.csl
+layout: default
+---
+
+## Motivation
+
+- Firms' decisions to enter and exit markets consider whether they can profitably serve consumers on expectation in that market. 
+  - Additional adjustment margin other than prices and quantities. 
+  - Sample selection bias in demand estimation. 
+- Applications in laundry machines [@thomasTooManyProducts2011], and this paper on airline industry [@aguirregabiriaIdentificationEstimationDemand2024]. More recently, [@sabalProductEntryGlobal2024] in the global automobile industry. 
+- [This paper:]{.bg} Demand estimation of differentiated products accounting for the endogeneity of firms' entry and exit decisions. 
+
+## Model
+### Demand
+- Households $h$, products $j$, and markets $j$. 
+- Discrete choice model with random coefficients a la @berryAutomobilePricesMarket1995. 
+
+$$U_{hjt} \equiv \delta(p_{jt}, x_{jt}) + v(p_{jt}, x_{jt}, \upsilon_{ht}) + \epsilon_{hjt}$$
+
+$$\delta_{jt} \equiv \alpha p_{jt} + x_{jt}' \beta + \xi_{jt}$$
+
+- $\upsilon_{ht}$: random coefficients. 
+- $\epsilon_{hjt}$: EVD T1. 
+
+## Model
+### Demand
+#### Inversion of demand system 
+$$s_{jt} = d_{jt}(\delta_t, a_t) \equiv \int \frac{\textcolor{orange}{a_{jt}}\exp (\delta_{jt} + v(p_{jt}, x_{jt}, \upsilon))}{1 + \sum_{i=1}^J \textcolor{orange}{a_{it}} \exp (\delta_{it} + v(p_{it}, x_{it}, \upsilon))} dF_{\upsilon}(\upsilon)$$
+
+- Consumers only buy products available in their market. 
+- The outside option is always available. 
+  - $s^{(a)}_t = d^{(a)}_t(\delta^{(a)}_t)$ is always invertible [@berryEstimatingDiscreteChoiceModels1994]. 
+
+## Model
+### Supply
+Two-stage game. 
+
+#### **Second stage:** Active firms $j$ on market $t$ choose prices.
+- Firm's problem: $$\max_{p_{jt}} \left\{p_{jt} d^{(a)}_{jt}(p_{jt}, \cdot) H_{t}  - c(d^{(a)}_{jt}(p_{jt}, \cdot) H_{t}; x_{jt}, \omega_{jt}) - f(x_{jt}, \eta_{jt}) \right\}$$
+- Nash-Bertrand equilibrium: $$p_{jt}^{*} = \frac{\partial c(\cdot, \cdot)}{\partial q_{jt}} - d^{(a)}_{jt}(\cdot, \cdot) \left( \frac{\partial d^{(a)}_{jt}(\cdot, \cdot)}{\partial p_{jt}} \right)^{-1} \quad \forall j \in J$$
+
+## Model
+### Supply
+#### **First stage:** Firms $j$ decide whether to enter each market $t$ individually. 
+- Given $(x_{t}, \kappa_{t}, \eta_{jt})$, 
+  - $\kappa_{t}$: public signal for the demand-cost variables $(\xi_{t}, \omega_{t})$. 
+  - $\eta_{jt}$: i.i.d. private signal for information of firm $j$. 
+- Firm enters the market if: $$\mathbb{E}[\pi_{j}(a_{-j}, x_{t}, \kappa_{t}, \eta_{jt})|x_{t}, \kappa_{t}]\geq 0. $$
+
+## Model
+### Supply
+#### **First stage:** Firms $j$ decide whether to enter each market $t$ individually. 
+#### Solution concepts
+- The entry probability depends on the combinatorial problem of whether each firms $-j$ also enters the market. 
+ - Find entry probabilities $\mathbb{P}_{jt}(x_{t}, \kappa_{t}) = \mathbb{P}[a_{jt} = 1 |x_{t}, \kappa_{t}]$. 
+- **Static:** Bayesian Nash Equilibrium 
+  - Single product firms. 
+  - Multi product firms. 
+- **Dynamic:** Markov Perfect Equilibrium. 
+
+## (Sample) selection problem
+- Selection propensity score $\bar{P}_{jt} \equiv \mathbb{P}[a_{jt}= 1|x_{t}].$
+- Selection bias function $\lambda_{j}(x_{t}) \equiv \mathbb{E}[\xi_{jt}|x_{t}, a_{jt} = 1] = \frac{\mathbb{E}[\xi_{jt}\mathbb{1}[a_{jt} = 1]|x_{t}]}{\bar{P}_{jt}}.$
+- (When) can we use selection propensity score to control for the selection bias [@angristConditionalIndependenceSample1997]? 
+  - $\mathbb{P}[\xi_{jt}, a_{jt}|x_{t}, \bar{P}_{jt}] = \mathbb{P}[\xi_{jt}, a_{jt}| \bar{P}_{jt}]$. 
+  - **Example:** single-crossing structure in the entry decision. 
+- **Additional assumption:** $P_{jt}(x_{t}, \kappa_{jt}) = \mathbb{P}[\xi_{jt}, a_{jt}|x_{t}, \kappa_{t}, \bar{P}_{jt}] = \mathbb{P}[\xi_{jt}, a_{jt}| \kappa_{t}, \bar{P}_{jt}].$ 
+  - **Structural condition:** Strict monotonicity of the profit function with respect to $\eta_{jt}$. 
+
+## (Sample) selection problem
+- **Unobservables matter:** integration over private signal $\eta_{jt}$ and public signal $\kappa_{t}$. 
+- $\psi_{j}(P_{j}(\textcolor{orange}{x_{t}}, \kappa_{t}), \textcolor{orange}{x_{t}}) \equiv \mathbb{E}[\xi_{jt}|x_{t}, \kappa_{t}, a_{jt} = 1]$ and $\theta(\textcolor{orange}{x_{t}}) \equiv (\alpha, \beta, \sigma).$
+- **Solution:** There's a discrete proxy/latent-variable $\kappa_{t}^{*}$ where the same property holds. 
+
+![Finite mixture model](density.png)
+
+## Identification
+$$\theta = \left( \textcolor{orange}{\theta_{\delta}}, P_{\kappa^{*}}, f_{\kappa^{*}}, f_{\xi | \eta, \kappa^{*}}, F_{\eta} \right)$$
+
+- $\theta_{\delta}$: Demand parameters
+- $P_{\kappa^{*}}$: Entry probabilities for each latent type. 
+- $f_{\kappa^{*}}$: Distribution of latent types. 
+- $f_{\xi | \eta, \kappa^{*}}$: Distribution of demand unobservables conditional on latent types and private information. 
+- $F_{\eta}$: Distribution of private information shocks. 
+
+## Identification
+[They propose by a two-step estimation procedure. ]{.fg}
+
+1. Given the empirical distribution of firms’ entry decisions, we establish the identification of the equilibrium probabilities $P_{\kappa^{*}}$, and the distribution $f_{\kappa^{*}}$.  
+2. Given the selection bias
+function $\lambda_{j}(x_{t})$, we show the identification of $\theta_{\delta}$.
+
+## Identification
+### First step: Game of market entry
+
+1. Given the empirical distribution of firms’ entry decisions, we establish the identification of the equilibrium probabilities $P_{\kappa^{*}}$, and the distribution $f_{\kappa^{*}}$.  
+$$\mathbb{P}(a_{t} = a | x_{t}) = \sum_{\kappa^{*} \in K(x_{t})} f_{\kappa^{*}}(\kappa^{*} | x_{t}) \prod_{j=1}^{J} \left[P_{j}(x_{t}, \kappa^{*}) \right]^{a_{jt}} \left[ 1 - P_{j}(x_{t}, \kappa^{*}) \right]^{1 - a_{jt}}$$
+  - The entry probability $P_{j}(x, κ^{*})$ of each firm $j$ conditionally independent from the others $P_{i}(x, κ^{*}), i  \neq j$. 
+  - The identification number of latent types relies on having a large sample. 
+  - $\kappa_{t}$ and $x_{t}$ are independent. (Application specific)
+
+## Identification
+### Second step: Identification of Demand Parameters
+
+- Controlling for selection bias on the mean utility regression, demand parameters are identified. 
+- After controlling for it, there should be remaining variation on $x_{t}$. 
+- The vector of entry probabilities $P_{jt}$ should depend on $x_{it}$ for $i \neq j.$ 
+
+## Estimation
+Given the constructive identification procedure, estimation is straightforward.
+
+### First step: Game of market entry
+
+- **Functional forms:**
+  - $f_{\kappa^{*}}(\kappa^{*} | x_{t})$: sieves multinomial logit structure. 
+  - $P_{j}(x, κ^{*})$: sieves binary logit structure. 
+- **Estimation method:** Maximum Likelihood (MLE) using the Expectation–maximization algorithm. 
+
+### Second step: Identification of Demand Parameters
+
+- **Functional forms:** Method of sieves and approximate each function $\psi_{j}(P_{j}(x_{t}, \kappa_{t}), x_{t})$ using a polynomial of order $L$ in the logarithm of the entry probability $P_{j}(x_{t}, \kappa_{t}).$
+- **Estimation method:** Generalised Method of Moments. 
+
+## Empirical application: Airline industry
+- Markups **drop** substantially:
+  - Benchmark (2SLS no selection): 1.25. 
+  - Controlling for selection (Finite mixture model (3 latent types)): 1.17. 
+- Own-price elasticities are **higher**. 
+  - Benchmark (2SLS no selection): −5.549.  
+  - Controlling for selection (Finite mixture model (3 latent types)): −8.000. 
+
+## Further research directions
+- @sabalProductEntryGlobal2024: Global automobile industry. Endogenous product entry and exit, heterogenous firms, and demand estimation. Bounds on the demand parameters. Timing of the game. 
+- @arkolakisEntryCostsTrade2024: Trade and entry costs. Plant location. Economic intuition: explicit trade-off. Cannibalisation among production plants and substitution effects between them. 
+
+## References
+
+::: {#refs}
+:::
