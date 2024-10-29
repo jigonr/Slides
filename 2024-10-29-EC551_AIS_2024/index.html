@@ -1225,17 +1225,17 @@ José Ignacio González Rojas
 </section>
 <section id="model-2" class="slide level2">
 <h2>Model</h2>
-<h3 id="supply">Supply</h3>
-<p>Two-stage game.</p>
+<h3 id="supply-two-stage-game.">Supply: Two-stage game.</h3>
 <h4 id="second-stage-active-firms-j-on-market-t-choose-prices."><strong>Second stage:</strong> Active firms <span class="math inline">\(j\)</span> on market <span class="math inline">\(t\)</span> choose prices.</h4>
 <ul>
-<li>Firm’s problem: <span class="math display">\[\max_{p_{jt}} \left\{p_{jt} d^{(a)}_{jt}(p_{jt}, \cdot) H_{t}  - c(d^{(a)}_{jt}(p_{jt}, \cdot) H_{t}; x_{jt}, \omega_{jt}) - f(x_{jt}, \eta_{jt}) \right\}\]</span></li>
-<li>Nash-Bertrand equilibrium: <span class="math display">\[p_{jt}^{*} = \frac{\partial c(\cdot, \cdot)}{\partial q_{jt}} - d^{(a)}_{jt}(\cdot, \cdot) \left( \frac{\partial d^{(a)}_{jt}(\cdot, \cdot)}{\partial p_{jt}} \right)^{-1} \quad \forall j \in J\]</span></li>
+<li><p>Firm’s problem: <span class="math display">\[\max_{p_{jt}} \left\{p_{jt} d^{(a)}_{jt}(p_{jt}, \cdot) H_{t}  - c(d^{(a)}_{jt}(p_{jt}, \cdot) H_{t}; x_{jt}, \omega_{jt}) - f(x_{jt}, \eta_{jt}) \right\}\]</span></p></li>
+<li><p>Nash-Bertrand equilibrium:</p></li>
 </ul>
+<p><span class="math display">\[p_{jt}^{*} = \frac{\partial c(\cdot, \cdot)}{\partial q_{jt}} - d^{(a)}_{jt}(\cdot, \cdot) \left( \frac{\partial d^{(a)}_{jt}(\cdot, \cdot)}{\partial p_{jt}} \right)^{-1} \quad \forall j \in J\]</span></p>
 </section>
 <section id="model-3" class="slide level2">
 <h2>Model</h2>
-<h3 id="supply-1">Supply</h3>
+<h3 id="supply">Supply</h3>
 <h4 id="first-stage-firms-j-decide-whether-to-enter-each-market-t-individually."><strong>First stage:</strong> Firms <span class="math inline">\(j\)</span> decide whether to enter each market <span class="math inline">\(t\)</span> individually.</h4>
 <ul>
 <li>Given <span class="math inline">\((x_{t}, \kappa_{t}, \eta_{jt})\)</span>,
@@ -1248,7 +1248,7 @@ José Ignacio González Rojas
 </section>
 <section id="model-4" class="slide level2">
 <h2>Model</h2>
-<h3 id="supply-2">Supply</h3>
+<h3 id="supply-1">Supply</h3>
 <h4 id="first-stage-firms-j-decide-whether-to-enter-each-market-t-individually.-1"><strong>First stage:</strong> Firms <span class="math inline">\(j\)</span> decide whether to enter each market <span class="math inline">\(t\)</span> individually.</h4>
 <h4 id="solution-concepts">Solution concepts</h4>
 <ul>
@@ -1341,33 +1341,13 @@ José Ignacio González Rojas
 </ul></li>
 <li><strong>Estimation method:</strong> Maximum Likelihood (MLE) using the Expectation–maximization algorithm.</li>
 </ul>
+</section>
+<section id="estimation-1" class="slide level2">
+<h2>Estimation</h2>
 <h3 id="second-step-identification-of-demand-parameters-1">Second step: Identification of Demand Parameters</h3>
 <ul>
 <li><strong>Functional forms:</strong> Method of sieves and approximate each function <span class="math inline">\(\psi_{j}(P_{j}(x_{t}, \kappa_{t}), x_{t})\)</span> using a polynomial of order <span class="math inline">\(L\)</span> in the logarithm of the entry probability <span class="math inline">\(P_{j}(x_{t}, \kappa_{t}).\)</span></li>
 <li><strong>Estimation method:</strong> Generalised Method of Moments.</li>
-</ul>
-</section>
-<section id="empirical-application-airline-industry" class="slide level2">
-<h2>Empirical application: Airline industry</h2>
-<ul>
-<li>Markups <strong>drop</strong> substantially:
-<ul>
-<li>Benchmark (2SLS no selection): 1.25.</li>
-<li>Controlling for selection (Finite mixture model (3 latent types)): 1.17.</li>
-</ul></li>
-<li>Own-price elasticities are <strong>higher</strong>.
-<ul>
-<li>Benchmark (2SLS no selection): −5.549.<br>
-</li>
-<li>Controlling for selection (Finite mixture model (3 latent types)): −8.000.</li>
-</ul></li>
-</ul>
-</section>
-<section id="further-research-directions" class="slide level2">
-<h2>Further research directions</h2>
-<ul>
-<li><span class="citation" data-cites="sabalProductEntryGlobal2024">Sabal (<a href="#/references" role="doc-biblioref" onclick>2024</a>)</span>: Global automobile industry. Endogenous product entry and exit, heterogenous firms, and demand estimation. Bounds on the demand parameters. Timing of the game.</li>
-<li><span class="citation" data-cites="arkolakisCombinatorialDiscreteChoice2023">Arkolakis et al. (<a href="#/references" role="doc-biblioref" onclick>2023</a>)</span>: Trade and entry costs. Plant location. Economic intuition: explicit trade-off. Cannibalisation among production plants and substitution effects between them.</li>
 </ul>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
@@ -1378,9 +1358,6 @@ Aguirregabiria, V., Iaria, A., &amp; Sokullu, S. (2024). <em>Identification and 
 </div>
 <div id="ref-angristConditionalIndependenceSample1997" class="csl-entry" role="listitem">
 Angrist, J. D. (1997). Conditional independence in sample selection models. <em>Economics Letters</em>, <em>54</em>(2), 103–112. <a href="https://doi.org/10.1016/S0165-1765(97)00022-0">https://doi.org/10.1016/S0165-1765(97)00022-0</a>
-</div>
-<div id="ref-arkolakisCombinatorialDiscreteChoice2023" class="csl-entry" role="listitem">
-Arkolakis, C., Eckert, F., &amp; Shi, R. (2023). <em>Combinatorial <span>Discrete Choice</span>: <span>A Quantitative Model</span> of <span>Multinational Location Decision</span></em> (Working Paper No. 31877). National Bureau of Economic Research. <a href="https://doi.org/10.3386/w31877">https://doi.org/10.3386/w31877</a>
 </div>
 <div id="ref-berryEstimatingDiscreteChoiceModels1994" class="csl-entry" role="listitem">
 Berry, S. T. (1994). Estimating <span>Discrete-Choice Models</span> of <span>Product Differentiation</span>. <em>RAND Journal of Economics</em>, <em>25</em>(2), 242–262. <a href="https://doi.org/10.2307/2555829">https://doi.org/10.2307/2555829</a>

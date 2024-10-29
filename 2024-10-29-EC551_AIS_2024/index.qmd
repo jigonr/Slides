@@ -54,12 +54,15 @@ $$s_{jt} = d_{jt}(\delta_t, a_t) \equiv \int \frac{\textcolor{orange}{a_{jt}}\ex
   - $s^{(a)}_t = d^{(a)}_t(\delta^{(a)}_t)$ is always invertible [@berryEstimatingDiscreteChoiceModels1994]. 
 
 ## Model
-### Supply
-Two-stage game. 
+### Supply: Two-stage game. 
 
 #### **Second stage:** Active firms $j$ on market $t$ choose prices.
-- Firm's problem: $$\max_{p_{jt}} \left\{p_{jt} d^{(a)}_{jt}(p_{jt}, \cdot) H_{t}  - c(d^{(a)}_{jt}(p_{jt}, \cdot) H_{t}; x_{jt}, \omega_{jt}) - f(x_{jt}, \eta_{jt}) \right\}$$
-- Nash-Bertrand equilibrium: $$p_{jt}^{*} = \frac{\partial c(\cdot, \cdot)}{\partial q_{jt}} - d^{(a)}_{jt}(\cdot, \cdot) \left( \frac{\partial d^{(a)}_{jt}(\cdot, \cdot)}{\partial p_{jt}} \right)^{-1} \quad \forall j \in J$$
+- Firm's problem: 
+$$\max_{p_{jt}} \left\{p_{jt} d^{(a)}_{jt}(p_{jt}, \cdot) H_{t}  - c(d^{(a)}_{jt}(p_{jt}, \cdot) H_{t}; x_{jt}, \omega_{jt}) - f(x_{jt}, \eta_{jt}) \right\}$$
+
+- Nash-Bertrand equilibrium: 
+
+$$p_{jt}^{*} = \frac{\partial c(\cdot, \cdot)}{\partial q_{jt}} - d^{(a)}_{jt}(\cdot, \cdot) \left( \frac{\partial d^{(a)}_{jt}(\cdot, \cdot)}{\partial p_{jt}} \right)^{-1} \quad \forall j \in J$$
 
 ## Model
 ### Supply
@@ -138,22 +141,11 @@ Given the constructive identification procedure, estimation is straightforward.
   - $P_{j}(x, κ^{*})$: sieves binary logit structure. 
 - **Estimation method:** Maximum Likelihood (MLE) using the Expectation–maximization algorithm. 
 
+## Estimation
 ### Second step: Identification of Demand Parameters
 
 - **Functional forms:** Method of sieves and approximate each function $\psi_{j}(P_{j}(x_{t}, \kappa_{t}), x_{t})$ using a polynomial of order $L$ in the logarithm of the entry probability $P_{j}(x_{t}, \kappa_{t}).$
 - **Estimation method:** Generalised Method of Moments. 
-
-## Empirical application: Airline industry
-- Markups **drop** substantially:
-  - Benchmark (2SLS no selection): 1.25. 
-  - Controlling for selection (Finite mixture model (3 latent types)): 1.17. 
-- Own-price elasticities are **higher**. 
-  - Benchmark (2SLS no selection): −5.549.  
-  - Controlling for selection (Finite mixture model (3 latent types)): −8.000. 
-
-## Further research directions
-- @sabalProductEntryGlobal2024: Global automobile industry. Endogenous product entry and exit, heterogenous firms, and demand estimation. Bounds on the demand parameters. Timing of the game. 
-- @arkolakisCombinatorialDiscreteChoice2023: Trade and entry costs. Plant location. Economic intuition: explicit trade-off. Cannibalisation among production plants and substitution effects between them. 
 
 ## References
 
