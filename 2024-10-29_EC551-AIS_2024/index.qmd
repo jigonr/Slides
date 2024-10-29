@@ -153,7 +153,7 @@ Given the constructive identification procedure, estimation is straightforward.
 
 ## Further research directions
 - @sabalProductEntryGlobal2024: Global automobile industry. Endogenous product entry and exit, heterogenous firms, and demand estimation. Bounds on the demand parameters. Timing of the game. 
-- @arkolakisEntryCostsTrade2024: Trade and entry costs. Plant location. Economic intuition: explicit trade-off. Cannibalisation among production plants and substitution effects between them. 
+- @arkolakisCombinatorialDiscreteChoice2023: Trade and entry costs. Plant location. Economic intuition: explicit trade-off. Cannibalisation among production plants and substitution effects between them. 
 
 ## References
 
