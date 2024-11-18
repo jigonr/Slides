@@ -1368,8 +1368,7 @@ José Ignacio González Rojas
 <h3 id="under-assumptions-of-the-classical-linear-regression-model-hatbeta_j-sim-textnormalleftbeta_j-fracsigma2sum_i1n-x_ij---barx_j2-1---r_j2right-is-knowing-this-distribution-sufficient-for-hypothesis-testing-1">Under assumptions of the classical linear regression model: <span class="math inline">\(\hat{\beta}_{j} \sim \text{Normal}\left(\beta_{j}, \frac{\sigma^{2}}{\sum_{i=1}^{n} (x_{ij} - \bar{x}_{j})^2 (1 - R_{j}^2)}\right)\)</span> Is knowing this distribution sufficient for hypothesis testing?</h3>
 <h4 id="from-population-to-sample">From population to sample</h4>
 <ul>
-<li>To account for estimated <span class="math inline">\(\sigma^{2}\)</span>, we use the <span class="math inline">\(t\)</span>-distribution:<span class="math display">\[t = \frac{\hat{\beta}_{j} - \beta_{j}}{\text{SE}(\hat{\beta}_{j})} \sim t_{n-k-1}\]</span></li>
-<li>Degrees of freedom (<span class="math inline">\(n - k - 1\)</span>) adjust for the number of predictors.</li>
+<li>To account for estimated <span class="math inline">\(\sigma^{2}\)</span>, we use the <span class="math inline">\(t\)</span>-distribution: <span class="math display">\[t = \frac{\hat{\beta}_{j} - \beta_{j}}{\text{SE}(\hat{\beta}_{j})} \sim t_{n-k-1}\]</span></li>
 <li>The <span class="math inline">\(t\)</span>-distribution is wider than the normal distribution, reflecting the added uncertainty from estimating <span class="math inline">\(\sigma^{2}\)</span>. Converges to normal distribution as sample size grows.</li>
 </ul>
 </section>
@@ -1378,9 +1377,9 @@ José Ignacio González Rojas
 <h3 id="investigating-whether-tenure-as-a-ceo-or-in-the-company-influences-salaries.-two-regressions-were-runhatlntextsalary-4.4-0.11-lntextsales-0.19-lntextmarket-value---0.014-textprofit-margin-with-textssr_r-27-and-hatlntextsalary-4.2-0.12-lntextsales-0.19-lntextmarket-value---0.001-textprofit-margin---0.002-textcom-tenure-0.02-textceo-tenure-with-textssr_ur-25">Investigating whether tenure as a CEO or in the company influences salaries. Two regressions were run:<span class="math inline">\(\hat{\ln(\text{salary})} = 4.4 + 0.11 \ln(\text{sales}) + 0.19 \ln(\text{market value}) - 0.014 \text{profit margin}\)</span> with <span class="math inline">\(\text{SSR}_r = 27\)</span> and <span class="math inline">\(\hat{\ln(\text{salary})} = 4.2 + 0.12 \ln(\text{sales}) + 0.19 \ln(\text{market value}) - 0.001 \text{profit margin}\)</span> <span class="math inline">\(- 0.002 \text{com tenure} + 0.02 \text{ceo tenure}\)</span> with <span class="math inline">\(\text{SSR}_{ur} = 25\)</span></h3>
 <h4 id="do-tenure-variables-jointly-influence-salaries">Do tenure variables jointly influence salaries?</h4>
 <ul>
-<li><strong>Null Hypothesis (<span class="math inline">\(H_{0}\)</span>):</strong> <span class="math inline">\(\beta_{\text{com\_tenure}} = 0 \quad \text{and} \quad \beta_{\text{ceo\_tenure}} = 0\)</span></li>
+<li><strong>Null Hypothesis (<span class="math inline">\(H_{0}\)</span>):</strong> <span class="math inline">\(\beta_{\text{com tenure}} = 0 \quad \text{and} \quad \beta_{\text{ceo tenure}} = 0\)</span></li>
 <li><strong>Alternative Hypothesis (<span class="math inline">\(H_{1}\)</span>):</strong> <span class="math inline">\(\beta_{\text{com tenure}} \neq 0 \quad \text{or} \quad \beta_{\text{ceo tenure}} \neq 0\)</span></li>
-<li><strong>Test statistic:</strong> <span class="math inline">\(F = \frac{(\text{SSR}_r - \text{SSR}_{ur}) / q}{\text{SSR}_{ur} / (n - k - 1)}\)</span>.</li>
+<li><strong>Test statistic:</strong> <span class="math inline">\(F = \frac{(\text{SSR}_{r} - \text{SSR}_{ur}) / q}{\text{SSR}_{ur} / (n - k - 1)}\)</span>.</li>
 <li>Substituting values: <span class="math inline">\(F = \frac{(27 - 25) / 2}{25 / (106 - 5 - 1)} = \frac{2 / 2}{25 / 100} = 4\)</span></li>
 </ul>
 </section>
@@ -1396,7 +1395,7 @@ José Ignacio González Rojas
 </section>
 <section id="q7-statistical-inference-with-confidence-intervals" class="slide level2">
 <h2>Q7: Statistical Inference with Confidence Intervals</h2>
-<h3 id="analyzing-the-trade-off-between-work-hours-and-sleep-among-532-associates-at-a-law-firm.-hattextsleep-underset1283672---underset0.020.152-textwork---underset7.1411.2texteduc---underset30.420.4-lntextwage-underset1.640.80-textage">Analyzing the trade-off between work hours and sleep among 532 associates at a law firm. <span class="math inline">\(\hat{\text{sleep}} = \underset{(128)}{3672} - \underset{0.02}{0.152} \text{work} - \underset{(7.14)}{11.2}\text{educ} - \underset{(30.4)}{20.4} \ln(\text{wage}) + \underset{(1.64)}{0.80} \text{age}\)</span></h3>
+<h3 id="analyzing-the-trade-off-between-work-hours-and-sleep-among-532-associates-at-a-law-firm.-hattextsleep-underset1283672---underset0.020.152-textwork---underset7.1411.2texteduc---underset30.420.4-lntextwage-underset1.640.80-textage">Analyzing the trade-off between work hours and sleep among 532 associates at a law firm. <span class="math inline">\(\hat{\text{sleep}} = \underset{(128)}{3672} - \underset{(0.02)}{0.152} \text{work} - \underset{(7.14)}{11.2}\text{educ} - \underset{(30.4)}{20.4} \ln(\text{wage}) + \underset{(1.64)}{0.80} \text{age}\)</span></h3>
 <h4 id="what-do-the-coefficients-mean">What Do the Coefficients Mean?</h4>
 <ul>
 <li><span class="math inline">\(\beta_{\text{work}} = -0.152\)</span>: An additional minute of work per week reduces sleep by approximately 0.152 minutes (9 seconds).</li>
@@ -1406,10 +1405,10 @@ José Ignacio González Rojas
 </section>
 <section id="q7-statistical-inference-with-confidence-intervals-1" class="slide level2">
 <h2>Q7: Statistical Inference with Confidence Intervals</h2>
-<h3 id="analyzing-the-trade-off-between-work-hours-and-sleep-among-532-associates-at-a-law-firm.-hattextsleep-underset1283672---underset0.020.152-textwork---underset7.1411.2texteduc---underset30.420.4-lntextwage-underset1.640.80-textage-1">Analyzing the trade-off between work hours and sleep among 532 associates at a law firm. <span class="math inline">\(\hat{\text{sleep}} = \underset{(128)}{3672} - \underset{0.02}{0.152} \text{work} - \underset{(7.14)}{11.2}\text{educ} - \underset{(30.4)}{20.4} \ln(\text{wage}) + \underset{(1.64)}{0.80} \text{age}\)</span></h3>
+<h3 id="analyzing-the-trade-off-between-work-hours-and-sleep-among-532-associates-at-a-law-firm.-hattextsleep-underset1283672---underset0.020.152-textwork---underset7.1411.2texteduc---underset30.420.4-lntextwage-underset1.640.80-textage-1">Analyzing the trade-off between work hours and sleep among 532 associates at a law firm. <span class="math inline">\(\hat{\text{sleep}} = \underset{(128)}{3672} - \underset{(0.02)}{0.152} \text{work} - \underset{(7.14)}{11.2}\text{educ} - \underset{(30.4)}{20.4} \ln(\text{wage}) + \underset{(1.64)}{0.80} \text{age}\)</span></h3>
 <h4 id="constructing-95-confidence-intervals">Constructing 95% Confidence Intervals</h4>
 <ul>
-<li><strong>95% CI Formula:</strong> <span class="math inline">\(\hat{\beta}_j \pm t_{n-k-1} \cdot \text{SE}(\hat{\beta}_j)\)</span>
+<li><strong>95% CI Formula:</strong> <span class="math inline">\(\hat{\beta}_{j} \pm t_{n-k-1} \cdot \text{SE}(\hat{\beta}_j)\)</span>
 <ul>
 <li>For <span class="math inline">\(\beta_{\text{work}}\)</span>: <span class="math inline">\(-0.152 \pm 1.96 \cdot 0.02 = [-0.191, -0.113]\)</span></li>
 <li>For <span class="math inline">\(\beta_{\text{educ}}\)</span>: <span class="math inline">\(-11.2 \pm 1.96 \cdot 7.14 = [-25.19, 2.79]\)</span></li>
@@ -1423,7 +1422,7 @@ José Ignacio González Rojas
 </section>
 <section id="q7-statistical-inference-with-confidence-intervals-2" class="slide level2">
 <h2>Q7: Statistical Inference with Confidence Intervals</h2>
-<h3 id="analyzing-the-trade-off-between-work-hours-and-sleep-among-532-associates-at-a-law-firm.-hattextsleep-underset1283672---underset0.020.152-textwork---underset7.1411.2texteduc---underset30.420.4-lntextwage-underset1.640.80-textage-2">Analyzing the trade-off between work hours and sleep among 532 associates at a law firm. <span class="math inline">\(\hat{\text{sleep}} = \underset{(128)}{3672} - \underset{0.02}{0.152} \text{work} - \underset{(7.14)}{11.2}\text{educ} - \underset{(30.4)}{20.4} \ln(\text{wage}) + \underset{(1.64)}{0.80} \text{age}\)</span></h3>
+<h3 id="analyzing-the-trade-off-between-work-hours-and-sleep-among-532-associates-at-a-law-firm.-hattextsleep-underset1283672---underset0.020.152-textwork---underset7.1411.2texteduc---underset30.420.4-lntextwage-underset1.640.80-textage-2">Analyzing the trade-off between work hours and sleep among 532 associates at a law firm. <span class="math inline">\(\hat{\text{sleep}} = \underset{(128)}{3672} - \underset{(0.02)}{0.152} \text{work} - \underset{(7.14)}{11.2}\text{educ} - \underset{(30.4)}{20.4} \ln(\text{wage}) + \underset{(1.64)}{0.80} \text{age}\)</span></h3>
 <h4 id="comparing-90-and-95-confidence-intervals">Comparing 90% and 95% Confidence Intervals</h4>
 <ul>
 <li><strong>90% CI Formula:</strong> Use <span class="math inline">\(t_{n-k-1} = 1.645\)</span>.</li>
@@ -1437,14 +1436,14 @@ José Ignacio González Rojas
 </section>
 <section id="q7-statistical-inference-with-confidence-intervals-3" class="slide level2">
 <h2>Q7: Statistical Inference with Confidence Intervals</h2>
-<h3 id="analyzing-the-trade-off-between-work-hours-and-sleep-among-532-associates-at-a-law-firm.-hattextsleep-underset1283672---underset0.020.152-textwork---underset7.1411.2texteduc---underset30.420.4-lntextwage-underset1.640.80-textage-3">Analyzing the trade-off between work hours and sleep among 532 associates at a law firm. <span class="math inline">\(\hat{\text{sleep}} = \underset{(128)}{3672} - \underset{0.02}{0.152} \text{work} - \underset{(7.14)}{11.2}\text{educ} - \underset{(30.4)}{20.4} \ln(\text{wage}) + \underset{(1.64)}{0.80} \text{age}\)</span></h3>
+<h3 id="analyzing-the-trade-off-between-work-hours-and-sleep-among-532-associates-at-a-law-firm.-hattextsleep-underset1283672---underset0.020.152-textwork---underset7.1411.2texteduc---underset30.420.4-lntextwage-underset1.640.80-textage-3">Analyzing the trade-off between work hours and sleep among 532 associates at a law firm. <span class="math inline">\(\hat{\text{sleep}} = \underset{(128)}{3672} - \underset{(0.02)}{0.152} \text{work} - \underset{(7.14)}{11.2}\text{educ} - \underset{(30.4)}{20.4} \ln(\text{wage}) + \underset{(1.64)}{0.80} \text{age}\)</span></h3>
 <h4 id="evaluating-statistical-significance-intuitively">Evaluating Statistical Significance Intuitively</h4>
 <ul>
 <li>Does education (<span class="math inline">\(\beta_{\text{educ}}\)</span>) significantly affect sleep?
 <ul>
 <li><strong>CI for <span class="math inline">\(\beta_{\text{educ}}\)</span>:</strong> Includes zero at both 90% and 95% confidence levels.</li>
 <li><strong>Conclusion:</strong> Insufficient evidence to reject <span class="math inline">\(H_0: \beta_{\text{educ}} = 0\)</span>.</li>
-<li>For $_{} $, CI excludes zero → Statistically significant at 5% level.</li>
+<li>For <span class="math inline">\(\beta_{\text{work}}\)</span>, CI excludes zero → Statistically significant at 5% level.</li>
 </ul></li>
 </ul>
 </section>
