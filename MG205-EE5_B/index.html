@@ -1178,7 +1178,7 @@ José Ignacio González Rojas
 <h2>Today</h2>
 <ul>
 <li>Take attendance.</li>
-<li>Answer question.</li>
+<li>Answer questions.</li>
 <li>Present paper. Questions, comments, and concerns are welcome.<br>
 </li>
 <li>Answer questions about particular exercises.</li>
@@ -1254,13 +1254,13 @@ José Ignacio González Rojas
 <h2>Data and measurement</h2>
 <h3 id="variables">Variables</h3>
 <ul>
-<li><span class="math inline">\(\text{beauty}_j = \frac{\frac{1}{N_{j}}\sum_{j}\text{rating}_{ij} - \overline{\text{rating}}_{i}}{\text{SD}(\text{rating}_{ij})}\)</span>.
+<li><span class="math inline">\(\text{beauty}_{j} = \frac{\frac{1}{N_{i}}\sum_{i}\text{rating}_{ij} - \overline{\text{rating}}_{i}}{\text{SD}(\text{rating}_{ij})}\)</span>.
 <ul>
 <li>50 independent raters.</li>
 <li>Scale 1-5.</li>
 <li>Standardized scores (interpretation?).</li>
 </ul></li>
-<li><span class="math inline">\(\log(\text{actual performance})_{i} = \log(\text{mazes solved})_{i}\)</span>.</li>
+<li><span class="math inline">\(\log(\text{actual performance})_{j} = \log(\text{mazes solved})_{j}\)</span>.</li>
 <li><span class="math inline">\(\log(\text{confidence})_{j} = \log(\text{predicted mazes})_{j}\)</span>.</li>
 <li><span class="math inline">\(\log(\text{projected performance})_{j} = \log\left(\frac{15 \times 60}{\text{practice time}_{j}}\right)\)</span>.</li>
 </ul>
@@ -1281,8 +1281,8 @@ José Ignacio González Rojas
 <h3 id="worker-payment">Worker payment</h3>
 <p><span class="math display">\[
 \begin{align*}
-  \text{Payment}_{j} &amp;= 100 \times \text{Actual}_{i} \\
-  &amp;- 40|\text{Confidence}_{i} - \text{Actual}_{i}| \\
+  \text{Payment}_{j} &amp;= 100 \times \text{Actual}_{j} \\
+  &amp;- 40|\text{Confidence}_{j} - \text{Actual}_{j}| \\
   &amp;+ \sum_{i}\text{Wages}_{ij}
 \end{align*}  
 \]</span></p>
@@ -1308,7 +1308,7 @@ José Ignacio González Rojas
 <section id="testing-productivity-channel" class="slide level2">
 <h2>Testing Productivity Channel</h2>
 <h3 id="model">Model</h3>
-<p><span class="math display">\[\log(\text{actual})_{i} = \beta_{0} + \beta_{1}\text{beauty}_{i} + \gamma X_{ij} + \epsilon_{i}\]</span></p>
+<p><span class="math display">\[\log(\text{actual})_{j} = \beta_{0} + \beta_{1}\text{beauty}_{j} + \gamma X_{ij} + \epsilon_{j}\]</span></p>
 <h3 id="results">Results</h3>
 <ul>
 <li><span class="math inline">\(\hat{\beta}_{1} = -0.018\)</span> <span class="math inline">\((\text{SE}(\hat{\beta}_{1}) = 0.039)\)</span>.</li>
@@ -1322,10 +1322,10 @@ José Ignacio González Rojas
 <h4 id="models">Models</h4>
 <ol type="1">
 <li><p>Beauty → Confidence: <span class="math display">\[
-\log(\text{confidence})_{i} = \beta_{0} + \beta_{1}\text{beauty}_{i} + \beta_{2}\log(\text{actual})_{i} + \gamma X_{i} + \varepsilon_{i}
+\log(\text{confidence})_{j} = \beta_{0} + \beta_{1}\text{beauty}_{j} + \beta_{2}\log(\text{actual})_{j} + \gamma X_{j} + \varepsilon_{j}
 \]</span></p></li>
 <li><p>Beauty → Confidence → Wages: <span class="math display">\[
-\log(\text{wage})_{ij} = \beta_{0} + \beta_{1}\text{beauty}_{i} + \beta_{2}\log(\text{confidence})_{i} + \gamma X_{ij} + \varepsilon_{ij}
+\log(\text{wage})_{ij} = \beta_{0} + \beta_{1}\text{beauty}_{j} + \beta_{2}\log(\text{confidence})_{j} + \gamma X_{ij} + \varepsilon_{ij}
 \]</span></p></li>
 </ol>
 </section>
@@ -1349,7 +1349,7 @@ José Ignacio González Rojas
 <h2>Treatment effects on wages</h2>
 <h3 id="model-1">Model</h3>
 <p><span class="math display">\[
-\log(\text{wage})_{ij} = \beta_0 + \beta_1\text{beauty}_i + \gamma X_{ij} + \epsilon_{ij}
+\log(\text{wage})_{ij} = \beta_0 + \beta_1\text{beauty}_{j} + \gamma X_{ij} + \epsilon_{ij}
 \]</span></p>
 <p>Estimated by every treatment (B, V, O, F).</p>
 <h3 id="results-1">Results</h3>
@@ -1374,13 +1374,13 @@ José Ignacio González Rojas
 <div class="column" style="width:50%;">
 <h4 id="visual-channel">Visual Channel</h4>
 <ul>
-<li><span class="math inline">\(\beta_{2} = 0.094^{**}\)</span> <span class="math inline">\((\text{SE}(\beta_{2}) = 0.043)\)</span>.</li>
+<li><span class="math inline">\(\hat{\beta}_{2} = 0.094^{**}\)</span> <span class="math inline">\((\text{SE}(\beta_{2}) = 0.043)\)</span>.</li>
 <li>About 40% of total premium.</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h4 id="oral-channel">Oral Channel</h4>
 <ul>
-<li><span class="math inline">\(\beta_{3} = 0.103^{***}\)</span> <span class="math inline">\((\text{SE}(\beta_{3}) = 0.035)\)</span>.</li>
+<li><span class="math inline">\(\hat{\beta}_{3} = 0.103^{***}\)</span> <span class="math inline">\((\text{SE}(\beta_{3}) = 0.035)\)</span>.</li>
 <li>Another 40% of total premium.</li>
 </ul>
 </div></div>
@@ -1443,7 +1443,7 @@ José Ignacio González Rojas
 <ol type="1">
 <li>Employer bias through structured hiring.</li>
 <li>Worker confidence through training.</li>
-<li>Organizational practices through standardization.</li>
+<li>Organisational practices through standardisation.</li>
 </ol>
 </section>
 <section id="summary" class="slide level2">
