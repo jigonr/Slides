@@ -1168,9 +1168,9 @@ José Ignacio González Rojas
 <ul>
 <li>Recap of last term.</li>
 <li>Empirical application to refresh concepts.</li>
-<li>Linear regression model.</li>
-<li>Estimation.</li>
-<li>Inference.</li>
+<li>Linear regression and linear projection models.</li>
+<li>Identification, Estimation, and Inference.<br>
+</li>
 <li>Limitations of linear regression.</li>
 </ul>
 </section>
@@ -1192,7 +1192,7 @@ José Ignacio González Rojas
 </section>
 <section id="the-beauty-premium-a-puzzle" class="slide level2">
 <h2>The Beauty Premium: A Puzzle</h2>
-<h3 id="labor-economists-observe">Labor economists observe</h3>
+<h3 id="labour-economists-observe">Labour economists observe</h3>
 <ul>
 <li>Attractive workers earn 10-15% more.</li>
 <li>Premium exists across occupations.</li>
@@ -1200,8 +1200,8 @@ José Ignacio González Rojas
 <li>Similar magnitude to gender wage gap.</li>
 </ul>
 </section>
-<section id="research-question" class="slide level2">
-<h2>Research Question</h2>
+<section id="research-questions" class="slide level2">
+<h2>Research Questions</h2>
 <h3 id="two-fundamental-questions">Two fundamental questions</h3>
 <ol type="1">
 <li>Is the beauty premium causal?</li>
@@ -1258,7 +1258,7 @@ José Ignacio González Rojas
 <ul>
 <li>50 independent raters.</li>
 <li>Scale 1-5.</li>
-<li>Standardized scores (interpretation?).</li>
+<li>Standardised scores (interpretation?).</li>
 </ul></li>
 <li><span class="math inline">\(\log(\text{actual performance})_{j} = \log(\text{mazes solved})_{j}\)</span>.</li>
 <li><span class="math inline">\(\log(\text{confidence})_{j} = \log(\text{predicted mazes})_{j}\)</span>.</li>
@@ -1349,7 +1349,7 @@ José Ignacio González Rojas
 <h2>Treatment effects on wages</h2>
 <h3 id="model-1">Model</h3>
 <p><span class="math display">\[
-\log(\text{wage})_{ij} = \beta_0 + \beta_1\text{beauty}_{j} + \gamma X_{ij} + \epsilon_{ij}
+\log(\text{wage})_{ij} = \beta_0 + \beta_{1}\text{beauty}_{j} + \gamma X_{ij} + \epsilon_{ij}
 \]</span></p>
 <p>Estimated by every treatment (B, V, O, F).</p>
 <h3 id="results-1">Results</h3>
@@ -1365,8 +1365,8 @@ José Ignacio González Rojas
 <h3 id="model-2">Model</h3>
 <p><span class="math display">\[
 \begin{align*}
-\log(\text{wage})_{ij} &amp;= \beta_{0} + \beta_{1}\text{beauty}_{i} + \beta_{2}(\text{beauty}_i \times \text{visual}_{i}) + \beta_{3}(\text{beauty}_i \times \text{oral}_{i}) \\
-&amp;+ \beta_{4}(\text{beauty}_{i} \times \text{visual}_{i} \times \text{oral}_{i}) + \beta_{5}\log(\text{confidence})_{i} + \epsilon_{ij}
+\log(\text{wage})_{ij} &amp;= \beta_{0} + \beta_{1}\text{beauty}_{j} + \beta_{2}(\text{beauty}_{j} \times \text{visual}_{j}) + \beta_{3}(\text{beauty}_{j} \times \text{oral}_{j}) \\
+&amp;+ \beta_{4}(\text{beauty}_{j} \times \text{visual}_{j} \times \text{oral}_{j}) + \beta_{5}\log(\text{confidence})_{j} + \epsilon_{ij}
 \end{align*}
 \]</span></p>
 <h3 id="results-direct-effects">Results (Direct effects)</h3>
@@ -1374,13 +1374,13 @@ José Ignacio González Rojas
 <div class="column" style="width:50%;">
 <h4 id="visual-channel">Visual Channel</h4>
 <ul>
-<li><span class="math inline">\(\hat{\beta}_{2} = 0.094^{**}\)</span> <span class="math inline">\((\text{SE}(\beta_{2}) = 0.043)\)</span>.</li>
+<li><span class="math inline">\(\hat{\beta}_{2} = 0.094^{**}\)</span> <span class="math inline">\((\text{SE}(\hat{\beta}_{2}) = 0.043)\)</span>.</li>
 <li>About 40% of total premium.</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h4 id="oral-channel">Oral Channel</h4>
 <ul>
-<li><span class="math inline">\(\hat{\beta}_{3} = 0.103^{***}\)</span> <span class="math inline">\((\text{SE}(\beta_{3}) = 0.035)\)</span>.</li>
+<li><span class="math inline">\(\hat{\beta}_{3} = 0.103^{***}\)</span> <span class="math inline">\((\text{SE}(\hat{\beta}_{3}) = 0.035)\)</span>.</li>
 <li>Another 40% of total premium.</li>
 </ul>
 </div></div>
@@ -1389,10 +1389,10 @@ José Ignacio González Rojas
 <h2>Confidence Channel Analysis</h2>
 <h3 id="two-part-decomposition">Two-part decomposition</h3>
 <h4 id="total-effect">Total effect</h4>
-<p><span class="math display">\[\widehat{\log(\text{confidence})}_{i} = 0.16 \times \text{beauty}_{i} + \text{controls}
+<p><span class="math display">\[\widehat{\log(\text{confidence})}_{j} = 0.16 \times \text{beauty}_{j} + \text{controls}
 \]</span></p>
 <p><span class="math display">\[
-\frac{\partial \widehat{\log(\text{wage})}_{ij}}{\partial \widehat{\log(\text{confidence})}_{i}} = 0.27
+\frac{\partial \widehat{\log(\text{wage})}_{ij}}{\partial \widehat{\log(\text{confidence})}_{j}} = 0.27
 \]</span></p>
 <p><strong>Total effect:</strong> 3.6% (0.16 × 0.27).</p>
 </section>
@@ -1423,7 +1423,7 @@ José Ignacio González Rojas
 <li>Random assignment.</li>
 <li>Multiple treatments.</li>
 <li>Objective performance.</li>
-<li>Incentivized decisions.</li>
+<li>Incentivised decisions.</li>
 <li>Clear channels.</li>
 </ul>
 </section>
@@ -1450,10 +1450,10 @@ José Ignacio González Rojas
 <h2>Summary</h2>
 <h3 id="today-1">Today</h3>
 <ul>
-<li>Experimental design.</li>
-<li>Decomposition.</li>
+<li>Experimental design based on theoretical framework.</li>
+<li>Map theoretical predictions to empirical analysis.</li>
+<li>Treatments designed to disentangle the steoreotype channels.</li>
 <li>Interpretation of results.</li>
-<li>Channels of the beauty premium.</li>
 </ul>
 <h3 id="next-week">Next week</h3>
 <ul>
