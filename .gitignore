@@ -159,3 +159,13 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 *.DS_Store
+2024-11-21-MG523_AT/apa.csl
+2024-11-21-MG523_AT/bibliography.bib
+2024-11-21-MG523_AT/figures/dense.png
+2024-11-21-MG523_AT/figures/ei.png
+2024-11-21-MG523_AT/figures/martinez2024es.png
+2024-11-21-MG523_AT/figures/sparse.png
+2024-11-21-MG523_AT/figures/vertical.png
+2024-11-21-MG523_AT/index.html
+2024-11-21-MG523_AT/index.qmd
+2024-11-21-MG523_AT/slides.scss
