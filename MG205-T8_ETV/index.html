@@ -444,7 +444,7 @@
   <meta name="generator" content="quarto-1.5.55">
 
   <meta name="author" content="José Ignacio González Rojas">
-  <meta name="dcterms.date" content="2025-02-03">
+  <meta name="dcterms.date" content="2025-02-10">
   <title>Topic 8 Exploiting Time Variation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -1161,25 +1161,27 @@ José Ignacio González Rojas
     </div>
 </div>
 
-  <p class="date">February 3, 2025</p>
+  <p class="date">February 10, 2025</p>
 </section>
 <section id="last-week" class="slide level2">
 <h2>Last week</h2>
 <ul>
-<li>Experimental design.</li>
-<li>Interpretation of treatment effect through linear regression model.</li>
+<li>Alleviate omitted variable bias using panel data methods.</li>
+<li>Review of first-differences estimator.</li>
+<li>Write empirical models for panel data, emphasis on dummy variables.</li>
+<li>Predict the sign of the coefficients of a visual model.</li>
 </ul>
 </section>
 <section id="today" class="slide level2">
 <h2>Today</h2>
 <ul>
 <li>Take attendance.</li>
-<li>Solve Topic 8 Exercises related to repeated cross-sections and first-differences estimator.</li>
+<li>Solve Topic 8 Exercises related to fixed-effects estimator.</li>
 <li>Ask questions about the remaining exercises.</li>
 </ul>
 </section>
-<section id="q1-airline-competition-and-fares" class="slide level2">
-<h2>Q1: Airline Competition and Fares</h2>
+<section id="q1-airline-competition-and-fares-and-q4-panel-data" class="slide level2">
+<h2>Q1: Airline Competition and Fares and Q4: Panel data</h2>
 <h3 id="controlling-for-distance-might-not-be-enough-to-deal-with-omitted-variable-bias.-will-panel-data-help-200-routes-captured-in-2002-2007-and-2012">Controlling for distance might not be enough to deal with omitted variable bias. Will panel data help (200 routes captured in 2002, 2007, and 2012)?</h3>
 <h4 id="proposed-model">Proposed model</h4>
 <p><span class="math display">\[
@@ -1193,8 +1195,8 @@ José Ignacio González Rojas
 \end{align*}
 \]</span></p>
 </section>
-<section id="q1-airline-competition-and-fares-1" class="slide level2">
-<h2>Q1: Airline Competition and Fares</h2>
+<section id="q1-airline-competition-and-fares-and-q4-panel-data-1" class="slide level2">
+<h2>Q1: Airline Competition and Fares and Q4: Panel data</h2>
 <h3 id="controlling-for-distance-might-not-be-enough-to-deal-with-omitted-variable-bias.-will-panel-data-help-200-routes-captured-in-2002-2007-and-2012-1">Controlling for distance might not be enough to deal with omitted variable bias. Will panel data help (200 routes captured in 2002, 2007, and 2012)?</h3>
 <h4 id="estimated-model">Estimated model</h4>
 <p><span class="math display">\[
@@ -1208,8 +1210,8 @@ José Ignacio González Rojas
 u_{it} = \underbrace{\beta_{3}\text{\color{orange}{business relationships}}_{i}}_{\text{time-invariant route effect }\gamma_{i}} + \underbrace{\beta_{4}\text{oil price}_{t}}_{\text{route-invariant time effect }\delta_{t}} + \underbrace{\epsilon_{it}}_{\text{true error}}
 \]</span></p>
 </section>
-<section id="q1-airline-competition-and-fares-2" class="slide level2">
-<h2>Q1: Airline Competition and Fares</h2>
+<section id="q1-airline-competition-and-fares-and-q4-panel-data-2" class="slide level2">
+<h2>Q1: Airline Competition and Fares and Q4: Panel data</h2>
 <h3 id="controlling-for-distance-might-not-be-enough-to-deal-with-omitted-variable-bias.-will-panel-data-help-200-routes-captured-in-2002-2007-and-2012-2">Controlling for distance might not be enough to deal with omitted variable bias. Will panel data help (200 routes captured in 2002, 2007, and 2012)?</h3>
 <h4 id="first-differences-estimator">First-differences estimator</h4>
 <ul>
@@ -1218,15 +1220,15 @@ u_{it} = \underbrace{\beta_{3}\text{\color{orange}{business relationships}}_{i}}
 <li><strong>Example:</strong> <span class="math inline">\(\Delta \log(\text{fare})_{USA-UK,2007} = \log(\text{fare})_{USA-UK,2007} - \log(\text{fare})_{USA-UK,2002}\)</span>.</li>
 </ul></li>
 <li><strong>First Difference (2007-2002):</strong> <span class="math display">\[
-\Delta\log(fare_{i2007}) = \beta_{2}\Delta\text{competition}_{i2007} + \beta_{4}\Delta\text{oil price}_{2007} + \Delta\epsilon_{i2007}
+\Delta\log(\text{fare})_{i2007} = \beta_{2}\Delta\text{competition}_{i2007} + \beta_{4}\Delta\text{oil price}_{2007} + \Delta\epsilon_{i2007}
 \]</span></li>
 <li><strong>Second Difference (2012-2007):</strong> <span class="math display">\[
-\Delta\log(fare_{i2012}) = \beta_{2}\Delta\text{competition}_{i2012} + \beta_{4}\Delta\text{\color{orange}{oil price}}_{2012} + \Delta\epsilon_{i2012}
+\Delta\log(\text{fare})_{i2012} = \beta_{2}\Delta\text{competition}_{i2012} + \beta_{4}\Delta\text{\color{orange}{oil price}}_{2012} + \Delta\epsilon_{i2012}
 \]</span></li>
 </ul>
 </section>
-<section id="q1-airline-competition-and-fares-3" class="slide level2">
-<h2>Q1: Airline Competition and Fares</h2>
+<section id="q1-airline-competition-and-fares-and-q4-panel-data-3" class="slide level2">
+<h2>Q1: Airline Competition and Fares and Q4: Panel data</h2>
 <h3 id="controlling-for-distance-might-not-be-enough-to-deal-with-omitted-variable-bias.-will-panel-data-help-200-routes-captured-in-2002-2007-and-2012-3">Controlling for distance might not be enough to deal with omitted variable bias. Will panel data help (200 routes captured in 2002, 2007, and 2012)?</h3>
 <h4 id="first-differences-estimator-1">First-differences estimator</h4>
 <ul>
@@ -1239,18 +1241,72 @@ u_{it} = \underbrace{\beta_{3}\text{\color{orange}{business relationships}}_{i}}
 </section>
 <section id="q2-patents-rd-model" class="slide level2">
 <h2>Q2: Patents &amp; R&amp;D Model</h2>
-<h3 id="write-the-model-and-interpret-the-coefficients.">Write the model and interpret the coefficients.</h3>
-<h4 id="basic-model">Basic model:</h4>
-<p><span class="math display">\[\log(\text{patents})_{it} = \beta_{0} + \beta_{1}\log(\text{R\&amp;D})_{it} + \beta_{2}\mathbb{1}[t=2006] + \beta_{3}\mathbb{1}[t=2007] + e_{it}\]</span></p>
-<h4 id="time-varying-relationship-model">Time-varying relationship model</h4>
+<h3 id="understanding-time-varying-relationships">Understanding time-varying relationships</h3>
+<h4 id="basic-model-with-time-effects">Basic model with time effects</h4>
+<p><span class="math display">\[
+\log(\text{patents})_{it} = \beta_{0} + \beta_{1}\log(\text{R\&amp;D})_{it} + \beta_{2}\mathbb{1}[t=2006] + \beta_{3}\mathbb{1}[t=2007] + e_{it}
+\]</span></p>
+<h4 id="conditional-means-by-year">Conditional means by year</h4>
 <p><span class="math display">\[
 \begin{align*}
-  \log(\text{patents})_{it} &amp;= \beta_{0} + \beta_{1}\log(\text{R\&amp;D})_{it} \\
-  &amp;+ \beta_{2}\mathbb{1}[t=2006] + \beta_{3}\mathbb{1}[t=2007] \\
-  &amp;+ \beta_{4}(\log(\text{R\&amp;D})_{it} \times \mathbb{1}[t=2006]) + \beta_{5}(\log(\text{R\&amp;D})_{it} \times \mathbb{1}[t=2007]) \\
-  &amp;+ e_{it}
-\end{align*}  
+\mathbb{E}[\log(\text{patents})|t=2005] &amp;= \beta_{0} + \beta_{1}\log(\text{R\&amp;D}) \\
+\mathbb{E}[\log(\text{patents})|t=2006] &amp;= (\beta_{0} + \beta_{2}) + \beta_{1}\log(\text{R\&amp;D}) \\
+\mathbb{E}[\log(\text{patents})|t=2007] &amp;= (\beta_{0} + \beta_{3}) + \beta_{1}\log(\text{R\&amp;D})
+\end{align*}
 \]</span></p>
+</section>
+<section id="q2-patents-rd-model-1" class="slide level2">
+<h2>Q2: Patents &amp; R&amp;D Model</h2>
+<h3 id="understanding-time-varying-relationships-1">Understanding time-varying relationships</h3>
+<h4 id="interpreting-coefficients">Interpreting coefficients</h4>
+<ul>
+<li><span class="math inline">\(\beta_{2} = \mathbb{E}[\log(\text{patents})_{it}|t=2006] - \mathbb{E}[\log(\text{patents})_{it}|t=2005]\)</span>
+<ul>
+<li>Difference in patents between 2006 and base year (2005).</li>
+</ul></li>
+<li><span class="math inline">\(\beta_{3} = \mathbb{E}[\log(\text{patents})_{it}|t=2007] - \mathbb{E}[\log(\text{patents})_{it}|t=2005]\)</span>
+<ul>
+<li>Difference in patents between 2007 and base year (2005)</li>
+</ul></li>
+<li><span class="math inline">\(\beta_{1}\)</span>: Elasticity of patents with respect to R&amp;D.</li>
+</ul>
+</section>
+<section id="q2-patents-rd-model-2" class="slide level2">
+<h2>Q2: Patents &amp; R&amp;D Model</h2>
+<h3 id="time-varying-relationship-model">Time-varying relationship model</h3>
+<h4 id="model-with-interactions">Model with interactions</h4>
+<p><span class="math display">\[
+\begin{align*}
+\log(\text{patents})_{it} &amp;= \beta_{0} + \beta_{1}\log(\text{R\&amp;D})_{it} + \beta_{2}\mathbb{1}[t=2006] + \beta_{3}\mathbb{1}[t=2007] \\
+&amp;+ \beta_{4}(\log(\text{R\&amp;D})_{it} \times \mathbb{1}[t=2006]) \\
+&amp;+ \beta_{5}(\log(\text{R\&amp;D})_{it} \times \mathbb{1}[t=2007]) + e_{it}
+\end{align*}
+\]</span></p>
+<h4 id="conditional-means-by-year-1">Conditional means by year</h4>
+<p><span class="math display">\[
+\begin{align*}
+\mathbb{E}[\log(\text{patents})|t=2005] &amp;= \beta_{0} + \beta_{1}\log(\text{R\&amp;D}) \\
+\mathbb{E}[\log(\text{patents})|t=2006] &amp;= (\beta_{0} + \beta_{2}) + (\beta_{1} + \beta_{4})\log(\text{R\&amp;D}) \\
+\mathbb{E}[\log(\text{patents})|t=2007] &amp;= (\beta_{0} + \beta_{3}) + (\beta_{1} + \beta_{5})\log(\text{R\&amp;D})
+\end{align*}
+\]</span></p>
+</section>
+<section id="q2-patents-rd-model-3" class="slide level2">
+<h2>Q2: Patents &amp; R&amp;D Model</h2>
+<h3 id="time-varying-relationship-model-1">Time-varying relationship model</h3>
+<h4 id="interpreting-differential-effects">Interpreting differential effects</h4>
+<ul>
+<li><strong>Change in intercept:</strong>
+<ul>
+<li>2006: <span class="math inline">\(\beta_{2}\)</span> (level shift from 2005).</li>
+<li>2007: <span class="math inline">\(\beta_{3}\)</span> (level shift from 2005).</li>
+</ul></li>
+<li><strong>Change in slope:</strong>
+<ul>
+<li>2006: <span class="math inline">\(\beta_{4}\)</span> (additional effect of R&amp;D in 2006).</li>
+<li>2007: <span class="math inline">\(\beta_{5}\)</span> (additional effect of R&amp;D in 2007).</li>
+</ul></li>
+</ul>
 </section>
 <section id="q3-gender-wage-gap" class="slide level2">
 <h2>Q3: Gender Wage Gap</h2>
@@ -1265,13 +1321,47 @@ u_{it} = \underbrace{\beta_{3}\text{\color{orange}{business relationships}}_{i}}
 </section>
 <section id="q3-gender-wage-gap-1" class="slide level2">
 <h2>Q3: Gender Wage Gap</h2>
+<h3 id="conditional-means">Conditional means</h3>
+<h4 id="women-before-2005-base-category">Women before 2005 (base category)</h4>
+<p><span class="math display">\[
+\mathbb{E}[\log(\text{wages})_{it}|\text{male}_{i}=0,t&lt;2005] = \beta_{0} + \beta_{2}t
+\]</span></p>
+<h4 id="men-before-2005">Men before 2005</h4>
+<p><span class="math display">\[
+\mathbb{E}[\log(\text{wages})_{it}|\text{male}_{i}=1,t&lt;2005] = (\beta_{0} + \beta_{1}) + (\beta_{2} + \beta_{4})t
+\]</span></p>
+<h4 id="women-after-2005">Women after 2005</h4>
+<p><span class="math display">\[
+\mathbb{E}[\log(\text{wages})_{it}|\text{male}_{i}=0,t \geq 2005] = (\beta_{0} + \beta_{3}) + (\beta_{2} + \beta_{6})t
+\]</span></p>
+<h4 id="men-after-2005">Men after 2005</h4>
+<p><span class="math display">\[
+\mathbb{E}[\log(\text{wages})_{it}|\text{male}_{i}=1,t \geq 2005] = (\beta_{0} + \beta_{5}) + (\beta_{2} + \beta_{7})t
+\]</span></p>
+</section>
+<section id="q3-gender-wage-gap-2" class="slide level2">
+<h2>Q3: Gender Wage Gap</h2>
+<h3 id="interpreting-coefficients-1">Interpreting coefficients</h3>
+<h4 id="pre-2005-differences">Pre-2005 differences</h4>
+<ul>
+<li><strong>Level difference:</strong> <span class="math inline">\(\beta_{1}\)</span> (male wage premium)</li>
+<li><strong>Trend difference:</strong> <span class="math inline">\(\beta_{4}\)</span> (differential growth rate for men)</li>
+</ul>
+<h4 id="post-2005-changes">Post-2005 changes</h4>
+<ul>
+<li><strong>Additional level shift:</strong> <span class="math inline">\(\beta_{5}\)</span> (change in male premium)</li>
+<li><strong>Additional trend shift:</strong> <span class="math inline">\(\beta_{7}\)</span> (change in male growth rate)</li>
+</ul>
+</section>
+<section id="q3-gender-wage-gap-3" class="slide level2">
+<h2>Q3: Gender Wage Gap</h2>
 <h3 id="write-an-empirical-model-to-capture-the-evolution-of-male-and-female-wages-over-time-1">Write an empirical model to capture the evolution of male and female wages over time</h3>
 <h4 id="empirical-model">Empirical model</h4>
 <p><span class="math display">\[
 \begin{align*}
-  \log(\text{wages})_{it} &amp;= \beta_{0} + \beta_{1}\mathbb{1}[i=\text{male}] + \beta_{2}t + \beta_{3}\mathbb{1}[t=2005] + \beta_{4}(\mathbb{1}[i=\text{male}] \times t) \\
-  &amp;+ \beta_{5}(\mathbb{1}[1=\text{male}] \times \mathbb{1}[t=2005]) + \beta_{6}(t\times \mathbb{1}[t=2005]) \\
-  &amp;+ \beta_{7}(t\times\mathbb{1}[t=2005]\times\mathbb{1}[i=\text{male}]) + e_{it}
+  \log(\text{wages})_{it} &amp;= \beta_{0} + \beta_{1}\mathbb{1}[i=\text{male}] + \beta_{2}t + \beta_{3}\mathbb{1}[t\geq 2005] + \beta_{4}(\mathbb{1}[i=\text{male}] \times t) \\
+  &amp;+ \beta_{5}(\mathbb{1}[i=\text{male}] \times \mathbb{1}[t\geq 2005]) + \beta_{6}(t\times \mathbb{1}[t\geq 2005]) \\
+  &amp;+ \beta_{7}(t\times\mathbb{1}[t\geq 2005]\times\mathbb{1}[i=\text{male}]) + e_{it}
 \end{align*}
 \]</span></p>
 <div class="columns">
@@ -1296,29 +1386,289 @@ u_{it} = \underbrace{\beta_{3}\text{\color{orange}{business relationships}}_{i}}
 </ul>
 </div></div>
 </section>
+<section id="q5-panel-data-and-measurement-error" class="slide level2">
+<h2>Q5: Panel Data and Measurement Error</h2>
+<h3 id="understanding-measurement-error-in-education">Understanding measurement error in education</h3>
+<h4 id="true-vs.-observed-education">True vs. Observed education</h4>
+<ul>
+<li><strong>True education:</strong> <span class="math inline">\(\text{educ}^{*}_{it}\)</span> (unobserved).</li>
+<li><strong>Observed education:</strong> <span class="math inline">\(\text{educ}_{it} = \text{educ}^*_{it} + e_{it}\)</span>.
+<ul>
+<li><span class="math inline">\(e_{it}\)</span> is measurement error.</li>
+<li>Independent across time and individuals.</li>
+<li>Uncorrelated with true education.</li>
+</ul></li>
+</ul>
+</section>
+<section id="q5-panel-data-and-measurement-error-1" class="slide level2">
+<h2>Q5: Panel Data and Measurement Error</h2>
+<h3 id="cross-sectional-model">Cross-sectional model</h3>
+<h4 id="population-model">Population model</h4>
+<p><span class="math display">\[
+\log(\text{wage})_{i} = \alpha + \beta\text{educ}^*_{i} + \epsilon_{i}
+\]</span></p>
+<h4 id="observed-model">Observed model</h4>
+<p><span class="math display">\[
+\log(\text{wage})_{i} = \alpha + \beta(\text{educ}_{i} - e_{i}) + \epsilon_{i}
+\]</span></p>
+<h4 id="attenuation-bias">Attenuation bias</h4>
+<p><span class="math display">\[
+\text{plim }\hat{\beta} = \beta\left(\frac{\text{var}(\text{educ}^*)}{\text{var}(\text{educ}^*) + \text{var}(e)}\right)
+\]</span></p>
+</section>
+<section id="q5-panel-data-and-measurement-error-2" class="slide level2">
+<h2>Q5: Panel Data and Measurement Error</h2>
+<h3 id="panel-data-first-differences">Panel data first differences</h3>
+<h4 id="first-difference-of-observed-education">First difference of observed education</h4>
+<p><span class="math display">\[
+\Delta\text{educ}_{i} = \Delta\text{educ}^*_{i} + (e_{i2} - e_{i1})
+\]</span></p>
+<h4 id="first-difference-model">First difference model</h4>
+<p><span class="math display">\[
+\Delta\log(\text{wage})_{i} = \beta\Delta\text{educ}^*_{i} + \Delta\epsilon_{i}
+\]</span></p>
+</section>
+<section id="q5-panel-data-and-measurement-error-3" class="slide level2">
+<h2>Q5: Panel Data and Measurement Error</h2>
+<h3 id="why-is-attenuation-bias-worse">Why is attenuation bias worse?</h3>
+<h4 id="variance-decomposition">Variance decomposition</h4>
+<p><span class="math display">\[
+\text{p}\lim\hat{\beta}_{\text{FD}} = \beta\left(\frac{\text{var}(\Delta\text{educ}^*)}{\text{var}(\Delta\text{educ}^*) + \text{var}(\Delta e)}\right)
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\text{var}(\Delta\text{educ}^*)\)</span> is small (education changes little).</li>
+<li><span class="math inline">\(\text{var}(\Delta e) = \text{var}(e_1) + \text{var}(e_2)\)</span> is larger than the cross-sectional model.</li>
+<li>Ratio becomes very small → severe attenuation bias.</li>
+</ul>
+</section>
 <section id="q7-why-cluster-standard-errors-in-panel-data" class="slide level2">
 <h2>Q7: Why cluster standard errors in panel data?</h2>
 <h3 id="non-random-sampling">Non-random sampling</h3>
-<h4 id="at-what-level-is-the-unit-of-analysis-consider-independent-of-others">At what level is the unit of analysis consider independent of others?</h4>
+<h4 id="at-what-level-is-the-unit-of-analysis-considered-independent-of-others">At what level is the unit of analysis considered independent of others?</h4>
 <ul>
 <li>Are my earnings correlated <strong>over time?</strong> The history of my wages is independent of the history of wages of other individuals.</li>
-<li>Did the training <strong>assigned to the department</strong> affected the performance of all the workers in that department? Were there <strong>spillovers</strong> within the department? The error terms of the workers within the department are correlated. The performance within the department is independent of the performance of other departments.</li>
+<li>Did the training <strong>assigned to the department</strong> affect the performance of all workers in that department? Were there <strong>spillovers</strong> within the department? The error terms of the workers within the department are correlated. The performance within the department is independent of the performance of other departments.</li>
 </ul>
 <p><strong>Do statistical inference considering the unit of analysis where the observations are independent.</strong></p>
+</section>
+<section id="q8-drug-usage-and-police-force.-how-to-control-for-time-trends" class="slide level2">
+<h2>Q8: Drug Usage and Police Force. How to control for time trends?</h2>
+<h3 id="models">Models</h3>
+<h4 id="linear-time-trend">Linear Time Trend</h4>
+<p><span class="math display">\[
+\text{Drugs usage}_{it} = \mu \text{post}_t + \theta_{i} + \gamma t + \epsilon_{it}
+\]</span></p>
+<h4 id="time-fixed-effects">Time Fixed Effects</h4>
+<p><span class="math display">\[
+\text{Drugs usage}_{it} = \mu \text{post}_{t} + \theta_{i} + \rho_{t} + \epsilon_{it}
+\]</span></p>
+<h4 id="interpreting-gamma">Interpreting <span class="math inline">\(\gamma\)</span></h4>
+<p><span class="math inline">\(\gamma\)</span> represents the average change in drug usage per time period, assuming this change is constant across all periods</p>
+</section>
+<section id="q8-drug-usage-and-police-force.-how-to-control-for-time-trends-1" class="slide level2">
+<h2>Q8: Drug Usage and Police Force. How to control for time trends?</h2>
+<h3 id="treatment-effect-is-not-identified-with-time-fixed-effects">Treatment effect is not identified with time fixed effects</h3>
+<h4 id="consider-a-simple-case-with-4-periods">Consider a simple case with 4 periods</h4>
+<ul>
+<li><strong>Time trend:</strong> <span class="math inline">\(\text{time}_{t} = \{1,2,3,4\}\)</span>.</li>
+<li><strong>Treatment starts at <span class="math inline">\(t=3\)</span>:</strong> <span class="math inline">\(\text{post}_{t} = \{0,0,1,1\}\)</span>.</li>
+</ul>
+<p>The effect of post and time fixed effects are perfectly collinear: <span class="math display">\[
+\text{post}_{t} = \begin{cases}
+1 &amp; \text{if } t \geq 3 \\
+0 &amp; \text{otherwise}
+\end{cases} \quad \quad
+\rho_{3} = \mathbb{1}[t=3] = \begin{cases}
+1 &amp; \text{if } t = 3 \\
+0 &amp; \text{otherwise}
+\end{cases}
+\]</span></p>
+</section>
+<section id="q8-drug-usage-and-police-force.-how-to-control-for-time-trends-2" class="slide level2">
+<h2>Q8: Drug Usage and Police Force. How to control for time trends?</h2>
+<h3 id="linear-time-trend-1">Linear Time Trend</h3>
+<h4 id="advantages">Advantages</h4>
+<ul>
+<li>Parsimonious specification (trend is captured in a single parameter).</li>
+<li>Clear interpretation of treatment effect.</li>
+</ul>
+<h4 id="limitations">Limitations</h4>
+<ul>
+<li>Assumes constant trend.</li>
+<li>Misses potential non-linearities.</li>
+<li>Cannot capture seasonality.</li>
+<li>Restrictive for complex temporal patterns.</li>
+</ul>
+</section>
+<section id="q9-age-effects-on-earnings.-how-to-model-age-effects" class="slide level2">
+<h2>Q9: Age Effects on Earnings. How to model age effects?</h2>
+<h3 id="alternative-specifications">Alternative Specifications</h3>
+<h4 id="dummy-variable-approach">Dummy Variable Approach</h4>
+<p><span class="math display">\[
+\log(\text{earnings})_{it} = \alpha_{i} + \theta_{t} + \sum_{j=17}^{85} \gamma_{j} \mathbb{1}[\text{age}_{it}=j] + \epsilon_{it}
+\]</span></p>
+<p><span class="math inline">\(\gamma_{j}\)</span> represents the earnings premium relative to 16-year-olds.</p>
+<h4 id="parametric-approaches">Parametric Approaches</h4>
+<ol type="1">
+<li><strong>Linear:</strong> <span class="math inline">\(\beta_{1} \text{age}_{it}\)</span></li>
+<li><strong>Quadratic:</strong> <span class="math inline">\(\beta_{1} \text{age}_{it} + \beta_{2} \text{age}_{it}^{2}\)</span>.</li>
+</ol>
+</section>
+<section id="q9-age-effects-on-earnings.-how-to-model-age-effects-1" class="slide level2">
+<h2>Q9: Age Effects on Earnings. How to model age effects?</h2>
+<h3 id="trade-offs-in-age-effect-estimation">Trade-offs in Age Effect Estimation</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="dummy-variables">Dummy Variables</h4>
+<ul>
+<li>Fully flexible.</li>
+<li>No functional form assumptions.</li>
+<li>Requires large sample size.</li>
+<li>May be imprecise for rare ages.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 id="parametric-forms">Parametric Forms</h4>
+<ul>
+<li>More efficient estimation.</li>
+<li>Smoother predictions.</li>
+<li>Stronger assumptions.</li>
+<li>May miss non-parametric patterns.</li>
+</ul>
+</div></div>
+</section>
+<section id="q9-age-effects-on-earnings.-how-to-model-age-effects-2" class="slide level2">
+<h2>Q9: Age Effects on Earnings. How to model age effects?</h2>
+<h3 id="variance-formula-for-age-effects">Variance Formula for Age Effects</h3>
+<p><span class="math display">\[
+\text{Var}(\hat{\gamma}_{j}) = \frac{\sigma^{2}}{\sum_{i,t} (\mathbb{1}[\text{age}_{it}=j]-\overline{\mathbb{1}[\text{age}_{it}=j]})(1-R^{2}_{j})}
+\]</span></p>
+<ul>
+<li>Fewer observations at extreme ages → larger variance.</li>
+<li><span class="math inline">\(\overline{\mathbb{1}[\text{age}_{it}=j]}\)</span> is the share of observations at age <span class="math inline">\(j\)</span>.</li>
+<li><strong>Example:</strong>
+<ul>
+<li>If only 5 workers aged 85 vs. 1000 workers aged 35.</li>
+<li><strong>Comparative:</strong> <span class="math inline">\(\text{var}(\hat{\gamma}_{85}) \approx 200 \times \text{Var}(\hat{\gamma}_{35})\)</span>, holding constant <span class="math inline">\(\sigma^{2}\)</span> and <span class="math inline">\(R^{2}_{j}\)</span>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="q10-selection-and-treatmet-effects-in-panel-data" class="slide level2">
+<h2>Q10: Selection and treatmet effects in Panel Data</h2>
+<h3 id="understanding-worker-productivity-and-performance-pay">Understanding Worker Productivity and Performance Pay</h3>
+<p>Consider a transition probability <span class="math inline">\(\pi_{it}\)</span> that worker <span class="math inline">\(i\)</span> remains in the sample at time <span class="math inline">\(t\)</span>:</p>
+<p><span class="math display">\[\pi_{it} = \mathbb{P}(\text{observed}_{it} = 1 \mid \text{observed}_{i,t-1} = 1). \]</span></p>
+<h4 id="initial-regression-results">Initial regression results</h4>
+<p><span class="math display">\[
+\widehat{\log(\text{productivity})}_{it} = \underset{(.78)}{5.2} + \underset{(.03)}{.20}\text{performance pay}_{t}
+\]</span></p>
+<h4 id="with-fixed-effects">With fixed effects</h4>
+<p><span class="math display">\[
+\widehat{\log(\text{productivity})}_{it} = \hat{\alpha}_{i} + \underset{(.02)}{.10}\text{performance pay}_{t}
+\]</span></p>
+</section>
+<section id="q10-selection-and-treatmet-effects-in-panel-data-1" class="slide level2">
+<h2>Q10: Selection and treatmet effects in Panel Data</h2>
+<h3 id="total-productivity-change-0.20-can-be-decomposed-into">Total productivity change (0.20) can be decomposed into</h3>
+<p><span class="math display">\[
+\begin{align*}
+\Delta\text{Productivity} &amp;= \underbrace{0.10}_{\text{Within}} + \underbrace{0.10}_{\text{Selection}} \\
+&amp;= \mathbb{E}[\Delta\text{prod}\mid \pi_{it}=1] + (\mathbb{E}[\text{prod}\mid \pi_{it}=1] - \mathbb{E}[\text{prod}\mid \pi_{it}=0])
+\end{align*}
+\]</span></p>
+</section>
+<section id="q10-selection-vs.-incentive-effects" class="slide level2">
+<h2>Q10: Selection vs. Incentive Effects</h2>
+<h3 id="interpreting-the-results">Interpreting the Results</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="within-worker-effect-0.10">Within-Worker Effect (0.10)</h4>
+<p><span class="math display">\[\mathbb{E}[\Delta\text{prod}\mid \pi_{it}=1]\]</span></p>
+<ul>
+<li>Existing workers increase productivity.</li>
+<li>Pure incentive effect.</li>
+<li>Identified through fixed effects.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 id="selection-effect-0.10">Selection Effect (0.10)</h4>
+<p><span class="math display">\[\mathbb{E}[\text{prod}\mid \pi_{it}=1] - \mathbb{E}[\text{prod}\mid \pi_{it}=0]\]</span></p>
+<ul>
+<li>Difference between stayers and leavers.</li>
+<li>Composition change in workforce.</li>
+<li>More productive workers self-select into performance pay.</li>
+</ul>
+</div></div>
+</section>
+<section id="q11-strawberry-farm-productivity" class="slide level2">
+<h2>Q11: Strawberry Farm Productivity</h2>
+<h3 id="initial-model">Initial Model</h3>
+<p><span class="math display">\[
+\begin{align*}
+  \text{productivity}_{it} &amp;= \beta_{0} + \beta_{1} \mathbb{1}[\text{contingent}_{t} = 1] + \beta_{2} \text{weather}_{t} + \beta_{3} \text{width}_{it} \\
+  &amp;+ \beta_{4} \text{height}_{it} + e_{it}
+\end{align*}
+\]</span></p>
+<h3 id="enhanced-model-with-fixed-effects">Enhanced Model with Fixed Effects</h3>
+<p><span class="math display">\[
+\begin{align*}
+  \text{productivity}_{it} &amp;=\beta_{1} \mathbb{1}[\text{contingent}_{t} = 1] + \beta_{2} \text{weather}_{t} + \beta_{3} \text{width}_{it} \\
+  &amp;+ \beta_{4} \text{height}_{it} + \gamma_{i} + e_{it}
+\end{align*}
+\]</span></p>
+<ul>
+<li>Omitted variable bias.</li>
+<li>Selection bias.</li>
+</ul>
+</section>
+<section id="q12-call-center-team-leader-effects" class="slide level2">
+<h2>Q12: Call Center Team Leader Effects</h2>
+<h3 id="proposed-population-model">Proposed population model</h3>
+<p><span class="math display">\[
+\text{productivity}_{ijt} = \lambda_{i} + \mu_{j} + \theta_{t} + \epsilon_{ijt}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\lambda_{i}\)</span>: Operator fixed effects.</li>
+<li><span class="math inline">\(\mu_{j}\)</span>: Team leader fixed effects.</li>
+<li><span class="math inline">\(\theta_{t}\)</span>: Day fixed effects.</li>
+</ul>
+<h3 id="implementing-the-f-test">Implementing the F-test</h3>
+<h4 id="step-1-null-hypothesis">Step 1: Null Hypothesis</h4>
+<p><span class="math display">\[H_{0}: \mu_{2} = \mu_{3} = \ldots = \mu_{J} = 0\]</span></p>
+<p>where <span class="math inline">\(J\)</span> is the total number of team leaders, with leader 1 as reference category.</p>
+</section>
+<section id="q12-call-center-team-leader-effects-1" class="slide level2">
+<h2>Q12: Call Center Team Leader Effects</h2>
+<h3 id="implementing-the-f-test-1">Implementing the F-test</h3>
+<h4 id="step-2-test-statistic">Step 2: Test Statistic</h4>
+<p><span class="math display">\[F = \frac{(RSS_{R} - RSS_{U})/(J-1)}{RSS_{U}/(N-K)} \sim F_{J-1,N-K}\]</span></p>
+<ul>
+<li><span class="math inline">\(RSS_R\)</span>: Restricted model (no leader effects).</li>
+<li><span class="math inline">\(RSS_U\)</span>: Unrestricted model (with leader effects).</li>
+<li><span class="math inline">\(N\)</span>: Total observations.</li>
+<li><span class="math inline">\(K\)</span>: Total parameters in unrestricted model.</li>
+</ul>
+</section>
+<section id="q12-call-center-team-leader-effects-2" class="slide level2">
+<h2>Q12: Call Center Team Leader Effects</h2>
+<h3 id="implementing-the-f-test-2">Implementing the F-test</h3>
+<h4 id="step-3-decision-rule">Step 3: Decision rule</h4>
+<ol type="1">
+<li>Compute F-statistic.</li>
+<li>Compare to critical value from <span class="math inline">\(F_{J-1,N-K}\)</span> distribution at <span class="math inline">\(\alpha\)</span> significance level.</li>
+<li>Reject <span class="math inline">\(H_{0}\)</span> if <span class="math inline">\(F &gt; F_{\text{critical}}\)</span>.</li>
+</ol>
+<p><strong>Interpretation:</strong> Rejection indicates significant differences in team leader effectiveness.</p>
 </section>
 <section id="summary" class="slide level2">
 <h2>Summary</h2>
 <h3 id="today-1">Today</h3>
 <ul>
-<li>Alleviate omitted variable bias using panel data methods.</li>
-<li>Review of first-differences estimator.</li>
-<li>Write empirical models for panel data.</li>
-<li>Predict the sign of the coefficients of a visual model.</li>
-<li>Cluster standard errors in panel data.</li>
+<li>Functional forms.</li>
+<li>Selection bias.</li>
+<li>Hypothesis testing.</li>
 </ul>
 <h3 id="next-week">Next week</h3>
 <ul>
-<li>Fixed effects estimator.</li>
+<li>Differences-in-differences estimator.</li>
 </ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
