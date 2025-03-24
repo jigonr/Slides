@@ -1321,7 +1321,7 @@ José Ignacio González Rojas
 <h2>Question 5</h2>
 <h3 id="write-down-the-formula-for-the-simple-correlation-between-y-and-haty.-show-that-this-simple-correlation-is-equal-to-the-square-root-of-r2.-1">Write down the formula for the simple correlation between <span class="math inline">\(y\)</span> and <span class="math inline">\(\hat{y}\)</span>. Show that this simple correlation is equal to the square root of <span class="math inline">\(R^{2}\)</span>.</h3>
 <h4 id="proof-2">Proof</h4>
-<p>First, we calculate the variance of <span class="math inline">\(y\)</span>. <span class="bg">Look at the additional notes for further derivations.</span></p>
+<p>First, we calculate the variance of <span class="math inline">\(y\)</span>. The covariance between <span class="math inline">\(\hat{y}\)</span> and <span class="math inline">\(\hat{\epsilon}\)</span> is zero due to the mechanical properties of OLS.</p>
 <p><span class="math display">\[
 \begin{align*}
   \text{var}(y) &amp;= \text{var}(\hat{y} + \hat{\epsilon}) \\
@@ -1399,7 +1399,7 @@ Figure 1: From population to sample
 <p><span class="bg">Estimator:</span> Statistic (function of the data) to infer the value of an unknown parameter.</p>
 <p>From the population to the sample, we have:</p>
 <ul>
-<li><strong>Estimand</strong> <span class="math inline">\(Y_{i} = \beta_{0} + \beta_{1} x_{i} + e_{i}\)</span></li>
+<li><strong>Estimand:</strong> <span class="math inline">\(Y_{i} = \beta_{0} + \beta_{1} x_{i} + e_{i}\)</span></li>
 <li><strong>Estimator:</strong> <span class="math inline">\(\hat{\beta}_{1} = \frac{\text{cov}(y_{i}, x_{i})}{\text{var}(x_{i})}.\)</span></li>
 <li><strong>Estimate:</strong> <span class="math inline">\(\hat{\beta}_{1} = 0.5\)</span>.</li>
 </ul>
@@ -1485,7 +1485,8 @@ Figure 1: From population to sample
 <h2>Question 9</h2>
 <h3 id="what-if-we-minimise-the-absolute-deviations-rather-than-the-squared-deviations">What if we minimise the absolute deviations rather than the squared deviations?</h3>
 <ul>
-<li>The OLS estimator is the best linear unbiased estimator for the homeskedastic linear regression model. (Topic 3)</li>
+<li>Due to the Gauss-Markov theorem, we know the OLS estimator is the best linear unbiased estimator for the homoskedastic linear regression model.</li>
+<li>There are other linear unbiased estimator, but, they are not as efficient.</li>
 <li>If we minimise the absolute deviations, we would be modelling the median.</li>
 </ul>
 <p><span class="math display">\[\text{Median[Y|X]} = \beta_{0} + \beta_{1}X_{i}\]</span></p>
