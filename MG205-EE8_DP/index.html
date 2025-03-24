@@ -1186,12 +1186,9 @@ José Ignacio González Rojas
 <section id="last-week" class="slide level2">
 <h2>Last week</h2>
 <ul>
-<li>Instrumental variables to address endogeneity in lobbying research.</li>
-<li>Political exits as source of identification.</li>
-<li>Importance of first-stage relationship strength.<br>
-</li>
-<li>Potential violations of exclusion restriction.</li>
-<li>Examining coefficient sensitivity to specification changes.</li>
+<li>Use plausibly exogenous exit of politicians to estimate the value of political connections.</li>
+<li>Connections theory is supported by the data.</li>
+<li>Difference-in-differences research design.</li>
 </ul>
 </section>
 <section>
@@ -1211,7 +1208,6 @@ José Ignacio González Rojas
 <ul>
 <li>Analysing DiD and IV approaches in death penalty research.</li>
 <li>Assessing identification strategies and robustness.</li>
-<li>Implications for causal inference and policy.</li>
 </ul>
 </section>
 <section id="research-question" class="slide level2">
@@ -1231,9 +1227,9 @@ José Ignacio González Rojas
 <li>Death penalty is maximum possible sanction.</li>
 </ul>
 </div><div class="column" style="width:45%;">
-<h4 id="brutalization-hypothesis">Brutalization hypothesis</h4>
+<h4 id="brutalisation-hypothesis">Brutalisation hypothesis</h4>
 <ul>
-<li>State violence legitimizes killing.</li>
+<li>State violence legitimises killing.</li>
 <li>Devalues human life in society.</li>
 <li>May increase aggression and homicide.</li>
 </ul>
@@ -1270,7 +1266,7 @@ José Ignacio González Rojas
 <h2>Effect of legal death penalty on homicide rates</h2>
 <h3 id="non-robust-results-of-dezhbakhshdeterrenteffectcapital2006">Non-robust results of <span class="citation" data-cites="dezhbakhshDeterrentEffectCapital2006">Dezhbakhsh &amp; Shepherd (<a href="#/references" role="doc-biblioref" onclick>2006</a>)</span></h3>
 <p><span class="math display">\[
-\underbrace{\frac{\text{Murders}_{st}}{\frac{\text{Population}_{st}}{100,000}}}_{\text{Homicide rate}_{st}} = \alpha_{s} + \gamma_{t} + \beta \cdot \mathbb{1}[\text{Legal Death Penalty}] + \text{Controls}_{st} + \varepsilon_{st}
+\underbrace{\frac{\text{Murders}_{st}}{\frac{\text{Population}_{st}}{100,000}}}_{\text{Homicide rate}_{st}} = \alpha_{s} + \gamma_{t} + \beta \cdot \mathbb{1}[\text{Legal Death Penalty}_{st}] + \text{Controls}_{st} + \varepsilon_{st}
 \]</span></p>
 <table class="caption-top">
 <colgroup>
@@ -1289,7 +1285,7 @@ José Ignacio González Rojas
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(\mathbb{1}[\text{Legal Death Penalty}]\)</span></td>
+<td><span class="math inline">\(\mathbb{1}[\text{Legal Death Penalty}_{st}]\)</span></td>
 <td><span class="math inline">\(\underset{(0.205)}{-0.955^{***}}\)</span></td>
 <td><span class="math inline">\(\underset{(0.565)}{-0.955^{*}}\)</span></td>
 <td><span class="math inline">\(\underset{(0.727)}{-0.472}\)</span></td>
@@ -1315,8 +1311,8 @@ José Ignacio González Rojas
 <tr class="odd">
 <td>Standard errors</td>
 <td>Robust</td>
-<td>Clustered (State)</td>
-<td>Clustered (State)</td>
+<td>Clustered: State</td>
+<td>Clustered: State</td>
 </tr>
 </tbody>
 </table>
@@ -1385,34 +1381,31 @@ José Ignacio González Rojas
 <h4 id="instruments-republican-vote-share-textrvs-in-state-sc-on-the-last-presidential-election-interacted-with-governments-term"><strong>Instruments:</strong> Republican Vote Share (<span class="math inline">\(\text{RVS}\)</span>) in state <span class="math inline">\(s(c)\)</span> on the last presidential election interacted with government’s term</h4>
 <p><span class="math display">\[
 \begin{align*}
-x_{ct} &amp;= \delta_{1} \text{Police Expenditure}_{ct} + \delta_{2} \text{Judicial Expenditure}_{ct} \\
-&amp;+ \delta_{3} \frac{\text{Prisoners}_{ct}}{\frac{\text{Population}_{ct}}{100,000}} + \theta_{\lceil \frac{t-72}{4}\rceil} (\text{RVS}_{s(c), 4\cdot (\lfloor\frac{t}{4}\rfloor-1)} \times \mathbb{1}[\text{Last EY} = \lceil \frac{t-72}{4}\rceil]) \\
+x_{ct} &amp;= \delta_{1} \text{Police Expenditure}_{s(c)t} + \delta_{2} \text{Judicial Expenditure}_{s(c)t} \\
+&amp;+ \delta_{3} \frac{\text{Prisoners}_{s(c)t}}{\frac{\text{Population}_{s(c)t}}{100,000}} + \theta_{\lceil \frac{t-72}{4}\rceil} (\text{RVS}_{s(c), 4\cdot (\lfloor\frac{t}{4}\rfloor-1)} \times \mathbb{1}[\text{Last EY} = \lceil \frac{t-72}{4}\rceil]) \\
 &amp;+ \beta \cdot \text{Controls}_{ct} + \eta_{c} + \lambda_{t} + \varepsilon_{ct}
 \end{align*}
 \]</span></p>
 </section>
 <section id="instrumental-variable-approach-of-dezhbakhshdoescapitalpunishment2003-1" class="slide level2">
 <h2>Instrumental variable approach of <span class="citation" data-cites="dezhbakhshDoesCapitalPunishment2003">Dezhbakhsh et al. (<a href="#/references" role="doc-biblioref" onclick>2003</a>)</span></h2>
-<h3 id="first-stage-population-models-for-mathbbptextarrest_st-mathbbptextdeath-sentence_st-and-mathbbptextexecution_st">First-stage population models for <span class="math inline">\(\mathbb{P}[\text{Arrest}_{st}]\)</span>, <span class="math inline">\(\mathbb{P}[\text{Death sentence}_{st}]\)</span>, and <span class="math inline">\(\mathbb{P}[\text{Execution}_{st}]\)</span></h3>
+<h3 id="first-stage-population-models-for-mathbbptextarrest_ct-mathbbptextdeath-sentence_ct-and-mathbbptextexecution_ct-1">First-stage population models for <span class="math inline">\(\mathbb{P}[\text{Arrest}_{ct}]\)</span>, <span class="math inline">\(\mathbb{P}[\text{Death sentence}_{ct}]\)</span>, and <span class="math inline">\(\mathbb{P}[\text{Execution}_{ct}]\)</span></h3>
 <h4 id="instrument-republican-vote-share-textrvs-in-county-sc-on-the-last-presidential-election"><strong>Instrument:</strong> Republican Vote Share (<span class="math inline">\(\text{RVS}\)</span>) in county <span class="math inline">\(s(c)\)</span> on the last presidential election</h4>
 <p><span class="math display">\[
 \begin{align*}
-   x_{ct} &amp;= \delta_{1} \text{Police Expenditure}_{ct} + \delta_{2} \text{Judicial Expenditure}_{ct} \\
-   &amp;+ \delta_{3} \frac{\text{Prisoners}_{ct}}{\frac{\text{Population}_{ct}}{100,000}} + \theta_{\lceil \frac{t-72}{4}\rceil} \text{RVS}_{s(c), 4\cdot (\lfloor\frac{t}{4}\rfloor-1)} + \beta \cdot \text{Controls}_{ct} + \eta_{c} + \lambda_{t} + \varepsilon_{ct}
+   x_{ct} &amp;= \delta_{1} \text{Police Expenditure}_{s(c)t} + \delta_{2} \text{Judicial Expenditure}_{s(c)t} \\
+   &amp;+ \delta_{3} \frac{\text{Prisoners}_{s(c)t}}{\frac{\text{Population}_{s(c)t}}{100,000}} + \theta_{\lceil \frac{t-72}{4}\rceil} \text{RVS}_{s(c), 4\cdot (\lfloor\frac{t}{4}\rfloor-1)} + \beta \cdot \text{Controls}_{ct} + \eta_{c} + \lambda_{t} + \varepsilon_{ct}
+\end{align*}
+\]</span></p>
+<h3 id="second-stage-population-model-for-texthomicide-rate_ct">Second-stage population model for <span class="math inline">\(\text{Homicide Rate}_{ct}\)</span></h3>
+<p><span class="math display">\[
+\begin{align*}
+   \text{Homicide Rate}_{ct} &amp;= \beta_{1} \widehat{\mathbb{P}[\text{Arrest}_{ct}]} + \beta_{2} \widehat{\mathbb{P}[\text{Death sentence}_{ct}]} + \beta_{3} \widehat{\mathbb{P}[\text{Execution}_{ct}]} \\
+   &amp;+ \text{Controls}_{ct} + \eta_{c} + \lambda_{t} + \nu_{ct}
 \end{align*}
 \]</span></p>
 </section>
 <section id="instrumental-variable-approach-of-dezhbakhshdoescapitalpunishment2003-2" class="slide level2">
-<h2>Instrumental variable approach of <span class="citation" data-cites="dezhbakhshDoesCapitalPunishment2003">Dezhbakhsh et al. (<a href="#/references" role="doc-biblioref" onclick>2003</a>)</span></h2>
-<h3 id="second-stage-population-model-for-texthomicide-rate_st">Second-stage population model for <span class="math inline">\(\text{Homicide Rate}_{st}\)</span></h3>
-<p><span class="math display">\[
-\begin{align*}
-   \text{Homicide Rate}_{st} &amp;= \beta_{1} \widehat{\mathbb{P}[\text{Arrest}_{ct}]} + \beta_{2} \widehat{\mathbb{P}[\text{Death sentence}_{ct}]} + \beta_{3} \widehat{\mathbb{P}[\text{Execution}_{ct}]} \\
-   &amp;+ \Gamma \cdot \text{Controls}_{ct} + \eta_{c} + \lambda_{t} + \nu_{ct}
-\end{align*}
-\]</span></p>
-</section>
-<section id="instrumental-variable-approach-of-dezhbakhshdoescapitalpunishment2003-3" class="slide level2">
 <h2>Instrumental variable approach of <span class="citation" data-cites="dezhbakhshDoesCapitalPunishment2003">Dezhbakhsh et al. (<a href="#/references" role="doc-biblioref" onclick>2003</a>)</span></h2>
 <h3 id="non-robust-results">Non-robust results</h3>
 <table class="caption-top">
@@ -1434,25 +1427,25 @@ x_{ct} &amp;= \delta_{1} \text{Police Expenditure}_{ct} + \delta_{2} \text{Judic
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(\mathbb{P}[\text{Arrest}_{st}]\)</span></td>
+<td><span class="math inline">\(\mathbb{P}[\text{Arrest}_{ct}]\)</span></td>
 <td><span class="math inline">\(\underset{(6.761)}{-11.124^{*}}\)</span></td>
-<td><span class="math inline">\(\underset{(10.033)}{-11.124}\)</span></td>
+<td><span class="math inline">\(\underset{(10.773)}{-11.124}\)</span></td>
 <td><span class="math inline">\(\underset{(6.854)}{-9.735}\)</span></td>
-<td><span class="math inline">\(\underset{(9.944)}{-9.735}\)</span></td>
+<td><span class="math inline">\(\underset{(11.422)}{-9.735}\)</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(\mathbb{P}[\text{Death sentence}_{st}]\)</span></td>
+<td><span class="math inline">\(\mathbb{P}[\text{Death sentence}_{ct}]\)</span></td>
 <td><span class="math inline">\(\underset{(143.194)}{-106.156}\)</span></td>
-<td><span class="math inline">\(\underset{(156.143)}{-106.156}\)</span></td>
+<td><span class="math inline">\(\underset{(205.797)}{-106.156}\)</span></td>
 <td><span class="math inline">\(\underset{(128.473)}{-62.012}\)</span></td>
-<td><span class="math inline">\(\underset{(155.068)}{-62.012}\)</span></td>
+<td><span class="math inline">\(\underset{(229.449)}{-62.012}\)</span></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(\mathbb{P}[\text{Execution}_{st}]\)</span></td>
+<td><span class="math inline">\(\mathbb{P}[\text{Execution}_{ct}]\)</span></td>
 <td><span class="math inline">\(\underset{(7.975)}{0.921}\)</span></td>
-<td><span class="math inline">\(\underset{(11.579)}{0.921}\)</span></td>
+<td><span class="math inline">\(\underset{(12.796)}{0.921}\)</span></td>
 <td><span class="math inline">\(\underset{(7.393)}{4.429}\)</span></td>
-<td><span class="math inline">\(\underset{(11.094)}{4.429}\)</span></td>
+<td><span class="math inline">\(\underset{(12.490)}{4.429}\)</span></td>
 </tr>
 <tr class="even">
 <td>Instrument</td>
@@ -1464,35 +1457,35 @@ x_{ct} &amp;= \delta_{1} \text{Police Expenditure}_{ct} + \delta_{2} \text{Judic
 <tr class="odd">
 <td>Standard Errors</td>
 <td>Robust</td>
-<td>Cl: County</td>
+<td>Cl: State</td>
 <td>Robust</td>
-<td>Cl: County</td>
+<td>Cl: State</td>
 </tr>
 <tr class="even">
-<td>F: <span class="math inline">\(\mathbb{P}[\text{Arrest}_{st}]\)</span></td>
+<td>F: <span class="math inline">\(\mathbb{P}[\text{Arrest}_{ct}]\)</span></td>
 <td><span class="math inline">\(3.23^{***}\)</span></td>
-<td><span class="math inline">\(4.87^{***}\)</span></td>
+<td><span class="math inline">\(25.32^{***}\)</span></td>
 <td><span class="math inline">\(3.11^{**}\)</span></td>
-<td><span class="math inline">\(2.36^{*}\)</span></td>
+<td><span class="math inline">\(4.42^{***}\)</span></td>
 </tr>
 <tr class="odd">
-<td>F: <span class="math inline">\(\mathbb{P}[\text{Death sent.}_{st}]\)</span></td>
+<td>F: <span class="math inline">\(\mathbb{P}[\text{Death sent.}_{ct}]\)</span></td>
 <td><span class="math inline">\(3.97^{***}\)</span></td>
-<td><span class="math inline">\(4.45^{***}\)</span></td>
+<td><span class="math inline">\(1.62\)</span></td>
 <td><span class="math inline">\(4.10^{***}\)</span></td>
-<td><span class="math inline">\(3.29^{**}\)</span></td>
+<td><span class="math inline">\(0.40\)</span></td>
 </tr>
 <tr class="even">
-<td>F: <span class="math inline">\(\mathbb{P}[\text{Execution}_{st}]\)</span></td>
+<td>F: <span class="math inline">\(\mathbb{P}[\text{Execution}_{ct}]\)</span></td>
 <td><span class="math inline">\(20.08^{***}\)</span></td>
-<td><span class="math inline">\(19.17^{***}\)</span></td>
+<td><span class="math inline">\(2.66^{**}\)</span></td>
 <td><span class="math inline">\(40.64^{***}\)</span></td>
-<td><span class="math inline">\(35.17^{***}\)</span></td>
+<td><span class="math inline">\(3.22^{**}\)</span></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="instrumental-variable-approach-of-dezhbakhshdoescapitalpunishment2003-4" class="slide level2">
+<section id="instrumental-variable-approach-of-dezhbakhshdoescapitalpunishment2003-3" class="slide level2">
 <h2>Instrumental variable approach of <span class="citation" data-cites="dezhbakhshDoesCapitalPunishment2003">Dezhbakhsh et al. (<a href="#/references" role="doc-biblioref" onclick>2003</a>)</span></h2>
 <h3 id="additional-non-robustness">Additional non-robustness</h3>
 <table class="caption-top">
@@ -1510,19 +1503,19 @@ x_{ct} &amp;= \delta_{1} \text{Police Expenditure}_{ct} + \delta_{2} \text{Judic
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(\mathbb{P}[\text{Arrest}_{st}]\)</span></td>
+<td><span class="math inline">\(\mathbb{P}[\text{Arrest}_{ct}]\)</span></td>
 <td><span class="math inline">\(\underset{(36.259)}{-4.114}\)</span></td>
-<td><span class="math inline">\(\underset{(43.114)}{-11.124}\)</span></td>
+<td><span class="math inline">\(\underset{(99.742)}{-4.114}\)</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(\mathbb{P}[\text{Death sentence}_{st}]\)</span></td>
+<td><span class="math inline">\(\mathbb{P}[\text{Death sentence}_{ct}]\)</span></td>
 <td><span class="math inline">\(\underset{(5,959.129)}{2,160.544}\)</span></td>
-<td><span class="math inline">\(\underset{(4,111.186)}{2,160.544}\)</span></td>
+<td><span class="math inline">\(\underset{(12,815.36)}{2,160.544}\)</span></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(\mathbb{P}[\text{Execution}_{st}]\)</span></td>
+<td><span class="math inline">\(\mathbb{P}[\text{Execution}_{ct}]\)</span></td>
 <td><span class="math inline">\(\underset{(7.975)}{23.450}\)</span></td>
-<td><span class="math inline">\(\underset{(57.417)}{23.450}\)</span></td>
+<td><span class="math inline">\(\underset{(176.845)}{23.450}\)</span></td>
 </tr>
 <tr class="even">
 <td>Instrument</td>
@@ -1532,34 +1525,88 @@ x_{ct} &amp;= \delta_{1} \text{Police Expenditure}_{ct} + \delta_{2} \text{Judic
 <tr class="odd">
 <td>Standard Errors</td>
 <td>Robust</td>
-<td>Cl: County</td>
+<td>Cl: State</td>
 </tr>
 <tr class="even">
-<td>F: <span class="math inline">\(\mathbb{P}[\text{Arrest}_{st}]\)</span></td>
+<td>F: <span class="math inline">\(\mathbb{P}[\text{Arrest}_{ct}]\)</span></td>
 <td><span class="math inline">\(3.84^{***}\)</span></td>
-<td><span class="math inline">\(2.76^{**}\)</span></td>
+<td><span class="math inline">\(5.93^{***}\)</span></td>
 </tr>
 <tr class="odd">
-<td>F: <span class="math inline">\(\mathbb{P}[\text{Death sent.}_{st}]\)</span></td>
+<td>F: <span class="math inline">\(\mathbb{P}[\text{Death sent.}_{ct}]\)</span></td>
 <td><span class="math inline">\(0.77\)</span></td>
-<td><span class="math inline">\(0.51\)</span></td>
+<td><span class="math inline">\(0.08\)</span></td>
 </tr>
 <tr class="even">
-<td>F: <span class="math inline">\(\mathbb{P}[\text{Execution}_{st}]\)</span></td>
+<td>F: <span class="math inline">\(\mathbb{P}[\text{Execution}_{ct}]\)</span></td>
 <td><span class="math inline">\(53.50^{***}\)</span></td>
-<td><span class="math inline">\(45.38^{***}\)</span></td>
+<td><span class="math inline">\(4.22^{***}\)</span></td>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="instrumental-variable-approach-of-dezhbakhshdoescapitalpunishment2003-4" class="slide level2">
+<h2>Instrumental variable approach of <span class="citation" data-cites="dezhbakhshDoesCapitalPunishment2003">Dezhbakhsh et al. (<a href="#/references" role="doc-biblioref" onclick>2003</a>)</span></h2>
+<h3 id="instruments-should-not-be-correlated-with-controls">Instruments should not be correlated with controls</h3>
+<table class="caption-top">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><span class="math inline">\(\text{Assault rate}_{ct}\)</span></th>
+<th><span class="math inline">\(\text{Assault rate}_{ct}\)</span></th>
+<th><span class="math inline">\(\text{Robbery rate}_{ct}\)</span></th>
+<th><span class="math inline">\(\text{Robbery rate}_{ct}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\text{Police exp.}_{s(c)t}\)</span></td>
+<td><span class="math inline">\(\underset{(1.89 \times 10^{-5})}{-9.29 \times 10^{-6}}\)</span></td>
+<td><span class="math inline">\(\underset{(1.79 \times 10^{-5})}{-1.04 \times 10^{-5}}\)</span></td>
+<td><span class="math inline">\(\underset{(4.22 \times 10^{-5})}{-4.1 \times 10^{-5}}\)</span></td>
+<td><span class="math inline">\(\underset{(4.28 \times 10^{-5})}{-4.21 \times 10^{-5}}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\text{Judicial exp.}_{s(c)t}\)</span></td>
+<td><span class="math inline">\(\underset{(2.97 \times 10^{-5})}{8.58 \times 10^{-6}}\)</span></td>
+<td><span class="math inline">\(\underset{(2.54 \times 10^{-5})}{1.52 \times 10^{-5}}\)</span></td>
+<td><span class="math inline">\(\underset{(6.7 \times 10^{-5})}{3.48 \times 10^{-5}}\)</span></td>
+<td><span class="math inline">\(\underset{(6.77 \times 10^{-5})}{4.16 \times 10^{-5}}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\frac{\text{Prisoners}_{s(c)t}}{\frac{\text{Population}_{s(c)t}}{100,000}}\)</span></td>
+<td><span class="math inline">\(\underset{(0.00121)}{0.00168}\)</span></td>
+<td><span class="math inline">\(\underset{(0.00123)}{0.00155}\)</span></td>
+<td><span class="math inline">\(\underset{(7.84 \times 10^{-4})}{0.00325^{**}}\)</span></td>
+<td><span class="math inline">\(\underset{(7.14 \times 10^{-4})}{0.00310^{**}}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\text{RVS}_{s(c)t}\)</span></td>
+<td>-</td>
+<td><span class="math inline">\(\underset{(1.247)}{1.259}\)</span></td>
+<td>-</td>
+<td><span class="math inline">\(\underset{(0.655)}{1.300^{*}}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="fg"><em>County and year fixed effects. Standard errors clustered at the state level.</em></span></p>
 </section>
 <section id="summary" class="slide level2">
 <h2>Summary</h2>
 <h3 id="today-1">Today</h3>
 <ul>
-<li>Robustness on IV.</li>
-<li>Exclusion restriction.</li>
-<li>Sample selection.</li>
-<li>F-test for first-stage.</li>
+<li>Big statements should be supported by robust empirical evidence.</li>
+<li>Clustering standard errors at the correct-level makes the difference.</li>
+<li>Outliers can drive results.</li>
+<li>IV approach is not a panacea.</li>
+<li>Sensitivity analysis is crucial.</li>
 </ul>
 <h3 id="next-week">Next week</h3>
 <ul>
