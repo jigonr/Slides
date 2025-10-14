@@ -988,7 +988,7 @@ margin-right: 0; }
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">MG205: Econometrics Theory and Applications</h1>
-  <p class="subtitle">Topic 2: Linear Regression Model (Exercises 1-5)</p>
+  <p class="subtitle">Topic 2: Linear Regression Model</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -1015,7 +1015,7 @@ José Ignacio González-Rojas
 <ul>
 <li>How to structure a proof</li>
 <li>Moving from “given” to “show”</li>
-<li>Recognizing when steps are valid</li>
+<li>Recognising when steps are valid</li>
 <li>Connecting algebra to concepts</li>
 </ul>
 </div><div class="column" style="width:50%;">
@@ -1037,46 +1037,20 @@ José Ignacio González-Rojas
 <h4 id="the-population-unknown-truth">The Population (Unknown Truth)</h4>
 <p><span class="math display">\[y_{i} = \beta_{0} + \beta_{1} x_{i} + e_{i}\]</span></p>
 <ul>
-<li><strong>What it is</strong>: The true relationship</li>
-<li><strong>Parameters</strong>: <span class="math inline">\(\beta_0, \beta_1\)</span> (constants we want)</li>
-<li><strong>Error</strong>: <span class="math inline">\(e_{i}\)</span> (random, unobservable)</li>
+<li><strong>Fixed Values</strong>: <span class="math inline">\(\beta_0, \beta_1, e_i\)</span></li>
+<li><strong>Parameters of interest:</strong> <span class="math inline">\(\beta_0, \beta_1\)</span></li>
+<li><strong>Error</strong>: <span class="math inline">\(e_{i}\)</span></li>
 <li><strong>Operators</strong>: <span class="math inline">\(\text{cov}(x,y)\)</span>, <span class="math inline">\(\text{var}(x)\)</span>, <span class="math inline">\(\mathbb{E}[\cdot]\)</span></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<h4 id="our-sample-what-we-observe">Our Sample (What We Observe)</h4>
+<h4 id="our-sample-what-we-observe-and-estimate-from-the-data">Our Sample (What We Observe and Estimate from the Data)</h4>
 <p><span class="math display">\[y_{i} = \hat{\beta}_0 + \hat{\beta}_1 x_{i} + \hat{\varepsilon}_{i}\]</span></p>
 <ul>
-<li><strong>What it is</strong>: Our estimate from data</li>
-<li><strong>Estimates</strong>: <span class="math inline">\(\hat{\beta}_{0}, \hat{\beta}_{1}\)</span> (calculated)</li>
-<li><strong>Residual</strong>: <span class="math inline">\(\hat{\varepsilon}_{i}\)</span> (calculated, observable)</li>
+<li><strong>Estimates</strong>: <span class="math inline">\(\hat{\beta}_{0}, \hat{\beta}_{1}\)</span></li>
+<li><strong>Residual</strong>: <span class="math inline">\(\hat{\varepsilon}_{i}\)</span></li>
 <li><strong>Operators</strong>: <span class="math inline">\(\widehat{\text{cov}}(x,y)\)</span>, <span class="math inline">\(\widehat{\text{var}}(x)\)</span>, <span class="math inline">\(\bar{x}\)</span></li>
 </ul>
 </div></div>
-</section>
-<section id="a-common-mistake-to-avoid" class="slide level2">
-<h2>A Common Mistake to Avoid</h2>
-<h3 id="errors-are-not-residuals">Errors Are NOT Residuals</h3>
-<div class="columns">
-<div class="column" style="width:45%;">
-<h4 id="wrong-thinking">❌ WRONG Thinking</h4>
-<p>“The errors sum to zero because OLS makes them sum to zero”</p>
-<p><strong>Why it’s wrong</strong>:</p>
-<ul>
-<li>OLS doesn’t touch <span class="math inline">\(e_{i}\)</span></li>
-<li>We never see true errors</li>
-<li>They exist before we estimate</li>
-</ul>
-</div><div class="column" style="width:55%;">
-<h4 id="correct-thinking">✓ CORRECT Thinking</h4>
-<p>“The RESIDUALS sum to zero by construction, but ERRORS are random draws”</p>
-<p><strong>Why it’s right</strong>:</p>
-<ul>
-<li><span class="math inline">\(\sum \hat{\varepsilon}_{i} = 0\)</span> (always, by FOC)</li>
-<li><span class="math inline">\(\sum e_{i} \neq 0\)</span> (random sum)</li>
-<li>Different objects entirely</li>
-</ul>
-</div></div>
-<p><span class="bg"><strong>Remember:</strong> Hats <span class="math inline">\(\hat{\cdot}\)</span> mean “estimated from our sample”</span></p>
 </section>
 <section>
 <section id="exercise-1-correlation-and-slope" class="title-slide slide level1 section-slide center">
@@ -1087,7 +1061,7 @@ José Ignacio González-Rojas
 <h2>If Correlation is Negative, Slope Must Be Too</h2>
 <h3 id="understanding-what-were-asked-to-prove">Understanding What We’re Asked to Prove</h3>
 <h4 id="mathematical-statement">Mathematical Statement</h4>
-<p>If <span class="math inline">\(\rho(y,x) &lt; 0\)</span>, then <span class="math inline">\(\hat{\beta}_{1} &lt; 0\)</span></p>
+<p>If <span class="math inline">\(\rho(y,x) &lt; 0\)</span>, then <span class="math inline">\(\beta_{1} &lt; 0\)</span></p>
 <h4 id="what-this-means">What This Means</h4>
 <ul>
 <li><strong>Given</strong>: We know correlation is negative</li>
@@ -1100,49 +1074,49 @@ José Ignacio González-Rojas
 <h3 id="the-key-to-our-proof">The Key to Our Proof</h3>
 <div class="columns">
 <div class="column" style="width:50%;">
-<h4 id="ols-slope-formula">OLS Slope Formula</h4>
-<p><span class="math display">\[
-\hat{\beta}_{1} =
-\frac{
-  \color{#EE7733}{\widehat{\text{cov}}(x,y)}
-}{
-  \color{#0077BB}{\widehat{\text{var}}(x)}
-}
-\]</span></p>
-</div><div class="column" style="width:50%;">
 <h4 id="correlation-formula">Correlation Formula</h4>
 <p><span class="math display">\[
 \rho(x,y) =
 \frac{
-  \color{#EE7733}{\widehat{\text{cov}}(x,y)}
+  \color{#EE7733}{\text{cov}(x,y)}
 }{
-  \sqrt{\color{#0077BB}{\widehat{\text{var}}(x)}} \cdot \sqrt{\widehat{\text{var}}(y)}
+  \sqrt{\color{#0077BB}{\text{var}(x)}} \cdot \sqrt{\text{var}(y)}
+}
+\]</span></p>
+</div><div class="column" style="width:50%;">
+<h4 id="ols-slope-formula">OLS Slope Formula</h4>
+<p><span class="math display">\[
+\beta_{1} =
+\frac{
+  \color{#EE7733}{\text{cov}(x,y)}
+}{
+  \color{#0077BB}{\text{var}(x)}
 }
 \]</span></p>
 </div></div>
-<p><span class="fg">Notice: Both have <span class="math inline">\(\color{#EE7733}{\widehat{\text{cov}}(x,y)}\)</span> in the numerator</span></p>
+<p><span class="fg">Both have <span class="math inline">\(\color{#EE7733}{\text{cov}(x,y)}\)</span> in the numerator</span></p>
 </section>
 <section id="the-sign-depends-only-on-covariance" class="slide level2 emphasis-slide">
 <h2>The Sign Depends Only on Covariance</h2>
-<h3 id="analyzing-each-formulas-sign">Analyzing Each Formula’s Sign</h3>
 <div class="columns">
-<div class="column" style="width:47%;">
-<h4 id="for-the-slope-hatbeta_1">For the Slope <span class="math inline">\(\hat{\beta}_1\)</span>:</h4>
-<p><span class="math display">\[\hat{\beta}_1 = \frac{\widehat{\text{cov}}(x,y)}{\widehat{\text{var}}(x)}\]</span></p>
+<div class="column" style="width:50%;">
+<h3 id="analysing-the-sign-of-the-correlation-rhoxy">Analysing the Sign of the Correlation <span class="math inline">\(\rho(x,y)\)</span></h3>
+<p><span class="math display">\[\rho(x,y) = \frac{\text{cov}(x,y)}{\underbrace{\sqrt{\text{var}(x)}}_{+} \cdot \underbrace{\sqrt{\text{var}(y)}}_{+}}\]</span></p>
 <ul>
-<li><strong>Denominator</strong>: Always positive (sum of squares)</li>
-<li><span class="math inline">\(\therefore\text{sign}(\hat{\beta}_1) = \text{sign}(\widehat{\text{cov}}(x,y))\)</span></li>
+<li><span class="math inline">\(\therefore\text{sign}(\rho(x,y)) = \text{sign}(\text{cov}(x,y))\)</span></li>
 </ul>
-</div><div class="column" style="width:53%;">
-<h4 id="for-the-correlation-rhoxy">For the Correlation <span class="math inline">\(\rho(x,y)\)</span>:</h4>
-<p><span class="math display">\[\rho(x,y) = \frac{\widehat{\text{cov}}(x,y)}{\sqrt{\widehat{\text{var}}(x)} \cdot \sqrt{\widehat{\text{var}}(y)}}\]</span></p>
+</div><div class="column" style="width:50%;">
+<h3 id="analysing-the-sign-of-the-slope-beta_1">Analysing the Sign of the Slope <span class="math inline">\(\beta_1\)</span></h3>
+<p><span class="math display">\[\beta_1 = \frac{\text{cov}(x,y)}{\underbrace{\text{var}(x)}_{+}}\]</span></p>
 <ul>
-<li><strong>Denominator</strong>: Always positive (product of square roots)</li>
-<li><span class="math inline">\(\therefore\text{sign}(\rho(x,y)) = \text{sign}(\widehat{\text{cov}}(x,y))\)</span></li>
+<li><span class="math inline">\(\therefore\text{sign}(\beta_1) = \text{sign}(\text{cov}(x,y))\)</span></li>
 </ul>
 </div></div>
 <div class="fragment">
 <p><span class="bg">Both correlation and slope depend only on the sign of covariance ✓</span></p>
+</div>
+<div class="fragment">
+<p>If <span class="math inline">\(\rho(x,y) &lt; 0\)</span>, then <span class="math inline">\(\text{cov}(x,y) &lt; 0\)</span>, and thus <span class="math inline">\(\beta_1 &lt; 0\)</span>.<span class="math inline">\(\blacksquare\)</span></p>
 </div>
 </section></section>
 <section>
@@ -1150,15 +1124,15 @@ José Ignacio González-Rojas
 <h1><strong>Exercise 2:</strong> Errors vs Residuals</h1>
 
 </section>
-<section id="residuals-sum-to-zero-but-errors-dont" class="slide level2">
-<h2>Residuals Sum to Zero, But Errors Don’t</h2>
-<h3 id="analyzing-a-suspicious-double-claim">Analyzing a Suspicious Double Claim</h3>
+<section id="residuals-always-sum-to-zero-errors-almost-never-do" class="slide level2 emphasis-slide">
+<h2>Residuals Always Sum to Zero, Errors Almost Never Do</h2>
+<h3 id="mechanical-properties-are-not-statistical-properties">Mechanical Properties Are Not Statistical Properties</h3>
 <h4 id="the-statement-to-evaluate">The Statement to Evaluate</h4>
-<p>“While the error terms (<span class="math inline">\(\epsilon_{i}\)</span>) and the OLS residuals (<span class="math inline">\(\hat{\varepsilon}_{i}\)</span>) are clearly not the same thing, it is always the case that” <span class="math display">\[\sum_{i=1}^{n} \hat{\varepsilon}_{i} = \sum_{i=1}^{n} \epsilon_{i} = 0\]</span></p>
+<p>“While the error terms (<span class="math inline">\(e_{i}\)</span>) and the OLS residuals (<span class="math inline">\(\hat{\varepsilon}_{i}\)</span>) are clearly not the same thing, it is always the case that” <span class="math display">\[\sum_{i=1}^{n} e_{i} = \sum_{i=1}^{n} \hat{\varepsilon}_{i} = 0\]</span></p>
 <h4 id="breaking-it-into-two-claims">Breaking It Into Two Claims</h4>
 <ol type="1">
-<li>Residuals sum to zero: <span class="math inline">\(\sum \hat{\varepsilon}_{i} = 0\)</span></li>
-<li>Errors sum to zero: <span class="math inline">\(\sum \epsilon_{i} = 0\)</span></li>
+<li>Errors sum to zero: <span class="math inline">\(\sum_{i} e_{i} = 0\)</span></li>
+<li>Residuals sum to zero: <span class="math inline">\(\sum_{i} \hat{\varepsilon}_{i} = 0\)</span></li>
 </ol>
 </section>
 <section id="only-one-part-is-true" class="slide level2 emphasis-slide">
@@ -1166,21 +1140,21 @@ José Ignacio González-Rojas
 <h3 id="mechanical-property-vs-random-realization">Mechanical Property vs Random Realization</h3>
 <div class="columns">
 <div class="column" style="width:50%;">
-<h4 id="residuals-true---always">Residuals: ✓ TRUE - Always!</h4>
+<h4 id="errors-false---almost-never">1. Errors: ✗ FALSE - Almost Never!</h4>
+<ul>
+<li>Yes, <span class="math inline">\(\mathbb{E}[e_{i}] = 0\)</span> (Assumption 4)</li>
+<li>But actual sum is random</li>
+<li>Think about flipping a fair coin <span class="math inline">\(n\)</span> times</li>
+<li><span class="math inline">\(\sum_{i=1}^{n} e_{i} \neq \sum_{i=1}^{n} \mathbb{E}[e_{i}]\)</span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 id="residuals-true---always">2. Residuals: ✓ TRUE - Always!</h4>
 <ul>
 <li>This is Mechanical Property 1 (MP1)
 <ul>
 <li>True by construction from FOC</li>
 <li>Observable and verifiable</li>
 </ul></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<h4 id="errors-false---almost-never">Errors: ✗ FALSE - Almost Never!</h4>
-<ul>
-<li>Each <span class="math inline">\(e_{i}\)</span> is a random draw</li>
-<li>Yes, <span class="math inline">\(\mathbb{E}[e_{i}] = 0\)</span> (Assumption 4)</li>
-<li>But actual sum is random</li>
-<li>We never even observe these!</li>
 </ul>
 </div></div>
 <div class="fragment">
@@ -1192,9 +1166,9 @@ José Ignacio González-Rojas
 <h1><strong>Exercise 3:</strong> Visual Interpretation</h1>
 
 </section>
-<section id="statistical-evidence-never-gives-100-certainty" class="slide level2">
-<h2>Statistical Evidence Never Gives 100% Certainty</h2>
-<h3 id="can-data-definitively-disprove-a-theory">Can Data Definitively Disprove a Theory?</h3>
+<section id="statistical-patterns-cannot-definitively-disprove-theories" class="slide level2">
+<h2>Statistical Patterns Cannot Definitively Disprove Theories</h2>
+<h3 id="unlikely-is-not-impossible">Unlikely Is Not Impossible</h3>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
@@ -1204,7 +1178,7 @@ José Ignacio González-Rojas
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
-<h4 id="does-this-data-prove-our-hypothesis-blue-line-wrong">Does this data prove our hypothesis (blue line) wrong?</h4>
+<h4 id="does-these-data-prove-our-hypothesis-red-line-wrong">Does these data prove our hypothesis (red line) wrong?</h4>
 <ol type="a">
 <li>Yes, categorically proves it wrong</li>
 <li><strong>Suggests wrong but doesn’t prove</strong></li>
@@ -1217,9 +1191,9 @@ José Ignacio González-Rojas
 </ul>
 </div></div>
 </section>
-<section id="mathematical-violations-give-certainty" class="slide level2">
-<h2>Mathematical Violations Give Certainty</h2>
-<h3 id="when-can-we-be-100-certain">When CAN We Be 100% Certain?</h3>
+<section id="mathematical-violations-provide-certainty" class="slide level2">
+<h2>Mathematical Violations Provide Certainty</h2>
+<h3 id="when-mechanical-properties-are-violated">When Mechanical Properties Are Violated</h3>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
@@ -1255,48 +1229,23 @@ José Ignacio González-Rojas
 <h3 id="the-fundamental-estimation-problem">The Fundamental Estimation Problem</h3>
 <div class="columns">
 <div class="column" style="width:50%;">
-<h4 id="find-the-best-line-through-our-data-points">Find the “best” line through our data points</h4>
-<h4 id="what-makes-a-line-best">What Makes a Line “Best”?</h4>
-<ul>
-<li><strong>Minimise total error?</strong>
-<ul>
-<li>No - positives cancel negatives</li>
-</ul></li>
-<li><strong>Minimise absolute error?</strong>
-<ul>
-<li>Possible, but hard mathematically<br>
-</li>
-</ul></li>
-<li><strong>Minimise squared error?</strong>
-<ul>
-<li>Yes! This is OLS estimator ✓</li>
-</ul></li>
-</ul>
+<h4 id="choose-b_0-and-b_1-to-minimise">Choose <span class="math inline">\(b_{0}\)</span> and <span class="math inline">\(b_{1}\)</span> to minimise</h4>
+<p><span class="math display">\[S(b_{0}, b_{1}) = \sum_{i=1}^n (y_{i} - b_{0} - b_{1}x_{i})^2\]</span></p>
 </div><div class="column" style="width:50%;">
-<div class="fragment">
-<h4 id="the-mathematical-problem">The Mathematical Problem</h4>
-<p>Choose <span class="math inline">\(b_{0}\)</span> and <span class="math inline">\(b_{1}\)</span> to minimise: <span class="math display">\[S(b_{0}, b_{1}) = \sum_{i=1}^n (y_{i} - b_{0} - b_{1}x_{i})^2\]</span></p>
-</div>
-<div class="fragment">
-<p><span class="bg">We use <span class="math inline">\(b_{0}, b_{1}\)</span> during the search, then denote the solution as <span class="math inline">\(\hat{\beta}_{0}, \hat{\beta}_{1}\)</span></span></p>
-</div>
-</div></div>
-</section>
-<section id="minimise-using-calculus-recipe" class="slide level2">
-<h2>Minimise using Calculus Recipe</h2>
-<h3 id="to-minimize-sb_0-b_1-sumy_i---b_0---b_1x_i2">To minimize <span class="math inline">\(S(b_{0}, b_{1}) = \sum(y_{i} - b_{0} - b_{1}x_{i})^2\)</span></h3>
+<h4 id="minimisation-via-calculus">Minimisation via Calculus</h4>
 <ol type="1">
 <li>Take partial derivatives: <span class="math inline">\(\frac{\partial S}{\partial b_{0}}\)</span> and <span class="math inline">\(\frac{\partial S}{\partial b_{1}}\)</span></li>
-<li>Set both equal to zero</li>
+<li>Set both equal to zero (FOCs)</li>
 <li>Solve the resulting system</li>
 </ol>
+</div></div>
 <div class="fragment">
-<p><span class="bg">Just like finding the minimum of any function from your maths courses - nothing new here!</span></p>
+<p><span class="bg">We use <span class="math inline">\(b_{0}, b_{1}\)</span> during minimisation, then denote the solution as <span class="math inline">\(\hat{\beta}_{0}, \hat{\beta}_{1}\)</span></span></p>
 </div>
 </section>
-<section id="taking-the-first-derivative" class="slide level2">
-<h2>Taking the “First” Derivative</h2>
-<h3 id="derivative-with-respect-to-b_0">Derivative with Respect to <span class="math inline">\(b_{0}\)</span></h3>
+<section id="partial-derivative-with-respect-to-intercept" class="slide level2">
+<h2>Partial Derivative with Respect to Intercept</h2>
+<h3 id="chain-rule-yields-first-order-condition">Chain Rule Yields First Order Condition</h3>
 <div class="columns">
 <div class="column" style="width:60%;">
 <h4 id="start-with-sb_0-b_1-sum_i1n-y_i---b_0---b_1x_i2">Start with <span class="math inline">\(S(b_{0}, b_{1}) = \sum_{i=1}^n (y_{i} - b_{0} - b_{1}x_{i})^2\)</span></h4>
@@ -1319,9 +1268,9 @@ José Ignacio González-Rojas
 </div>
 </div></div>
 </section>
-<section id="taking-the-second-derivative" class="slide level2">
-<h2>Taking the “Second” Derivative</h2>
-<h3 id="derivative-with-respect-to-b_1">Derivative with Respect to <span class="math inline">\(b_{1}\)</span></h3>
+<section id="partial-derivative-with-respect-to-slope" class="slide level2">
+<h2>Partial Derivative with Respect to Slope</h2>
+<h3 id="note-how-x_i-enters-the-derivative">Note How <span class="math inline">\(x_i\)</span> Enters the Derivative</h3>
 <div class="columns">
 <div class="column" style="width:60%;">
 <h4 id="start-with-sb_0-b_1-sum_i1ny_i---b_0---b_1x_i2">Start with <span class="math inline">\(S(b_{0}, b_{1}) = \sum_{i=1}^{n}(y_{i} - b_{0} - b_{1}x_{i})^{2}\)</span></h4>
@@ -1349,9 +1298,9 @@ José Ignacio González-Rojas
 <h3 id="from-calculus-to-econometrics">From Calculus to Econometrics</h3>
 <table class="caption-top">
 <colgroup>
-<col style="width: 6%">
-<col style="width: 46%">
-<col style="width: 46%">
+<col style="width: 19%">
+<col style="width: 40%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1372,7 +1321,7 @@ José Ignacio González-Rojas
 <td><span class="math inline">\(\sum_{i}x_{i}(y_{i} - \hat{\beta}_{0} - \hat{\beta}_{1}x_{i}) = 0\)</span></td>
 </tr>
 <tr class="odd">
-<td><strong>Using <span class="math inline">\(\hat{\varepsilon}_{i}\)</span></strong></td>
+<td><strong>Using</strong> <span class="math inline">\(\hat{\varepsilon}_{i}\)</span></td>
 <td><span class="math inline">\(\sum_{i}\hat{\varepsilon}_{i} = 0\)</span> (MP1)</td>
 <td><span class="math inline">\(\sum_{i}x_{i}\hat{\varepsilon}_{i} = 0\)</span> (MP2)</td>
 </tr>
@@ -1427,109 +1376,47 @@ José Ignacio González-Rojas
 <p><span class="math display">\[\sum_{i=1}^{n} x_{i}(y_{i} - \bar{y}) = \hat{\beta}_{1}\sum_{i=1}^{n} x_{i}(x_{i} - \bar{x})\]</span></p>
 </div>
 <div class="fragment">
-<p><span class="alert">But we can do more…</span></p>
+<h4 id="sec-apply-identity">Apply algebraic identity <a href="#/appendix-identity"><span class="button">See proof</span></a></h4>
+<p><span class="math display">\[\sum_{i=1}^{n}(x_{i} - \bar{x})(y_{i} - \bar{y}) = \hat{\beta}_{1}\sum_{i=1}^{n}(x_{i} - \bar{x})^{2}\]</span></p>
 </div>
 </div></div>
-</section>
-<section id="a-useful-algebraic-identity" class="slide level2">
-<h2>A Useful Algebraic Identity</h2>
-<h3 id="proving-sum-x_iy_i---bary-sumx_i---barxy_i---bary">Proving <span class="math inline">\(\sum x_{i}(y_{i} - \bar{y}) = \sum(x_{i} - \bar{x})(y_{i} - \bar{y})\)</span></h3>
-<h4 id="distribute-the-lhs-and-factor-out-constants">Distribute the LHS and factor out constants</h4>
-<p><span class="math display">\[\sum_{i=1}^{n}(x_{i} - \bar{x})(y_{i} - \bar{y}) = \sum_{i=1}^{n} x_{i}(y_{i} - \bar{y}) - \bar{x}\underbrace{\sum_{i=1}^{n}(y_{i} - \bar{y})}_{0}\]</span></p>
-<div class="fragment">
-<h4 id="deviations-from-mean-always-sum-to-zero">Deviations from mean always sum to zero</h4>
-<p><span class="math display">\[\sum_{i=1}^{n}(y_{i} - \bar{y}) = n\bar{y} - n\bar{y} = 0\]</span></p>
-</div>
 </section>
 <section id="final-formula-for-the-slope" class="slide level2 emphasis-slide">
 <h2>Final Formula for the Slope</h2>
 <h3 id="completing-the-derivation-of-hatbeta_1">Completing the Derivation of <span class="math inline">\(\hat{\beta}_{1}\)</span></h3>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h4 id="where-we-were">Where we were</h4>
-<p><span class="math display">\[\sum_{i=1}^{n} x_{i}(y_{i} - \bar{y}) = \hat{\beta}_{1}\sum_{i=1}^{n} x_{i}(x_{i} - \bar{x})\]</span></p>
-<div class="fragment">
-<h4 id="apply-our-identity">Apply our identity</h4>
-<p><span class="math display">\[\sum_{i=1}^{n}(x_{i} - \bar{x})(y_{i} - \bar{y}) = \hat{\beta}_{1}\sum_{i=1}^{n}(x_{i} - \bar{x})^{2}\]</span></p>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="fragment">
 <h4 id="solve-for-hatbeta_1">Solve for <span class="math inline">\(\hat{\beta}_{1}\)</span></h4>
 <p><span class="math display">\[\boxed{\hat{\beta}_{1} = \frac{\sum_{i=1}^{n}(x_{i} - \bar{x})(y_{i} - \bar{y})}{\sum_{i=1}^{n}(x_{i} - \bar{x})^{2}}}\]</span></p>
-</div>
 <div class="fragment">
 <h4 id="in-covariance-notation">In covariance notation</h4>
 <p><span class="math display">\[\boxed{\hat{\beta}_{1} = \frac{\widehat{\text{cov}}(x,y)}{\widehat{\text{var}}(x)}}\]</span></p>
 </div>
-</div></div>
 </section></section>
 <section>
 <section id="exercise-5-correlation-and-r2" class="title-slide slide level1 section-slide center">
 <h1><strong>Exercise 5:</strong> Correlation and <span class="math inline">\(R^{2}\)</span></h1>
 
 </section>
-<section id="what-are-we-proving" class="slide level2 emphasis-slide">
-<h2>What Are We Proving?</h2>
-<h3 id="the-connection-between-correlation-and-goodness-of-fit">The Connection Between Correlation and Goodness of Fit</h3>
+<section id="sec-correlation-r2" class="slide level2 emphasis-slide">
+<h2>Correlation with Fitted Values Equals Square Root of <span class="math inline">\(R^2\)</span></h2>
+<h3 id="goodness-of-fit-connects-to-correlation">Goodness of Fit Connects to Correlation</h3>
 <div class="columns">
-<div class="column" style="width:60%;">
-<h4 id="given-definitions">Given Definitions</h4>
-<ul>
+<div class="column" style="width:45%;">
+<h4 id="definitions">Definitions</h4>
+<ol type="1">
 <li><strong>Correlation:</strong> <span class="math inline">\(\rho(y,\hat{y}) = \frac{\text{cov}(y,\hat{y})}{\sqrt{\text{var}(y)}\cdot\sqrt{\text{var}(\hat{y})}}\)</span></li>
 <li><strong>Decomposition:</strong> <span class="math inline">\(y_i = \hat{y}_i + \hat{\varepsilon}_i\)</span></li>
 <li><strong>R-squared:</strong> <span class="math inline">\(R^2 = \frac{\text{var}(\hat{y})}{\text{var}(y)}\)</span></li>
-</ul>
-</div><div class="column" style="width:40%;">
-<h4 id="our-goal">Our Goal</h4>
-<p>Prove: <span class="math inline">\(\rho(y,\hat{y}) = \sqrt{R^2}\)</span></p>
-<h4 id="well-need">We’ll Need</h4>
-<ul>
-<li><strong>MP1:</strong> <span class="math inline">\(\sum_{i} \hat{\varepsilon}_{i} = 0\)</span></li>
-<li><strong>MP2:</strong> <span class="math inline">\(\sum_{i} x_{i}\hat{\varepsilon}_{i} = 0\)</span></li>
-<li><strong>MP5:</strong> <span class="math inline">\(\sum_{i} \hat{y}_{i}\hat{\varepsilon}_{i} = 0\)</span></li>
-</ul>
+</ol>
+</div><div class="column" style="width:55%;">
+<h4 id="key-properties">Key Properties</h4>
+<ol type="1">
+<li><span class="math inline">\(\text{cov}(\hat{y}, \hat{\varepsilon}) = 0\)</span> <a href="#/appendix-orthogonality"><span class="button">See proof</span></a></li>
+<li><span class="math inline">\(\text{cov}(X + Z, Y) = \text{cov}(X, Y) + \text{cov}(Z, Y)\)</span></li>
+<li><span class="math inline">\(\text{cov}(X, X) = \text{var}(X)\)</span></li>
+</ol>
 </div></div>
-</section>
-<section id="mp5-will-gives-us-insights-later" class="slide level2">
-<h2>MP5 will gives us insights later</h2>
-<h3 id="why-textcovhaty-hatvarepsilon-0">Why <span class="math inline">\(\text{cov}(\hat{y}, \hat{\varepsilon}) = 0\)</span>?</h3>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h4 id="since-haty_i-hatbeta_0-hatbeta_1-x_i-and-distribute">Since <span class="math inline">\(\hat{y}_{i} = \hat{\beta}_{0} + \hat{\beta}_{1} x_{i}\)</span>, and distribute</h4>
-<p><span class="math display">\[\begin{align*}
-  \sum_{i=1}^{n} \hat{y}_{i}\hat{\varepsilon}_{i} &amp;= \sum_{i=1}^{n} (\hat{\beta}_{0} + \hat{\beta}_{1} x_{i})\hat{\varepsilon}_{i} \\
-  &amp;= \hat{\beta}_{0} \underbrace{\sum_{i=1}^{n} \hat{\varepsilon}_{i}}_{\text{MP}1} + \hat{\beta}_{1} \underbrace{\sum_{i=1}^{n} x_{i}\hat{\varepsilon}_{i}}_{\text{MP}2}
-\end{align*}\]</span></p>
-</div><div class="column" style="width:50%;">
-<div class="fragment">
-<h4 id="apply-mp1-and-mp2">Apply MP1 and MP2</h4>
-<p><span class="math display">\[\begin{align*}
-  &amp;= \hat{\beta}_{0} \underbrace{\sum_{i=1}^{n} \hat{\varepsilon}_{i}}_{\text{MP}1} + \hat{\beta}_{1} \underbrace{\sum_{i=1}^{n} x_{i}\hat{\varepsilon}_{i}}_{\text{MP}2} \\
-  &amp;= \hat{\beta}_{0} \cdot 0 + \hat{\beta}_{1} \cdot 0 \\
-  &amp;= 0
-\end{align*}\]</span></p>
-</div>
-<div class="fragment">
-<h4 id="thereforetextcovhaty-hatvarepsilon-frac1nsum_i1n-haty_ihatvarepsilon_i-0"><span class="math inline">\(\therefore\text{cov}(\hat{y}, \hat{\varepsilon}) = \frac{1}{n}\sum_{i=1}^{n} \hat{y}_{i}\hat{\varepsilon}_{i} = 0\)</span></h4>
-</div>
-</div></div>
-<div class="fragment">
-<p><span class="bg">Fitted values and residuals are uncorrelated!</span></p>
-</div>
-</section>
-<section id="the-total-variance-can-be-decomposed-into-explained-and-residual-variance" class="slide level2 emphasis-slide">
-<h2>The Total Variance can be Decomposed into Explained and Residual Variance</h2>
-<h3 id="using-y_i-haty_i-hatvarepsilon_i">Using <span class="math inline">\(y_{i} = \hat{y}_{i} + \hat{\varepsilon}_{i}\)</span></h3>
-<h4 id="calculate-textvary">Calculate <span class="math inline">\(\text{var}(y)\)</span></h4>
-<p><span class="math display">\[\begin{align*}
-\text{var}(y) &amp;= \text{var}(\hat{y} + \hat{\varepsilon}) \\
-&amp;= \text{var}(\hat{y}) + \text{var}(\hat{\varepsilon}) + 2\cdot\underbrace{\text{cov}(\hat{y}, \hat{\varepsilon})}_{0} \\
-&amp;= \text{var}(\hat{y}) + \text{var}(\hat{\varepsilon})
-\end{align*}\]</span></p>
-<div class="fragment">
-<h4 id="in-sum-of-squares">In sum of squares</h4>
-<p><span class="math display">\[\underbrace{SST}_{\text{Total}} = \underbrace{SSE}_{\text{Residual}} + \underbrace{SSR}_{\text{Explained}}\]</span></p>
-</div>
+<h4 id="what-we-want-to-prove">What We Want to Prove</h4>
+<p><span class="math display">\[\rho(y,\hat{y}) = \sqrt{R^2}\]</span></p>
 </section>
 <section id="covariance-equals-variance-of-fitted-values" class="slide level2 emphasis-slide">
 <h2>Covariance Equals Variance of Fitted Values</h2>
@@ -1539,69 +1426,564 @@ José Ignacio González-Rojas
 <h4 id="finding-textcovy-haty">Finding <span class="math inline">\(\text{cov}(y, \hat{y})\)</span></h4>
 <p><span class="math display">\[\begin{align*}
   \text{cov}(y, \hat{y}) &amp;= \text{cov}(\hat{y} + \hat{\varepsilon}, \hat{y}) \\
-
-  &amp;= \text{var}(\hat{y}) + \underbrace{\text{cov}(\hat{\varepsilon}, \hat{y})}_{0} \\
-
-  \therefore \text{cov}(y, \hat{y}) &amp;= \text{var}(\hat{y})
+  &amp;= \text{cov}(\hat{y}, \hat{y}) + \underbrace{\text{cov}(\hat{\varepsilon}, \hat{y})}_{0} \\
+  &amp;= \text{var}(\hat{y})
 \end{align*}\]</span></p>
+<div class="fragment">
+<p><span class="math display">\[\therefore \text{cov}(y, \hat{y}) = \text{var}(\hat{y})\]</span></p>
+</div>
 </div><div class="column" style="width:50%;">
 <div class="fragment">
-<h4 id="wrapping-up">Wrapping up</h4>
+<h4 id="calculating-the-correlation">Calculating the Correlation</h4>
 <p><span class="math display">\[\begin{align*}
-  \rho(y,\hat{y}) &amp;= \frac{\text{cov}(y, \hat{y})}{\sqrt{\text{var}(y)}\cdot\sqrt{\text{var}(\hat{y})}} \\
-  &amp;= \frac{\text{var}(\hat{y})}{\sqrt{\text{var}(y)}\cdot\sqrt{\text{var}(\hat{y})}} \\
-  &amp;= \frac{\sqrt{\text{var}(\hat{y})}}{\sqrt{\text{var}(y)}} \\
-  &amp;= \sqrt{R^2}
+  \rho(y, \hat{y}) &amp;= \frac{\text{cov}(y, \hat{y})}{\sqrt{\text{var}(y)} \cdot \sqrt{\text{var}(\hat{y})}} \\
+  &amp;= \frac{\text{var}(\hat{y})}{\sqrt{\text{var}(y)} \cdot \sqrt{\text{var}(\hat{y})}} \\
+  &amp;= \frac{\sqrt{\text{var}(\hat{y})}}{\sqrt{\text{var}(y)}} = \sqrt{\frac{\text{var}(\hat{y})}{\text{var}(y)}} \\
+  &amp;= \sqrt{R^2} \blacksquare
 \end{align*}\]</span></p>
 </div>
 </div></div>
+</section></section>
+<section>
+<section id="exercise-6-what-is-an-estimator" class="title-slide slide level1 section-slide center">
+<h1><strong>Exercise 6:</strong> What is an Estimator?</h1>
+
 </section>
-<section id="the-logic-of-proofs" class="slide level2">
-<h2>The Logic of Proofs</h2>
-<h3 id="what-youve-learned-about-mathematical-reasoning">What You’ve Learned About Mathematical Reasoning</h3>
+<section id="an-estimator-converts-data-into-parameter-estimates" class="slide level2">
+<h2>An Estimator Converts Data Into Parameter Estimates</h2>
+<h3 id="returns-to-education-example">Returns to Education Example</h3>
+<table class="caption-top">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 28%">
+<col style="width: 23%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Component</strong></th>
+<th><strong>What It Is</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Nature</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Estimand</strong></td>
+<td>Parameter</td>
+<td>True return to education <span class="math inline">\(\beta_1 = ?\)</span></td>
+<td>Unknown fixed parameter</td>
+</tr>
+<tr class="even">
+<td><strong>Estimator</strong></td>
+<td>Statistic (function of the data) to infer the value of an estimand</td>
+<td><span class="math inline">\(\hat{\beta}_{1} = \frac{\hat{\text{cov}}(x,y)}{\hat{\text{var}}(x)}\)</span></td>
+<td>Random variable</td>
+</tr>
+<tr class="odd">
+<td><strong>Estimate</strong></td>
+<td>Computed value</td>
+<td><span class="math inline">\(\hat{\beta}_{1} = 0.073\)</span> (7.3% return per year)</td>
+<td>Number associated with a particular sample</td>
+</tr>
+</tbody>
+</table>
+<p><span class="bg"><strong>Estimand:</strong> Perfect dish · <strong>Estimator:</strong> Recipe · <strong>Estimate:</strong> What you cooked today</span></p>
+</section>
+<section id="good-estimators-have-three-key-properties" class="slide level2 emphasis-slide">
+<h2>Good Estimators Have Three Key Properties</h2>
+<h3 id="what-makes-an-estimator-good">What Makes an Estimator Good?</h3>
 <div class="columns">
-<div class="column" style="width:50%;">
-<h4 id="proof-structure">Proof Structure</h4>
-<ol type="1">
-<li><strong>State</strong> what’s given</li>
-<li><strong>State</strong> what to show</li>
-<li><strong>Choose</strong> a strategy</li>
-<li><strong>Execute</strong> step by step</li>
-<li><strong>Conclude</strong> explicitly</li>
-</ol>
-</div><div class="column" style="width:50%;">
-<h4 id="key-techniques">Key Techniques</h4>
+<div class="column" style="width:33%;">
+<h4 id="unbiasedness"><strong>Unbiasedness</strong></h4>
+<p><span class="math display">\[\mathbb{E}[\hat{\beta} - \beta] = 0\]</span></p>
 <ul>
-<li>Sign analysis (Exercise 1)</li>
-<li>Definition checking (Exercise 2)</li>
-<li>Contradiction finding (Exercise 3)</li>
-<li>Optimisation (Exercise 4)</li>
-<li>Algebraic identities (Exercise 5)</li>
+<li>Right on average across samples</li>
+<li>No systematic error.</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<h4 id="efficiency"><strong>Efficiency</strong></h4>
+<p><span class="math display">\[\text{var}(\hat{\beta}_{\text{OLS}}) \leq \text{var}(\hat{\beta}_{\text{other}})\]</span></p>
+<ul>
+<li>Lowest variance among unbiased estimators</li>
+<li>Most precise</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<h4 id="consistency"><strong>Consistency</strong></h4>
+<p><span class="math display">\[\hat{\beta}_n \xrightarrow{p} \beta\]</span></p>
+<ul>
+<li>Converges to truth as sample grows</li>
+<li>Large samples give exact answer</li>
 </ul>
 </div></div>
-<p><span class="alert">Every step must be justified - no magic allowed!</span></p>
+<p><span class="alert">In this course, we prioritise unbiasedness</span></p>
+</section></section>
+<section>
+<section id="sec-var-x-var-estimator" class="title-slide slide level1 section-slide center">
+<h1><strong>Exercise 7:</strong> Variation in <span class="math inline">\(x_{i}\)</span> and Estimator Precision</h1>
+
+</section>
+<section id="more-x_i-variation-reduces-estimator-variance" class="slide level2">
+<h2>More <span class="math inline">\(x_{i}\)</span> Variation Reduces Estimator Variance</h2>
+<h3 id="the-precision-formula">The Precision Formula</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="definitions-1">Definitions</h4>
+<ol type="1">
+<li><span class="math display">\[\begin{align*}
+  \text{var}(x) &amp;= \frac{1}{n}\sum_{i=1}^n(x_i - \bar{x})^2 \\
+  &amp;= \frac{1}{n}\sum_{i=1}^n x_i^2 - \bar{x}^2
+\end{align*}\]</span></li>
+<li><span class="math inline">\(\text{var}(\hat{\beta}_{0}) = \frac{\sigma^2}{n}\frac{\sum_{i=1}^n x_i^2}{\sum_{i=1}^{n}(x_i - \bar{x})^2}\)</span>.</li>
+<li><span class="math inline">\(\text{var}(\hat{\beta}_{1}) = \frac{\sigma^2}{\sum_{i=1}^n (x_i - \bar{x})^2}\)</span>.</li>
+</ol>
+</div><div class="column" style="width:50%;">
+<h4 id="the-mathematical-proof-for-the-intercept">The Mathematical Proof for the Intercept</h4>
+<p><span class="math display">\[\begin{align*}
+  \text{var}(\hat{\beta}_{0}) &amp;= \frac{\sigma^2}{n} \frac{\sum_{i=1}^n x_i^2}{\sum_{i=1}^n (x_i - \bar{x})^2} \\
+  &amp;= \frac{\sigma^2}{n} \frac{\sum_{i=1}^n x_i^2}{n \cdot \text{var}(x)} \\
+  &amp;= \frac{\sigma^2}{n} \left(\frac{\text{var}(x) + \bar{x}^2}{\text{var}(x)}\right) \\
+  &amp;= \frac{\sigma^2}{n} \left(1 + \frac{\bar{x}^2}{\text{var}(x)\uparrow}\downarrow\right)\downarrow
+\end{align*}\]</span></p>
+</div></div>
+</section>
+<section id="more-x_i-variation-reduces-estimator-variance-1" class="slide level2">
+<h2>More <span class="math inline">\(x_{i}\)</span> Variation Reduces Estimator Variance</h2>
+<h3 id="the-precision-formula-1">The Precision Formula</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="the-mathematical-proof-for-the-slope">The Mathematical Proof for the Slope</h4>
+<p><span class="math display">\[\begin{align*}
+  \text{var}(\hat{\beta}_1) &amp;= \frac{\sigma^2}{\sum_{i=1}^n (x_i - \bar{x})^2} \\
+  &amp;= \frac{\sigma^2}{n} \cdot \frac{1}{\text{var}(x)\uparrow}\downarrow
+\end{align*}\]</span></p>
+</div><div class="column" style="width:50%;">
+<h4 id="the-intuition">The Intuition</h4>
+<ul>
+<li>Holding the number of observations <span class="math inline">\(n\)</span> constant:
+<ul>
+<li>More spread out <span class="math inline">\(x_i\)</span> values, the larger variance of <span class="math inline">\(x_i\)</span></li>
+<li>Hence, the smaller variance of the estimator <span class="math inline">\(\hat{\beta}_{1}\)</span></li>
+</ul></li>
+</ul>
+</div></div>
+</section></section>
+<section>
+<section id="exercise-8-choosing-between-two-estimators" class="title-slide slide level1 section-slide center">
+<h1><strong>Exercise 8:</strong> Choosing Between Two Estimators</h1>
+
+</section>
+<section id="we-prioritise-unbiasedness-over-low-variance" class="slide level2">
+<h2>We Prioritise Unbiasedness Over Low Variance</h2>
+<h3 id="two-competing-estimators-for-beta_1">Two Competing Estimators for <span class="math inline">\(\beta_1\)</span></h3>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img role="img" data-src="data:image/png;base64,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AAECQxIQgIfUW+pKgAABAgQIECBAgAABAlsLCMBb01mRAAECBAgQIECAAAECBIYkIAAPqbfUlQABAgQIECBAgAABAgS2FhCAt6azIgECBAgQIECAAAECBAgMSUAAHlJvqSsBAgQIECBAgAABAgQIbC0gAG9NZ0UCBAgQIECAAAECBAgQGJKAADyk3lJXAgQIECBAgAABAgQIENhaQADems6KBAgQIECAAAECBAgQIDAkAQF4SL2lrgQIECBAgAABAgQIECCwtYAAvDWdFQkQIECAAAECBAgQIEBgSAIC8JB6S10JECBAgAABAgQIECBAYGsBAXhrOisSIECAAAECBAgQIECAwJAEfjakyqorAQIECOxZ4MKFSzdw8eKl88whQIAAAQIECAxQwAjwADtNlQkQILBzgQTfReE3G2rN33klFEiAAAECBAgQ2K+AEeD9+iqdAAEC/RUQbPvbN2pGgAABAgQI7EVAAN4Lq0IJECDQYwHBt8edo2oECBAgQIDAPgWcAr1PXWUTIECgbwLbht9t1+tb+9WHAAECBAgQmLSAADzp7td4AgQIECBAgAABAgQITEdAAJ5OX2spAQJTF1hnFNcdn6e+l2g/AQIECBAYtYAAPOru1TgCBAisKZDgW8Jvee2uuk6A7q7jMwECBAgQIECgRwJugtWjzlAVAgQI7E2gFV5bYXdvFVEwAQIECBAgQOB4AkaAj2dvywQIECBAgAABAgQIECBwQAEB+IDYNkWAAIGjCGwz+tsaGW6VdZSG2SgBAgQIECBAYDMBAXgzL0sTIECAAAECBAgQIECAwEAFBOCBdpxqEyBAYC2B1ohta4R3rUItRIAAAQIvvfTS7LbbbptdccUVswsn/6/Nv5tvvnn29ttvwyEwGYEh/g4u/PD3n05u/WmKwG9++YuTm6DisDcQIDAigfMG4POuPyJKTSFAYH2Bb775Zvbhhx/O8nrHHXfMbrrppvVX7vmS//rXv2Z333337L333ltY0+uvv3726aefLvzOzPUExrz/rCfQ/6WO/Tv460//2BpJAK7oBOAKw1sCBIYvsIvwuosyhi+pBSMWeOGFF2ZPP/307G9/+9slrbz22mtnv/vd7+bz83rLLbfMbr311lnmm5YLPPDAA7NXX331dKEvvvhiNG7ZZx577LHTtuVN9onLLrts9tlnn83fp72m7QXGvP9s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ynTPPfeUt14JECBwRkAAPsPhAwECBAYg0JeR19Zoc6t+A6BVRQIEhilQP183p5NnBNhEgACBRQIC8CIV8wgQIECAAAECBAYhkOsuc71ymRJ+h36TntIWrwQI7F5AAN69qRIJECBAgAABAgQOJFCP/maT+7j784GaYjMECBxAwE2wKmQ3waowvCVAoL8CrVOMW6ck77MlfarLPtupbAIEeimQm19dffXV8zv2poJ59Mt3333Xy7qqFAECuxNwE6zdWSqJAAEC/RYQOPvdP2pHgMBBBfKomjLlUTd5vquJAAECywSMAFc6RoArDG8JEOinQN8CcN/q089eUysCBAgQIEBghwJGgHeIqSgCBAgQ2ECgddp1KxhvULRFCRAgQIAAAQK7FnATrF2LKo8AAQIECBAgQIAAAQIEeikgAPeyW1SKAAECCwRao6qtUdgFRZhFgAABAgQIEJiygAA85d7XdgIECBAgQIAAAQIECExIQACeUGdrKgECBAgQIECAAAECBKYsIABPufe1nQABAgQIECBAgAABAhMSEIAn1NmaSoDAgAX6fP1v6xrkVp0H3A2qToAAAQIECAxbQAAedv+pPQECBAgQIECAAAECBAisKSAArwllMQIECBAgQIAAAQIECBAYtoAAPOz+U3sCBAgQIECAAAECBAgQWFNAAF4TymIECBAgQIAAAQIECBAgMGwBAXjY/af2BAgQ6IeAG2H1ox/UggABAgQIEFgqIAAv5fElAQIEeiDQuptyK3T2oMqqQIAAAQIECBDoo4AA3MdeUScCBAgQIECAAIFBCjz11FOz2267bf7vpZde2nkbUmbKv+KKK2YXTg6Q5t/NN988e/vtt5vb2madZmG+IDBwgQs//P2niwNvw86q/5tf/mJ20YjKzjwVRIDAjgSGMgI8lHruqFsUQ4AAgUUCCacffvjh/Kv7779/9sorryxabPbNN9/Ml8vrHXfcMbvpppsWLldm/utf/5rdfffds/fee6/MOvN6/fXXzz799NMz87ZZ50wBPhDoqcBff/rH1jX72dZrWpEAAQIECBAgQIAAga0Enn766dmrr746Xzfvv/jii9m1117bLCujuN3wm+Uvu+yy2WeffTZL2O1O26zTLcNnAmMTEIDH1qPaQ4AAAQIECBAg0HuBjz/++EwdE2JbATjh9rnnnjtdPqO9b7311uyqq66az8soctavp23Wqdf3nsBYBQTgsfasdhEgQODQArmEZNFp0Jnn8pJD94btEVgo8MILL8zeeeed+Xe333777E9/+tPC5czcv0DC65dffnm6oWWnQCcsf//996fLPv7447OsX6a8rz9n/jbrlPK8bibgd7WZ17GXFoCP3QO2T4AAgWUCF07C46JJoFykYh4BAisEEn7L9alZVABeAbbHr59//vnZjTfeON/CogBbbzojvPV011131R8Xvt9mnYUFmblSwO9qJVGvFhCAe9UdKkOAAAECBAgQIDAFgZzunDtGrzPVo7+XX375/LrfVetts86qMn1PYAwCHoM0hl7UBgIECBAgQIAAgdEKfPvtt6dtSwBeZ9pmnXXKtQyBoQsIwEPvQfUnQIAAAQIECBAYtcCiOzyvavA266wq0/cExiDgFOgx9KI2ECBAgAABAgQaAjnN9i9/+cv82/pOwXmfZ9bW0+9+97tZrk3N6xtvvDF7+eWX51/nGtXW82zL+glc99133+xvf/vbfNaLL77YvKtxWSfXI+cRQJlySnDWWTblplGp09tvvz0r17jmMUC5gVTWv/LKK2d59m7qv+sp7cpjiz755JP5Daay/dyN+dZbb5394Q9/mL9uss20PXd2jlvKiXs91TdWqm+WlVObu/324IMPzu69997ZNuvU2yzvcwOtPHIpbc1+km2mjvl33XXXzbe1yjh99Oc//3leZKlfPmS/SrvLvpi+S9tbNwHbZ11Kn7755pvzPk390p9p5z333NOsU5bb9neVdU1HFvjh7z9d9O/fBiddcdFEgACBXgn8+/7JueXV2X+9qmSnMt26ls+dxXwkQOAwAvn7ZpN/H3zwwbxizzzzzJn1yvxWrfN9vZ1HH320tejp/DvuuON0nZPQcTq/++bHH3+8eBJsT5ett9N9f3KK8MWTQNUt4lyfP/3004snBwGWbr+09yRAnS6XOremJ5988nS5tKE7rdpe3e5sM9M269Tb/ec//3nx5MZoZ+pVb6e8j/HJY5jqVS95X7evONTzSll5zfzutO+6nBzQuXgS4pttPTmwcvH111/vVuv0c13/dd6v+v2cFuzNWgLnya9OgT7ZY00ECBDopcCFC4urlShsIkCAwJoCq0bqusWUa0wzolhP9d2j6/nlfXm8UvmcEcBlU0Y+6zIzirpoyihdRjwz+rrOlOUfe+yx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AQIECBAgMD0BAXh6fa7FBAgQIECAAAECBAgQmKSAADzJbtdoAgQIECBAgAABAgQITE9AAJ5en2sxAQK7EGjddbh1l+JdbFMZBAgQIECAAAEC5xIQgM/FZ2UCBAgQIECAAAECBAgQGIqAADyUnlJPAgQIEPi3QGuUvTUqz40AAQIECBAg8D8CArBdgQABAgQIECBAgAABAgQmISAAT6KbNZIAAQIECBAgQIAAAQIEBGD7AAECBAgQIECAAAECBAhMQkAAnkQ3a+Q333wDgQABAgQIECBAgACBiQv8bOLt1/wdCCRcPvHEE7Pvv/9+ZWmPPPLI7K677lq53C4XuPrqq2ep4/XXXz/79NNPd1m0stYQ+Ne//jV7+umnZx9//PF86Q8++GCNtSxCgAABAgQIECBAYPcCAvDuTSdX4htvvDHLv3Wmq666amcBOKH2b3/72zzYtrad8JXlMn355Zfz1yH+Z5229rFdH3744ezhhx8etP1C19bdhlt3J15YiJkECBAgQIAAAQKHFhCADy0+wu0lZJbp0Ucfnf3qV78qHy95veOOOy6Zt82MjCbefPPN81Vff/312b333ruwmMsuu2x2//33zxLEWsssXLFHM9dta4+qPD8w8dhjj81effXVPlVLXQgQIECAAAECBCYuIABPfAfYdfNzinNGefc91aG7fr9ou6+88sqi2YOZV7evft/XBmSk/bbbbjs9Jf5Pf/rTfBR+3bME+tou9eqZQEbbF43EZ56R+J51luoQIECAAIH+CLgJVn/6Qk0IjEIgQTfXg990002zL774YvbMM8/MMhJvIkCAAAECBAgQIHBsASPAx+4B2z8VyKm+77333unnBKjuKdO5Fjb/Pvvss9Plvvrqq/kpzmXGtddeO/vd735XPs5vvpRyU1bKrKecGp3t5vToMnKdsjM/1xennHx3+eWX16vNr2ktI5rZXsot659ZsPMho6Mpu75h2K233jrLv+60TVvrMjJanLblX96nDbkRWOq6LJCmfrVJHHIqc16z3kMPPXSJR73dOMdkqKec123xngABAgQIECBAYFwCF374+08n55GZIvCbX/7i5Mw5HJvuDU899dT8Lr9Z7+uvv14rCNbbSODMjZISurpTQmXuGlzC5QMPPLDyutInn3xyljqVqdwFOiGzewfi8l3WyfXL991335kQnjISHHOdcYJd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f//p5PwxUwR+88tfnJwxh8PeQIBAQ+DCyWm1iyb/31ikcrh5+uVw1rZEgAABAgR6IPDXn/6xdS3cBGtrOisSIECAAAECBAgQIECAwJAEBOAh9Za6EiBAgAABAgQIECBAgMDWAgLw1nRWJECAAAECBAgQIECAAIEhCQjAQ+otdSVA4HgCrjM9nv2qLbeuwW712aryfE+AAAECBAiMVkAAHm3XahgBAgQIECBAgAABAgQI1AICcK3hPQECBAgQIECAAAECBAiMVkAAHm3XahgBAgQIECBAgAABAgQI1AICcK3hPQECBAgQIECAAAECBAiMVkAAHm3XahgBAgQIECBAgAABAgQI1AICcK3hPQECBAgQIECAAAECBAiMVkAAHm3XahgBAgQIECBAgAABAgQI1AICcK3hPQECBBYJtJ4n23r+7KIyzNuvQKsvWn2339oonQABAgQIEOipgADc045RLQIECBAgQIAAAQIECBDYrYAAvFtPpREgQIAAAQIECBAgQIBATwUE4J52jGoRIECAAAECBAgQIECAwG4FBODdeiqNAAECBAgQIECAAAECBHoqIAD3tGNUiwABAgQIECBAgAABAgR2KyAA79ZTaQQIECBAgAABAgQIECDQUwEBuKcdo1oECBAgsKGARyFtCGZxAgQIECAwPQEBeHp9rsUECGwi0HqObCtsbVK2ZQkQIECAAAECBA4qIAAflNvGCBAgQIAAAQIECBAgQOBYAgLwseRtlwABAgQIECBAgAABAgQOKiAAH5TbxggQIECAAAECBAgQIEDgWAIC8LHkbZcAAQIECBAgQIAAAQIEDiogAB+U28YIECBAgAABAgQIECBA4FgCAvCx5G2XAAECBAgQIECAAAECBA4qIAAflNvGCBAYlIBHIA2qu+aVbT2eqtWXw2uhGhMgQIAAAQLnEBCAz4FnVQIECBAgQIAAAQIECBAYjoAAPJy+UlMCBAgQIECAAAECBAgQOIeAAHwOPKsSIECAAAECBAgQIECAwHAEBODh9JWaEiBAgAABAgQIECBAgMA5BATgc+BZlQABAgQIECBAgAABAgSGIyAAD6ev1JQAAQIECBAgQIAAAQIEziEgAJ8Dz6oECIxYoPXYnNZjdkZMMbimtfqo1aeDa6AKEyBAgAABAtsK/GzbFa1HgAABAgQIELjy//y/LkH49v/5vy+ZZwYB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Ran7srb2pfrPPvvs/IBIcS/1+vDDD+dvX3311dmjjz46e/7558tXXgksFBCAF7KYSYDAYAUWjdqlMUbtBtul3YovCgNZZuxhoOvgM4GxC9RB58knn1za3HvvvXfp9+t+mdHF++67b774Rx991AzVCYz333//LOErI49DnNZtax/altHeJ554Yl6Vyy+/fHbHHXfMrrnmmvnnjAZ//PHH8/cvvPDC7Lrrrpv3TR/qrQ79FBCA+9kvakWAAAECBAgQmAtMeRS47AJPPfVUebvX1zp01+8XbfSVV15ZNHsw8+r21e/72oAE38cff3w+ynvZZZedVjP7RoLvY489Np+X0+ZzcMJEoCUgALdkzCdAgACB3gkY/e1dl6gQAQIE9i7wu9/9bvbjjz82t5NTn1977bVZrhvP6em5bjyB2URgkYAAvEjFPAIECBAgQIBAjwSMAm/fGbk+uJwim1Jy+mz3hlm5Fjan2X711VenG0qYqqfcbKkOVaXcnH7dvYY21y4niOW7hLdMqUNOmc5oa27alO/qkcyyTMrNlO2lnmX9+czGf1LXlF1uGJZyb7311kvamdW3aWu92WyjbC/zU7+0P9tbNnVN4p3rduMR14ceeugSj2Xldb+LV+kzAbir43MtIADXGt4TIECAQG8FDj76607Qvd0XVIzAOgIJkg8//PA8iNbL5xTZBLZc41sCbZZLgKynckptmZdTnutTa++88875V99+++2sezr03XffPf8u5SdwZ9kSzkp5uab13XffnQfdhMEHHnhgVsJvWSbhMneY7gb28n2u4017ys2syvzymvVefPHF+TbKvG3amnUTVLOt3Ixq0ZRQ//rrrzfrWpukXbnWugT2lJcAuypEL9queQQ2FRCANxWzPAECBAgcXKAVfg9eERskcEQBo8Dr4ydQloCVsJXg+vOf/3z2v//3/54/RieBsR4lvP322+eFZ70SJrsjvvm86fT555/PQ2NGgxOGU0YZgc22Eow/+OCD+WuWychtQmve51+Wue2222Zff/31JSPBpY2pU8pOeMwNoNLGjLZmOxl1jsOnn356Orq6TVuzrQTYMpKesJuDCLHNvGwr9b355pvnBwPqAwVdsyyXgwvFP2UU8+6ym3wuBxhikTJNBFoCF374+08nDzs0ReA3v/zFyY1icdgbCAxa4MKFxdX3217sMpC5rQC89zs/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"></p>
+<figcaption>Realisations of Two Estimators</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:33%;">
+<h4 id="estimator-1">Estimator 1</h4>
+<ul>
+<li><strong>Centre</strong>: Away from <span class="math inline">\(\beta_1\)</span></li>
+<li><strong>Spread</strong>: Narrow</li>
+<li><strong><span class="math inline">\(\mathbb{E}[\hat{\beta}_1 - \beta_1] \neq 0\)</span></strong></li>
+<li>Precisely wrong</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<h4 id="estimator-2">Estimator 2 ✓</h4>
+<ul>
+<li><strong>Centre</strong>: At <span class="math inline">\(\beta_1\)</span></li>
+<li><strong>Spread</strong>: Wide</li>
+<li><strong><span class="math inline">\(\mathbb{E}[\hat{\beta}_1 - \beta_1] = 0\)</span></strong></li>
+<li>Right on average</li>
+</ul>
+</div></div>
+<p><span class="alert">Bias cannot be fixed with more data. Variance can be.</span></p>
+</section></section>
+<section>
+<section id="exercise-9-ols-vs-alternative-estimators" class="title-slide slide level1 section-slide center">
+<h1><strong>Exercise 9:</strong> OLS vs Alternative Estimators</h1>
+
+</section>
+<section id="ols-minimisation-gives-best-properties" class="slide level2">
+<h2>OLS Minimisation Gives Best Properties</h2>
+<h3 id="two-different-minimisation-criteria">Two Different Minimisation Criteria</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="ols-minimises-squared-residuals">OLS Minimises Squared Residuals</h4>
+<p><span class="math display">\[\min \sum_{i=1}^n \hat{\varepsilon}_i^2\]</span></p>
+<ul>
+<li>Mean regression</li>
+<li><strong>BLUE</strong> (Best Linear Unbiased Estimator)</li>
+<li>Closed-form solution</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 id="lad-minimises-absolute-residuals">LAD Minimises Absolute Residuals</h4>
+<p><span class="math display">\[\min \sum_{i=1}^n |\hat{\varepsilon}_i|\]</span></p>
+<ul>
+<li>Median regression</li>
+<li>Robust to outliers</li>
+<li>No closed-form solution</li>
+</ul>
+</div></div>
+<p><span class="bg">Under AS1-AS6, OLS has smallest variance among unbiased estimators</span></p>
+</section></section>
+<section>
+<section id="sec-unbiased-intercept" class="title-slide slide level1 section-slide center">
+<h1><strong>Exercise 10:</strong> Proving <span class="math inline">\(\hat{\beta}_0\)</span> is Unbiased</h1>
+
+</section>
+<section id="proving-unbiasedness-requires-careful-expectation-algebra" class="slide level2">
+<h2>Proving Unbiasedness Requires Careful Expectation Algebra</h2>
+<h3 id="each-step-uses-linearity-and-independence">Each Step Uses Linearity and Independence</h3>
+<div class="columns">
+<div class="column" style="width:55%;">
+<h4 id="given-definitions-and-results">Given Definitions and Results</h4>
+<ol type="1">
+<li><span class="math inline">\(y_i = \beta_0 + \beta_1 x_i + \varepsilon_i\)</span> (Population model)</li>
+<li><span class="math inline">\(\hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x}\)</span> (MP3)</li>
+<li><span class="math inline">\(\mathbb{E}[\hat{\beta}_1-\beta_1] = 0\)</span> (Given from the question)</li>
+<li><span class="math inline">\(\mathbb{E}[e_i] = 0\)</span> (AS4)</li>
+</ol>
+</div><div class="column" style="width:45%;">
+<h4 id="intermediate-results">Intermediate Results</h4>
+<ol type="a">
+<li>Average (1) over <span class="math inline">\(i\in\{1,...,n\}\)</span>: <span class="math inline">\(\bar{y} = \beta_0 + \beta_1\bar{x} + \bar{\varepsilon}\)</span></li>
+<li>Substract (a) into (2): <span class="math inline">\(\hat{\beta}_0 - \beta_0 = \bar{\varepsilon} - (\hat{\beta}_1 - \beta_1)\bar{x}\)</span>.</li>
+</ol>
+</div></div>
+<h4 id="we-need-to-prove">We Need To Prove</h4>
+<p><span class="math display">\[\mathbb{E}[\hat{\beta}_0 - \beta_0] = 0\]</span></p>
+</section>
+<section id="the-unbiasedness-proof" class="slide level2">
+<h2>The Unbiasedness Proof</h2>
+<h3 id="starting-from-the-definition">Starting from the Definition</h3>
+<div class="columns">
+<div class="column" style="width:70%;">
+<h4 id="mathematical-derivation">Mathematical Derivation</h4>
+<p><span class="math display">\[\begin{align}
+  \mathbb{E}[\hat{\beta}_0 - \beta_0] &amp;= \mathbb{E}[\bar{e} - (\hat{\beta}_1 - \beta_1)\bar{x}] \tag{1} \\
+  &amp;= \frac{1}{n} \sum_{i=1}^{n} \underbrace{\mathbb{E}[e_{i}]}_{0} - \mathbb{E}[(\hat{\beta}_1-\beta_1)\bar{x}]  \tag{2}\\
+  &amp;= 0 - \underbrace{\mathbb{E}[\hat{\beta}_1-\beta_1]}_{0}\bar{x} \tag{3} \\
+  &amp;= 0 \tag{4}
+\end{align}\]</span></p>
+<p><span class="bg"><span class="math inline">\(\therefore\hat{\beta}_0\)</span> is unbiased <span class="math inline">\(\blacksquare\)</span></span></p>
+</div><div class="column" style="width:30%;">
+<h4 id="explanation-of-each-step">Explanation of Each Step</h4>
+<ol type="1">
+<li>Substitute Intermediate Result (b).</li>
+<li>Use linearity of <span class="math inline">\(\mathbb{E}\)</span> and AS4.</li>
+<li>Holding <span class="math inline">\(\bar{x}\)</span> fixed, and use linearity of <span class="math inline">\(\mathbb{E}\)</span>.</li>
+<li>Use unbiasedness of <span class="math inline">\(\hat{\beta}_1\)</span> (Given Result 3).</li>
+</ol>
+</div></div>
+</section></section>
+<section>
+<section id="exercise-11-deriving-varhatbeta_0" class="title-slide slide level1 section-slide center">
+<h1><strong>Exercise 11:</strong> Deriving var(<span class="math inline">\(\hat{\beta}_0\)</span>)</h1>
+
+</section>
+<section id="sec-variance-link" class="slide level2 emphasis-slide">
+<h2>The Intercept Variance Formula</h2>
+<h3 id="if-textvarhatbeta_0-textvarbare-textvarhatbeta_1barx-then-textvarhatbeta_0-fracsigma2sum_i1n-x_i2nsum_i1nx_i---barx2">If <span class="math inline">\(\text{var}(\hat{\beta}_0) = \text{var}(\bar{e}) + \text{var}(\hat{\beta}_1\bar{x})\)</span>, then <span class="math inline">\(\text{var}(\hat{\beta}_0) = \frac{\sigma^2\sum_{i=1}^n x_i^2}{n\sum_{i=1}^n(x_i - \bar{x})^2}\)</span></h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="assumptions-and-previous-derivations">Assumptions and Previous Derivations</h4>
+<ol type="1">
+<li>The error terms are independent.</li>
+<li><span class="math inline">\(\text{var}(e_{i}) = \sigma^2\)</span> <a href="#/appendix-variance-proof"><span class="button">See proof</span></a></li>
+<li><span class="math inline">\(\text{var}(\hat{\beta}_1) = \frac{\sigma^2}{n}\frac{1}{\text{var}(x)}\)</span> (See <a href="#/sec-var-x-var-estimator" class="quarto-xref">Exercise 7</a>)</li>
+</ol>
+</div><div class="column" style="width:50%;">
+<h4 id="analyse-the-average-error-term">Analyse the average error term</h4>
+<p><span class="math display">\[\begin{align*}
+  \text{var}(\bar{e}) &amp;= \text{var}\left(\frac{1}{n}\sum_{i=1}^{n}e_{i}\right) \\
+  &amp;= \frac{1}{n^2}\sum_{i=1}^{n}\text{var}(e_{i}) \\
+  &amp;= \frac{1}{n^2}\cdot n \cdot \sigma^2 = \frac{\sigma^2}{n}
+\end{align*}\]</span></p>
+</div></div>
+</section>
+<section id="the-intercept-variance-formula" class="slide level2 emphasis-slide">
+<h2>The Intercept Variance Formula</h2>
+<h3 id="if-textvarhatbeta_0-textvarbare-textvarhatbeta_1barx-then-textvarhatbeta_0-fracsigma2sum_i1n-x_i2nsum_i1nx_i---barx2-1">If <span class="math inline">\(\text{var}(\hat{\beta}_0) = \text{var}(\bar{e}) + \text{var}(\hat{\beta}_1\bar{x})\)</span>, then <span class="math inline">\(\text{var}(\hat{\beta}_0) = \frac{\sigma^2\sum_{i=1}^n x_i^2}{n\sum_{i=1}^n(x_i - \bar{x})^2}\)</span></h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="wrapping-up">Wrapping up</h4>
+<ol type="1">
+<li>For the slope estimator, take the <span class="math inline">\(\bar{x}\)</span> as fixed: <span class="math display">\[\text{var}(\hat{\beta}_1 \bar{x}) = \bar{x}^{2} \cdot \text{var}(\hat{\beta}_1)\]</span></li>
+<li>Substitute the Previous Derivation 3 into the above.</li>
+<li>Substitute both results into the initial equation.</li>
+</ol>
+</div><div class="column" style="width:50%;">
+<ol start="4" type="1">
+<li>Homogenise the expression.</li>
+<li>Use the identity <span class="math inline">\(\sum_{i=1}^n(x_i - \bar{x})^2 + n\bar{x}^2 = \sum_{i=1}^n x_i^2 \blacksquare\)</span>.</li>
+</ol>
+<p><span class="fg">Follows similar logic to <a href="#/sec-var-x-var-estimator" class="quarto-xref">Exercise 7</a></span></p>
+</div></div>
+</section></section>
+<section>
+<section id="exercise-12-sample-size-and-precision" class="title-slide slide level1 section-slide center">
+<h1><strong>Exercise 12:</strong> Sample Size and Precision</h1>
+
+</section>
+<section id="small-samples-generate-extreme-estimates" class="slide level2 alert-slide">
+<h2>Small Samples Generate Extreme Estimates</h2>
+<h3 id="us-states-education-returns-example">US States Education Returns Example</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<h4 id="population-model"><strong>Population Model</strong></h4>
+<p><span class="math inline">\(\log(\text{wage}_{i}) = \beta_0 + \beta_1 \cdot \text{education}_{i} + \varepsilon_{i}\)</span></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>State</th>
+<th>Population</th>
+<th>n</th>
+<th><span class="math inline">\(\hat{\beta}_1\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>California</strong></td>
+<td>38,332,521</td>
+<td>383</td>
+<td>0.070</td>
+</tr>
+<tr class="even">
+<td><strong>New York</strong></td>
+<td>19,651,127</td>
+<td>197</td>
+<td>0.065</td>
+</tr>
+<tr class="odd">
+<td><strong>Florida</strong></td>
+<td>19,552,860</td>
+<td>196</td>
+<td>0.075</td>
+</tr>
+<tr class="even">
+<td><strong>Wyoming</strong></td>
+<td>582,658</td>
+<td>6</td>
+<td><strong>0.200</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>North Dakota</strong></td>
+<td>723,393</td>
+<td>7</td>
+<td><strong>0.010</strong></td>
+</tr>
+<tr class="even">
+<td><strong>South Dakota</strong></td>
+<td>844,877</td>
+<td>8</td>
+<td><strong>0.150</strong></td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:40%;">
+<h4 id="the-pattern"><strong>The Pattern</strong></h4>
+<ul>
+<li><strong>Large states</strong> (<span class="math inline">\(n &gt; 100\)</span>):
+<ul>
+<li><strong>Estimates:</strong> 0.065 - 0.075</li>
+<li>Clustered around truth</li>
+</ul></li>
+<li><strong>Small states</strong> (<span class="math inline">\(n &lt; 10\)</span>):
+<ul>
+<li><strong>Estimates:</strong> 0.010 - 0.200</li>
+<li><strong>Wildly variable</strong></li>
+</ul></li>
+</ul>
+</div></div>
+</section>
+<section id="sampling-variance-explains-the-pattern" class="slide level2">
+<h2>Sampling Variance Explains the Pattern</h2>
+<h3 id="not-economics-just-statistics">Not Economics, Just Statistics</h3>
+<p><span class="math display">\[\text{var}(\hat{\beta}_1) = \frac{\sigma^2}{n \cdot \text{var}(x)}\]</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="why-small-states-differ">Why Small States Differ</h4>
+<ul>
+<li>Small <span class="math inline">\(n\)</span> → Large <span class="math inline">\(\text{var}(\hat{\beta}_1)\)</span></li>
+<li>More likely to get extreme estimates</li>
+<li>Pattern is <strong>statistical</strong>, not economic</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 id="the-truth">The Truth</h4>
+<ul>
+<li>All states likely have <span class="math inline">\(\beta_1 \approx 0.07\)</span></li>
+<li>Education returns similar across US</li>
+<li>Need adequate samples for reliable estimates</li>
+</ul>
+</div></div>
+<p><span class="alert">Cannot conclude small states have different returns to education</span></p>
+</section></section>
+<section>
+<section id="exercise-13-prediction-variance-increases-with-distance-from-barx" class="title-slide slide level1 section-slide center">
+<h1><strong>Exercise 13:</strong> Prediction Variance Increases with Distance from <span class="math inline">\(\bar{x}\)</span></h1>
+
+</section>
+<section id="further-from-the-mean-means-less-reliable-predictions" class="slide level2">
+<h2>Further From the Mean Means Less Reliable Predictions</h2>
+<h3 id="out-of-sample-prediction-uncertainty">Out-of-Sample Prediction Uncertainty</h3>
+<h4 id="given">Given</h4>
+<ul>
+<li><strong>OLS estimates:</strong> <span class="math inline">\(\hat{\beta}_0\)</span> and <span class="math inline">\(\hat{\beta}_1\)</span></li>
+<li><strong>New observation:</strong> <span class="math inline">\(x_i^*\)</span> (not in sample)</li>
+<li><strong>Prediction:</strong> <span class="math inline">\(\hat{y}_i^* = \hat{\beta}_0 + \hat{\beta}_1 x_i^*\)</span></li>
+<li><strong>MP3:</strong> <span class="math inline">\(\hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x}\)</span></li>
+</ul>
+<h4 id="we-need-to-show">We Need To Show</h4>
+<p><span class="math display">\[(x_i^* - \bar{x})^2 \uparrow \implies \text{var}(\hat{y}_i^*) \uparrow\]</span></p>
+</section>
+<section id="the-proof-uses-mp3-to-isolate-the-random-component" class="slide level2 emphasis-slide">
+<h2>The Proof Uses MP3 to Isolate the Random Component</h2>
+<h3 id="deriving-prediction-variance">Deriving Prediction Variance</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<h4 id="express-prediction-using-mp3">Express prediction using MP3</h4>
+<p><span class="math display">\[\hat{y}_i^* = \hat{\beta}_0 + \hat{\beta}_1 x_i^* = \bar{y} - \hat{\beta}_1\bar{x} + \hat{\beta}_1 x_i^*\]</span></p>
+<h4 id="rearrange-to-show-distance-from-mean">Rearrange to show distance from mean</h4>
+<p><span class="math display">\[\hat{y}_i^* - \bar{y} = \hat{\beta}_1(x_i^* - \bar{x})\]</span></p>
+</div><div class="column" style="width:40%;">
+<h4 id="take-variance">Take variance</h4>
+<p><span class="math display">\[\text{var}(\hat{y}_i^* - \bar{y}) = \text{var}[\hat{\beta}_1(x_i^* - \bar{x})]\]</span></p>
+<h4 id="treating-bary-barx-x_i-as-constants">Treating <span class="math inline">\(\bar{y}\)</span>, <span class="math inline">\(\bar{x}\)</span>, <span class="math inline">\(x_i^*\)</span> as constants</h4>
+<p><span class="math display">\[\text{var}(\hat{y}_i^*) \uparrow = (x_i^* - \bar{x})^2 \uparrow \cdot \text{var}(\hat{\beta}_1)\]</span></p>
+</div></div>
+<p><span class="bg">Distance from mean enters quadratically into prediction uncertainty <span class="math inline">\(\blacksquare\)</span></span></p>
+</section>
+<section id="mathematical-reasoning-in-econometrics" class="slide level2 emphasis-slide">
+<h2>Mathematical Reasoning in Econometrics</h2>
+<h3 id="five-steps-to-valid-proofs">Five Steps to Valid Proofs</h3>
+<div class="columns">
+<div class="column" style="width:40%;">
+<h4 id="the-universal-structure">The Universal Structure</h4>
+<ol type="1">
+<li><strong>State</strong> given conditions</li>
+<li><strong>Identify</strong> what to prove</li>
+<li><strong>Choose</strong> appropriate technique</li>
+<li><strong>Execute</strong> justified steps</li>
+<li><strong>Conclude</strong> explicitly (<span class="math inline">\(\blacksquare\)</span>)</li>
+</ol>
+</div><div class="column" style="width:60%;">
+<h4 id="todays-proof-techniques">Today’s Proof Techniques</h4>
+<ul>
+<li><strong>Sign analysis</strong> (correlation → slope sign)</li>
+<li><strong>Definition verification</strong> (mechanical vs random)</li>
+<li><strong>Contradiction</strong> (impossible residual patterns)</li>
+<li><strong>Optimization</strong> (FOCs for OLS)</li>
+<li><strong>Algebraic manipulation</strong> (<span class="math inline">\(R^2\)</span> and correlation)</li>
+</ul>
+</div></div>
+<p><span class="fg">Every step requires justification - intuition guides, mathematics proves</span></p>
 </section></section>
 <section>
 <section id="next-week" class="title-slide slide level1 section-slide center">
 <h1>Next Week</h1>
 
 </section>
-<section id="more-linear-regression" class="slide level2 alert-slide">
-<h2>More Linear Regression</h2>
-<h3 id="your-tasks-and-preview">Your Tasks and Preview</h3>
+<section id="multiple-regression" class="slide level2 alert-slide">
+<h2>Multiple Regression</h2>
+<h3 id="from-simple-to-multiple-controlling-for-confounders">From Simple to Multiple: Controlling for Confounders</h3>
 <div class="alert-content">
-<p><strong>Continue with Exercises 6-12</strong></p>
+<p><strong>Key Questions We’ll Answer:</strong></p>
 <ul>
-<li>Estimation</li>
-<li>Inference</li>
+<li>What does “controlling for” actually mean?</li>
+<li>How do we interpret coefficients when multiple variables are present?</li>
+<li>When does omitting a variable bias our results?</li>
+<li>Why does R² always increase with more variables?</li>
+<li>Can residual patterns reveal omitted variable bias?</li>
+<li>How do we reduce variance in our estimates?</li>
+<li>Why is minimum variance important?</li>
 </ul>
-<p><strong>Key concepts</strong></p>
-<ul>
-<li><strong>Unbiasedness:</strong> <span class="math inline">\(\mathbb{E}[\hat{\beta}] = \beta\)</span></li>
-<li><strong>Efficiency:</strong> Minimum variance</li>
-<li><strong>The assumptions (AS1-AS6)</strong> that guarantee these properties</li>
-</ul>
+<p><strong>Prepare by:</strong> Thinking about what “holding constant” means in practice</p>
 </div>
+</section></section>
+<section>
+<section id="appendix-further-mathematical-derivations" class="title-slide slide level1 appendix section-slide center">
+<h1><strong>Appendix:</strong> Further Mathematical Derivations</h1>
+
+</section>
+<section id="appendix-identity" class="slide level2">
+<h2>Algebraic Identity for Exercise 4</h2>
+<h3 id="proving-sum-x_iy_i---bary-sumx_i---barxy_i---bary">Proving <span class="math inline">\(\sum x_{i}(y_{i} - \bar{y}) = \sum(x_{i} - \bar{x})(y_{i} - \bar{y})\)</span></h3>
+<div class="columns">
+<div class="column" style="width:33%;">
+<h4 id="expand-the-rhs">Expand the RHS</h4>
+<p><span class="math display">\[\begin{align*}
+  &amp;\sum_{i=1}^{n}(x_{i} - \bar{x})(y_{i} - \bar{y}) \\
+  &amp;= \sum_{i=1}^{n} x_{i}(y_{i} - \bar{y}) \\
+  &amp;- \bar{x}\sum_{i=1}^{n}(y_{i} - \bar{y})
+\end{align*}\]</span></p>
+</div><div class="column" style="width:33%;">
+<div class="fragment">
+<h4 id="deviations-from-mean-always-sum-to-zero">Deviations from mean always sum to zero</h4>
+<p><span class="math display">\[\begin{align*}
+  &amp;\sum_{i=1}^{n}(y_{i} - \bar{y}) \\
+  &amp;= \sum_{i=1}^{n} y_{i} - \sum_{i=1}^{n} \bar{y} \\
+  &amp;= n\underbrace{\frac{1}{n}\sum_{i=1}^{n} y_{i}}_{\bar{y}} - n\bar{y} \\
+  &amp;= 0
+\end{align*}\]</span></p>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="fragment">
+<h4 id="therefore">Therefore</h4>
+<p><span class="math display">\[\begin{align*}
+  &amp;\sum_{i=1}^{n}(x_{i} - \bar{x})(y_{i} - \bar{y}) \\
+  &amp;= \sum_{i=1}^{n} x_{i}(y_{i} - \bar{y}) - \bar{x} \cdot 0 \\
+  &amp;= \sum_{i=1}^{n} x_{i}(y_{i} - \bar{y})
+\end{align*}\]</span></p>
+<p><a href="#/sec-apply-identity"><span class="button">Continue with Exercise 4</span></a></p>
+</div>
+</div></div>
+</section>
+<section id="appendix-orthogonality" class="slide level2">
+<h2>Orthogonality of Fitted Values and Residuals</h2>
+<h3 id="why-textcovhaty-hatvarepsilon-0">Why <span class="math inline">\(\text{cov}(\hat{y}, \hat{\varepsilon}) = 0\)</span>?</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="since-haty_i-hatbeta_0-hatbeta_1-x_i">Since <span class="math inline">\(\hat{y}_{i} = \hat{\beta}_{0} + \hat{\beta}_{1} x_{i}\)</span></h4>
+<p><span class="math display">\[\begin{align*}
+  \sum_{i=1}^{n} \hat{y}_{i}\hat{\varepsilon}_{i} &amp;= \sum_{i=1}^{n} (\hat{\beta}_{0} + \hat{\beta}_{1} x_{i})\hat{\varepsilon}_{i} \\
+  &amp;= \sum_{i=1}^{n} \hat{\beta}_{0}\hat{\varepsilon}_{i} + \sum_{i=1}^{n} \hat{\beta}_{1} x_{i}\hat{\varepsilon}_{i} \\
+  &amp;= \hat{\beta}_{0} \underbrace{\sum_{i=1}^{n} \hat{\varepsilon}_{i}}_{MP1} + \hat{\beta}_{1} \underbrace{\sum_{i=1}^{n} x_{i}\hat{\varepsilon}_{i}}_{MP2}\\
+  &amp;= \hat{\beta}_{0} \cdot 0 + \hat{\beta}_{1} \cdot 0 = 0 \; \text{MP5}
+\end{align*}\]</span></p>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<h4 id="converting-to-covariance">Converting to covariance</h4>
+<p><span class="math display">\[\begin{align*}
+\text{cov}(\hat{y}, \hat{\varepsilon}) &amp;= \frac{1}{n}\sum_{i=1}^{n} (\hat{y}_{i} - \bar{\hat{y}})(\hat{\varepsilon}_{i} - \bar{\hat{\varepsilon}}) \\
+&amp;= \frac{1}{n}\underbrace{\sum_{i=1}^{n} \hat{y}_{i}\hat{\varepsilon}_{i}}_{MP5} - \bar{\hat{y}} \cdot \frac{1}{n}\underbrace{\sum_{i=1}^{n} \hat{\varepsilon}_{i}}_{MP1} \\
+&amp;=0 - \bar{\hat{y}} \cdot 0 = 0
+\end{align*}\]</span></p>
+<p><a href="#/sec-correlation-r2"><span class="button">Continue with Exercise 5</span></a></p>
+</div>
+</div></div>
+</section>
+<section id="appendix-variance-proof" class="slide level2">
+<h2>Proving <span class="math inline">\(\text{var}(e_i|x_i) = \sigma^2\)</span> Using Total Variance</h2>
+<h3 id="from-conditional-to-unconditional-variance">From Conditional to Unconditional Variance</h3>
+<h4 id="the-law-of-total-variance-states">The Law of Total Variance States</h4>
+<p><span class="math display">\[\text{var}(e_i) = \mathbb{E}[\text{var}(e_i|x_i)] + \text{var}[\mathbb{E}[e_i|x_i]]\]</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="by-as4-zero-conditional-mean">By AS4 (Zero conditional mean)</h4>
+<p><span class="math display">\[\mathbb{E}[e_i|x_i] = 0\]</span> <span class="math display">\[\therefore\text{var}[\mathbb{E}[e_i|x_i]] = \text{var}[0] = 0\]</span></p>
+<h4 id="by-as5-homoskedasticity">By AS5 (Homoskedasticity)</h4>
+<p><span class="math display">\[\text{var}(e_i|x_i) = \sigma^2 \text{ for all } x_i\]</span></p>
+</div><div class="column" style="width:50%;">
+<h4 id="substituting-into-total-variance">Substituting into total variance</h4>
+<p><span class="math display">\[\text{var}(e_i) = \mathbb{E}[\sigma^2] + 0 = \sigma^2\]</span></p>
+<p><span class="bg">Therefore: <span class="math inline">\(\text{var}(e_i|x_i) = \text{var}(e_i) = \sigma^2\)</span> <span class="math inline">\(\blacksquare\)</span></span></p>
+<p><a href="#/sec-variance-link"><span class="button">Continue to Exercise 11</span></a></p>
+</div></div>
 
 </section></section>
     </div>
