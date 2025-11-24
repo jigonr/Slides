@@ -988,7 +988,7 @@ margin-right: 0; }
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">MG205: Econometrics Theory and Applications</h1>
-  <p class="subtitle">Topic 5: Functional Forms and Transformations</p>
+  <p class="subtitle">Topic 5: Functional Forms</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -1205,7 +1205,7 @@ José Ignacio González-Rojas
 <h4 id="initial-level-hatbeta_0-4">Initial level: <span class="math inline">\(\hat{\beta}_0 = 4\)</span></h4>
 <ul>
 <li>Productivity starts at 4 units on day 0</li>
-<li>Intercept (not significant: <span class="math inline">\(|4/2| = 2 &lt; 1.96\)</span>)</li>
+<li>Intercept (significant: <span class="math inline">\(|4/2| = 2 &gt; 1.96\)</span>)</li>
 </ul>
 <h4 id="linear-time-trend-hatbeta_1-0">Linear time trend: <span class="math inline">\(\hat{\beta}_1 = 0\)</span></h4>
 <ul>
@@ -1308,7 +1308,7 @@ José Ignacio González-Rojas
 <section id="balanced-variables-yield-more-precise-estimates" class="slide level2">
 <h2>Balanced Variables Yield More Precise Estimates</h2>
 <h3 id="variance-formula-shows-female-coefficient-more-precise">Variance Formula Shows Female Coefficient More Precise</h3>
-<p><span class="math display">\[\text{Var}(\hat{\beta}_{\text{category}}) = \frac{\hat{\sigma}^2}{\sum_{i=1}^n(\mathbb{1}[i\text{ is category}] - \mathbb{P}[i\text{ is category}])^2}\]</span></p>
+<p><span class="math display">\[\text{Var}(\hat{\beta}_{\text{category}}) = \frac{\sigma^2}{\sum_{i=1}^n(\mathbb{1}[i\text{ is category}] - \mathbb{P}[i\text{ is category}])^2}\]</span></p>
 <p>(No <span class="math inline">\((1-R^2)\)</span> term since uncorrelated)</p>
 <h4 id="female-takes-values-0-and-1-with-equal-probability-see-exercise-4">Female takes values 0 and 1 with equal probability (See <a href="#/sec-bernoulli-min-variance"><span class="button">Exercise 4</span></a>)</h4>
 <p><span class="math display">\[\begin{align*}
@@ -1396,7 +1396,7 @@ José Ignacio González-Rojas
 <h3 id="substitute-mathbb1itext-is-female-1-mathbb1itext-is-male-0">Substitute <span class="math inline">\(\mathbb{1}[i\text{ is female}] = 1\)</span>, <span class="math inline">\(\mathbb{1}[i\text{ is male}] = 0\)</span></h3>
 <p><span class="math display">\[\begin{align*}
     \widehat{\text{wage}}_i &amp;= -2 + 3 \cdot \mathbb{1}[i\text{ is female}] + 2 \cdot \text{age}_i + 8 \cdot (\mathbb{1}[i\text{ is male}] \times \text{age}_i) \\
-    &amp;\quad - 0.1 \cdot \text{age}_i^2 + 0.1 \cdot (\text{age}_i^2 \times \mathbb{1}[i\text{ is female}]) \\
+    &amp;- 0.1 \cdot \text{age}_i^2 + 0.1 \cdot (\text{age}_i^2 \times \mathbb{1}[i\text{ is female}]) \\
     &amp;= -2 + 3(1) + 2 \cdot \text{age}_i + 8(0 \times \text{age}_i) - 0.1 \cdot \text{age}_i^2 + 0.1(\text{age}_i^2 \times 1) \\
     &amp;= -2 + 3 + 2 \cdot \text{age}_i + 0 - 0.1 \cdot \text{age}_i^2 + 0.1 \cdot \text{age}_i^2 \\
     &amp;= 1 + 2 \cdot \text{age}_i
@@ -1504,28 +1504,28 @@ José Ignacio González-Rojas
 <section id="expected-patent-levels-differ-by-merger-status" class="slide level2">
 <h2>Expected Patent Levels Differ by Merger Status</h2>
 <h3 id="conditional-expectations-from-model-1">Conditional Expectations From Model 1</h3>
-<h4 id="b-expected-lpatents-conditional-on-merger">(b) Expected lpatents conditional on merger</h4>
+<h4 id="b-expected-logtextpatents_i-conditional-on-merger">(b) Expected <span class="math inline">\(\log(\text{patents}_{i})\)</span> conditional on merger</h4>
 <p><strong>Firms with merger:</strong></p>
 <p><span class="math display">\[\begin{align*}
-    \mathbb{E}[\log(\text{patents}) \mid \mathbb{1}[i\text{ has merger}] = 1] &amp;= 0.12 + 0.07 \cdot \log(\text{sales}) \\
-    &amp;\quad + 0.70 \cdot \log(\text{R\&amp;D}) \\
-    &amp;\quad + 0.97(1) \\
-    &amp;\quad + 0.0002 \cdot \text{employment} \\
-    &amp;= 1.09 + 0.07 \cdot \log(\text{sales}) \\
-    &amp;\quad + 0.70 \cdot \log(\text{R\&amp;D}) \\
-    &amp;\quad + 0.0002 \cdot \text{employment}
+    \mathbb{E}[\log(\text{patents}_{i}) \mid \mathbb{1}[i\text{ has merger}] = 1] &amp;= 0.12 + 0.07 \cdot \log(\text{sales}_{i}) \\
+    &amp;+ 0.70 \cdot \log(\text{R\&amp;D}_{i}) \\
+    &amp;+ 0.97(1) \\
+    &amp;+ 0.0002 \cdot \text{employment}_{i} \\
+    &amp;= 1.09 + 0.07 \cdot \log(\text{sales}_{i}) \\
+    &amp;+ 0.70 \cdot \log(\text{R\&amp;D}_{i}) \\
+    &amp;+ 0.0002 \cdot \text{employment}_{i}
 \end{align*}\]</span></p>
 </section>
 <section id="expected-patent-levels-differ-by-merger-status-1" class="slide level2">
 <h2>Expected Patent Levels Differ by Merger Status</h2>
 <h3 id="conditional-expectations-from-model-1-1">Conditional Expectations From Model 1</h3>
-<h4 id="b-expected-lpatents-conditional-on-merger-1">(b) Expected lpatents conditional on merger</h4>
+<h4 id="b-expected-logtextpatents_i-conditional-on-merger-1">(b) Expected <span class="math inline">\(\log(\text{patents}_{i})\)</span> conditional on merger</h4>
 <p><strong>Firms without merger:</strong></p>
 <p><span class="math display">\[\begin{align*}
-    \mathbb{E}[\log(\text{patents}) \mid \mathbb{1}[i\text{ has merger}] = 0] &amp;= 0.12 + 0.07 \cdot \log(\text{sales}) \\
-    &amp;\quad + 0.70 \cdot \log(\text{R\&amp;D}) \\
-    &amp;\quad + 0.97(0) \\
-    &amp;\quad + 0.0002 \cdot \text{employment}
+    \mathbb{E}[\log(\text{patents}_{i}) \mid \mathbb{1}[i\text{ has merger}] = 0] &amp;= 0.12 + 0.07 \cdot \log(\text{sales}_{i}) \\
+    &amp;+ 0.70 \cdot \log(\text{R\&amp;D}_{i}) \\
+    &amp;+ 0.97(0) \\
+    &amp;+ 0.0002 \cdot \text{employment}_{i}
 \end{align*}\]</span></p>
 <p><span class="bg">Merger shifts intercept up by 0.97 (log points) but slopes unchanged</span></p>
 </section>
@@ -1548,92 +1548,226 @@ José Ignacio González-Rojas
 <h2>Interactions Reveal Heterogeneous Merger Effects</h2>
 <h3 id="model-2-shows-merger-impact-depends-on-firm-characteristics">Model 2 Shows Merger Impact Depends on Firm Characteristics</h3>
 <h4 id="d-partial-effect-of-sales-now-depends-on-merger-status">(d) Partial effect of sales now depends on merger status</h4>
-<p><span class="math display">\[\frac{\partial \widehat{\text{lpatents}}}{\partial \text{lsales}} = 0.06 + 0.55 \cdot \mathbb{1}[i\text{ has merger}]\]</span></p>
+<p><span class="math display">\[\frac{\partial \widehat{\log(\text{patents}_{i})}}{\partial \log(\text{sales}_{i})} = 0.06 + 0.55 \cdot \mathbb{1}[i\text{ has merger}]\]</span></p>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>For merged firms (merger = 1):</strong></p>
-<p><span class="math display">\[\frac{\partial \widehat{\text{lpatents}}}{\partial \text{lsales}} = 0.06 + 0.55(1) = 0.61\]</span></p>
-<p>Sales elasticity of 0.61 (much stronger)</p>
-</div><div class="column" style="width:50%;">
-<p><strong>For non-merged firms (merger = 0):</strong></p>
-<p><span class="math display">\[\frac{\partial \widehat{\text{lpatents}}}{\partial \text{lsales}} = 0.06 + 0.55(0) = 0.06\]</span></p>
-<p>Sales elasticity of 0.06 (similar to Model 1)</p>
+<div class="column" style="width:47%;">
+<p><strong>For merged firms <span class="math inline">\((\mathbb{1}[i\text{ has merger}] = 1):\)</span></strong></p>
+<p><span class="math display">\[\begin{align*}
+    \frac{\partial \widehat{\log(\text{patents}_{i})}}{\partial \log(\text{sales}_{i})} &amp;= 0.06 + 0.55(1) \\
+    &amp;= 0.61
+\end{align*}\]</span></p>
+</div><div class="column" style="width:53%;">
+<p><strong>For non-merged firms <span class="math inline">\((\mathbb{1}[i\text{ has merger}] = 0):\)</span></strong></p>
+<p><span class="math display">\[\begin{align*}
+    \frac{\partial \widehat{\log(\text{patents}_{i})}}{\partial \log(\text{sales}_{i})} &amp;= 0.06 + 0.55(0) \\
+    &amp;= 0.06
+\end{align*}\]</span></p>
 </div></div>
 <p><span class="bg">Mergers amplify how sales translate into innovation output</span></p>
 </section>
 <section id="sign-reversal-on-merger-coefficient-explained-by-interactions" class="slide level2 alert-slide">
 <h2>Sign Reversal on Merger Coefficient Explained by Interactions</h2>
-<h3 id="coefficient-interpretation-changes-fundamentally">Coefficient Interpretation Changes Fundamentally</h3>
-<h4 id="e-why-did-hatbeta_textmerger-change-from-0.97-to--2.39">(e) Why did <span class="math inline">\(\hat{\beta}_{\text{merger}}\)</span> change from +0.97 to -2.39?</h4>
+<h3 id="never-interpret-main-effect-in-isolation-when-interactions-present">Never interpret main effect in isolation when interactions present</h3>
 <div class="alert-content">
-<p><strong>Model 1 interpretation:</strong></p>
+<ol start="5" type="a">
+<li><strong>Why did <span class="math inline">\(\hat{\beta}_{\text{merger}}\)</span> change from <span class="math inline">\(+0.97\)</span> to <span class="math inline">\(-2.39\)</span>?</strong></li>
+</ol>
+<p><strong>Model 1 measured average difference between merged and non-merged firms</strong></p>
 <ul>
-<li><span class="math inline">\(\hat{\beta}_{\text{merger}} = 0.97\)</span> measured <strong>average difference</strong> between merged and non-merged firms</li>
+<li><span class="math inline">\(\hat{\beta}_{\text{merger}} = 0.97\)</span></li>
 </ul>
-<p><strong>Model 2 interpretation:</strong></p>
+<p><strong>Model 2 measures difference when <span class="math inline">\(\log(\text{sales}_{i})\)</span> and <span class="math inline">\(\log(\text{R\&amp;D}_{i}) = 0\)</span>:</strong></p>
 <ul>
-<li><span class="math inline">\(\hat{\beta}_{\text{merger}} = -2.39\)</span> measures difference <strong>when lsales = 0 AND lR&amp;D = 0</strong></li>
+<li><span class="math inline">\(\hat{\beta}_{\text{merger}} = -2.39\)</span></li>
 <li>This is an <strong>extrapolation point</strong> outside data range</li>
 <li>Not economically meaningful</li>
 </ul>
-<p><strong>The richer Model 2:</strong></p>
-<ul>
-<li>Allows intercept to differ by merger status</li>
-<li>Allows slopes (w.r.t. lsales and lR&amp;D) to differ by merger status</li>
-<li>Total effect now depends on all these components</li>
-</ul>
 </div>
-<p><span class="alert">Never interpret main effect in isolation when interactions present</span></p>
 </section>
 <section id="expected-innovation-now-differs-in-both-intercept-and-slopes" class="slide level2">
 <h2>Expected Innovation Now Differs in Both Intercept and Slopes</h2>
 <h3 id="conditional-expectations-from-model-2">Conditional Expectations From Model 2</h3>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h4 id="merged-firms-merger-1">Merged firms (merger = 1)</h4>
+<h4 id="merged-firms-mathbb1itext-has-merger-1">Merged firms <span class="math inline">\((\mathbb{1}[i\text{ has merger}] = 1)\)</span></h4>
 <p><span class="math display">\[\begin{align*}
-\mathbb{E}[\text{lpatents} \mid \text{merger} = 1] &amp;= 0.16 + 0.06 \cdot \text{lsales} \\
-&amp;\quad + 0.72 \cdot \text{lR\&amp;D} \\
-&amp;\quad - 2.39(1) + 0.0001 \cdot \text{employ} \\
-&amp;\quad + 0.55(\text{lsales} \times 1) \\
-&amp;\quad - 0.17(\text{lR\&amp;D} \times 1) \\
-&amp;= -2.23 + 0.61 \cdot \text{lsales} \\
-&amp;\quad + 0.55 \cdot \text{lR\&amp;D} \\
-&amp;\quad + 0.0001 \cdot \text{employ}
+    \mathbb{E}[\log(\text{patents}_{i}) \mid \mathbb{1}[i\text{ has merger}] = 1] &amp;= 0.16 + 0.06 \cdot \log(\text{sales}_{i}) \\
+    &amp;+ 0.72 \cdot \log(\text{R\&amp;D}_{i}) \\
+    &amp;- 2.39(1) + 0.0001 \cdot \text{employment}_{i} \\
+    &amp;+ 0.55(\log(\text{sales}_{i}) \times 1) \\
+    &amp;\quad - 0.17(\log(\text{R\&amp;D}_{i}) \times 1) \\
+    &amp;= -2.23 + 0.61 \cdot \log(\text{sales}_{i}) \\
+    &amp;\quad + 0.55 \cdot \log(\text{R\&amp;D}_{i}) \\
+    &amp;\quad + 0.0001 \cdot \text{employment}_{i}
 \end{align*}\]</span></p>
-</div><div class="column" style="width:50%;">
-<h4 id="non-merged-firms-merger-0">Non-merged firms (merger = 0)</h4>
+</section>
+<section id="expected-innovation-now-differs-in-both-intercept-and-slopes-1" class="slide level2">
+<h2>Expected Innovation Now Differs in Both Intercept and Slopes</h2>
+<h3 id="conditional-expectations-from-model-2-1">Conditional Expectations From Model 2</h3>
+<h4 id="non-merged-firms-mathbb1itext-has-merger-0">Non-merged firms <span class="math inline">\((\mathbb{1}[i\text{ has merger}] = 0)\)</span></h4>
 <p><span class="math display">\[\begin{align*}
-\mathbb{E}[\text{lpatents} \mid \text{merger} = 0] &amp;= 0.16 + 0.06 \cdot \text{lsales} \\
-&amp;\quad + 0.72 \cdot \text{lR\&amp;D} \\
-&amp;\quad + 0.0001 \cdot \text{employ}
+    \mathbb{E}[\log(\text{patents}_{i}) \mid \mathbb{1}[i\text{ has merger}] = 0] &amp;= 0.16 + 0.06 \cdot \log(\text{sales}_{i}) \\
+    &amp;+ 0.72 \cdot \log(\text{R\&amp;D}_{i}) \\
+    &amp;+ 0.0001 \cdot \text{employment}_{i}
 \end{align*}\]</span></p>
-<p><strong>Comparison:</strong></p>
-<ul>
-<li>Merged: Lower intercept, higher sales slope, lower R&amp;D slope</li>
-<li>Effect of merger depends on firm size and R&amp;D intensity</li>
-</ul>
-</div></div>
+<p><span class="bg">Effect of merger depends on firm size and R&amp;D intensity</span></p>
 </section>
 <section id="rd-interaction-effect-is-not-statistically-significant" class="slide level2">
 <h2>R&amp;D Interaction Effect Is Not Statistically Significant</h2>
 <h3 id="testing-whether-rd-slope-differs-by-merger-status">Testing Whether R&amp;D Slope Differs by Merger Status</h3>
-<h4 id="g-does-partial-effect-of-lrd-depend-on-merger">(g) Does partial effect of lR&amp;D depend on merger?</h4>
-<p><strong>Hypothesis:</strong></p>
+<h4 id="g-does-partial-effect-of-logtextrd-depend-on-merger">(g) Does partial effect of <span class="math inline">\(\log(\text{R\&amp;D})\)</span> depend on merger?</h4>
 <ul>
-<li><span class="math inline">\(H_0: \beta_{(\text{merger} \times \text{lR\&amp;D})} = 0\)</span></li>
-<li><span class="math inline">\(H_1: \beta_{(\text{merger} \times \text{lR\&amp;D})} \neq 0\)</span></li>
+<li><strong>Hypothesis:</strong>
+<ul>
+<li><span class="math inline">\(H_0: \beta_{(\text{merger} \times \log(\text{R\&amp;D}_{i}))} = 0\)</span></li>
+<li><span class="math inline">\(H_1: \beta_{(\text{merger} \times \log(\text{R\&amp;D}_{i}))} \neq 0\)</span></li>
+</ul></li>
+<li><strong>Test statistic:</strong> <span class="math inline">\(t = \frac{-0.17 - 0}{0.13} = -1.31\)</span></li>
+<li><strong>Decision:</strong> Fail to reject <span class="math inline">\(H_0\)</span> (<span class="math inline">\(|-1.31| &lt; 1.96\)</span>)</li>
 </ul>
-<p><strong>Test statistic:</strong></p>
-<p><span class="math display">\[t = \frac{-0.17 - 0}{0.13} = -1.31\]</span></p>
-<p><strong>Critical value:</strong> <span class="math inline">\(t_{4316, 0.025} \approx 1.96\)</span></p>
-<p><strong>Decision:</strong> Fail to reject <span class="math inline">\(H_0\)</span> (<span class="math inline">\(|-1.31| &lt; 1.96\)</span>)</p>
 <p><span class="fg">Cannot confidently assert that R&amp;D effectiveness differs between merged and non-merged firms</span></p>
 </section></section>
 <section>
 <section id="testing-with-multiple-restrictions" class="title-slide slide level1 section-slide center">
 <h1><strong>Testing With Multiple Restrictions</strong></h1>
 
+</section>
+<section id="exercise-7-do-wage-determinants-differ-by-gender" class="slide level2">
+<h2><strong>Exercise 7:</strong> Do Wage Determinants Differ by Gender?</h2>
+<h3 id="testing-whether-separate-regressions-are-needed">Testing Whether Separate Regressions Are Needed</h3>
+<h4 id="should-we-run-separate-wage-regressions-for-men-and-women-or-can-we-pool-them">Should we run separate wage regressions for men and women, or can we pool them?</h4>
+<p><strong>Variables:</strong></p>
+<ul>
+<li><code>lwage</code>: Log of hourly wages</li>
+<li><code>educ</code>: Years of education<br>
+</li>
+<li><code>exp</code>: Years of work experience</li>
+<li><code>manager</code>: Equals 1 if in managerial position, 0 otherwise</li>
+</ul>
+<p><strong>Dataset:</strong> 779 employees (534 men, 245 women) from large organisation</p>
+</section>
+<section id="two-modelling-strategies-with-different-assumptions" class="slide level2">
+<h2>Two Modelling Strategies With Different Assumptions</h2>
+<h3 id="pooled-vs-separate-regressions">Pooled vs Separate Regressions</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="strategy-1-pooled-regression"><strong>Strategy 1:</strong> Pooled regression</h4>
+<p><span class="math display">\[\begin{align*}
+    \log(\text{wage}_{i}) &amp;= \beta_{0} + \beta_{1} \cdot \text{education}_{i} \\
+    &amp;+ \beta_{2} \cdot \text{experience}_{i} \\
+    &amp;+ \beta_{3} \cdot \mathbb{1}[i\text{ is manager}] + v_i
+\end{align*}\]</span></p>
+<ul>
+<li><strong>Assumes:</strong> All coefficients identical for men and women</li>
+<li><strong>Parameters:</strong> 4 (<span class="math inline">\(\beta_0, \beta_1, \beta_2, \beta_3\)</span>)</li>
+<li><strong>More efficient</strong> if assumption holds</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 id="strategy-2-separate-regressions"><strong>Strategy 2:</strong> Separate regressions</h4>
+<p><strong>Run two models:</strong></p>
+<ul>
+<li><p>One for men only</p></li>
+<li><p>One for women only</p></li>
+<li><p><strong>Allows:</strong> Different intercepts and slopes by gender</p></li>
+<li><p><strong>Parameters:</strong> 8 total (4 for each gender)</p></li>
+<li><p><strong>More flexible</strong> but uses more degrees of freedom</p></li>
+</ul>
+</div></div>
+</section>
+<section id="unrestricted-model-nests-both-strategies" class="slide level2 emphasis-slide">
+<h2>Unrestricted Model Nests Both Strategies</h2>
+<h3 id="using-interactions-to-test-whether-pooling-is-valid">Using Interactions to Test Whether Pooling Is Valid</h3>
+<p><span class="math display">\[\begin{align*}
+    \log(\text{wage}_i) &amp;= \beta_0 + \beta_1 \cdot \text{education}_i + \beta_2 \cdot \text{experience}_i + \beta_3 \cdot \text{manager}_i \\
+    &amp;+ \beta_4 \cdot \mathbb{1}[i\text{ is female}] \\
+    &amp;+ \beta_5 \cdot (\mathbb{1}[i\text{ is female}] \times \text{education}_i) \\
+    &amp;+ \beta_6 \cdot (\mathbb{1}[i\text{ is female}] \times \text{experience}_i) \\
+    &amp;+ \beta_7 \cdot (\mathbb{1}[i\text{ is female}] \times \text{manager}_i) + e_i
+\end{align*}\]</span></p>
+<p><strong>Key features:</strong></p>
+<ul>
+<li>7 parameters (<span class="math inline">\(\beta_0\)</span> through <span class="math inline">\(\beta_7\)</span>)</li>
+<li>Equivalent to running two separate regressions simultaneously</li>
+<li>If <span class="math inline">\(\beta_4 = \beta_5 = \beta_6 = \beta_7 = 0\)</span>, reduces to pooled model</li>
+</ul>
+</section>
+<section id="gender-specific-equations-derived-by-substitution" class="slide level2">
+<h2>Gender-Specific Equations Derived by Substitution</h2>
+<h3 id="setting-indicator-to-0-or-1-recovers-separate-regressions">Setting Indicator to 0 or 1 Recovers Separate Regressions</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="men-mathbb1itext-is-female-0">Men (<span class="math inline">\(\mathbb{1}[i\text{ is female}] = 0\)</span>)</h4>
+<p><span class="math display">\[\begin{align*}
+    \log(\text{wage}_i) &amp;= \beta_0 + \beta_1 \cdot \text{education}_i \\
+    &amp;+ \beta_2 \cdot \text{experience}_i \\
+    &amp;+ \beta_3 \cdot \mathbb{1}[i\text{ is manager}] + e_i
+\end{align*}\]</span></p>
+</div><div class="column" style="width:50%;">
+<h4 id="women-mathbb1itext-is-female-1">Women (<span class="math inline">\(\mathbb{1}[i\text{ is female}] = 1\)</span>)</h4>
+<p><span class="math display">\[\begin{align*}
+    \log(\text{wage}_i) &amp;= (\beta_0 + \beta_4) \\
+    &amp;+ (\beta_1 + \beta_5) \cdot \text{education}_i \\
+    &amp;+ (\beta_2 + \beta_6) \cdot \text{experience}_i \\
+    &amp;+ (\beta_3 + \beta_7) \cdot \mathbb{1}[i\text{ is manager}] \\
+    &amp;+ e_i
+\end{align*}\]</span></p>
+</div></div>
+<p><span class="bg">Each gender has its own intercept and slopes in unrestricted model</span></p>
+</section>
+<section id="f-test-required-to-test-four-restrictions-jointly" class="slide level2 emphasis-slide">
+<h2>F-Test Required to Test Four Restrictions Jointly</h2>
+<h3 id="cannot-use-four-individual-t-tests">Cannot Use Four Individual t-Tests</h3>
+<h4 id="null-hypothesis-gender-doesnt-affect-any-coefficient">Null hypothesis: Gender doesn’t affect any coefficient</h4>
+<p><span class="math display">\[H_0: \beta_4 = 0; \; \beta_5 = 0; \; \beta_6 = 0; \; \beta_7 = 0\]</span></p>
+<ul>
+<li><strong>Alternative:</strong> At least one <span class="math inline">\(\beta_j \neq 0\)</span> for <span class="math inline">\(j \in \{4,5,6,7\}\)</span></li>
+</ul>
+<h4 id="why-not-use-four-t-tests">Why not use four t-tests?</h4>
+<ul>
+<li>Each test at <span class="math inline">\(\alpha = 0.05\)</span> level</li>
+<li>Probability of Type I error across all tests: <span class="math inline">\(1 - (1-0.05)^4 = 0.185\)</span></li>
+<li>Joint significance level inflates to 18.5%, not 5%</li>
+</ul>
+<p><span class="alert">Must test all four restrictions simultaneously using F-test</span></p>
+</section>
+<section id="computing-the-f-statistic-from-both-models" class="slide level2">
+<h2>Computing the F-Statistic From Both Models</h2>
+<h3 id="compare-sum-of-squared-residuals">Compare Sum of Squared Residuals</h3>
+<h4 id="f-test-procedure">F-test procedure</h4>
+<p><span class="math display">\[F = \frac{(\text{SSR}_r - \text{SSR}_{ur})/q}{\text{SSR}_{ur}/(n-k-1)}\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(\text{SSR}_r\)</span>: From pooled model (4 parameters)</li>
+<li><span class="math inline">\(\text{SSR}_{ur}\)</span>: From unrestricted model (7 parameters)</li>
+<li><span class="math inline">\(q = 4\)</span> restrictions being tested</li>
+<li><span class="math inline">\(n = 779\)</span> total observations</li>
+<li><span class="math inline">\(k = 7\)</span> parameters in unrestricted model</li>
+</ul>
+<h4 id="distribution-under-null">Distribution under null</h4>
+<p><span class="math display">\[F \sim F_{4, 771}\]</span></p>
+</section>
+<section id="decision-rule-based-on-critical-value" class="slide level2">
+<h2>Decision Rule Based on Critical Value</h2>
+<h3 id="reject-null-if-f-statistic-exceeds-threshold">Reject Null If F-Statistic Exceeds Threshold</h3>
+<h4 id="critical-value-at-alpha-0.05">Critical value at <span class="math inline">\(\alpha = 0.05\)</span></h4>
+<p><span class="math display">\[F_{4,771,0.05} = 2.37\]</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="if-f-2.37">If <span class="math inline">\(F &gt; 2.37\)</span></h4>
+<ul>
+<li><strong>Reject <span class="math inline">\(H_0\)</span></strong></li>
+<li>Gender affects at least one coefficient</li>
+<li><strong>Run separate regressions</strong> for men and women</li>
+<li>Pooling imposes invalid restrictions</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 id="if-f-leq-2.37">If <span class="math inline">\(F \leq 2.37\)</span></h4>
+<ul>
+<li><strong>Fail to reject <span class="math inline">\(H_0\)</span></strong></li>
+<li>No evidence gender affects coefficients</li>
+<li><strong>Use pooled regression</strong></li>
+<li>More efficient estimation</li>
+<li>Gain precision from larger sample</li>
+</ul>
+</div></div>
 </section>
 <section id="exercise-8-testing-university-effects-on-wages" class="slide level2">
 <h2><strong>Exercise 8:</strong> Testing University Effects on Wages</h2>
@@ -1655,7 +1789,7 @@ José Ignacio González-Rojas
 <section id="model-1-testing-against-baseline-category" class="slide level2">
 <h2>Model 1: Testing Against Baseline Category</h2>
 <h3 id="individual-t-tests-for-each-university-vs-cambridge">Individual t-Tests for Each University vs Cambridge</h3>
-<p><span class="math display">\[\widehat{\log(\text{wage}_i)} = \alpha + \beta_{\text{LSE}} \cdot \mathbb{1}[i\text{ from LSE}] + \beta_{\text{OX}} \cdot \mathbb{1}[i\text{ from Oxford}] + e_i\]</span></p>
+<p><span class="math display">\[\log(\text{wage}_i) = \alpha + \beta_{\text{LSE}} \cdot \mathbb{1}[i\text{ from LSE}] + \beta_{\text{OX}} \cdot \mathbb{1}[i\text{ from Oxford}] + e_i\]</span></p>
 <p>where Cambridge is baseline (both dummies = 0)</p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -1678,11 +1812,13 @@ José Ignacio González-Rojas
 <h2>Comparing Non-Baseline Categories Requires Different Test</h2>
 <h3 id="lse-vs-oxford-cannot-be-tested-with-single-t-statistic">LSE vs Oxford Cannot Be Tested With Single t-Statistic</h3>
 <h4 id="test-3-lse-vs-oxford">Test 3: LSE vs Oxford</h4>
-<p><strong>Hypothesis:</strong> <span class="math inline">\(H_0: \beta_{\text{LSE}} = \beta_{\text{OX}}\)</span></p>
-<p><strong>Cannot use simple t-test because:</strong></p>
+<ul>
+<li><strong>Hypothesis:</strong> <span class="math inline">\(H_0: \beta_{\text{LSE}} = \beta_{\text{OX}}\)</span></li>
+<li><strong>Cannot use simple t-test because:</strong>
 <ul>
 <li>This tests equality of two parameters</li>
 <li>Not whether single parameter equals zero</li>
+</ul></li>
 </ul>
 </section>
 <section id="comparing-non-baseline-categories-requires-different-test-1" class="slide level2">
@@ -1692,8 +1828,8 @@ José Ignacio González-Rojas
 <p><strong>Solution: F-test</strong></p>
 <p>Compare:</p>
 <ul>
-<li><strong>Unrestricted model:</strong> <span class="math inline">\(\text{lwage}_i = \alpha + \beta_{\text{LSE}} \cdot \mathbb{1}[i\text{ from LSE}] + \beta_{\text{OX}} \cdot \mathbb{1}[i\text{ from Oxford}] + e_i\)</span></li>
-<li><strong>Restricted model:</strong> <span class="math inline">\(\text{lwage}_i = \alpha + \beta \cdot (\mathbb{1}[i\text{ from LSE}] + \mathbb{1}[i\text{ from Oxford}]) + e_i\)</span></li>
+<li><strong>Unrestricted model:</strong> <span class="math inline">\(\log(\text{wage}_i) = \alpha + \beta_{\text{LSE}} \cdot \mathbb{1}[i\text{ from LSE}] + \beta_{\text{OX}} \cdot \mathbb{1}[i\text{ from Oxford}] + e_i\)</span></li>
+<li><strong>Restricted model:</strong> <span class="math inline">\(\log(\text{wage}_i) = \alpha + \beta \cdot (\mathbb{1}[i\text{ from LSE}] + \mathbb{1}[i\text{ from Oxford}]) + e_i\)</span></li>
 </ul>
 <p><span class="fg">Imposing constraint makes LSE and Oxford have same coefficient</span></p>
 </section>
@@ -1701,35 +1837,37 @@ José Ignacio González-Rojas
 <h2>Testing Whether All Universities Have Same Wage-Experience Profile</h2>
 <h3 id="model-2-adds-experience-and-interactions">Model 2 Adds Experience and Interactions</h3>
 <p><span class="math display">\[\begin{align*}
-    \widehat{\log(\text{wage}_{i})} &amp;= \alpha + \beta_{\text{LSE}} \cdot \mathbb{1}[i\text{ from LSE}] + \beta_{\text{Oxford}} \cdot \mathbb{1}[i\text{ from Oxford}] \\
+    \log(\text{wage}_{i}) &amp;= \alpha + \beta_{\text{LSE}} \cdot \mathbb{1}[i\text{ from LSE}] + \beta_{\text{Oxford}} \cdot \mathbb{1}[i\text{ from Oxford}] \\
     &amp;+ \gamma \cdot \text{experience}_i + \gamma_{\text{LSE}} \cdot (\text{experience}_i \times \mathbb{1}[i\text{ from LSE}]) \\
     &amp;+ \gamma_{\text{OX}} \cdot (\text{experience}_i \times \mathbb{1}[i\text{ from Oxford}]) + e_i
 \end{align*}\]</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
 <h4 id="what-this-allows">What this allows</h4>
 <ul>
 <li>Different intercepts by university</li>
 <li>Different slopes w.r.t. experience by university</li>
 </ul>
+</div><div class="column" style="width:50%;">
 <h4 id="alternative-interpretation">Alternative interpretation</h4>
 <ul>
 <li>Three separate regressions (one per university)</li>
 <li>Model 2 estimates all simultaneously</li>
 </ul>
+</div></div>
 </section>
 <section id="joint-null-requires-f-test-with-four-restrictions" class="slide level2">
 <h2>Joint Null Requires F-Test With Four Restrictions</h2>
 <h3 id="testing-all-differences-simultaneously">Testing All Differences Simultaneously</h3>
 <h4 id="null-hypothesis-single-wage-experience-profile">Null hypothesis: Single wage-experience profile</h4>
 <p><span class="math display">\[H_0: \beta_{\text{LSE}} = 0; \; \gamma_{\text{LSE}} = 0; \; \beta_{\text{OX}} = 0; \; \gamma_{\text{OX}} = 0\]</span></p>
-<p><strong>Restricted model:</strong></p>
-<p><span class="math display">\[\text{lwage}_i = \alpha + \gamma \cdot \text{EXP}_i + v_i\]</span></p>
-<p><strong>F-test procedure:</strong></p>
-<p><span class="math display">\[F = \frac{(\text{SSR}_r - \text{SSR}_{ur})/4}{\text{SSR}_{ur}/(n-5-1)} \sim F_{4, n-6}\]</span></p>
 <ul>
-<li>Compare to critical value <span class="math inline">\(c\)</span> at chosen significance level</li>
-<li>Reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(F &gt; c\)</span></li>
+<li><p><strong>Restricted model:</strong> <span class="math inline">\(\log(\text{wage}_i) = \alpha + \gamma \cdot \text{EXP}_i + v_i\)</span></p></li>
+<li><p><strong>F-test procedure:</strong> <span class="math inline">\(F = \frac{(\text{SSR}_r - \text{SSR}_{ur})/4}{\text{SSR}_{ur}/(n-5-1)} \sim F_{4, n-6}\)</span></p></li>
+<li><p>Compare to critical value <span class="math inline">\(c\)</span> at chosen significance level</p></li>
+<li><p>Reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(F &gt; c\)</span></p></li>
 </ul>
-<p><span class="alert">Cannot test four restrictions jointly using individual t-tests</span></p>
+<p><span class="alert">Cannot test four restrictions jointly using individual <span class="math inline">\(t\)</span>-tests</span></p>
 </section></section>
 <section>
 <section id="summary-and-key-takeaways" class="title-slide slide level1 section-slide center">
