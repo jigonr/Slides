@@ -1635,29 +1635,27 @@ José Ignacio González-Rojas
 <h1><strong>Testing With Multiple Restrictions</strong></h1>
 
 </section>
-<section id="exercise-7-testing-university-effects-on-wages" class="slide level2">
-<h2><strong>Exercise 7:</strong> Testing University Effects on Wages</h2>
+<section id="exercise-8-testing-university-effects-on-wages" class="slide level2">
+<h2><strong>Exercise 8:</strong> Testing University Effects on Wages</h2>
 <h3 id="three-universities-three-pairwise-comparisons-required">Three Universities, Three Pairwise Comparisons Required</h3>
-<h4 id="the-setup">The setup</h4>
-<p>Compare wage outcomes for graduates from:</p>
+<h4 id="compare-wage-outcomes-for-graduates-from">Compare wage outcomes for graduates from:</h4>
 <ul>
 <li>Cambridge (baseline/omitted category)</li>
 <li>LSE</li>
 <li>Oxford</li>
 </ul>
-<p>Want to test:</p>
+<p><strong>Want to test:</strong></p>
 <ol type="1">
-<li>LSE ≠ Cambridge?</li>
-<li>Oxford ≠ Cambridge?</li>
-<li>LSE ≠ Oxford?</li>
+<li>LSE <span class="math inline">\(\neq\)</span> Cambridge?</li>
+<li>Oxford <span class="math inline">\(\neq\)</span> Cambridge?</li>
+<li>LSE <span class="math inline">\(\neq\)</span> Oxford?</li>
 </ol>
-<h4 id="question-1">Question</h4>
-<p>How would we set up these tests using dummy variables and t-tests?</p>
+<h4 id="how-would-we-set-up-these-tests-using-dummy-variables-and-t-tests">How would we set up these tests using dummy variables and t-tests?</h4>
 </section>
 <section id="model-1-testing-against-baseline-category" class="slide level2">
 <h2>Model 1: Testing Against Baseline Category</h2>
 <h3 id="individual-t-tests-for-each-university-vs-cambridge">Individual t-Tests for Each University vs Cambridge</h3>
-<p><span class="math display">\[\widehat{\text{lwage}}_i = \alpha + \beta_{\text{LSE}} \cdot \mathbb{1}[i\text{ from LSE}] + \beta_{\text{OX}} \cdot \mathbb{1}[i\text{ from Oxford}] + e_i\]</span></p>
+<p><span class="math display">\[\widehat{\log(\text{wage}_i)} = \alpha + \beta_{\text{LSE}} \cdot \mathbb{1}[i\text{ from LSE}] + \beta_{\text{OX}} \cdot \mathbb{1}[i\text{ from Oxford}] + e_i\]</span></p>
 <p>where Cambridge is baseline (both dummies = 0)</p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -1686,6 +1684,11 @@ José Ignacio González-Rojas
 <li>This tests equality of two parameters</li>
 <li>Not whether single parameter equals zero</li>
 </ul>
+</section>
+<section id="comparing-non-baseline-categories-requires-different-test-1" class="slide level2">
+<h2>Comparing Non-Baseline Categories Requires Different Test</h2>
+<h3 id="lse-vs-oxford-cannot-be-tested-with-single-t-statistic-1">LSE vs Oxford Cannot Be Tested With Single t-Statistic</h3>
+<h4 id="test-3-lse-vs-oxford-1">Test 3: LSE vs Oxford</h4>
 <p><strong>Solution: F-test</strong></p>
 <p>Compare:</p>
 <ul>
@@ -1694,20 +1697,20 @@ José Ignacio González-Rojas
 </ul>
 <p><span class="fg">Imposing constraint makes LSE and Oxford have same coefficient</span></p>
 </section>
-<section id="exercise-8-testing-whether-all-universities-have-same-wage-experience-profile" class="slide level2">
-<h2><strong>Exercise 8:</strong> Testing Whether All Universities Have Same Wage-Experience Profile</h2>
+<section id="testing-whether-all-universities-have-same-wage-experience-profile" class="slide level2">
+<h2>Testing Whether All Universities Have Same Wage-Experience Profile</h2>
 <h3 id="model-2-adds-experience-and-interactions">Model 2 Adds Experience and Interactions</h3>
 <p><span class="math display">\[\begin{align*}
-\widehat{\text{lwage}}_i &amp;= \alpha + \beta_{\text{LSE}} \cdot \mathbb{1}[i\text{ from LSE}] + \beta_{\text{OX}} \cdot \mathbb{1}[i\text{ from Oxford}] + \gamma \cdot \text{EXP}_i \\
-&amp;+ \gamma_{\text{LSE}} \cdot (\text{EXP}_i \times \mathbb{1}[i\text{ from LSE}]) \\
-&amp;+ \gamma_{\text{OX}} \cdot (\text{EXP}_i \times \mathbb{1}[i\text{ from Oxford}]) + e_i
+    \widehat{\log(\text{wage}_{i})} &amp;= \alpha + \beta_{\text{LSE}} \cdot \mathbb{1}[i\text{ from LSE}] + \beta_{\text{Oxford}} \cdot \mathbb{1}[i\text{ from Oxford}] \\
+    &amp;+ \gamma \cdot \text{experience}_i + \gamma_{\text{LSE}} \cdot (\text{experience}_i \times \mathbb{1}[i\text{ from LSE}]) \\
+    &amp;+ \gamma_{\text{OX}} \cdot (\text{experience}_i \times \mathbb{1}[i\text{ from Oxford}]) + e_i
 \end{align*}\]</span></p>
-<p><strong>What this allows:</strong></p>
+<h4 id="what-this-allows">What this allows</h4>
 <ul>
 <li>Different intercepts by university</li>
 <li>Different slopes w.r.t. experience by university</li>
 </ul>
-<p><strong>Alternative interpretation:</strong></p>
+<h4 id="alternative-interpretation">Alternative interpretation</h4>
 <ul>
 <li>Three separate regressions (one per university)</li>
 <li>Model 2 estimates all simultaneously</li>
@@ -1761,7 +1764,6 @@ José Ignacio González-Rojas
 <li>Interaction models change hypothesis test structure</li>
 </ul>
 </div></div>
-<p><span class="bg">Functional form choice as important as variable selection for valid inference</span></p>
 </section>
 <section id="next-week-limitations-of-ols" class="slide level2 alert-slide">
 <h2>Next Week: Limitations of OLS</h2>
