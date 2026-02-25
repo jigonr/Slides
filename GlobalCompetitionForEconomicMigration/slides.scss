@@ -1,0 +1,481 @@
+/*-- scss:defaults --*/
+
+// Custom colours and variables
+$jet: #000000;
+$accent: #EE7733;
+$accent2: #0077BB;
+$accent3: #33BBEE;
+$accent4: #EE3377;
+$accent5: #CC3311;
+$accent6: #009988;
+$accent7: #BBBBBB;
+$right-arrow: "\2192"; // Unicode character for right arrow
+
+// Refined color scheme for slides (Paul Tol 3-color)
+$primary: #004488;    // Deep blue - for structure
+$highlight: #DDAA33;  // Gold - for emphasis
+$alert: #BB5566;      // Muted red - for warnings
+$text-dark: #222222;  // Near black - better than pure black
+$text-light: #FFFFFF; // White for dark backgrounds
+$gray-light: #F8F9FA; // Very light gray - subtle use only
+
+// fonts
+@import url(https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,350,350i,400,400i);
+$font-family-sans-serif: "Roboto", sans-serif !default;
+$presentation-font-size-root: 50px;
+
+$presentation-heading-font: "Roboto", sans-serif !default;
+$presentation-heading-color: $jet !default;
+$presentation-heading-font-weight: 200;
+
+// colors
+$body-color: $jet !default;
+$link-color: $accent3 !default;
+$selection-bg: $accent5 !default;
+
+/*-- scss:rules --*/
+
+.reveal a {
+  line-height: 1.5em;
+}
+
+.reveal p {
+  font-weight: 300;
+  margin-top: 1.25em;
+}
+
+// TITLE SLIDE - Flexible author layouts
+#title-slide {
+  text-align: left;
+
+  .title {
+    color: $body-color;
+    font-size: 1.4em;
+    font-weight: 350;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+  }
+
+  .subtitle {
+    color: $accent;
+    font-style: italic;
+    font-size: 1.1em;
+    margin-bottom: 1.5em;
+  }
+
+  .institute,
+  .quarto-title-affiliation,
+  .quarto-title-author-email {
+    font-style: italic;
+    font-size: 0.85em;
+    color: #666666;
+    line-height: 1.3;
+  }
+
+  .author,
+  .quarto-title-author-name {
+    color: $body-color;
+    font-weight: 400;
+    font-size: 1em;
+  }
+
+  // Flexible author layouts based on count
+  .quarto-title-authors {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    margin-bottom: 1.5em;
+    
+    // Single author - standard left-aligned
+    &:has(.quarto-title-author:only-child) {
+      .quarto-title-author {
+        width: 100%;
+      }
+    }
+    
+    // Two authors - side by side
+    &:has(.quarto-title-author:nth-child(2):last-child) {
+      gap: 3em;
+      .quarto-title-author {
+        flex: 0 1 45%;
+      }
+    }
+    
+    // Three authors - one row
+    &:has(.quarto-title-author:nth-child(3):last-child) {
+      gap: 2em;
+      .quarto-title-author {
+        flex: 0 1 30%;
+      }
+    }
+    
+    // Four authors - single row
+    &:has(.quarto-title-author:nth-child(4):last-child) {
+      gap: 1.5em;
+      .quarto-title-author {
+        flex: 0 1 22%;
+      }
+    }
+    
+    // Five or six authors - single row, smaller text
+    &:has(.quarto-title-author:nth-child(5)),
+    &:has(.quarto-title-author:nth-child(6)) {
+      gap: 1.2em;
+      .quarto-title-author {
+        flex: 0 1 auto;
+        
+        .quarto-title-author-name {
+          font-size: 0.9em;
+        }
+        
+        .quarto-title-affiliation,
+        .quarto-title-author-email {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+  
+  // Date styling
+  .date {
+    color: $accent7;
+    font-size: 0.9em;
+    margin-top: 1em;
+    clear: both;
+  }
+}
+
+// Regular content slides
+.reveal h2 {
+  font-weight: 350;
+  font-size: 1.4em;
+}
+
+.reveal h3 {
+  color: $accent;
+  font-style: italic;
+  font-weight: 350;
+  font-size: 0.95em;
+}
+
+.reveal h4 {
+  color: $accent2;
+  font-weight: 350;
+  margin-top: 1.25em;
+}
+
+// alerts etc.
+.alert {
+  color: $accent4;
+}
+
+.fg {
+  color: $accent2;
+}
+
+.bg {
+  background-color: $accent3;
+  padding: 0.1em;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+// lists
+// Unordered lists
+.reveal ul {
+  font-weight: 300;
+  padding-left: 16px;
+
+  li::marker {
+    color: mix($accent, white, 70%);
+  }
+}
+
+.reveal ul ul {
+  list-style: none;
+
+  li:before {
+    content: $right-arrow;
+    color: mix($accent, white, 60%);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    margin-right: 0.5em;
+  }
+}
+
+// Ordered lists
+.reveal ol {
+  font-weight: 300;
+  padding-left: 16px;
+
+  li::marker {
+    color: $accent;
+  }
+}
+
+// Move "hamburger" menu button to top right
+.reveal .slide-menu-button {
+  position: fixed;
+  top: 6px;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.reveal .slide-menu-button>* {
+  pointer-events: auto;
+}
+
+// Same for chalkboard buttons (with an offset)
+.reveal .slide-chalkboard-buttons {
+  position: fixed;
+  top: 12px;
+  right: 24px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.reveal .slide-chalkboard-buttons>* {
+  pointer-events: auto;
+}
+
+// Beamer-style button link environment
+.button {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: $accent2;
+  border: 1px solid $accent2;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: $accent3;
+  border-color: $accent3;
+}
+
+.button::before {
+  content: "▶";
+  margin-right: 5px;
+}
+
+// Special catch for etable environment
+.etable {
+  width: 100%;
+  height: calc(100% - 3em);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.etable img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+// CUSTOM SLIDE STYLES - Refined Design System
+
+// 1. SECTION SLIDES - Deep blue background (main transitions)
+.reveal .slide.section-slide,
+.reveal section.section-slide {
+  background-color: $primary !important;
+  
+  h1, h2 {
+    color: $text-light !important;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 20%;
+  }
+  
+  h3, p {
+    color: $text-light !important;
+    text-align: center;
+    font-weight: 300;
+    opacity: 0.9;
+  }
+  
+  // No bold on section slides
+  strong, b {
+    font-weight: 400;
+  }
+}
+
+// 2. EMPHASIS SLIDES - White background with accent colors (better contrast)
+.reveal .slide.emphasis-slide,
+.reveal section.emphasis-slide {
+  background-color: white !important;
+  
+  h2 {
+    color: $primary !important;
+    font-weight: 400;
+    border-bottom: 3px solid $highlight;
+    padding-bottom: 0.3em;
+    margin-bottom: 1em;
+  }
+  
+  h3 {
+    color: $primary !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.1em;
+  }
+  
+  h4 {
+    color: $highlight !important;
+    font-weight: 400;
+  }
+  
+  // Enhanced .fg and .bg for emphasis slides
+  .fg {
+    color: $primary !important;
+    font-weight: 500;
+  }
+  
+  .bg {
+    background-color: rgba(221, 170, 51, 0.15);
+    color: $text-dark;
+    padding: 4px 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(221, 170, 51, 0.3);
+  }
+  
+  // Tables on emphasis slides
+  table {
+    margin: 1.5em auto;
+    border-collapse: collapse;
+    
+    th {
+      color: white;
+      background-color: $primary;
+      padding: 0.5em;
+      font-weight: 400;
+    }
+    
+    td {
+      border: 1px solid rgba(0, 68, 136, 0.2);
+      padding: 0.5em;
+    }
+    
+    // Zebra striping for better readability
+    tr:nth-child(even) {
+      background-color: rgba(0, 68, 136, 0.05);
+    }
+  }
+  
+  // Special box for key information
+  .key-box {
+    background-color: $gray-light;
+    border-left: 4px solid $highlight;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+}
+
+// 3. ALERT SLIDES - White background with alert accents
+.reveal .slide.alert-slide,
+.reveal section.alert-slide {
+  background-color: white !important;
+  
+  h2 {
+    color: $alert !important;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 0.3em;
+    font-size: 1.3em;
+  }
+  
+  h3 {
+    color: $alert !important;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+  }
+  
+  // Alert box for critical information
+  .alert-content {
+    border: 2px solid $alert;
+    border-radius: 8px;
+    padding: 1.5em;
+    margin: 1em auto;
+    max-width: 90%;
+    
+    p {
+      color: $text-dark;
+      font-size: 1.1em;
+      margin: 0;
+    }
+    
+    strong {
+      color: $alert;
+      font-weight: 500;
+    }
+  }
+  
+  // For deadline tables - more compact
+  table {
+    margin: 1em auto;
+    font-size: 0.95em;
+    
+    th {
+      background-color: $alert;
+      color: white;
+      padding: 0.3em;
+      font-weight: 400;
+    }
+    
+    td {
+      padding: 0.3em;
+      border: 1px solid rgba(187, 85, 102, 0.3);
+      
+      strong {
+        color: $alert;
+      }
+    }
+  }
+}
+
+// Utility classes
+.reveal .center {
+  text-align: center !important;
+}
+
+.reveal .muted {
+  color: $accent7;
+  font-size: 0.9em;
+}
+
+// Video centering
+.reveal iframe,
+.reveal video {
+  display: block;
+  margin: 0 auto;
+}
+
+// Fragment animations
+.reveal .fragment.grow {
+  display: inline-block;
+}
+
+.reveal .fragment.highlight-current-blue.current-fragment {
+  color: $primary;
+}
