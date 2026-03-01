@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(GlobalCompetitionForEconomicMigration/**)",
+      "Bash(wc:*)",
+      "Bash(git -C:*)"
+    ]
+  }
+}
