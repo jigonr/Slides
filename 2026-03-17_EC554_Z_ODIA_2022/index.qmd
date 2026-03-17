@@ -94,9 +94,6 @@ $$
 
 :::
 
-
-ptimal learning is a Poisson process
-
 # Characterization of Optimal Learning {.section-slide}
 
 ## The optimal belief process is a compensated Poisson process.
