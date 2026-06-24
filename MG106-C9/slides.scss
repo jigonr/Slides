@@ -20,13 +20,13 @@ $text-light: #FFFFFF; // White for dark backgrounds
 $gray-light: #F8F9FA; // Very light gray - subtle use only
 
 // fonts
-@import url(https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,350,350i,400,400i);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap);
 $font-family-sans-serif: "Roboto", sans-serif !default;
 $presentation-font-size-root: 50px;
 
 $presentation-heading-font: "Roboto", sans-serif !default;
 $presentation-heading-color: $jet !default;
-$presentation-heading-font-weight: 200;
+$presentation-heading-font-weight: 300;
 
 // colors
 $body-color: $jet !default;
@@ -51,7 +51,7 @@ $selection-bg: $accent5 !default;
   .title {
     color: $body-color;
     font-size: 1.4em;
-    font-weight: 350;
+    font-weight: 300;
     line-height: 1.2;
     margin-bottom: 0.5em;
   }
@@ -149,20 +149,20 @@ $selection-bg: $accent5 !default;
 
 // Regular content slides
 .reveal h2 {
-  font-weight: 350;
+  font-weight: 300;
   font-size: 1.4em;
 }
 
 .reveal h3 {
   color: $accent;
   font-style: italic;
-  font-weight: 350;
+  font-weight: 300;
   font-size: 0.95em;
 }
 
 .reveal h4 {
   color: $accent2;
-  font-weight: 350;
+  font-weight: 300;
   margin-top: 1.25em;
 }
 
@@ -411,6 +411,14 @@ $selection-bg: $accent5 !default;
     text-align: center;
     margin-bottom: 0.5em;
     font-size: 1em;
+  }
+
+  h4 {
+    color: $alert !important;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 0.9em;
+    margin-bottom: 0.4em;
   }
   
   // Alert box for critical information
