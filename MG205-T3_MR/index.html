@@ -1539,15 +1539,15 @@ display:block!important;
 <section id="more-variables-increase-coefficient-variance" class="slide level2 emphasis-slide">
 <h2>More Variables Increase Coefficient Variance</h2>
 <h3 id="the-cost-of-controlling">The Cost of Controlling</h3>
-<p><span class="math display">\[\operatorname{var}(\hat{\beta}_j\mid\mathbf{x}) = \frac{\sigma^2}{ns_{x_j}^2(1-R_j^2)},\]</span></p>
-<p>where <span class="math inline">\(\mathbf{x}=(x_{i\ell})_{i=1,\ldots,n;\,\ell=1,\ldots,k}\)</span> is the complete observed design, <span class="math inline">\(s_{x_j}^2=\sum_i(x_{ij}-\bar{x}_j)^2/n\)</span>, and <span class="math inline">\(R_j^2\)</span> comes from regressing regressor <span class="math inline">\(j\)</span> on the others. Index <span class="math inline">\(i\)</span> labels observations; <span class="math inline">\(j\)</span> labels coefficients.</p>
+<p><span class="math display">\[\text{var}(\hat{\beta}_i) = \frac{\sigma^2}{n} \cdot \frac{1}{\text{var}(x_{i})} \cdot \frac{1}{1 - R^2_i},\]</span></p>
+<p>where <span class="math inline">\(R^2_i\)</span> is from regressing <span class="math inline">\(x_i\)</span> on all other regressors.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <h4 id="when-we-add-x_2">When We Add <span class="math inline">\(x_2\)</span></h4>
 <ul>
 <li>If <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> are correlated, then <span class="math inline">\(R^2_1 &gt; 0\)</span></li>
 <li><span class="math inline">\(\therefore 1 - R^2_1 &lt; 1\)</span></li>
-<li><span class="math inline">\(\operatorname{var}(\hat{\beta}_1)\uparrow\)</span></li>
+<li><span class="math inline">\(\text{var}(\hat{\beta}_1)\uparrow\)</span></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h4 id="the-intuition">The Intuition</h4>
@@ -1558,7 +1558,7 @@ display:block!important;
 <li>Need larger effects to reject <span class="math inline">\(H_0\)</span></li>
 </ul>
 </div></div>
-<p><span class="bg">This is the trade-off: better fit (<span class="math inline">\(R^2 \uparrow\)</span>) but less precise estimates (<span class="math inline">\(\operatorname{var}(\hat{\beta})\uparrow\)</span>)</span></p>
+<p><span class="bg">This is the trade-off: better fit (<span class="math inline">\(R^2 \uparrow\)</span>) but less precise estimates (<span class="math inline">\(\text{var}(\hat{\beta})\uparrow\)</span>)</span></p>
 </section>
 <section id="the-fundamental-trade-off-fit-vs-precision" class="slide level2 emphasis-slide">
 <h2>The Fundamental Trade-off: Fit vs Precision</h2>
@@ -1585,13 +1585,13 @@ display:block!important;
 <tr class="even">
 <td><strong>Hypothesis Testing</strong></td>
 <td>Can we detect effects?</td>
-<td><span class="math inline">\(\operatorname{var}(\hat{\beta})\uparrow\)</span> → wider confidence intervals → harder to reject <span class="math inline">\(H_0\)</span></td>
+<td><span class="math inline">\(\text{var}(\hat{\beta})\uparrow\)</span> → wider confidence intervals → harder to reject <span class="math inline">\(H_0\)</span></td>
 </tr>
 </tbody>
 </table>
 <h4 id="the-dilemma">The Dilemma</h4>
 <ul>
-<li><strong>Adding variables</strong>: Improves <span class="math inline">\(R^2\)</span> but increases <span class="math inline">\(\operatorname{var}(\hat{\beta})\)</span></li>
+<li><strong>Adding variables</strong>: Improves <span class="math inline">\(R^2\)</span> but increases <span class="math inline">\(\text{var}(\hat{\beta})\)</span></li>
 <li><strong>Dropping variables</strong>: Risks omitted variable bias</li>
 </ul>
 <p><span class="bg">Choose based on research question: Do you prioritise explanation or causal inference?</span></p>
@@ -1604,7 +1604,7 @@ display:block!important;
 <section id="only-sample-size-reduces-variance-reliably" class="slide level2">
 <h2>Only Sample Size Reduces Variance Reliably</h2>
 <h3 id="what-can-we-do-about-high-variance">What Can We Do About High Variance?</h3>
-<p><span class="math display">\[\operatorname{var}(\hat{\beta}_j\mid\mathbf{x}) = \frac{\sigma^2}{ns_{x_j}^2(1-R_j^2)}\]</span></p>
+<p><span class="math display">\[\text{var}(\hat{\beta}_i) = \frac{\sigma^2}{n}\cdot\frac{1}{\text{var}(x_{i})}\cdot\frac{1}{1 - R^2_{i}}\]</span></p>
 <div class="columns">
 <div class="column" style="width:33%;">
 <h4 id="increase-sample-size">Increase sample size ✓</h4>
@@ -1616,7 +1616,7 @@ display:block!important;
 </div><div class="column" style="width:33%;">
 <h4 id="choose-x-far-from-mean">Choose <span class="math inline">\(x\)</span> far from mean? ✗</h4>
 <ul>
-<li>Would increase <span class="math inline">\(s_{x_1}^2\)</span></li>
+<li>Would increase <span class="math inline">\(\text{var}(x_{1i})\)</span></li>
 <li>Conflicts with random sampling (Assumption 2)</li>
 <li>Cannot control <span class="math inline">\(x\)</span> values</li>
 </ul>
@@ -1636,7 +1636,7 @@ display:block!important;
 <div class="column" style="width:40%;">
 <h4 id="pros-of-dropping-variables">Pros of Dropping Variables</h4>
 <ul>
-<li>Lower <span class="math inline">\(\operatorname{var}(\hat{\beta}_k)\)</span></li>
+<li>Lower <span class="math inline">\(\text{var}(\hat{\beta}_k)\)</span></li>
 <li>Narrower confidence intervals</li>
 <li>Easier to detect effects</li>
 </ul>
