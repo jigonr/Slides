@@ -1,6 +1,6 @@
 # Screening for Global Talent
 
-`talk.qmd` is the 15-substantive-slide presentation, followed by linked backups.
+`talk.qmd` is the 17-substantive-slide presentation, followed by linked backups.
 Title and section transitions are outside that count. Every backup has a return
 button; the final reference section uses native Quarto citations and the local
 fresh local-Zotero BibTeX export in `references.bib`, using the reference deck’s APA style.
@@ -36,7 +36,7 @@ render, numerical reconciliation or bounds check is not scientific acceptance;
 read the actual slides and figures as well.
 
 The retained `talk.pdf` has 64 non-empty widescreen pages, including the title,
-section transitions and 38 backup/reference slides. Its internal buttons remain
+section transitions and 37 backup/reference slides. Its internal buttons remain
 clickable. To reproduce it, start a dedicated Chromium CDP browser on loopback
 port 9241, then run:
 
@@ -70,8 +70,8 @@ uv run --script review/restyle-figures.py --source /path/to/visa_proj/worktree
 ```
 
 There are 26 displayed figures; the retained monetary-coefficient asset is not
-shown. The final three main slides instead introduce demand, identification,
-and a proposed supply/counterfactual framework. No current gravity estimates
+shown. The closing sequence introduces demand, identification, government policy
+choice and conclusions. No current gravity estimates
 appear in the talk. The bibliography contains 23 locally verified references.
 
 - The six-date ECDF uses 2000/05/10/15/20/25, 22 nonmilitary occupation groups and

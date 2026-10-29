@@ -31,7 +31,25 @@ format:
     date-format: long
 ---
 
-# The economic question {.section-slide}
+# Motivation and research question {.section-slide}
+
+## Governments offer access to work and membership {#motivation}
+
+### Work visas and investment-linked citizenship make different offers
+
+- **US H-1B:** employers sponsor workers in specialty occupations.
+- **US H-1B1:** Chile and Singapore have nationality-specific pathways.
+- **Argentina:** an investment-linked citizenship initiative combines financial conditions with membership.
+
+[Eligibility, sponsorship and future rights shape the offer.]{.bg}
+
+::: {.nav}
+[Policy examples](#episodes){.button} [Nationality-specific pathways](#preferences){.button} [Research question](#question){.button}
+:::
+
+::: {.notes}
+Argentina: Decrees 366/2025 and 524/2025 establish category/procedure; 2 October 2026 announcement describes financial terms, not a verified exact application opening. The episode motivates a policy panel displayed through 2025, not an observation inside that window. The earlier UK examples are not reused with unverified historical thresholds. Germany’s exact occupation-targeted episode remains a lead requiring identification, not an asserted causal treatment.
+:::
 
 ## Visa design links worker choice and government competition {#question .emphasis-slide}
 
@@ -44,11 +62,30 @@ format:
 [Our contribution: a global visa Atlas linked to domestic and international careers.]{.fg}
 
 ::: {.nav}
-[Contribution and literature](#contribution){.button} [Examples of visa offers](#motivation){.button} [Nationality preferences](#preferences){.button}
+[Examples of visa offers](#motivation){.button} [Nationality preferences](#preferences){.button}
 :::
 
 ::: {.notes}
 Main question recovered from the PhD Review Visa brief and earlier Global Competition presentation. Descriptive questions do not all require elasticities; government/firm counterfactuals require additional objectives, constraints and equilibrium closure.
+:::
+
+## Connecting legal offers with global career allocation {#contribution .literature}
+
+### Route-level policy bundles connect policy measurement with worker histories
+
+- **Policy measurement and competition:** legal regimes select different migrants and compete for talent [@helblingMeasuringImmigrationPolicies2017; @dehaasGrowingRestrictivenessChanging2018; @czaikaGravityHighSkilledMigration2017; @shacharRaceTalentHighly2006].
+  - **Our contribution:** a broad motive inventory and dated, work-oriented route bundles for comparable profiles.
+- **International allocation:** migration choices reallocate talent across countries and over careers [@bertoliMultilateralResistanceMigration2013; @brinattiThirdCountryEffectsUS2024; @amanzadehReturnMigrationHuman2024; @bhalothiaGlobalValueCities2025; @pratoGlobalRaceTalent2025].
+  - **Our contribution:** connect legal menus to domestic and international career transitions.
+- **Legal options and labour markets:** access to migrant labour, employer restrictions and connected domestic markets shape firm and worker outcomes [@doranEffectsHighSkilledImmigration2022; @townsendHowRestrictingMigrants2025; @borusyakUnderstandingMigrationResponses2026].
+  - **Our contribution:** cross-country legal-menu measurement, with competing government offers as a proposed extension.
+
+::: {.nav}
+[Full literature map](#literature-map){.button} [Demand identification](#demand-identification){.button} [Government objectives](#government-costs){.button} [Return: question](#question){.button}
+:::
+
+::: {.notes}
+Do not claim the first policy dataset, third-country response, or visa-induced employer-mobility result. Townsend–Allan concerns within-destination employer options and wage setting; Borusyak et al. domestic region–industry responses under specified shocks. Neither supplies a ready international coefficient or closure. The competing-government model remains a research extension. Cai–Lin–Szeidl is intentionally excluded from this presentation.
 :::
 
 # Data: pathways and job histories {.section-slide}
@@ -322,25 +359,6 @@ Three descriptive findings, followed by two next research steps. Occupational sw
 
 # Appendix: legal offers and data {.section-slide}
 
-## Connecting legal offers with global career allocation {#contribution .literature}
-
-### Route-level policy bundles connect policy measurement with worker histories
-
-- **Policy measurement and competition:** legal regimes select different migrants and compete for talent [@helblingMeasuringImmigrationPolicies2017; @dehaasGrowingRestrictivenessChanging2018; @czaikaGravityHighSkilledMigration2017; @shacharRaceTalentHighly2006].
-  - **Our contribution:** a broad motive inventory and dated, work-oriented route bundles for comparable profiles.
-- **International allocation:** migration choices reallocate talent across countries and over careers [@bertoliMultilateralResistanceMigration2013; @brinattiThirdCountryEffectsUS2024; @amanzadehReturnMigrationHuman2024; @bhalothiaGlobalValueCities2025; @pratoGlobalRaceTalent2025].
-  - **Our contribution:** connect legal menus to domestic and international career transitions.
-- **Legal options and labour markets:** access to migrant labour, employer restrictions and connected domestic markets shape firm and worker outcomes [@doranEffectsHighSkilledImmigration2022; @townsendHowRestrictingMigrants2025; @borusyakUnderstandingMigrationResponses2026].
-  - **Our contribution:** cross-country legal-menu measurement, with competing government offers as a proposed extension.
-
-::: {.nav}
-[Full literature map](#literature-map){.button} [Demand identification](#demand-identification){.button} [Government objectives](#government-costs){.button} [Return: question](#question){.button}
-:::
-
-::: {.notes}
-Do not claim the first policy dataset, third-country response, or visa-induced employer-mobility result. Townsend–Allan concerns within-destination employer options and wage setting; Borusyak et al. domestic region–industry responses under specified shocks. Neither supplies a ready international coefficient or closure. The competing-government model remains a research extension. Cai–Lin–Szeidl is intentionally excluded from this presentation.
-:::
-
 ## A migrant’s profile determines the relevant visa menu {#bridge}
 
 ### Match the person, destination and year to the pathway
@@ -360,37 +378,6 @@ Applications also depend on sponsorship, salary and other personal circumstances
 
 ::: {.notes}
 Official reference hierarchy: 23/98/459/867 major/minor/broad/detailed codes, not measured provider cardinalities. Source support includes military; Atlas grid excludes it. Earlier 11-skilled-group and current four-group gravity restrictions are analytical selections. Complete native vendor hierarchy, fine observed counts and source vintage remain unverified. Salary, sponsor, age, experience and family circumstances can remain unresolved in a putative profile match.
-:::
-
-## Governments offer access, costs and rights {#motivation .compact}
-
-### Admission is one part of a package that shapes a person’s future options
-
-:::: {.columns}
-::: {.column width="49%"}
-#### Access to employment
-
-- Occupation, citizenship and sponsorship can determine which routes a worker can use.
-- Employer portability changes the jobs available **after admission**.
-- A route opening can redirect workers from another destination rather than create a new move.
-:::
-::: {.column width="49%"}
-#### Residence and membership
-
-- Family work rights, renewal and settlement change the value of the initial offer.
-- Argentina’s investment-linked **citizenship** initiative illustrates a different membership instrument—not a work visa.
-- Announced terms, binding rules and operational access are distinct.
-:::
-::::
-
-[How do these offers change the allocation of workers—and the offers made by rival governments?]{.bg}
-
-::: {.nav}
-[Legal examples](#episodes){.button} [Nationality-specific routes](#preferences){.button} [Return: question](#question){.button}
-:::
-
-::: {.notes}
-Argentina: Decrees 366/2025 and 524/2025 establish category/procedure; 2 October 2026 announcement describes financial terms, not a verified exact application opening. The episode motivates a policy panel displayed through 2025, not an observation inside that window. The earlier UK examples are not reused with unverified historical thresholds. Germany’s exact occupation-targeted episode remains a lead requiring identification, not an asserted causal treatment.
 :::
 
 ## Admission, residence and citizenship are distinct {#episodes .compact}

@@ -9,8 +9,8 @@
     "overflow": []
   },
   {
-    "id": "the-economic-question",
-    "title": "The economic question",
+    "id": "motivation-and-research-question",
+    "title": "Motivation and research question",
     "indices": {
       "h": 1,
       "v": 0
@@ -19,11 +19,31 @@
     "overflow": []
   },
   {
+    "id": "motivation",
+    "title": "Governments offer access to work and membership",
+    "indices": {
+      "h": 1,
+      "v": 1
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
     "id": "question",
     "title": "Visa design links worker choice and government competition",
     "indices": {
       "h": 1,
-      "v": 1
+      "v": 2
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "contribution",
+    "title": "Connecting legal offers with global career allocation",
+    "indices": {
+      "h": 1,
+      "v": 3
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -229,31 +249,11 @@
     "overflow": []
   },
   {
-    "id": "contribution",
-    "title": "Connecting legal offers with global career allocation",
-    "indices": {
-      "h": 7,
-      "v": 1
-    },
-    "height": 1015.199951171875,
-    "overflow": []
-  },
-  {
     "id": "bridge",
     "title": "A migrant’s profile determines the relevant visa menu",
     "indices": {
       "h": 7,
-      "v": 2
-    },
-    "height": 1015.199951171875,
-    "overflow": []
-  },
-  {
-    "id": "motivation",
-    "title": "Governments offer access, costs and rights",
-    "indices": {
-      "h": 7,
-      "v": 3
+      "v": 1
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -263,7 +263,7 @@
     "title": "Admission, residence and citizenship are distinct",
     "indices": {
       "h": 7,
-      "v": 4
+      "v": 2
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -273,7 +273,7 @@
     "title": "A nationality preference need not dominate a general route",
     "indices": {
       "h": 7,
-      "v": 5
+      "v": 3
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -283,7 +283,7 @@
     "title": "The broad inventory includes more than work routes",
     "indices": {
       "h": 7,
-      "v": 6
+      "v": 4
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -293,7 +293,7 @@
     "title": "Route identity and annual history require validation",
     "indices": {
       "h": 7,
-      "v": 7
+      "v": 5
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -303,7 +303,7 @@
     "title": "Occupational detail and analytical restrictions differ",
     "indices": {
       "h": 7,
-      "v": 8
+      "v": 6
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -313,7 +313,7 @@
     "title": "Different questions use different parts of the job history",
     "indices": {
       "h": 7,
-      "v": 9
+      "v": 7
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -323,7 +323,7 @@
     "title": "Many positive gaps are short; missing updates still matter",
     "indices": {
       "h": 7,
-      "v": 10
+      "v": 8
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -333,7 +333,7 @@
     "title": "A fixed horizon requires a job covering the endpoint",
     "indices": {
       "h": 7,
-      "v": 11
+      "v": 9
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -343,7 +343,7 @@
     "title": "Historical representation broadens over time",
     "indices": {
       "h": 7,
-      "v": 12
+      "v": 10
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -353,7 +353,7 @@
     "title": "Recorded appearances and endings are not legal births and deaths",
     "indices": {
       "h": 7,
-      "v": 13
+      "v": 11
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -363,7 +363,7 @@
     "title": "Changing support gives a different pooled comparison",
     "indices": {
       "h": 7,
-      "v": 14
+      "v": 12
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -373,7 +373,7 @@
     "title": "Computer/mathematical profile: fixed-support comparison",
     "indices": {
       "h": 7,
-      "v": 15
+      "v": 13
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -383,7 +383,7 @@
     "title": "Healthcare-practitioner profile: fixed-support comparison",
     "indices": {
       "h": 7,
-      "v": 16
+      "v": 14
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -393,7 +393,7 @@
     "title": "Unresolved rules prevent a complete legal-menu interpretation",
     "indices": {
       "h": 7,
-      "v": 17
+      "v": 15
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -403,7 +403,7 @@
     "title": "Credential requirements are often unresolved",
     "indices": {
       "h": 7,
-      "v": 18
+      "v": 16
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -413,7 +413,7 @@
     "title": "Employer sponsorship remains common as its recorded share falls",
     "indices": {
       "h": 7,
-      "v": 19
+      "v": 17
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -423,7 +423,7 @@
     "title": "Sponsorship shares depend on the weighting rule",
     "indices": {
       "h": 7,
-      "v": 20
+      "v": 18
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -433,7 +433,7 @@
     "title": "Spouse work rights are one part of the route bundle",
     "indices": {
       "h": 7,
-      "v": 21
+      "v": 19
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -443,7 +443,7 @@
     "title": "Dependent access and dependent work rights are distinct",
     "indices": {
       "h": 7,
-      "v": 22
+      "v": 20
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -453,7 +453,7 @@
     "title": "Joint fee contrasts keep comparisons within a profile cell",
     "indices": {
       "h": 7,
-      "v": 23
+      "v": 21
     },
     "height": 1015.199951171875,
     "overflow": []

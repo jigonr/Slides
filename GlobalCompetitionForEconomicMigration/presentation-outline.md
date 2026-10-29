@@ -1,15 +1,17 @@
 # Screening for Global Talent
 
-The [Quarto source](talk/talk.qmd), [HTML](talk/talk.html) and [PDF](talk/talk.pdf) contain **15 substantive slides**, followed by linked backups. The title and section transitions are outside that count.
+The [Quarto source](talk/talk.qmd), [HTML](talk/talk.html) and [PDF](talk/talk.pdf) contain **17 substantive slides**, followed by linked backups. The title and section transitions are outside that count.
 
-## Main argument and slide sequence
+Motivation examples precede the economic question, and the literature/contribution slide follows it as an ordinary main slide.
+
+## Core argument and slide sequence
 
 1. **Visa design links worker choice and government competition.** Connect a global visa Atlas with domestic and international careers. The detailed contribution and literature comparison are linked backups.
 2. **The Atlas describes pathways available to migrants.** The analytical object is a pathway for a given origin, destination, occupation, education and year. Eligibility, fees, rights and future options form a package.
 3. **Job histories reveal domestic and international mobility.** People can change employers, occupations and countries repeatedly. Job locations are distinct from citizenship and residence.
-4. **Recorded work pathways increase over time.** Show the active-pathway series, from744 in2000 to1,965 in2025.
+4. **Recorded work pathways increase over time.** Show the active-pathway series, from 744 in 2000 to 1,965 in 2025.
 5. **Recorded occupation–education passes increase on common support.** Compare the distribution for the same destinations and profiles at six dates.
-6. **Lithuanian preferential pathways involve trade-offs.** For the Korean, arts-occupation, undergraduate profile in2024, compare fees, processing, duration and settlement.
+6. **Lithuanian preferential pathways involve trade-offs.** For the Korean, arts-occupation, undergraduate profile in 2024, compare fees, processing, duration and settlement.
 7. **Three Czech pathways illustrate different requirements.** Restore the Digital Nomad Visa, Employee Card and EU Blue Card comparison immediately after Lithuania. Nationality, sponsorship, fees and annual salary requirements differ.
 8. **About half of job changes cross occupations.** Compare domestic and international job changes, not distinct people.
 9. **International moves connect country-income groups.** Show the origin-conditional transition matrix.
@@ -23,9 +25,9 @@ The [Quarto source](talk/talk.qmd), [HTML](talk/talk.html) and [PDF](talk/talk.p
 ## Supporting evidence and qualifications
 
 - The Atlas inventory, annual pathway characteristics and applicant-specific legal availability are different objects. Passing occupation and education conditions does not establish complete eligibility. Citizenship cannot be assigned from a previous job country.
-- The fixed-support ECDF uses167 destinations,22 nonmilitary occupation groups, two overlapping hypothetical education scenarios and six dates. The two education scenarios are not mutually exclusive population groups.
-- Broad geography plots use83,651,638 international job changes in2010–2025. Occupational comparisons use the separate strict-history sample with resolved occupations. These are event-weighted comparisons.
-- Country-income groups use fixed World Bank FY2011 classifications; regions use the retained World Bank2026 mapping. Income-group transitions are not personal earnings changes.
+- The fixed-support ECDF uses 167 destinations, 22 nonmilitary occupation groups, two overlapping hypothetical education scenarios and six dates. The two education scenarios are not mutually exclusive population groups.
+- Broad geography plots use 83,651,638 international job changes in 2010–2025. Occupational comparisons use the separate strict-history sample with resolved occupations. These are event-weighted comparisons.
+- Country-income groups use fixed World Bank FY2011 classifications; regions use the retained World Bank 2026 mapping. Income-group transitions are not personal earnings changes.
 - The Lithuanian Korean-nationality preference is not evidence of a bilateral treaty. The linked H-1B1 example supplies a bilateral-agreement comparison. The Czech fields describe recorded requirements; unreported conditions remain unresolved.
 - Revelio generally reveals a job destination rather than a visa route. Route probabilities must be aggregated before matching country flows. Staying, sponsorship, applications and admission require explicit treatment.
 - Predetermined geography does not instrument every policy. Fixed effects may absorb policy variation. PPML can handle count zeros but cannot reveal inaccessible alternatives by itself.
