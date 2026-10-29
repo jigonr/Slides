@@ -16,6 +16,13 @@ The talk follows a dependency chain:
 
 There are **15 substantive slides** below. The title, optional contents and section transitions are outside that count. This is an outline, not a slide implementation or a script. Backup buttons identify specific destinations and return to their invoking slide; the full graph collection is an evidence library rather than an additional main sequence.
 
+## Presentation design
+
+- Use large graph labels, ticks, legends and cell values. Remove sample-size annotations and graph footnotes; retain the sample definitions, coverage and sources in speaker notes and the figure documentation. Preserve counts when they are the plotted outcome.
+- Present the literature vertically, without columns or a comparison table. Each main bullet states the literature and its previous findings, with parenthetic citations; its indented sub-bullet states our contribution to that literature.
+- Preserve `slides.scss` and its default citation and colour settings. Avoid pink emphasis in the literature slide; use the bullet hierarchy to distinguish previous findings from our contribution. Give slides informative subtitles.
+- Use Paul Tol Vibrant for the graphs, matching the teaching theme. After content review, Iris implements the section, normal, emphasis and alert slide treatments using the existing theme.
+
 # Main sequence
 
 ## Motivation, question and contribution
@@ -48,11 +55,14 @@ There are **15 substantive slides** below. The title, optional contents and sect
 
 **Purpose:** Combine literature and contribution on one slide. Avoid claiming that policy measurement, international substitution or visa-induced employer mobility is new.
 
-**Exhibit:** Three comparisons, each with a closest precedent and a precise proposed departure:
+**Exhibit:** Three top-level bullets, each stating previous findings with parenthetic citations, followed by an indented contribution sub-bullet. No columns or comparison table:
 
-- **Policy measurement:** IMPIC, DEMIG POLICY and Czaika–Parsons measure legal levels, policy changes or instruments. The Atlas can add dated route bundles and profile-dependent comparisons, conditional on route identity and legal validation.
-- **Migration allocation:** Bertoli–Fernández-Huertas Moraga and Brinatti–Guo establish the importance of alternatives and third-country effects. We seek a broader policy/history mapping across destinations, occupations and career stages, not the first evidence of diversion.
-- **Legal options and labour markets:** Townsend–Allan connect employer restrictions, mobility, wage setting and welfare within a destination. We seek cross-country legal menus and subsequent government competition; the firm side is an extension requiring its own evidence.
+- **Policy measurement:** restrictions and selection vary across instruments and migrant groups (IMPIC, DEMIG POLICY and Czaika–Parsons).
+  - **Our contribution:** dated route-level bundles across migration motives and worker profiles, conditional on route identity and legal validation.
+- **Migration allocation:** alternatives and third-country diversion shape bilateral migration (Bertoli–Fernández-Huertas Moraga; Brinatti–Guo).
+  - **Our contribution:** connect legal-menu variation to domestic and international career transitions.
+- **Legal options and labour markets:** employer restrictions and connected labour markets affect mobility, wages and policy responses (Townsend–Allan; Borusyak et al.).
+  - **Our contribution:** study competing countries’ offers, with employer responses as a distinct extension requiring its own evidence.
 
 **Backups:** B3 detailed literature map, including dynamic mobility, demand identification and government-policy inversion. Define each paper’s contribution rather than listing names.
 
@@ -178,41 +188,41 @@ There are **15 substantive slides** below. The title, optional contents and sect
 
 ## Elasticities, costs and policy questions
 
-### 13. Worker substitution is the empirical link from offers to allocation
+### 13. Workers choose among the pathways they can access
 
-**Subtitle:** First distinguish migration participation from the destination chosen conditional on moving.
+**Subtitle:** A random-utility model separates fixed geography from government-chosen offers.
 
 **Purpose:** Explain the parameter required by the research question, the alternatives over which it operates and the variation that could identify it.
 
-**Exhibit:** A small worker-choice diagram and one conditional choice equation. Include staying and domestic alternatives in the intended model; show explicitly when the retained empirical exercise conditions only on observed international movers. Define the price/attribute derivative, the population, timing and fixed effects before calling a coefficient an elasticity.
+**Exhibit:** Utility with net wage $\widetilde w$, fixed geographic attributes in blue and government-chosen visa characteristics in orange, followed by a choice probability over an eligibility-dependent set including staying. Define the product as destination–pathway. Net wage deducts taxes and annualised application charges on a consistent horizon. Cite migration RUM and destination-substitution precedents.
 
 **Evidence boundary:** Domestic job transitions are available, but they do not by themselves supply same-job stayers or an exhaustive population risk set. Legal rules can restrict opportunities, yet unknown sponsorship, admission and consideration still separate preferences from access. Repeated histories add transition information; they do not by themselves identify unrestricted preferences or exogenous policy variation.
 
-**Retained empirical support:** The single-policy conditional MPML exercise uses 12 largest origins, observed destination labels, four SOC groups and two lifetime-education profiles over 2010–2024. Its fee sample has 121,258 positive cells / 7,523,810 events; its salary-floor sample has 42,492 cells / 3,143,435 events. The source's 246 labels are not 246 verified sovereign countries, and positive-cell support is not an exhaustive alternative set.
+**Presentation scope:** Do not show the current gravity estimates. The equations introduce an illustrative demand framework, not an adopted or fitted structural model.
 
 **Backups:** B19 denominator/PPML–MPML mapping; B20 policy variation left after fixed effects; B21 sample inclusion and zero alternatives. Do not present a coefficient based only on positive policy-matched cells as the unconditional migration response.
 
-### 14. Cost preliminaries distinguish policy burdens from government incentives
+### 14. Estimation must separate preferences from access
 
-**Subtitle:** Monetary associations and model-based inversion are different evidential steps.
+**Subtitle:** Gravity connects individual choices to flows; zeros alone do not reveal why an option is absent.
 
-**Purpose:** Include the requested cost-estimation material without claiming that either fees or observed choice coefficients identify government resource costs.
+**Purpose:** Explain the extra endogeneity beyond net wages: governments choose characteristics and selection rules; actual accessible alternatives are partly unobserved.
 
-**Exhibit:** One readable preliminary monetary-response comparison or model-based cost diagnostic, selected with Ariadne from the retained numerical objects. State the exact sample, transformations, units, uncertainty availability and identifying assumptions beside the result. Keep the legacy demand-inversion/WTP diagnostic separate from the newer single-policy MPML sensitivities; they have different samples and specifications. Some MPML fits have no estimated standard errors and cannot support inferential claims.
+**Exhibit:** Aggregate individual pathway probabilities into expected origin–destination flows. Three short estimation routes: demand inversion/instruments; latent or restricted choice sets; revealed-preference information bounds. Cite the papers supporting each route. A standard gravity or PPML representation needs aggregation and identification assumptions; handling count zeros does not itself identify unavailable alternatives.
 
-**Available preliminary comparison:** Fee coefficients per USD 1,000 are **+0.064244 / −0.124078 / −0.208230** across the L/D/T fixed-effect structures; annual salary-floor coefficients per USD 1,000 are **+0.003749 / −0.016707 / +0.000122**. These are conditional-index/log-relative-odds slopes, not unqualified flow or probability semielasticities. For one changing alternative, its own log-probability derivative is the coefficient times one minus its choice probability; a common change to a set of destination alternatives instead depends on that set’s probability mass. K/E absorb these policies exactly: that is no identifying variation, not an estimated zero effect. Define the FE structures in backup. Same-support PPML reproduces six monetary MPML points within 0.000080, which is an implementation check, not causal validation. There are no current standard errors, joint-policy fit or identified government resource-cost estimates. The honest main-slide point is sensitivity to the variation retained, not a preferred point estimate or a willingness-to-pay conclusion.
+**Zero-flow interpretation:** An unavailable pathway, prohibitive cost, low preferences, sampling and measurement can all generate an observed zero. Do not equate every zero with selection or every positive flow with exogenous access.
 
 **Core distinction:** Applicant fees, employer levies, salary requirements and capital deposits are different burdens. A fee payment is not pure resource loss, a salary floor is not revenue paid to government, and waiting time is not measured government staff cost. A fee-choice model may recover a net marginal incentive under interior optimality and identified fee derivatives; it does not separate unrestricted government benefits from resource costs. Label any WTP/fee equivalent as conditional on its utility and access assumptions.
 
 **Backups:** B22 retained demand diagnostics and monetary units; B23 government fee first-order condition, capacity multipliers and benefit/cost non-identification. If no estimate passes the needed checks, retain the input-to-estimand diagram as the preliminary result rather than manufacture a cost estimate.
 
-### 15. The next step is to turn measured menus into testable competition questions
+### 15. Demand elasticities connect design, costs and welfare
 
-**Subtitle:** Use worker responses first; add firms and governments with explicit additional evidence.
+**Subtitle:** The same demand estimates can discipline a firm model or a government model.
 
 **Purpose:** Close the research loop from the initial question. Summarise the three defensible descriptive messages and state the next estimable object and policy counterfactual.
 
-**Exhibit:** One sequence: validated legal offers and career histories → worker substitution → firm or government decision problem → allocation/distribution/welfare. Use one concrete counterfactual, such as a rival changing a specified route’s portability or fee, rather than promise every model extension.
+**Exhibit:** Estimated demand elasticities enter a provider/government objective with revenue, benefits and costs. Supply optimality gives marginal-cost or incentive restrictions under explicit objectives, constraints and conduct assumptions. Use one concrete design: a portable work visa replacing employer-tied permission. Ask who applies, how employers and rival governments respond, and who gains.
 
 **Required additions:** Route-linked applications/admissions or usable-access evidence; credible policy/attribute variation; government instruments and objectives; market adjustment and the welfare population. Cross-country policy co-movement alone does not identify competition. State which questions can be answered with existing evidence, which require additional identification and which remain longer-term extensions.
 

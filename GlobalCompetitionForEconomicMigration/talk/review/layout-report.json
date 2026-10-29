@@ -110,7 +110,7 @@
   },
   {
     "id": "pooled-menu",
-    "title": "Menu expansion survives fixed destination–profile support",
+    "title": "Recorded screen passes increase on fixed support",
     "indices": {
       "h": 3,
       "v": 2
@@ -170,7 +170,7 @@
   },
   {
     "id": "worker-demand",
-    "title": "Worker substitution links legal offers to allocation",
+    "title": "Workers choose among the pathways they can access",
     "indices": {
       "h": 4,
       "v": 1
@@ -180,7 +180,7 @@
   },
   {
     "id": "cost-preliminaries",
-    "title": "Preliminary monetary coefficients depend on the retained variation",
+    "title": "Estimation must separate preferences from access",
     "indices": {
       "h": 4,
       "v": 2
@@ -190,7 +190,7 @@
   },
   {
     "id": "next-steps",
-    "title": "From legal offers to competition for talent",
+    "title": "Demand elasticities connect design, costs and welfare",
     "indices": {
       "h": 4,
       "v": 3
@@ -570,10 +570,30 @@
   },
   {
     "id": "literature-map",
-    "title": "Policy measurement and worker allocation frame the contribution",
+    "title": "Policy measurement and allocation frame the contribution",
     "indices": {
       "h": 7,
       "v": 7
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "literature-careers",
+    "title": "Career histories have close empirical precedents",
+    "indices": {
+      "h": 7,
+      "v": 8
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "literature-methods",
+    "title": "Screening and causal gravity inform different steps",
+    "indices": {
+      "h": 7,
+      "v": 9
     },
     "height": 1015.199951171875,
     "overflow": []
@@ -583,7 +603,7 @@
     "title": "References",
     "indices": {
       "h": 7,
-      "v": 8
+      "v": 10
     },
     "height": 1015.199951171875,
     "overflow": []

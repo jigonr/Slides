@@ -35,8 +35,8 @@ Screen captures and the layout report are generated under `review/`. A successfu
 render, numerical reconciliation or bounds check is not scientific acceptance;
 read the actual slides and figures as well.
 
-The retained `talk.pdf` has 59 non-empty widescreen pages, including the title,
-section transitions and 36 backup/reference slides. Its internal buttons remain
+The retained `talk.pdf` has 61 non-empty widescreen pages, including the title,
+section transitions and 38 backup/reference slides. Its internal buttons remain
 clickable. To reproduce it, start a dedicated Chromium CDP browser on loopback
 port 9241, then run:
 
@@ -56,6 +56,23 @@ Figures are retained or re-rendered from numerical objects in the
 Its `presentation-figure-review.md` identifies exact sources, producers,
 denominators, units and checks. Figure content hashes and source names are
 recorded in `figure-manifest.json`.
+
+`review/restyle-figures.py` regenerates presentation derivatives from the retained
+plotting functions and numerical results in that worktree. It enlarges graph
+text, removes sample-size annotations and graph footers, and uses Paul Tol
+Vibrant. Continuous magnitude matrices use a sequential white-to-Vibrant-blue
+scale. The theme SCSS and default citation styles remain unchanged. The renderer
+checks unchanged data artists/axis limits and exact numerical readbacks, and
+retains the removed annotations in `review/figure-annotations.json`.
+
+```sh
+uv run --script review/restyle-figures.py --source /path/to/visa_proj/worktree
+```
+
+There are 26 displayed figures; the retained monetary-coefficient asset is not
+shown. The final three main slides instead introduce demand, identification,
+and a proposed supply/counterfactual framework. No current gravity estimates
+appear in the talk. The bibliography contains 21 locally verified references.
 
 - The six-date ECDF uses 2000/05/10/15/20/25, 22 nonmilitary occupation groups and
   two overlapping hypothetical education scenarios. The main comparison fixes

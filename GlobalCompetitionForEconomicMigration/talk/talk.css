@@ -55,33 +55,22 @@
   height: 800px;
 }
 
-.reveal .figure-meta {
-  display: block;
-  font-size: 0.42em;
-  line-height: 1.15;
+.reveal .literature > ul {
+  font-size: 0.76em;
+  line-height: 1.2;
 }
 
-.reveal .matrix p:has(.figure-meta) {
-  margin: 0.15em 0;
+.reveal .literature > ul > li {
+  margin-bottom: 0.55em;
 }
 
-.reveal .literature table {
-  font-size: 0.64em;
-  line-height: 1.16;
+.reveal .literature ul ul {
+  margin-top: 0.18em;
+  font-size: 1em;
 }
 
-.reveal .literature td,
-.reveal .literature th {
-  padding: 0.4em 0.45em;
-  vertical-align: top;
-}
-
-.reveal .literature td:first-child {
-  width: 32%;
-}
-
-.reveal .literature .fg {
-  font-size: 0.7em;
+.reveal .literature-detail > ul {
+  font-size: 0.66em;
 }
 
 .reveal .compact {
