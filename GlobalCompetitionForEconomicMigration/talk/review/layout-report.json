@@ -1,0 +1,591 @@
+[
+  {
+    "id": "title-slide",
+    "title": "Global competition for economic migration",
+    "indices": {
+      "h": 0
+    },
+    "height": 895.0562133789062,
+    "overflow": []
+  },
+  {
+    "id": "the-economic-question",
+    "title": "The economic question",
+    "indices": {
+      "h": 1,
+      "v": 0
+    },
+    "height": 141,
+    "overflow": []
+  },
+  {
+    "id": "motivation",
+    "title": "Governments offer access, costs and rights",
+    "indices": {
+      "h": 1,
+      "v": 1
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "question",
+    "title": "How do governments respond to workers and rivals?",
+    "indices": {
+      "h": 1,
+      "v": 2
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "contribution",
+    "title": "Connecting legal offers with global career allocation",
+    "indices": {
+      "h": 1,
+      "v": 3
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "data-offers-and-histories",
+    "title": "Data: offers and histories",
+    "indices": {
+      "h": 2,
+      "v": 0
+    },
+    "height": 141,
+    "overflow": []
+  },
+  {
+    "id": "atlas",
+    "title": "One Atlas, two layers: inventory and characteristics",
+    "indices": {
+      "h": 2,
+      "v": 1
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "histories",
+    "title": "Revelio follows domestic and international job histories",
+    "indices": {
+      "h": 2,
+      "v": 2
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "bridge",
+    "title": "Matching policies to careers requires comparable profiles",
+    "indices": {
+      "h": 2,
+      "v": 3
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "three-descriptive-facts",
+    "title": "Three descriptive facts",
+    "indices": {
+      "h": 3,
+      "v": 0
+    },
+    "height": 141,
+    "overflow": []
+  },
+  {
+    "id": "pathway-growth",
+    "title": "Recorded active pathways increase over time",
+    "indices": {
+      "h": 3,
+      "v": 1
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "pooled-menu",
+    "title": "Menu expansion survives fixed destination–profile support",
+    "indices": {
+      "h": 3,
+      "v": 2
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "screening",
+    "title": "Employer sponsorship remains common as its recorded share falls",
+    "indices": {
+      "h": 3,
+      "v": 3
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "bundles",
+    "title": "A profile can face different joint requirement bundles",
+    "indices": {
+      "h": 3,
+      "v": 4
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "group-transitions",
+    "title": "International transitions between regions",
+    "indices": {
+      "h": 3,
+      "v": 5
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "occupation-transitions",
+    "title": "International transitions between occupational families",
+    "indices": {
+      "h": 3,
+      "v": 6
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "worker-responses-and-policy-incentives",
+    "title": "Worker responses and policy incentives",
+    "indices": {
+      "h": 4,
+      "v": 0
+    },
+    "height": 282,
+    "overflow": []
+  },
+  {
+    "id": "worker-demand",
+    "title": "Worker substitution links legal offers to allocation",
+    "indices": {
+      "h": 4,
+      "v": 1
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "cost-preliminaries",
+    "title": "Preliminary monetary coefficients depend on the retained variation",
+    "indices": {
+      "h": 4,
+      "v": 2
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "next-steps",
+    "title": "From legal offers to competition for talent",
+    "indices": {
+      "h": 4,
+      "v": 3
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "appendix-legal-objects-and-data",
+    "title": "Appendix: legal objects and data",
+    "indices": {
+      "h": 5,
+      "v": 0
+    },
+    "height": 141,
+    "overflow": []
+  },
+  {
+    "id": "episodes",
+    "title": "Admission, residence and citizenship are distinct",
+    "indices": {
+      "h": 5,
+      "v": 1
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "preferences",
+    "title": "A nationality preference need not dominate a general route",
+    "indices": {
+      "h": 5,
+      "v": 2
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "atlas-categories",
+    "title": "The broad inventory includes more than work routes",
+    "indices": {
+      "h": 5,
+      "v": 3
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "atlas-history",
+    "title": "Route identity and annual history require validation",
+    "indices": {
+      "h": 5,
+      "v": 4
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "taxonomy",
+    "title": "Occupational detail and analytical restrictions differ",
+    "indices": {
+      "h": 5,
+      "v": 5
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "history-construction",
+    "title": "History construction changes the retained population",
+    "indices": {
+      "h": 5,
+      "v": 6
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "history-gaps",
+    "title": "Many positive gaps are short; missing updates still matter",
+    "indices": {
+      "h": 5,
+      "v": 7
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "horizon",
+    "title": "A fixed horizon requires a job covering the endpoint",
+    "indices": {
+      "h": 5,
+      "v": 8
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "represented",
+    "title": "Historical representation broadens over time",
+    "indices": {
+      "h": 5,
+      "v": 9
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "turnover",
+    "title": "Recorded appearances and endings are not legal births and deaths",
+    "indices": {
+      "h": 5,
+      "v": 10
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "pooled-changing",
+    "title": "Changing support gives a different pooled comparison",
+    "indices": {
+      "h": 5,
+      "v": 11
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "profile-computer",
+    "title": "Computer/mathematical profile: fixed-support comparison",
+    "indices": {
+      "h": 5,
+      "v": 12
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "profile-health",
+    "title": "Healthcare-practitioner profile: fixed-support comparison",
+    "indices": {
+      "h": 5,
+      "v": 13
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "unresolved",
+    "title": "Unresolved rules prevent a complete legal-menu interpretation",
+    "indices": {
+      "h": 5,
+      "v": 14
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "education-rules",
+    "title": "Credential requirements are often unresolved",
+    "indices": {
+      "h": 5,
+      "v": 15
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "sponsorship-weights",
+    "title": "Sponsorship shares depend on the weighting rule",
+    "indices": {
+      "h": 5,
+      "v": 16
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "spouse-rights",
+    "title": "Spouse work rights are one part of the route bundle",
+    "indices": {
+      "h": 5,
+      "v": 17
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "dependent-rights",
+    "title": "Dependent access and dependent work rights are distinct",
+    "indices": {
+      "h": 5,
+      "v": 18
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "fee-contrasts",
+    "title": "Joint fee contrasts keep comparisons within a profile cell",
+    "indices": {
+      "h": 5,
+      "v": 19
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "dominance",
+    "title": "Dominance needs complete, comparable bundles for one applicant",
+    "indices": {
+      "h": 5,
+      "v": 20
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "appendix-group-to-group-mobility",
+    "title": "Appendix: group-to-group mobility",
+    "indices": {
+      "h": 6,
+      "v": 0
+    },
+    "height": 141,
+    "overflow": []
+  },
+  {
+    "id": "region-counts",
+    "title": "Region-to-region international transition volumes",
+    "indices": {
+      "h": 6,
+      "v": 1
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "income-shares",
+    "title": "International transitions between income groups",
+    "indices": {
+      "h": 6,
+      "v": 2
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "income-counts",
+    "title": "Income-group transition volumes reflect origin size too",
+    "indices": {
+      "h": 6,
+      "v": 3
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "occupation-counts",
+    "title": "Origin-to-destination occupation volumes",
+    "indices": {
+      "h": 6,
+      "v": 4
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "family-counts",
+    "title": "Broad occupational-family transition volumes",
+    "indices": {
+      "h": 6,
+      "v": 5
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "occupation-detail",
+    "title": "The full matrix retains every SOC major group",
+    "indices": {
+      "h": 6,
+      "v": 6
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "occupation-switching",
+    "title": "Switching occurs in domestic and international job transitions",
+    "indices": {
+      "h": 6,
+      "v": 7
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "skills",
+    "title": "Occupational groups are not a skill ladder",
+    "indices": {
+      "h": 6,
+      "v": 8
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "appendix-estimation-and-literature",
+    "title": "Appendix: estimation and literature",
+    "indices": {
+      "h": 7,
+      "v": 0
+    },
+    "height": 141,
+    "overflow": []
+  },
+  {
+    "id": "mpml",
+    "title": "MPML normalises the supplied alternatives, not a missing population",
+    "indices": {
+      "h": 7,
+      "v": 1
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "fixed-effects",
+    "title": "Fixed effects determine the monetary comparison",
+    "indices": {
+      "h": 7,
+      "v": 2
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "monetary",
+    "title": "Monetary comparisons need compatible amounts and units",
+    "indices": {
+      "h": 7,
+      "v": 3
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "demand-identification",
+    "title": "Rich histories do not by themselves separate preferences from access",
+    "indices": {
+      "h": 7,
+      "v": 4
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "government-costs",
+    "title": "Fee competition identifies a net marginal object",
+    "indices": {
+      "h": 7,
+      "v": 5
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "welfare",
+    "title": "Welfare needs a population and an adjustment mechanism",
+    "indices": {
+      "h": 7,
+      "v": 6
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "literature-map",
+    "title": "Policy measurement and worker allocation frame the contribution",
+    "indices": {
+      "h": 7,
+      "v": 7
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  },
+  {
+    "id": "references",
+    "title": "References",
+    "indices": {
+      "h": 7,
+      "v": 8
+    },
+    "height": 1015.199951171875,
+    "overflow": []
+  }
+]

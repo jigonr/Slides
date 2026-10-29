@@ -1,0 +1,142 @@
+{
+  "source_repository": "Applied-Economics-With-AI/visa_proj",
+  "source_branch": "letta/visa-revisions-spec-858e8de2",
+  "verified_source_commit": "c939d9159ebcfd671160bc0e8834ba3622be2e58",
+  "figures": [
+    {
+      "file": "figures/rights-dependants.svg",
+      "source_file": "rights-dependants.svg",
+      "sha256": "b0e77736be436b2712651b35759eb9c6cc9a77ddf1b6be148f204868d41a84b6"
+    },
+    {
+      "file": "figures/pooled-profile-changing.svg",
+      "source_file": "profile-ecdf-pooled-changing-six-years.svg",
+      "sha256": "d335af2587e2bdba4baf0c9393cc8a38726e260a5c57c186021e967c157c9e46"
+    },
+    {
+      "file": "figures/joint-applicant-fee-soc15.svg",
+      "source_file": "joint-applicant-fee-soc15.svg",
+      "sha256": "664c67b0809182b288652b9d29de80c7c35360fe3af9f4e1735b35b4504e3b41"
+    },
+    {
+      "file": "figures/sponsorship-weighting.svg",
+      "source_file": "sponsorship-weighting.svg",
+      "sha256": "408143a46553003a6ead28b9537210852535d4ebd36fa266b18be9d87413cd5b"
+    },
+    {
+      "file": "figures/annual-sponsorship-undergraduate.svg",
+      "source_file": "annual-sponsorship-undergraduate.svg",
+      "sha256": "9aea4a31e7aeb07a7014f89c399c44924e509d56a49255e160db0da0799c5ee4"
+    },
+    {
+      "file": "figures/international-family-counts.svg",
+      "source_file": "international-occupation-family-origin-destination-counts.svg",
+      "sha256": "6755101641a911b8074ca8a9f43c11ef1540b8585a98cc3a0ee17ddde1e80d5e"
+    },
+    {
+      "file": "figures/active-pathways.svg",
+      "source_file": "active-pathways.svg",
+      "sha256": "dc05038e74f2668e1514002bbcce89e8eb60b0e4c9f3edd3d10cfc6a16dd788c"
+    },
+    {
+      "file": "figures/rights-spouse.svg",
+      "source_file": "rights-spouse.svg",
+      "sha256": "8587a31cc972dc5a37b3c1fcf33fd92c2f35f466034bcec8e3684a122a64247a"
+    },
+    {
+      "file": "figures/international-soc-row-shares.svg",
+      "source_file": "international-soc2-origin-destination-row-shares.svg",
+      "sha256": "ff72956b25813693ab1b0b78a445be535911da54e1a560539f951b2238a0e450"
+    },
+    {
+      "file": "figures/corrected-one-year-endpoint-2010.svg",
+      "source_file": "corrected-one-year-endpoint-2010.svg",
+      "sha256": "92621309c31835aced85d00b863b93e5c8e8847e1de8613317376ca57e8e67f8"
+    },
+    {
+      "file": "figures/occupation-switching-corrected.svg",
+      "source_file": "occupation-switching-corrected-2010-2025.svg",
+      "sha256": "11adba2114c226841324249e23baa8e3e5cdbe43c7899d0f6f6dcdb9560fdec6"
+    },
+    {
+      "file": "figures/international-income-counts.svg",
+      "source_file": "international-income-origin-destination-counts.svg",
+      "sha256": "5b4d914da0366039680d22253b5547f5d50131733b9af7aa5b665deb65ba9673"
+    },
+    {
+      "file": "figures/gravity-money-fe-comparison.svg",
+      "source_file": "gravity-money-fe-comparison.svg",
+      "sha256": "d36996e6b8849c46c10775c3956b22aeaafee9f3f1e2839effad68b2af7df03d"
+    },
+    {
+      "file": "figures/international-region-counts.svg",
+      "source_file": "international-region-origin-destination-counts.svg",
+      "sha256": "84188d87fb80ef32c641f490bb1c3cc81dee04051e1a0b989f53ad4809394894"
+    },
+    {
+      "file": "figures/international-soc-counts.svg",
+      "source_file": "international-soc2-origin-destination-counts.svg",
+      "sha256": "2dfad37c52fbaf5853b27b163bbdd380634f30b3131895ceeb57031ffc207bc6"
+    },
+    {
+      "file": "figures/international-region-row-shares.svg",
+      "source_file": "international-region-origin-destination-row-shares-plot.svg",
+      "sha256": "1faecc947585fdafd9b2ca6b8d3103561da2957cdf60b2b5dd5ec9c98a5400c0"
+    },
+    {
+      "file": "figures/international-family-row-shares.svg",
+      "source_file": "international-occupation-family-origin-destination-row-shares-plot.svg",
+      "sha256": "c43f6404ff16290d396e58dd55ab92a9c932e7ee5e04eba96570e7662fb9c50f"
+    },
+    {
+      "file": "figures/pathway-appearances-endings.svg",
+      "source_file": "pathway-appearances-endings.svg",
+      "sha256": "a15a6ae445eee43867543f2725a2dd2db24ac27e2357f631411e51c659ed2abf"
+    },
+    {
+      "file": "figures/profile-unresolved-destinations.svg",
+      "source_file": "profile-unresolved-destinations.svg",
+      "sha256": "5e2b621dfbfc7278f96ff37cb941f86803a8b8751993bb3ffae0c1feb7315b81"
+    },
+    {
+      "file": "figures/fx-coverage.svg",
+      "source_file": "fx-coverage.svg",
+      "sha256": "aa78fa74504825a674f0c4307f9d80d17570fa2159a8a8a5a963ed5b278f0702"
+    },
+    {
+      "file": "figures/international-income-row-shares.svg",
+      "source_file": "international-income-origin-destination-row-shares-plot.svg",
+      "sha256": "f5b12db359b4438b18d5726fe2355726722c5b8d7f8c06666b16d237efe09b36"
+    },
+    {
+      "file": "figures/represented-countries.svg",
+      "source_file": "represented-countries.svg",
+      "sha256": "d94ad92440d97c13b0bafd0d6064a4d101386f56f7b845a747dda7ae8399404b"
+    },
+    {
+      "file": "figures/measured-positive-gaps.svg",
+      "source_file": "measured-positive-gaps.svg",
+      "sha256": "62d89927966c403651ab4e6293b13cf01ad74f427917e784422b894566cfb8a3"
+    },
+    {
+      "file": "figures/pooled-profile-fixed.svg",
+      "source_file": "profile-ecdf-pooled-fixed-six-years.svg",
+      "sha256": "e9e6104613b3e69e2f3794a116dac87afcaf3d18e660d82be548729acb7c955d"
+    },
+    {
+      "file": "figures/profile-computer-fixed.svg",
+      "source_file": "profile-ecdf-soc15-fixed-six-years.svg",
+      "sha256": "8130cb99bb439fe6fad474ea0e50c03b6c843fe41fe117f2f3b707fd89465a2c"
+    },
+    {
+      "file": "figures/recorded-education-requirements.svg",
+      "source_file": "recorded-education-requirements.svg",
+      "sha256": "28e925e656b9535fd176e2b4c3bd9a24bef3bbe706d343a7ddf776373aee37f8"
+    },
+    {
+      "file": "figures/profile-health-fixed.svg",
+      "source_file": "profile-ecdf-soc29-fixed-six-years.svg",
+      "sha256": "1840de4ff6892340dd26f4806f3f9c20f8c7b7e6a1262bfc1061cc2ea39435c1"
+    }
+  ]
+}

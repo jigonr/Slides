@@ -154,13 +154,13 @@ There are **15 substantive slides** below. The title, optional contents and sect
 
 **Backups:** B15 partial/Pareto ordering; B2 citizenship-specific preference versus general route. A nationality preference can coexist with less attractive duration or intent conditions; it is not necessarily universally superior.
 
-### 11. International job transitions connect different labour-market environments
+### 11. International transitions connect origin groups to destination groups
 
 **Subtitle:** Geographic and income-group directions describe destinations, not workers’ skill gains.
 
 **Purpose:** Introduce the mobility fact with a clearly defined event and show where people’s recorded careers go. Keep domestic transitions visible as a comparison population.
 
-**Exhibit:** Choose one main geography/income contrast from existing aggregates, with counts and within-origin shares distinguished. Use equal country weights only for a declared country-comparison estimand; event weights describe where recorded transitions concentrate. Retain the dominant high-income-to-high-income margin if supported rather than force an upward-migration narrative.
+**Exhibit:** Origin-group × destination-group matrices for international events, with origin groups in rows and destination groups in columns. Region and income-group versions must retain the actual joint cells, not destination marginals or only same/different summaries. Show origin-conditional shares in the main comparison and counts separately in backup; label the exact window and group vintage. Diagonal cells remain international transitions between countries in the same group. Use equal country weights only for a declared country-comparison estimand; event weights describe recorded transitions. Retain the dominant high-income-to-high-income margin if supported rather than force an upward-migration narrative.
 
 **Backups:** B16 region/income matrices, country-pair concentrations and group definitions; B17 return/onward movement and observation horizons. A move to a higher-income country is not automatically a wage increase or welfare gain for that person.
 
@@ -170,7 +170,7 @@ There are **15 substantive slides** below. The title, optional contents and sect
 
 **Purpose:** Connect job histories to heterogeneity and substitution without conflating switching with skill progression.
 
-**Exhibit:** Two bars for corrected **2010–2025 SOC major-group switching**: domestic **335,730,244 / 623,487,006 = 53.84719%**; international **30,699,456 / 55,618,521 = 55.19646%**. The denominator requires resolved countries and recognised full occupation codes; it excludes 1,850,579 domestic and 113,932 international unknown-occupation events. Another 7,324 country-unresolved transitions are outside these two groups. These are event-weighted major-group changes, not distinct people or fine-occupation changes. The older 52.98%/54.37% plot uses all retained years and prefix recognition; do not mix its denominator with the corrected figures. The corrected result is retained and can be plotted without a VM pass. One observation-rule sensitivity belongs in backup, not six main curves.
+**Exhibit:** An origin-occupation-group × destination-occupation-group matrix, following the same joint-transition convention as the region and income figures. Do not substitute a destination-only distribution or a switching bar for that object. Use a verified skill-group mapping if available; otherwise label the matrix SOC major groups, not skills. The corrected **2010–2025** summary provides context: domestic **335,730,244 / 623,487,006 = 53.84719%** switch; international **30,699,456 / 55,618,521 = 55.19646%** switch. The denominator requires resolved countries and recognised full occupation codes; it excludes 1,850,579 domestic and 113,932 international unknown-occupation events. Another 7,324 country-unresolved transitions are outside these two groups. These are event-weighted major-group changes, not distinct people or fine-occupation changes. The older 52.98%/54.37% plot uses all retained years and prefix recognition; do not mix its denominator with the corrected figures. The joint corrected output is retained and can be plotted without a VM pass. Counts, conditional shares, the domestic comparison and one observation-rule sensitivity belong in backup rather than six main curves.
 
 **Interpretation:** The approximately 50% fact depends on aggregation level and chronology. SOC codes are not an ordinal skill ladder. The existing broad SOC-to-ISCO reference exercise leaves upward/equal/downward possibilities overlapping for about 95% of events, so it does not establish meaningful upgrading shares. Routine/non-routine and cognitive/manual measures are task dimensions, not a common high-to-low ordering.
 

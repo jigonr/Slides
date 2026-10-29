@@ -1,0 +1,333 @@
+[
+  {
+    "id": "helblingMeasuringImmigrationPolicies2017",
+    "type": "article-journal",
+    "citation-key": "helblingMeasuringImmigrationPolicies2017",
+    "container-title": "European Political Science",
+    "DOI": "10.1057/eps.2016.4",
+    "ISSN": "1680-4333, 1682-0983",
+    "issue": "1",
+    "language": "en",
+    "page": "79-98",
+    "source": "DOI.org (Crossref)",
+    "title": "measuring immigration policies: the IMPIC database",
+    "title-short": "measuring immigration policies",
+    "volume": "16",
+    "author": [
+      {
+        "family": "Helbling",
+        "given": "Marc"
+      },
+      {
+        "family": "Bjerre",
+        "given": "Liv"
+      },
+      {
+        "family": "Römer",
+        "given": "Friederike"
+      },
+      {
+        "family": "Zobel",
+        "given": "Malisa"
+      }
+    ],
+    "accessed": {
+      "date-parts": [["2026", 9, 7]]
+    },
+    "issued": {
+      "date-parts": [["2017", 3]]
+    }
+  },
+  {
+    "id": "dehaasGrowingRestrictivenessChanging2018",
+    "type": "article-journal",
+    "citation-key": "dehaasGrowingRestrictivenessChanging2018",
+    "container-title": "International Migration Review",
+    "DOI": "10.1111/imre.12288",
+    "ISSN": "0197-9183, 1747-7379",
+    "issue": "2",
+    "language": "en",
+    "page": "324-367",
+    "source": "DOI.org (Crossref)",
+    "title": "Growing Restrictiveness or Changing Selection? The Nature and Evolution of Migration Policies",
+    "title-short": "Growing Restrictiveness or Changing Selection?",
+    "volume": "52",
+    "author": [
+      {
+        "family": "Haas",
+        "given": "Hein",
+        "non-dropping-particle": "de"
+      },
+      {
+        "family": "Natter",
+        "given": "Katharina"
+      },
+      {
+        "family": "Vezzoli",
+        "given": "Simona"
+      }
+    ],
+    "accessed": {
+      "date-parts": [["2026", 9, 7]]
+    },
+    "issued": {
+      "date-parts": [["2018", 6]]
+    }
+  },
+  {
+    "id": "czaikaGravityHighSkilledMigration2017",
+    "type": "article-journal",
+    "citation-key": "czaikaGravityHighSkilledMigration2017",
+    "container-title": "Demography",
+    "DOI": "10.1007/s13524-017-0559-1",
+    "ISSN": "0070-3370, 1533-7790",
+    "issue": "2",
+    "language": "en",
+    "page": "603-630",
+    "source": "DOI.org (Crossref)",
+    "title": "The Gravity of High-Skilled Migration Policies",
+    "volume": "54",
+    "author": [
+      {
+        "family": "Czaika",
+        "given": "Mathias"
+      },
+      {
+        "family": "Parsons",
+        "given": "Christopher R."
+      }
+    ],
+    "accessed": {
+      "date-parts": [["2026", 9, 7]]
+    },
+    "issued": {
+      "date-parts": [["2017", 4, 1]]
+    }
+  },
+  {
+    "id": "bertoliMultilateralResistanceMigration2013",
+    "type": "article-journal",
+    "citation-key": "bertoliMultilateralResistanceMigration2013",
+    "container-title": "Journal of Development Economics",
+    "DOI": "10.1016/j.jdeveco.2012.12.001",
+    "ISSN": "03043878",
+    "journalAbbreviation": "JDE",
+    "language": "en",
+    "page": "79-100",
+    "source": "DOI.org (Crossref)",
+    "title": "Multilateral resistance to migration",
+    "volume": "102",
+    "author": [
+      {
+        "family": "Bertoli",
+        "given": "Simone"
+      },
+      {
+        "family": "Fernández-Huertas Moraga",
+        "given": "Jesús"
+      }
+    ],
+    "accessed": {
+      "date-parts": [["2026", 9, 7]]
+    },
+    "issued": {
+      "date-parts": [["2013", 5]]
+    }
+  },
+  {
+    "id": "brinattiThirdCountryEffectsUS2024",
+    "type": "report",
+    "citation-key": "brinattiThirdCountryEffectsUS2024",
+    "genre": "Working Paper",
+    "language": "en",
+    "source": "Zotero",
+    "title": "Third-Country Effects of U.S. Immigration Policy",
+    "author": [
+      {
+        "family": "Brinatti",
+        "given": "Agostina"
+      },
+      {
+        "family": "Guo",
+        "given": "Xing"
+      }
+    ],
+    "issued": {
+      "date-parts": [["2024", 10]]
+    }
+  },
+  {
+    "id": "townsendHowRestrictingMigrants2025",
+    "type": "report",
+    "citation-key": "townsendHowRestrictingMigrants2025",
+    "genre": "Working Paper",
+    "language": "en",
+    "source": "Zotero",
+    "title": "How Restricting Migrants’ Job Options Affects Both Migrants and Existing Residents",
+    "author": [
+      {
+        "family": "Townsend",
+        "given": "Wilbur"
+      },
+      {
+        "family": "Allan",
+        "given": "Corey"
+      }
+    ],
+    "issued": {
+      "date-parts": [["2025", 10, 22]]
+    }
+  },
+  {
+    "id": "borusyakUnderstandingMigrationResponses2026",
+    "type": "report",
+    "citation-key": "borusyakUnderstandingMigrationResponses2026",
+    "genre": "Working Paper",
+    "language": "en",
+    "source": "DOI.org (Crossref)",
+    "title": "Understanding Migration Responses to Local Shocks",
+    "author": [
+      {
+        "family": "Borusyak",
+        "given": "Kirill"
+      },
+      {
+        "family": "Dix-Carneiro",
+        "given": "Rafael"
+      },
+      {
+        "family": "Kovak",
+        "given": "Brian"
+      }
+    ],
+    "accessed": {
+      "date-parts": [["2026", 10, 27]]
+    },
+    "issued": {
+      "date-parts": [["2026", 10]]
+    }
+  },
+  {
+    "id": "kennanEffectExpectedIncome2011",
+    "type": "article-journal",
+    "citation-key": "kennanEffectExpectedIncome2011",
+    "container-title": "Econometrica",
+    "DOI": "10.3982/ECTA4657",
+    "ISSN": "0012-9682",
+    "issue": "1",
+    "journalAbbreviation": "ECTA",
+    "language": "en",
+    "page": "211-251",
+    "source": "DOI.org (Crossref)",
+    "title": "The Effect of Expected Income on Individual Migration Decisions",
+    "volume": "79",
+    "author": [
+      {
+        "family": "Kennan",
+        "given": "John"
+      },
+      {
+        "family": "Walker",
+        "given": "James R."
+      }
+    ],
+    "accessed": {
+      "date-parts": [["2024", 3, 1]]
+    },
+    "issued": {
+      "date-parts": [["2011", 1]]
+    }
+  },
+  {
+    "id": "adaoWorldTradingSystem2025",
+    "type": "report",
+    "citation-key": "adaoWorldTradingSystem2025",
+    "genre": "Working Paper",
+    "language": "en",
+    "source": "Zotero",
+    "title": "A World Trading System For Whom? Evidence from Global Tariffs",
+    "author": [
+      {
+        "family": "Adão",
+        "given": "Rodrigo"
+      },
+      {
+        "family": "Sturm Becko",
+        "given": "John"
+      },
+      {
+        "family": "Costinot",
+        "given": "Arnaud"
+      },
+      {
+        "family": "Donaldson",
+        "given": "Dave"
+      }
+    ],
+    "issued": {
+      "date-parts": [["2025", 12]]
+    }
+  },
+  {
+    "id": "berryNonparametricIdentificationDifferentiated2024",
+    "type": "article-journal",
+    "citation-key": "berryNonparametricIdentificationDifferentiated2024",
+    "container-title": "Econometrica",
+    "DOI": "10.3982/ECTA20731",
+    "ISSN": "0012-9682",
+    "issue": "4",
+    "journalAbbreviation": "ECTA",
+    "language": "en",
+    "page": "1135-1162",
+    "source": "DOI.org (Crossref)",
+    "title": "Nonparametric Identification of Differentiated Products Demand Using Micro Data",
+    "volume": "92",
+    "author": [
+      {
+        "family": "Berry",
+        "given": "Steven T."
+      },
+      {
+        "family": "Haile",
+        "given": "Philip A."
+      }
+    ],
+    "accessed": {
+      "date-parts": [["2024", 11, 29]]
+    },
+    "issued": {
+      "date-parts": [["2024", 7]]
+    }
+  },
+  {
+    "id": "agarwalDemandAnalysisLatent2025",
+    "type": "article-journal",
+    "citation-key": "agarwalDemandAnalysisLatent2025",
+    "container-title": "Review of Economic Studies",
+    "DOI": "10.1093/restud/rdaf093",
+    "ISSN": "0034-6527, 1467-937X",
+    "issue": "4",
+    "journalAbbreviation": "REStud",
+    "language": "en",
+    "page": "2215-2249",
+    "source": "DOI.org (Crossref)",
+    "title": "Demand Analysis under Latent Choice Constraints",
+    "volume": "93",
+    "author": [
+      {
+        "family": "Agarwal",
+        "given": "Nikhil"
+      },
+      {
+        "family": "Somaini",
+        "given": "Paulo"
+      }
+    ],
+    "accessed": {
+      "date-parts": [["2026", 5, 27]]
+    },
+    "issued": {
+      "date-parts": [["2026", 7, 7]]
+    }
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "name": "visa-slide-review",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
