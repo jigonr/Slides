@@ -36,6 +36,21 @@ Screen captures and the layout report are generated under `review/`. A successfu
 render, numerical reconciliation or bounds check is not scientific acceptance;
 read the actual slides and figures as well.
 
+The retained `talk.pdf` has 59 non-empty widescreen pages, including the title,
+section transitions and 36 backup/reference slides. Its internal buttons remain
+clickable. To reproduce it, start a dedicated Chromium CDP browser on loopback
+port 9241, then run:
+
+```sh
+bun GlobalCompetitionForEconomicMigration/talk/review/export-pdf.ts \
+  GlobalCompetitionForEconomicMigration/talk/talk.html
+```
+
+The exporter checks the slide count, citations, equations and a real backup/return
+click sequence. In the print-only DOM, it converts Reveal's browser-route hashes
+to plain fragment destinations so that Chromium preserves PDF links. It does not
+modify the Quarto source or the live HTML navigation.
+
 ## Figure definitions and numerical ownership
 
 Figures are retained or re-rendered from numerical objects in the
