@@ -12,10 +12,10 @@ global typography.
 
 ## Build and review
 
-From the repository root:
+From this presentation folder:
 
 ```sh
-quarto render GlobalCompetitionForEconomicMigration/talk/talk.qmd --to revealjs
+quarto render talk.qmd --to revealjs
 ```
 
 There are no executable analytical cells. Rendering does not estimate a model,
@@ -26,10 +26,9 @@ through a caller-owned, isolated Chromium CDP browser on loopback port 9239. Its
 private package contains only review typings. After starting that browser:
 
 ```sh
-bun install --cwd GlobalCompetitionForEconomicMigration/talk/review --ignore-scripts
-bun check --no-script -p GlobalCompetitionForEconomicMigration/talk/review/tsconfig.json
-bun GlobalCompetitionForEconomicMigration/talk/review/capture.ts \
-  GlobalCompetitionForEconomicMigration/talk/talk.html
+bun install --cwd review --ignore-scripts
+bun check --no-script -p review/tsconfig.json
+bun review/capture.ts talk.html
 ```
 
 Screen captures and the layout report are generated under `review/`. A successful
@@ -42,8 +41,7 @@ clickable. To reproduce it, start a dedicated Chromium CDP browser on loopback
 port 9241, then run:
 
 ```sh
-bun GlobalCompetitionForEconomicMigration/talk/review/export-pdf.ts \
-  GlobalCompetitionForEconomicMigration/talk/talk.html
+bun review/export-pdf.ts talk.html
 ```
 
 The exporter checks the slide count, citations, equations and a real backup/return
