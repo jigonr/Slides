@@ -1,14 +1,14 @@
-# Global competition for economic migration
+# Screening for Global Talent
 
 `talk.qmd` is the 15-substantive-slide presentation, followed by linked backups.
 Title and section transitions are outside that count. Every backup has a return
 button; the final reference section uses native Quarto citations and the local
-Zotero-exported CSL bibliography in `references.json`.
+fresh local-Zotero BibTeX export in `references.bib`, using the reference deck’s APA style.
 
-The presentation uses the unchanged teaching theme in `assets/slides.scss` and
-the local Roboto Light font, with its SIL Open Font License. `talk.css` adds
-scoped figure, table and navigation layout; it does not replace the theme’s
-global typography.
+The presentation uses **one stylesheet**, the project’s `../slides.scss`, based on the
+working reference deck, with necessary figure/list layout and button rules.
+There is no second CSS file. The native title block lists Peter’s LSE and
+Warwick affiliations separately. Subtitles use `###`; subordinate headings use `####`.
 
 ## Build and review
 
@@ -35,7 +35,7 @@ Screen captures and the layout report are generated under `review/`. A successfu
 render, numerical reconciliation or bounds check is not scientific acceptance;
 read the actual slides and figures as well.
 
-The retained `talk.pdf` has 61 non-empty widescreen pages, including the title,
+The retained `talk.pdf` has 64 non-empty widescreen pages, including the title,
 section transitions and 38 backup/reference slides. Its internal buttons remain
 clickable. To reproduce it, start a dedicated Chromium CDP browser on loopback
 port 9241, then run:
@@ -61,7 +61,7 @@ recorded in `figure-manifest.json`.
 plotting functions and numerical results in that worktree. It enlarges graph
 text, removes sample-size annotations and graph footers, and uses Paul Tol
 Vibrant. Continuous magnitude matrices use a sequential white-to-Vibrant-blue
-scale. The theme SCSS and default citation styles remain unchanged. The renderer
+scale. Default citation styling is preserved. The renderer
 checks unchanged data artists/axis limits and exact numerical readbacks, and
 retains the removed annotations in `review/figure-annotations.json`.
 
@@ -72,7 +72,7 @@ uv run --script review/restyle-figures.py --source /path/to/visa_proj/worktree
 There are 26 displayed figures; the retained monetary-coefficient asset is not
 shown. The final three main slides instead introduce demand, identification,
 and a proposed supply/counterfactual framework. No current gravity estimates
-appear in the talk. The bibliography contains 21 locally verified references.
+appear in the talk. The bibliography contains 23 locally verified references.
 
 - The six-date ECDF uses 2000/05/10/15/20/25, 22 nonmilitary occupation groups and
   two overlapping hypothetical education scenarios. The main comparison fixes

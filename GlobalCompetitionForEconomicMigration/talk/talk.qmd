@@ -1,21 +1,25 @@
 ---
-title: "Global competition for economic migration"
+title: "Screening for Global Talent"
 subtitle: "Visa menus, worker histories and the allocation of talent"
 author:
   - name: David Cai
     affiliations: London School of Economics
-  - name: José Ignacio González Rojas
+    email: j.cai18@lse.ac.uk
+  - name: José Ignacio González
     affiliations: London School of Economics
     email: j.i.gonzalez-rojas@lse.ac.uk
   - name: Peter J. Lambert
-    affiliations: University of Warwick
+    affiliations:
+      - London School of Economics
+      - Warwick University
+    email: p.j.lambert@lse.ac.uk
 date: 2026-10-29
-bibliography: references.json
+bibliography: references.bib
+csl: assets/apa.csl
 link-citations: true
 format:
   revealjs:
-    theme: assets/slides.scss
-    css: talk.css
+    theme: ../slides.scss
     width: 1920
     height: 1080
     margin: 0.06
@@ -27,167 +31,72 @@ format:
     date-format: long
 ---
 
-# The economic question
+# The economic question {.section-slide}
 
-## Governments offer access, costs and rights {#motivation .compact}
+## Visa design links worker choice and government competition {#question .emphasis-slide}
 
-[Admission is one part of a package that shapes a person’s future options]{.subtitle}
+### Countries compete through the opportunities they offer migrants
 
-:::: {.columns}
-::: {.column width="49%"}
-### Access to employment
+- Workers choose among offers with different fees, eligibility conditions and rights.
+- Employers influence recruitment, sponsorship and the jobs migrants can take.
+- Governments design offers while anticipating workers’ choices and other countries’ policies.
 
-- Occupation, citizenship and sponsorship can determine which routes a worker can use.
-- Employer portability changes the jobs available **after admission**.
-- A route opening can redirect workers from another destination rather than create a new move.
-:::
-::: {.column width="49%"}
-### Residence and membership
-
-- Family work rights, renewal and settlement change the value of the initial offer.
-- Argentina’s investment-linked **citizenship** initiative illustrates a different membership instrument—not a work visa.
-- Announced terms, binding rules and operational access are distinct.
-:::
-::::
-
-[How do these offers change the allocation of workers—and the offers made by rival governments?]{.bg}
+[Our contribution: a global visa Atlas linked to domestic and international careers.]{.fg}
 
 ::: {.nav}
-[Legal examples](#episodes){.button} [Nationality-specific routes](#preferences){.button}
+[Contribution and literature](#contribution){.button} [Examples of visa offers](#motivation){.button} [Nationality preferences](#preferences){.button}
 :::
 
 ::: {.notes}
-Substantive slide 1/15. Argentina: Decrees 366/2025 and 524/2025 establish category/procedure; 2 October 2026 announcement describes financial terms, not a verified exact application opening. The episode motivates a policy panel displayed through 2025, not an observation inside that window. The earlier UK examples are not reused with unverified historical thresholds. Germany’s exact occupation-targeted episode remains a lead requiring identification, not an asserted causal treatment.
+Main question recovered from the PhD Review Visa brief and earlier Global Competition presentation. Descriptive questions do not all require elasticities; government/firm counterfactuals require additional objectives, constraints and equilibrium closure.
 :::
 
-## How do governments respond to workers and rivals? {#question .compact}
+# Data: pathways and job histories {.section-slide}
 
-[Worker substitution connects visa menus to competition for talent]{.subtitle}
+## The Atlas describes the pathways available to migrants {#atlas}
 
-### Government offers → worker choices and composition → rival offers
+### Compare each pathway for a given migrant profile and year
 
-- **Worker side:** which terms affect participation, destination, employer choice and retention?
-- **Government side:** do countries compete through fees, eligibility and rights?
-- **Firm side:** how do recruitment, sponsorship and employer dependence affect wages and allocation?
+- **Pathways:** work, study, family, protection, business and investment.
+- **Terms:** eligibility, fees, sponsorship, work and family rights, duration and settlement.
+- **Unit of analysis:** one pathway for a given **origin × destination × occupation × education × year**.
 
-[Which allocation and welfare consequences follow from a change in one country’s offer?]{.fg}
-
-::: {.takeaway}
-Measure menus and careers first. Estimate worker substitution, then add the decision problem of firms or governments.
-:::
-
-::: {.notes}
-Substantive slide 2/15. Main question recovered from the PhD Review Visa brief and earlier Global Competition presentation. Descriptive questions do not all require elasticities; government/firm counterfactuals require additional objectives, constraints and equilibrium closure.
-:::
-
-## Connecting legal offers with global career allocation {#contribution .literature}
-
-[Route-level policy bundles connect policy measurement with worker histories]{.subtitle}
-
-- **Policy measurement and competition:** legal regimes select different migrants and compete for talent [@helblingMeasuringImmigrationPolicies2017; @dehaasGrowingRestrictivenessChanging2018; @czaikaGravityHighSkilledMigration2017; @shacharRaceTalentHighly2006].
-  - **Our contribution:** a broad motive inventory and dated, work-oriented route bundles for comparable profiles.
-- **International allocation:** alternatives, return migration and international careers matter [@bertoliMultilateralResistanceMigration2013; @brinattiThirdCountryEffectsUS2024; @amanzadehReturnMigrationHuman2024; @bhalothiaGlobalValueCities2025].
-  - **Our contribution:** connect legal menus to domestic and international career transitions.
-- **Legal options and labour markets:** access to migrant labour, employer restrictions and connected domestic markets shape firm and worker outcomes [@doranEffectsHighSkilledImmigration2022; @townsendHowRestrictingMigrants2025; @borusyakUnderstandingMigrationResponses2026].
-  - **Our contribution:** cross-country legal-menu measurement, with competing government offers as a proposed extension.
+The same migrant may face several pathways with different requirements and rights.
 
 ::: {.nav}
-[Full literature map](#literature-map){.button} [Demand identification](#demand-identification){.button} [Government objectives](#government-costs){.button}
+[Matching profiles](#bridge){.button} [Categories and characteristics](#atlas-categories){.button} [Pathways over time](#atlas-history){.button}
 :::
 
 ::: {.notes}
-Substantive slide 3/15. Do not claim the first policy dataset, third-country response, or visa-induced employer-mobility result. Townsend–Allan concerns within-destination employer options and wage setting; Borusyak et al. domestic region–industry responses under specified shocks. Neither supplies a ready international coefficient or closure. The competing-government model remains a research extension. Cai–Lin–Szeidl is intentionally excluded from this presentation.
+Retained 25 October broad/annual CSV readback; 80 exact export value names equal status-companion bases and current schema definitions. The earlier “81” is not the current export count. Raw annual years 1940–2026 do not establish verified search coverage beyond 2000–2025. Missing/uncertain/inapplicable/known states remain distinct. Family/study routes may allow work; labels alone do not define rights. Category classification needs validation.
 :::
 
-# Data: offers and histories
+## Job histories reveal domestic and international mobility {#histories}
 
-## One Atlas, two layers: inventory and characteristics {#atlas .compact}
+### People can change employers, occupations and countries
 
-[The retained delivery distinguishes migration motives from detailed contract terms]{.subtitle}
-
-:::: {.columns}
-::: {.column width="47%"}
-### Broad pathway inventory
-
-**5,744 country/name entries · 194 destination labels**
-
-Work, study, family, protection, business/investment, visit and other categories.
-
-Search-window metadata: **2000–2025**.
-
-This is a retained inventory, not certified exhaustive legal discovery.
-:::
-::: {.column width="51%"}
-### Detailed annual characteristics
-
-**2,195 country/route IDs · 43,049 route-years**
-
-**80 value fields + 80 status fields**, with four identifying columns.
-
-Work-oriented selection precedes detailed extraction. Native unit: **destination × route × year**.
-:::
-::::
-
-Eligibility · financial burdens · procedures · employment rights · family rights · renewal and settlement
-
-::: {.nav}
-[Categories and fields](#atlas-categories){.button} [Identity and history](#atlas-history){.button}
-:::
-
-::: {.notes}
-Substantive slide 4/15. Retained 25 October broad/annual CSV readback; 80 exact export value names equal status-companion bases and current schema definitions. The earlier “81” is not the current export count. Raw annual years 1940–2026 do not establish verified search coverage beyond 2000–2025. Missing/uncertain/inapplicable/known states remain distinct. Family/study routes may allow work; labels alone do not define rights. Category classification needs validation.
-:::
-
-## Revelio follows domestic and international job histories {#histories .compact}
-
-[Foundation totals and transition samples are distinct constructions]{.subtitle}
-
-| Full keyed foundation | Broad verified-geography events, 2010–2025 |
+| People and jobs in the database | Job changes in 2010–2025 |
 |:--|:--|
-| **549.7 million** keyed people | **892.2 million** domestic transitions |
-| **1.766 billion** positions | **83.65 million** international transitions |
+| **549.7 million** people | **892.2 million** domestic job changes |
+| **1.766 billion** jobs | **83.65 million** international job changes |
 
-### One person can contribute several different events
+One person can change jobs several times, move abroad and later return or move to a third country.
 
-Domestic employer change → international job-country change → return or onward transition
-
-- These are **career events**, not counts of visa grants or necessarily residential moves.
-- The strict whole-history sample retains **303.5 million people**; its denominator differs from the broad sample above.
+Job locations describe where a person works; residence and citizenship require separate information.
 
 ::: {.nav}
-[Sample and chronology](#history-construction){.button} [Gaps and attrition](#history-gaps){.button} [Horizon outcomes](#horizon){.button}
+[Building job histories](#history-construction){.button} [Gaps between jobs](#history-gaps){.button} [Later outcomes](#horizon){.button}
 :::
 
 ::: {.notes}
-Substantive slide 5/15. Foundation 549,729,026 people/1,765,970,337 positions; strict 303,499,990 people/1,117,773,296 positions. Broad geography count 975,853,764 = 892,202,126 domestic + 83,651,638 international. Missing-country records are removed before ordering in this broad construction; ties are unresolved. Never combine it with strict counts as a single sample funnel. Positions are not completed job spells. A same-country job transition is not same-job staying.
+Foundation 549,729,026 people/1,765,970,337 positions; strict 303,499,990 people/1,117,773,296 positions. Broad geography count 975,853,764 = 892,202,126 domestic + 83,651,638 international. Missing-country records are removed before ordering in this broad construction; ties are unresolved. Never combine it with strict counts as a single sample funnel. Positions are not completed job spells. A same-country job transition is not same-job staying.
 :::
 
-## Matching policies to careers requires comparable profiles {#bridge .compact}
-
-[Legal eligibility and observed career characteristics are not the same object]{.subtitle}
-
-| Dimension | Atlas and policy comparison | Revelio and analytical support |
-|:--|:--|:--|
-| **Time** | 2000–2025 presentation window | Verified transition comparison: 2010–2025 |
-| **Occupation** | 22 nonmilitary SOC major groups | Finer O*NET codes retained; SOC major groups used here |
-| **Origin** | Citizenship/residence conditions | Prior recorded job country—not citizenship |
-| **Education** | Route-specific requirements | Lifetime highest degree need not precede a move |
-
-Passing occupation and education screens is **partial compatibility**, not complete admission eligibility.
-
-::: {.nav}
-[All occupational levels](#taxonomy){.button} [Coverage](#represented){.button} [Unresolved rules](#unresolved){.button}
-:::
-
-::: {.notes}
-Substantive slide 6/15. Official reference hierarchy: 23/98/459/867 major/minor/broad/detailed codes, not measured provider cardinalities. Source support includes military; Atlas grid excludes it. Earlier 11-skilled-group and current four-group gravity restrictions are analytical selections. Complete native vendor hierarchy, fine observed counts and source vintage remain unverified. Salary, sponsor, age, experience and family circumstances can remain unresolved in a putative profile match.
-:::
-
-# Three descriptive facts
+# More migration pathways {.section-slide}
 
 ## Recorded active pathways increase over time {#pathway-growth .visual}
 
-[Work-oriented route IDs · 2000–2025 · 744 → 1,965]{.subtitle}
+### Work pathways from 2000 to 2025
 
 ![](figures/active-pathways.svg){.exhibit}
 
@@ -196,12 +105,12 @@ Substantive slide 6/15. Official reference hierarchy: 23/98/459/867 major/minor/
 :::
 
 ::: {.notes}
-Substantive slide 7/15. Source results/monetary/annual_recorded_turnover.csv; count IDs, not legal grants or exhaustive applicant menus. Wider represented support, renamings and constructed histories can affect counts. First representation is not necessarily policy adoption. The next slide holds destination/profile support fixed.
+Source results/monetary/annual_recorded_turnover.csv; count IDs, not legal grants or exhaustive applicant menus. Wider represented support, renamings and constructed histories can affect counts. First representation is not necessarily policy adoption. The next slide holds destination/profile support fixed.
 :::
 
 ## Recorded screen passes increase on fixed support {#pooled-menu .visual}
 
-[Fixed destination–profile support · equal cell weights · six dates]{.subtitle}
+### Compare the same destinations and migrant profiles
 
 ![](figures/pooled-profile-fixed.svg){.exhibit}
 
@@ -210,62 +119,81 @@ Substantive slide 7/15. Source results/monetary/annual_recorded_turnover.csv; co
 :::
 
 ::: {.notes}
-Substantive slide 8/15. Retained represented_destination_profiles.csv. Mean coded passes 0.366494/0.422836/0.576483/0.794502/1.012520/1.222646 in 2000/05/10/15/20/25. Zero shares 71.6658% to 50.5171%; median remains zero. Equal cells are not population weights and under/postgraduate scenarios overlap. Known zero passes require represented active records; absent destinations are not coded zero. No nationality/age screen is applied; unresolved is not legal exclusion. The result is average recorded partial-screen expansion, not first-order dominance or universal access.
+Retained represented_destination_profiles.csv. Mean coded passes 0.366494/0.422836/0.576483/0.794502/1.012520/1.222646 in 2000/05/10/15/20/25. Zero shares 71.6658% to 50.5171%; median remains zero. Equal cells are not population weights and under/postgraduate scenarios overlap. Known zero passes require represented active records; absent destinations are not coded zero. No nationality/age screen is applied; unresolved is not legal exclusion. The result is average recorded partial-screen expansion, not first-order dominance or universal access.
 :::
 
-## Employer sponsorship remains common as its recorded share falls {#screening .visual}
+# Different countries offer different terms {.section-slide}
 
-[2000–2025 · four occupation profiles · undergraduate screen · resolved sponsorship]{.subtitle}
+## Preferential pathways involve trade-offs {#bundles}
 
-![](figures/annual-sponsorship-undergraduate.svg){.exhibit}
+### Each row is a pathway for the same migrant profile
+
+**Profile:** Korean nationality · Lithuania · arts occupation · undergraduate · 2024.
+
+| Pathway | Fee (€) | Processing days | Duration (months) | Permanent residence |
+|:--|--:|--:|--:|:--|
+| Preferential residence permit | 160 | 90 | 36 | Eligible |
+| National visa for artists | 140 | 15 | 12 | Ineligible |
+
+Bilateral agreements and national rules create preferences. Here, longer stays cost more and take longer to process.
 
 ::: {.nav}
-[Weights](#sponsorship-weights){.button} [Education rules](#education-rules){.button} [Family rights](#spouse-rights){.button} [Fee contrasts](#fee-contrasts){.button}
+[Nationality-specific examples](#preferences){.button} [Czech example](#czech-pathways){.button}
 :::
 
 ::: {.notes}
-Substantive slide 9/15. Actual retained annual-sponsorship summaries, not a new restriction index. Near-overlap across these occupation profiles is informative; do not claim large occupational differentiation from this graph. Shares are conditional on screen-passing routes and resolved sponsorship; unknown does not mean no sponsor. Route-weighted and destination-equal shares answer different questions. This documents a particular instrument, not that all countries change every instrument in the same way.
+Source: Visa-results-2026-10-26/menu-dynamics/matched_route_pairs_2024.csv. Profile KR nationality, Lithuania destination, SOC27, undergraduate,2024, common_screen_state=pass. Preferential: temporary-residence-permit-simplified-selected-citizens (Australia,Japan,USA,Canada,NewZealand,SouthKorea); general: national-visa-d-for-artists-and-performers-work-permit-exempt. Atlas fields report fees160/140EUR, representative processing90/15days, defaultduration36/12months, PReligibletrue/false;dependantstrue/true,quotasfalse/false. These measured dimensions exhibit a trade-off, not a complete legal-eligibility or Pareto finding. The artist route has additional profession-specific requirements; salary/sponsorship/residence conditions remain to be checked. The Korean example is a Lithuanian nationality preference, not evidence of a bilateral Korea–Lithuania treaty. H-1B1 Chile/Singapore provides the separately sourced bilateral-agreement example in the linked backup. No verified comparable Taiwan/India pair appears in the matched table.
 :::
 
-## A profile can face different joint requirement bundles {#bundles .compact}
+## Three Czech pathways illustrate different requirements {#czech-pathways}
 
-[Czechia, 2024 · SOC 15 undergraduate screen · three of 12 passing route IDs]{.subtitle}
+### Computer occupations, undergraduate degree, 2024
 
-| Recorded route | Sponsor | Applicant fee | Annual salary floor | Nationality condition |
-|:--|:--|:--|:--|:--|
-| Digital Nomad Visa | None | CZK 2,500 | CZK 780,144 | AU, CA, GB, JP, KR, NZ, TW, US |
-| Employee Card | Employer | CZK 7,500 | CZK 226,800 | No recorded gate |
-| EU Blue Card | Employer | CZK 5,000 | CZK 780,138 | Unknown |
+| Pathway | Sponsor | Fee (CZK) | Annual salary floor (CZK) | Nationality |
+|:--|:--|--:|--:|:--|
+| Digital Nomad Visa | None | 2,500 | 780,144 | AU, CA, GB, JP, KR, NZ, TW, US |
+| Employee Card | Employer | 7,500 | 226,800 | None listed |
+| EU Blue Card | Employer | 5,000 | 780,138 | Not reported |
 
-- Each row is an **actual recorded package**, not independent field minima.
-- Occupation/education compatibility is not complete eligibility for one person.
-- Nationality, admission risk and continuation rights prevent an unqualified dominance claim.
+Nationality, sponsorship and salary requirements differ across these pathways.
 
 ::: {.nav}
-[Dominance test](#dominance){.button} [Preferential routes](#preferences){.button}
+[Lithuania example](#bundles){.button} [Nationality preferences](#preferences){.button}
 :::
 
 ::: {.notes}
-Substantive slide 10/15. Source results/monetary/joint-pathway-fees/czech_2024_soc15_undergraduate_routes.csv. Preserve raw source currency and annual salary period. Do not call the two 780,1xx values identical or independently verified law. Broad SOC mapping does not establish individual exact occupation eligibility. A no-recorded-gate field is not independently proven universal nationality access.
+Restored from the approved three-pathway comparison. Source results/monetary/joint-pathway-fees/czech_2024_soc15_undergraduate_routes.csv. Czechia2024,SOC15,undergraduate;three of12coded occupation-education passes. Preserve CZK and annual salary floors. These are actual joint route records, not independent minima. The two7801xx salaries are not identical and not independently verified law. Broad SOC compatibility does not establish exact individual eligibility. None listed is a recorded absence, not independent proof of universal nationality access. Nationality codes: Australia,Canada,UnitedKingdom,Japan,SouthKorea,NewZealand,Taiwan,UnitedStates.
 :::
 
-## International transitions between regions {#group-transitions .visual .matrix}
+# Job changes and international mobility {.section-slide}
 
-[Broad verified-country events · 2010–2025 · diagonal: different countries in the same region]{.subtitle}
+## About half of job changes cross occupations {#occupation-switching .visual}
 
-![](figures/international-region-row-shares.svg){.exhibit}
+### The pattern holds for domestic and international moves
+
+![](figures/occupation-switching-corrected.svg){.exhibit}
 
 ::: {.nav}
-[Region counts](#region-counts){.button} [Income-group transitions](#income-shares){.button} [Income counts](#income-counts){.button}
+[Income groups](#income-shares){.button} [Occupational families](#occupation-transitions){.button} [Regions](#group-transitions){.button}
 :::
 
 ::: {.notes}
-Substantive slide 11/15. The broad verified-country adjacency sample contains 83,651,638 international job transitions in 2010–2025. Regions use fixed World Bank 2026 metadata; income groups use fixed FY2011 classifications. Unknown groups are retained. These are joint origin/destination event counts, not destination marginals. A diagonal is an international transition between different countries in the same region; domestic job transitions are excluded. Origin-conditional shares sum over destination groups. Income-group transitions describe country environments, not personal wage gains.
+Strict histories,2010–2025,recognised full occupation codes and resolved countries. Domestic SOC-major changes335730244/623487006=53.84719%; international30699456/55618521=55.19646%. These are event-weighted job changes, not the share of distinct people; one worker can contribute multiple events. Unknown-occupation events and unresolved countries are handled as in the retained numerical source.
+:::
+
+## International transitions between income groups {#income-shares .visual .matrix}
+
+### Origin and destination country-income groups, 2010–2025
+
+![](figures/international-income-row-shares.svg){.exhibit}
+
+::: {.nav}
+[Counts](#income-counts){.button} [Return: regional transitions](#group-transitions){.button} [Return: job switching](#occupation-switching){.button}
 :::
 
 ## International transitions between occupational families {#occupation-transitions .visual .matrix}
 
-[Strict-history international events · 2010–2025 · occupational families, not a skill ladder]{.subtitle}
+### Occupations before and after an international job change
 
 ![](figures/international-family-row-shares.svg){.exhibit}
 
@@ -274,51 +202,68 @@ Substantive slide 11/15. The broad verified-country adjacency sample contains 83
 :::
 
 ::: {.notes}
-Substantive slide 12/15. Six analytical families plus unknown: SOC11–29 management/business/science/arts (including education/legal/healthcare);31–39services;41/43sales/office;45/47/49naturalresources/construction/maintenance;51/53production/transport;55military. Mapping exhausts23major groups and both margins reconcile with full joint counts. Family changes14542762/55618521=26.14734% among known-code events. This is NOT55.19646%SOC2 switching; broad families consolidate many SOC2 moves. Full joint matrix retains113932unknownendpoint events for55732453international events. DomesticSOC2 switch335730244/623487006=53.84719%;countryunresolved7324outsideboth. Repeated events, not distinct people. No rank or upgrading inference.
+Six analytical families plus unknown: SOC11–29 management/business/science/arts (including education/legal/healthcare);31–39services;41/43sales/office;45/47/49naturalresources/construction/maintenance;51/53production/transport;55military. Mapping exhausts23major groups and both margins reconcile with full joint counts. Family changes14542762/55618521=26.14734% among known-code events. This is NOT55.19646%SOC2 switching; broad families consolidate many SOC2 moves. Full joint matrix retains113932unknownendpoint events for55732453international events. DomesticSOC2 switch335730244/623487006=53.84719%;countryunresolved7324outsideboth. Repeated events, not distinct people. No rank or upgrading inference.
 :::
 
-# Worker responses and policy incentives
+## International transitions between regions {#group-transitions .visual .matrix}
 
-## Workers choose among the pathways they can access {#worker-demand .compact}
+### Moves between different countries, within or across regions
 
-[A random-utility model separates fixed geography from government-chosen offers]{.subtitle}
+![](figures/international-region-row-shares.svg){.exhibit}
+
+::: {.nav}
+[Region counts](#region-counts){.button} [Income-group transitions](#income-shares){.button} [Income counts](#income-counts){.button} [Return: job switching](#occupation-switching){.button}
+:::
+
+::: {.notes}
+The broad verified-country adjacency sample contains 83,651,638 international job transitions in 2010–2025. Regions use fixed World Bank 2026 metadata; income groups use fixed FY2011 classifications. Unknown groups are retained. These are joint origin/destination event counts, not destination marginals. A diagonal is an international transition between different countries in the same region; domestic job transitions are excluded. Origin-conditional shares sum over destination groups. Income-group transitions describe country environments, not personal wage gains.
+:::
+
+# Demand, costs and visa design {.section-slide}
+
+## Workers choose among accessible visa pathways {#worker-demand}
+
+### Fixed geography and government-chosen offers
 
 $$
-u_{ijt}=\alpha\log\widetilde w_{ijt}
-+\underbrace{\color{#0077BB}{\beta' z_{od}}}_{\text{fixed geography}}
-+\underbrace{\color{#EE7733}{\gamma' q_{jt}}}_{\text{chosen visa terms}}
+u_{ijt}=\textcolor{#EE7733}{\alpha\log\widetilde w_{ijt}}
++\underbrace{\textcolor{#0077BB}{\beta' z_{od}}}_{\text{fixed geography}}
++\underbrace{\textcolor{#EE7733}{\gamma' q_{jt}}}_{\text{chosen visa terms}}
 +\xi_{jt}+\varepsilon_{ijt},\qquad j=(d,v).
 $$
 
 $$
 p_{ijt}(C_{it})=
-\frac{\mathbf 1\{j\in C_{it}(r_t)\}\exp(V_{ijt})}
-{\sum_{k\in C_{it}(r_t)}\exp(V_{ikt})}.
+\frac{\mathbf 1\{j\in C_{it}(\textcolor{#EE7733}{r_t})\}\exp(V_{ijt})}
+{\sum_{k\in C_{it}(\textcolor{#EE7733}{r_t})}\exp(V_{ikt})}.
 $$
 
-- **Net wage** $\widetilde w$: earnings net of taxes and annualised application charges.
-- $z$: distance and other fixed geography; $q$: rights and portability; $r$: eligibility rules.
+- **Net wage** $\widetilde w$: earnings net of taxes and fees on a common horizon.
+- $\textcolor{#0077BB}{z}$: fixed geography; $\textcolor{#EE7733}{q}$: rights; $\textcolor{#EE7733}{r}$: eligibility.
 - $C_{it}(r_t)$ includes staying and the worker’s accessible pathways.
 
-Migration RUMs and destination substitution: [@kennanEffectExpectedIncome2011; @bertoliMultilateralResistanceMigration2013].
+Migration RUMs: [@kennanEffectExpectedIncome2011].
 
 ::: {.nav}
-[Denominators and MPML](#mpml){.button} [Fixed effects](#fixed-effects){.button} [Preference versus access](#demand-identification){.button}
+[Denominators and MPML](#mpml){.button} [Fixed effects](#fixed-effects){.button} [Preference versus access](#demand-identification){.button} [Return: conclusion](#next-steps){.button} [Return: literature careers](#literature-careers){.button}
 :::
 
 ::: {.notes}
-Substantive slide 13/15. Illustrative static RUM, not an adopted or estimated individual likelihood. Worker i starts in origin o; j=(destination d, pathway v); t is time. V is utility excluding the idiosyncratic shock. Conditional logit requires iid type-I extreme-value shocks conditional on the relevant set and observables. Staying is normalised as alternative0 with its own utility, not assigned a foreign visa. Net earnings must be positive for the log; fees are annualised or converted to a common consumption horizon, not subtracted as a lump sum from an annual flow without conversion. Fixed distance is treated as predetermined in this model, not an instrument for every policy. q includes portability, duration and family rights; r sets eligibility and affects C. Actual access can also depend on sponsorship, admission and information. Legal compatibility is not complete access. Revelio normally reveals destination job country, not visa route: route probabilities must be aggregated over v before matching country flows. Dynamic migration RUMs are precedents, not this static formula verbatim. ξ is unobserved destination/pathway attractiveness. Wages/net fees and chosen characteristics may respond to it.
+Illustrative static RUM, not an adopted or estimated individual likelihood. Worker i starts in origin o; j=(destination d, pathway v); t is time. V is utility excluding the idiosyncratic shock. Conditional logit requires iid type-I extreme-value shocks conditional on the relevant set and observables. Staying is normalised as alternative0 with its own utility, not assigned a foreign visa. Net earnings must be positive for the log; fees are annualised or converted to a common consumption horizon, not subtracted as a lump sum from an annual flow without conversion. Fixed distance is treated as predetermined in this model, not an instrument for every policy. q includes portability, duration and family rights; r sets eligibility and affects C. Actual access can also depend on sponsorship, admission and information. Legal compatibility is not complete access. Revelio normally reveals destination job country, not visa route: route probabilities must be aggregated over v before matching country flows. Dynamic migration RUMs are precedents, not this static formula verbatim. ξ is unobserved destination/pathway attractiveness. Wages/net fees and chosen characteristics may respond to it.
+Application charges paid before an uncertain admission decision belong to the application stage when that uncertainty matters; they are not automatically equivalent to a deduction from earnings conditional on entry. The net-wage term is a common-horizon illustration, not a maintained identification of those stages.
 :::
 
-## Estimation must separate preferences from access {#cost-preliminaries .compact}
+## Estimation must separate preferences from access {#cost-preliminaries}
 
-[Gravity connects individual choices to flows; zeros alone do not reveal why an option is absent]{.subtitle}
+### Gravity links choices to flows; access creates selection
 
 $$
 \mu_{odt}=N_{ot}\sum_v \mathbb E[p_{i,dv,t}(C_{it})\mid o,t].
 $$
 
 **Two endogenous margins:** $\widetilde w_{ijt}$ and $q_{jt}$ may covary with $\xi_{jt}$; the accessible set $C_{it}$ is partly unobserved.
+
+$N_{ot}$ is the population at risk; movers alone do not identify it.
 
 - **Offers:** demand inversion and instruments [@berryNonparametricIdentificationDifferentiated2024].
 - **Access:** latent or restricted choice sets [@agarwalDemandAnalysisLatent2025; @almagroChoicesConstraintsDisentangling2026].
@@ -329,34 +274,124 @@ $$
 :::
 
 ::: {.notes}
-Substantive slide14/15. No current gravity estimates are presented. N_ot is the origin population at risk and μ is expected flow; expectation averages worker heterogeneity and accessible sets. The expression is an aggregation identity conditional on the illustrative choice model, not a claim that a generic heterogeneous RUM reduces to a linear PPML index. Standard logit/gravity restrictions can supply an aggregate starting point. A zero observed cell can reflect an unavailable route, an unaffordable offer, low preferences, a finite-sample zero or measurement/coverage; never classify every zero as selection. Even positive flows face endogenous characteristics: governments choose rules and rights in response to latent attractiveness/composition, while firms and governments affect wages or net charges. These are distinct from predetermined geography. Destination-time and dyad fixed effects can absorb policy or distance, respectively, rather than identify them automatically. PPML handles count zeros but does not by itself identify unavailable alternatives. Berry–Haile supplies conditional identification/instrument restrictions; Agarwal–Somaini addresses latent choice constraints; Almagro–Sood is a housing comparator with its own set restrictions; Porcher etal separates information frictions and preferences through revealed-preference bounds. These are candidate routes, not an already solved estimator for visa data.
+No current gravity estimates are presented. N_ot is the origin population at risk and μ is expected flow; expectation averages worker heterogeneity and accessible sets. The expression is an aggregation identity conditional on the illustrative choice model, not a claim that a generic heterogeneous RUM reduces to a linear PPML index. Standard logit/gravity restrictions can supply an aggregate starting point. A zero observed cell can reflect an unavailable route, an unaffordable offer, low preferences, a finite-sample zero or measurement/coverage; never classify every zero as selection. Even positive flows face endogenous characteristics: governments choose rules and rights in response to latent attractiveness/composition, while firms and governments affect wages or net charges. These are distinct from predetermined geography. Destination-time and dyad fixed effects can absorb policy or distance, respectively, rather than identify them automatically. PPML handles count zeros but does not by itself identify unavailable alternatives. Berry–Haile supplies conditional identification/instrument restrictions; Agarwal–Somaini addresses latent choice constraints; Almagro–Sood is a housing comparator with its own set restrictions; Porcher etal separates information frictions and preferences through revealed-preference bounds. These are candidate routes, not an already solved estimator for visa data.
 :::
 
-## Demand elasticities connect design, costs and welfare {#next-steps .compact}
+## Governments choose visa policies as the supply side {#government-supply}
 
-[The same demand estimates can discipline a firm model or a government model]{.subtitle}
+### Governments anticipate worker choices and rival offers
 
 $$
-D(a;\widehat\eta),\qquad
-\max_{a_d}\;R_d(a,D)+B_d(D)-C_d(a_d,D),
-\qquad a_d=(f_d,q_d,r_d).
+M_d^*\in\arg\max_{M_d\in\mathscr M_d}G_d(M_d,M_{-d}^*).
 $$
 
-- **Demand + supply conditions** → restrictions on marginal costs and incentives.
-- **New design:** a portable work visa replaces employer-tied permission.
-- **Counterfactuals:** who applies, how firms and rivals respond, and who gains?
+- **Menu $M_d$:** eligibility, rights and fees; $\mathscr M_d$ contains feasible policies.
+- **Payoff $G_d$:** resident welfare and political support; recruitment, fee receipts and real costs shape the welfare component.
+- **Competition:** a country’s offer changes workers’ alternatives to rival destinations.
 
-[Demand elasticities are the common input; objectives and equilibrium determine the welfare exercise.]{.fg}
+Political-economy benchmark: *Protection for Sale* [@grossmanProtectionSale1994].
 
 ::: {.nav}
-[Government cost inversion](#government-costs){.button} [Welfare scope](#welfare){.button} [All references](#references){.button}
+[Government objectives](#government-costs){.button} [Welfare](#welfare){.button} [Conclusion](#next-steps){.button}
 :::
 
 ::: {.notes}
-Substantive slide15/15. Proposed research sequence, not completed cost or welfare estimates. η denotes worker demand parameters/elasticities; a_d is a country or provider's fee, characteristics and eligibility menu. R is revenue, B other benefits/objective terms and C resource or implementation cost; their arguments and ownership differ for firms and governments. Continuous interior characteristics may yield first-order restrictions; discrete eligibility rules, quotas and political/legal constraints may instead require inequalities or discrete deviations. Demand alone cannot separately identify unrestricted B and C; recover costs only with objectives, market conduct, constraints and parameterisation explicitly specified. Distinguish characteristic marginal costs from fees paid by applicants and from marginal cost per entrant. For a portable visa compare fixed rival offers first, then endogenous firm/wage and government responses under an explicit equilibrium. Welfare includes workers/families, origin and destination residents, firms and fiscal effects; fees are transfers, future rights and participation matter. A demand estimate need not identify welfare without those primitives and population scope. Trade-policy inversion is a methodological comparison, not an identification theorem for visas.
+Adapted from the PhD Review slide Visa:competing contracts under policy change, with its best-response condition. M_d is a country's feasible menu, and G_d is evaluated at worker choices induced by all menus. A unilateral deviation holds rival menus fixed but allows workers to choose again. Grossman–Helpman1994 supplies a proposed political-economy starting point: government welfare plus political contributions, with organised interests choosing contribution schedules. Transferring that mechanism to visas requires specifying relevant domestic groups, their schedules and information; exclusive worker destination choice alone is not the original common-agency game. Lobbying data and government weights are not identified here. Resident-welfare accounting includes fiscal effects net of real costs; fee receipts must not be counted twice. This is a proposed supply-side research step, not an estimated equilibrium or a completed application of Protection for Sale.
 :::
 
-# Appendix: legal objects and data
+## Conclusion and next steps {#next-steps}
+
+### Visa pathways connect policy design to workers’ careers
+
+- The number of work pathways has increased.
+- Pathways combine different eligibility conditions, costs and rights.
+- About half of domestic and international job changes involve occupational switching.
+
+#### Next steps
+
+- Continue demand estimation, separating preferences from access.
+- Develop a supply-side model of governments’ visa-policy choices.
+
+::: {.nav}
+[Demand estimation](#worker-demand){.button} [Government policy model](#government-supply){.button} [References](#references){.button}
+:::
+
+::: {.notes}
+Three descriptive findings, followed by two next research steps. Occupational switching is event-weighted, not a fraction of distinct people. Growth is the recorded work-pathway series and coded occupation/education passes on fixed support. Neither statement establishes complete legal availability or a causal policy effect.
+:::
+
+# Appendix: legal offers and data {.section-slide}
+
+## Connecting legal offers with global career allocation {#contribution .literature}
+
+### Route-level policy bundles connect policy measurement with worker histories
+
+- **Policy measurement and competition:** legal regimes select different migrants and compete for talent [@helblingMeasuringImmigrationPolicies2017; @dehaasGrowingRestrictivenessChanging2018; @czaikaGravityHighSkilledMigration2017; @shacharRaceTalentHighly2006].
+  - **Our contribution:** a broad motive inventory and dated, work-oriented route bundles for comparable profiles.
+- **International allocation:** migration choices reallocate talent across countries and over careers [@bertoliMultilateralResistanceMigration2013; @brinattiThirdCountryEffectsUS2024; @amanzadehReturnMigrationHuman2024; @bhalothiaGlobalValueCities2025; @pratoGlobalRaceTalent2025].
+  - **Our contribution:** connect legal menus to domestic and international career transitions.
+- **Legal options and labour markets:** access to migrant labour, employer restrictions and connected domestic markets shape firm and worker outcomes [@doranEffectsHighSkilledImmigration2022; @townsendHowRestrictingMigrants2025; @borusyakUnderstandingMigrationResponses2026].
+  - **Our contribution:** cross-country legal-menu measurement, with competing government offers as a proposed extension.
+
+::: {.nav}
+[Full literature map](#literature-map){.button} [Demand identification](#demand-identification){.button} [Government objectives](#government-costs){.button} [Return: question](#question){.button}
+:::
+
+::: {.notes}
+Do not claim the first policy dataset, third-country response, or visa-induced employer-mobility result. Townsend–Allan concerns within-destination employer options and wage setting; Borusyak et al. domestic region–industry responses under specified shocks. Neither supplies a ready international coefficient or closure. The competing-government model remains a research extension. Cai–Lin–Szeidl is intentionally excluded from this presentation.
+:::
+
+## A migrant’s profile determines the relevant visa menu {#bridge}
+
+### Match the person, destination and year to the pathway
+
+| Profile | Visa requirements | Job histories |
+|:--|:--|:--|
+| **Year** | Rules applying in that year | Job and move dates |
+| **Occupation** | Occupation-specific conditions | Type of work before and after a move |
+| **Origin** | Nationality or residence conditions | Previous job country; nationality is matched separately |
+| **Education** | Required qualifications | Highest reported degree |
+
+Applications also depend on sponsorship, salary and other personal circumstances.
+
+::: {.nav}
+[Occupational groups](#taxonomy){.button} [Country coverage](#represented){.button} [Missing requirements](#unresolved){.button} [Return: Atlas](#atlas){.button}
+:::
+
+::: {.notes}
+Official reference hierarchy: 23/98/459/867 major/minor/broad/detailed codes, not measured provider cardinalities. Source support includes military; Atlas grid excludes it. Earlier 11-skilled-group and current four-group gravity restrictions are analytical selections. Complete native vendor hierarchy, fine observed counts and source vintage remain unverified. Salary, sponsor, age, experience and family circumstances can remain unresolved in a putative profile match.
+:::
+
+## Governments offer access, costs and rights {#motivation .compact}
+
+### Admission is one part of a package that shapes a person’s future options
+
+:::: {.columns}
+::: {.column width="49%"}
+#### Access to employment
+
+- Occupation, citizenship and sponsorship can determine which routes a worker can use.
+- Employer portability changes the jobs available **after admission**.
+- A route opening can redirect workers from another destination rather than create a new move.
+:::
+::: {.column width="49%"}
+#### Residence and membership
+
+- Family work rights, renewal and settlement change the value of the initial offer.
+- Argentina’s investment-linked **citizenship** initiative illustrates a different membership instrument—not a work visa.
+- Announced terms, binding rules and operational access are distinct.
+:::
+::::
+
+[How do these offers change the allocation of workers—and the offers made by rival governments?]{.bg}
+
+::: {.nav}
+[Legal examples](#episodes){.button} [Nationality-specific routes](#preferences){.button} [Return: question](#question){.button}
+:::
+
+::: {.notes}
+Argentina: Decrees 366/2025 and 524/2025 establish category/procedure; 2 October 2026 announcement describes financial terms, not a verified exact application opening. The episode motivates a policy panel displayed through 2025, not an observation inside that window. The earlier UK examples are not reused with unverified historical thresholds. Germany’s exact occupation-targeted episode remains a lead requiring identification, not an asserted causal treatment.
+:::
 
 ## Admission, residence and citizenship are distinct {#episodes .compact}
 
@@ -381,7 +416,7 @@ The US H-1B1 comparison and Germany’s Western Balkans employment regulation pr
 **Compare the whole bundle for the same applicant and date:** eligibility, sponsor, fees, intent, work rights and continuation.
 
 ::: {.nav}
-[Return: motivation](#motivation){.button} [Return: route bundles](#bundles){.button}
+[Return: motivation](#motivation){.button} [Return: route bundles](#bundles){.button} [Return: question](#question){.button} [Return: Czechia](#czech-pathways){.button}
 :::
 
 ::: {.notes}
@@ -404,7 +439,7 @@ Existing official-source comparisons in docs/research/origin-specific-mobility-a
 | **Total** | **5,744** |
 :::
 ::: {.column width="51%"}
-### Characteristic families
+#### Characteristic families
 
 - Access and selection
 - Fees, funds, salary and investment
@@ -416,7 +451,7 @@ Existing official-source comparisons in docs/research/origin-specific-mobility-a
 :::
 ::::
 
-The detailed release has **80 values and 80 status companions**, not 80 independent screening instruments. A separate AI-category field is blank in 3,693 inventory entries.
+The Atlas describes **80 pathway characteristics**, including eligibility, costs and rights.
 
 ::: {.nav}
 [Return: Atlas](#atlas){.button}
@@ -429,7 +464,7 @@ The detailed release has **80 values and 80 status companions**, not 80 independ
 - Renaming, branching and succession can change counts without adding a simultaneous option.
 - Unknown, inapplicable, uncertain and known values must remain distinct.
 
-**Raw annual years: 1940–2026; intended search/display window: 2000–2025.** The UK has only two IDs in the unchanged 2024 retained panel, a consequential coverage warning.
+Historical coverage differs across countries and pathways. These figures focus on 2000–2025.
 
 ::: {.nav}
 [Return: Atlas](#atlas){.button} [Return: growth](#pathway-growth){.button}
@@ -448,17 +483,17 @@ The detailed release has **80 values and 80 status companions**, not 80 independ
 The observed occupation source includes military and malformed values. Exact recognized-code rules differ from simply taking two initial characters.
 
 ::: {.nav}
-[Return: bridge](#bridge){.button} [Return: occupations](#occupation-transitions){.button}
+[Return: bridge](#bridge){.button} [Return: occupations](#occupation-transitions){.button} [Return: skills](#skills){.button}
 :::
 
-## History construction changes the retained population {#history-construction .compact}
+## Different questions use different parts of the job history {#history-construction .compact}
 
 | Object | People | Positions/events |
 |:--|--:|--:|
-| Full keyed foundation | 549,729,026 | 1,765,970,337 positions |
+| People with job histories | 549,729,026 | 1,765,970,337 positions |
 | Strict whole histories | 303,499,990 | 1,117,773,296 positions |
-| Strict adjacent events, all retained years | — | 814,273,306 events |
-| Broad verified geography, 2010–2025 | — | 975,853,764 events |
+| Job changes after removing uncertain histories | — | 814,273,306 events |
+| Job changes with known countries, 2010–2025 | — | 975,853,764 events |
 
 Missing starts, countries and tied starts have **overlapping** exclusion counts. The strict rule excludes a person if any history record fails; the broad geography construction removes missing-country records before ordering.
 
@@ -470,7 +505,7 @@ These are different populations, not successive rows in one funnel. Concurrent p
 
 ## Many positive gaps are short; missing updates still matter {#history-gaps .visual}
 
-[Measured positive adjacent-record gaps · not unemployment or legal-status gaps]{.subtitle}
+### Measured positive adjacent-record gaps · not unemployment or legal-status gaps
 
 ![](figures/measured-positive-gaps.svg){.exhibit}
 
@@ -480,7 +515,7 @@ These are different populations, not successive rows in one funnel. Concurrent p
 
 ## A fixed horizon requires a job covering the endpoint {#horizon .visual}
 
-[Corrected one-year endpoint comparison · unresolved follow-up is separate]{.subtitle}
+### Corrected one-year endpoint comparison · unresolved follow-up is separate
 
 ![](figures/corrected-one-year-endpoint-2010.svg){.exhibit}
 
@@ -490,7 +525,7 @@ These are different populations, not successive rows in one funnel. Concurrent p
 
 ## Historical representation broadens over time {#represented .visual}
 
-[Represented destination labels · not necessarily new policy adopters]{.subtitle}
+### Represented destination labels · not necessarily new policy adopters
 
 ![](figures/represented-countries.svg){.exhibit}
 
@@ -500,7 +535,7 @@ These are different populations, not successive rows in one funnel. Concurrent p
 
 ## Recorded appearances and endings are not legal births and deaths {#turnover .visual}
 
-[The 2000 boundary and unresolved status affect lifecycle interpretation]{.subtitle}
+### The 2000 boundary and unresolved status affect lifecycle interpretation
 
 ![](figures/pathway-appearances-endings.svg){.exhibit}
 
@@ -510,7 +545,7 @@ These are different populations, not successive rows in one funnel. Concurrent p
 
 ## Changing support gives a different pooled comparison {#pooled-changing .visual}
 
-[Changing destination support · occupation–education scenarios · six dates]{.subtitle}
+### Changing destination support · occupation–education scenarios · six dates
 
 ![](figures/pooled-profile-changing.svg){.exhibit}
 
@@ -520,7 +555,7 @@ These are different populations, not successive rows in one funnel. Concurrent p
 
 ## Computer/mathematical profile: fixed-support comparison {#profile-computer .visual}
 
-[SOC 15 · undergraduate screen · six dates · no nationality or age screen]{.subtitle}
+### SOC 15 · undergraduate screen · six dates · no nationality or age screen
 
 ![](figures/profile-computer-fixed.svg){.exhibit}
 
@@ -530,7 +565,7 @@ These are different populations, not successive rows in one funnel. Concurrent p
 
 ## Healthcare-practitioner profile: fixed-support comparison {#profile-health .visual}
 
-[SOC 29 · undergraduate screen · six dates · no nationality or age screen]{.subtitle}
+### SOC 29 · undergraduate screen · six dates · no nationality or age screen
 
 ![](figures/profile-health-fixed.svg){.exhibit}
 
@@ -540,7 +575,7 @@ These are different populations, not successive rows in one funnel. Concurrent p
 
 ## Unresolved rules prevent a complete legal-menu interpretation {#unresolved .visual}
 
-[Recorded pass counts and unresolved evaluations are different objects]{.subtitle}
+### Recorded pass counts and unresolved evaluations are different objects
 
 ![](figures/profile-unresolved-destinations.svg){.exhibit}
 
@@ -550,7 +585,7 @@ These are different populations, not successive rows in one funnel. Concurrent p
 
 ## Credential requirements are often unresolved {#education-rules .visual}
 
-[2000–2025 · represented route records · not an ordinal route-skill ranking]{.subtitle}
+### 2000–2025 · represented route records · not an ordinal route-skill ranking
 
 ![](figures/recorded-education-requirements.svg){.exhibit}
 
@@ -558,9 +593,23 @@ These are different populations, not successive rows in one funnel. Concurrent p
 [Return: screening](#screening){.button}
 :::
 
+## Employer sponsorship remains common as its recorded share falls {#screening .visual}
+
+### 2000–2025 · four occupation profiles · undergraduate screen · resolved sponsorship
+
+![](figures/annual-sponsorship-undergraduate.svg){.exhibit}
+
+::: {.nav}
+[Weights](#sponsorship-weights){.button} [Education rules](#education-rules){.button} [Family rights](#spouse-rights){.button} [Fee contrasts](#fee-contrasts){.button}
+:::
+
+::: {.notes}
+Actual retained annual-sponsorship summaries, not a new restriction index. Near-overlap across these occupation profiles is informative; do not claim large occupational differentiation from this graph. Shares are conditional on screen-passing routes and resolved sponsorship; unknown does not mean no sponsor. Route-weighted and destination-equal shares answer different questions. This documents a particular instrument, not that all countries change every instrument in the same way.
+:::
+
 ## Sponsorship shares depend on the weighting rule {#sponsorship-weights .visual}
 
-[2024 · route-weighted, destination-equal and median comparisons]{.subtitle}
+### 2024 · route-weighted, destination-equal and median comparisons
 
 ![](figures/sponsorship-weighting.svg){.exhibit}
 
@@ -570,7 +619,7 @@ These are different populations, not successive rows in one funnel. Concurrent p
 
 ## Spouse work rights are one part of the route bundle {#spouse-rights .visual}
 
-[Represented route records · not an active-only or applicant-weighted denominator]{.subtitle}
+### Represented route records · not an active-only or applicant-weighted denominator
 
 ![](figures/rights-spouse.svg){.exhibit}
 
@@ -580,7 +629,7 @@ These are different populations, not successive rows in one funnel. Concurrent p
 
 ## Dependent access and dependent work rights are distinct {#dependent-rights .visual}
 
-[Represented route records · preserve unknown and inapplicable states]{.subtitle}
+### Represented route records · preserve unknown and inapplicable states
 
 ![](figures/rights-dependants.svg){.exhibit}
 
@@ -590,7 +639,7 @@ These are different populations, not successive rows in one funnel. Concurrent p
 
 ## Joint fee contrasts keep comparisons within a profile cell {#fee-contrasts .visual}
 
-[SOC 15 · employer-sponsored minus explicit-none routes · comparable applicant fees]{.subtitle}
+### SOC 15 · employer-sponsored minus explicit-none routes · comparable applicant fees
 
 ![](figures/joint-applicant-fee-soc15.svg){.exhibit}
 
@@ -602,26 +651,11 @@ These are different populations, not successive rows in one funnel. Concurrent p
 Nominal USD, overlapping degree profiles and changing comparable-cell composition. No supported employer-fee contrast exists. Do not infer causality or an employer-sponsorship premium from these descriptive differences.
 :::
 
-## Dominance needs complete, comparable bundles for one applicant {#dominance}
-
-For declared dimensions, route A weakly dominates B only if A is weakly preferred on every dimension and strictly preferred on at least one.
-
-- Fix citizenship, occupation, education, destination, year and application stage.
-- Compare actual joint terms—not a synthetic combination of minima.
-- Confirm the preference direction: a salary threshold is not a promised wage.
-- Keep admission risk, sponsor availability, future rights and missing terms visible.
-
-**Report:** dominated on observed dimensions; incomparable; or unassessable. Absence of observed dominance is not complete economic nondominance.
-
-::: {.nav}
-[Return: bundles](#bundles){.button}
-:::
-
-# Appendix: group-to-group mobility
+# Appendix: international mobility {.section-slide}
 
 ## Region-to-region international transition volumes {#region-counts .visual}
 
-[2010–2025 · fixed World Bank 2026 regions · repeated international events]{.subtitle}
+### 2010–2025 · fixed World Bank 2026 regions · repeated international events
 
 ![](figures/international-region-counts.svg){.exhibit}
 
@@ -629,19 +663,9 @@ For declared dimensions, route A weakly dominates B only if A is weakly preferre
 [Return: origin-conditional shares](#group-transitions){.button}
 :::
 
-## International transitions between income groups {#income-shares .visual .matrix}
-
-[2010–2025 · fixed World Bank FY2011 income groups · origin-conditional shares]{.subtitle}
-
-![](figures/international-income-row-shares.svg){.exhibit}
-
-::: {.nav}
-[Counts](#income-counts){.button} [Return: regional transitions](#group-transitions){.button}
-:::
-
 ## Income-group transition volumes reflect origin size too {#income-counts .visual}
 
-[2010–2025 · fixed World Bank FY2011 groups · country income, not personal wages]{.subtitle}
+### 2010–2025 · fixed World Bank FY2011 groups · country income, not personal wages
 
 ![](figures/international-income-counts.svg){.exhibit}
 
@@ -651,17 +675,17 @@ For declared dimensions, route A weakly dominates B only if A is weakly preferre
 
 ## Origin-to-destination occupation volumes {#occupation-counts .visual}
 
-[Recognised SOC major groups · international events · no ordinal skill interpretation]{.subtitle}
+### Recognised SOC major groups · international events · no ordinal skill interpretation
 
 ![](figures/international-soc-counts.svg){.exhibit}
 
 ::: {.nav}
-[Detailed occupation shares](#occupation-detail){.button} [Return: occupational families](#occupation-transitions){.button}
+[Detailed occupation shares](#occupation-detail){.button} [Return: occupational families](#occupation-transitions){.button} [Return: family counts](#family-counts){.button}
 :::
 
 ## Broad occupational-family transition volumes {#family-counts .visual}
 
-[Six analytical families plus unknown · repeated international events]{.subtitle}
+### Six analytical families plus unknown · repeated international events
 
 ![](figures/international-family-counts.svg){.exhibit}
 
@@ -671,22 +695,12 @@ For declared dimensions, route A weakly dominates B only if A is weakly preferre
 
 ## The full matrix retains every SOC major group {#occupation-detail .visual}
 
-[23 groups plus unknown · origin-conditional shares · detail for discussion and zoom]{.subtitle}
+### 23 groups plus unknown · origin-conditional shares · detail for discussion and zoom
 
 ![](figures/international-soc-row-shares.svg){.exhibit}
 
 ::: {.nav}
 [Detailed counts](#occupation-counts){.button} [Return: occupational families](#occupation-transitions){.button}
-:::
-
-## Switching occurs in domestic and international job transitions {#occupation-switching .visual}
-
-[2010–2025 · recognised full occupation codes · event-weighted]{.subtitle}
-
-![](figures/occupation-switching-corrected.svg){.exhibit}
-
-::: {.nav}
-[Return: occupational transitions](#occupation-transitions){.button}
 :::
 
 ## Occupational groups are not a skill ladder {#skills}
@@ -702,26 +716,32 @@ For declared dimensions, route A weakly dominates B only if A is weakly preferre
 [Return: occupational transitions](#occupation-transitions){.button} [Taxonomy](#taxonomy){.button}
 :::
 
-# Appendix: estimation and literature
+# Appendix: estimation and literature {.section-slide}
 
-## MPML normalises the supplied alternatives, not a missing population {#mpml}
+## Demand estimates depend on the available alternatives {#mpml}
+
+### Counts and shares depend on the choice set
 
 $$
 \mu_{ra}=\exp(\alpha_r+\beta x_{ra}+z_{ra}'\gamma),\quad
 p_{ra}=\frac{\exp(\beta x_{ra}+z_{ra}'\gamma)}{\sum_{b\in A_r}\exp(\beta x_{rb}+z_{rb}'\gamma)}.
 $$
 
-$$\ell(\beta,\gamma)=\sum_{r,a}Y_{ra}\log p_{ra}.$$
-
 - Profiling the row effect gives the corresponding Poisson objective on **identical support and weights**.
-- Current $A_r$ contains observed positive, policy-matched international cells.
-- Fitting supplied row totals does not recover unobserved stayers or unavailable destinations.
+- The alternatives in $A_r$, including staying, must be defined for the question.
+- PPML can include observed count zeros; access restrictions still need a model.
 
 ::: {.nav}
 [Return: worker responses](#worker-demand){.button}
 :::
 
+::: {.notes}
+The conditional likelihood is ell(beta,gamma)=sum_{r,a}Y_{ra}log p_{ra}. Poisson profiling and conditional multinomial objectives coincide on identical support and weights. Estimating a model on positive policy-matched international cells does not itself supply the missing population at risk, stayers, applications or legal availability. No current fitted coefficient is presented here.
+:::
+
 ## Fixed effects determine the monetary comparison {#fixed-effects .compact}
+
+### The variation left after conditioning determines what can be estimated
 
 | Specification | Conditional row | Additional fixed effects |
 |:--|:--|:--|
@@ -740,7 +760,7 @@ The estimand and fixed effects must leave the relevant policy variation. Dyad ef
 
 ## Monetary comparisons need compatible amounts and units {#monetary .visual}
 
-[FX support is not proof of fee definition, real value or incidence]{.subtitle}
+### FX support is not proof of fee definition, real value or incidence
 
 ![](figures/fx-coverage.svg){.exhibit}
 
@@ -748,7 +768,9 @@ The estimand and fixed effects must leave the relevant policy variation. Dyad ef
 [Return: monetary preliminaries](#cost-preliminaries){.button}
 :::
 
-## Rich histories do not by themselves separate preferences from access {#demand-identification}
+## Rich histories do not by themselves separate preferences from access {#demand-identification .compact .alert-slide}
+
+### Observed choices combine preferences with constraints on available options
 
 [@berryNonparametricIdentificationDifferentiated2024; @agarwalDemandAnalysisLatent2025]
 
@@ -764,6 +786,8 @@ The estimand and fixed effects must leave the relevant policy variation. Dyad ef
 
 ## Fee competition identifies a net marginal object {#government-costs .compact}
 
+### Recovering separate benefits and costs requires additional restrictions
+
 $$
 G_d=f_d'n_d(f)+B_d(n_d)-C_d(n_d),\qquad
 c_d-b_d=f_d+(D_d^{\mathsf T})^{-1}n_d.
@@ -778,25 +802,27 @@ $D_d$ is the own-route quantity-by-fee derivative matrix; $b_d$ and $c_d$ are ma
 Trade-policy inversion provides a comparison, not a Visa identification theorem [@adaoWorldTradingSystem2025].
 
 ::: {.nav}
-[Return: cost preliminaries](#cost-preliminaries){.button} [Return: next steps](#next-steps){.button}
+[Return: cost preliminaries](#cost-preliminaries){.button} [Return: next steps](#next-steps){.button} [Return: contribution](#contribution){.button} [Return: literature methods](#literature-methods){.button} [Return: government policy](#government-supply){.button}
 :::
 
 ## Welfare needs a population and an adjustment mechanism {#welfare}
+
+### Who is affected depends on the scope of the counterfactual
 
 - Migrants and families; origin residents; destination residents; employers; governments.
 - Wages, amenities, fiscal effects and housing or other prices may adjust.
 - Fees are transfers, waiting uses time, and restrictions can remove future options.
 - Government recruitment gains do not establish gains for everyone affected.
 
-**Counterfactual scope:** worker responses at fixed offers → market adjustment → government responses, adding assumptions at each step.
+**Counterfactual scope:** first hold other offers fixed, then allow market adjustment and government responses under explicit assumptions.
 
 ::: {.nav}
-[Return: next steps](#next-steps){.button}
+[Return: next steps](#next-steps){.button} [Return: government policy](#government-supply){.button}
 :::
 
 ## Policy measurement and allocation frame the contribution {#literature-map .literature .literature-detail}
 
-[Previous findings and the contribution to each literature]{.subtitle}
+### Previous findings and the contribution to each literature
 
 - **Policy measurement:** levels, signed changes and instrument indicators have different units [@helblingMeasuringImmigrationPolicies2017; @dehaasGrowingRestrictivenessChanging2018; @czaikaGravityHighSkilledMigration2017].
   - **Our contribution:** dated route bundles and comparable occupation–education profiles.
@@ -813,7 +839,7 @@ Trade-policy inversion provides a comparison, not a Visa identification theorem 
 
 ## Career histories have close empirical precedents {#literature-careers .literature}
 
-[Professional trajectories, place values and policy-induced location choices]{.subtitle}
+### Professional trajectories, place values and policy-induced location choices
 
 - **Return and onward careers:** professional histories trace return migration and foreign experience [@amanzadehReturnMigrationHuman2024].
   - **Our contribution:** connect those trajectories to dated legal-route measurement, not claim the first use of onward histories.
@@ -828,7 +854,7 @@ Trade-policy inversion provides a comparison, not a Visa identification theorem 
 
 ## Screening and causal gravity inform different steps {#literature-methods .literature}
 
-[Mechanism recovery, information timing and policy-effect identification]{.subtitle}
+### Mechanism recovery, information timing and policy-effect identification
 
 - **Inverse screening:** allocations, transfers and outside-option restrictions can identify types and costs [@aryalIdentificationEstimationMultidimensional2024].
   - **Proposed use:** specify what visa choices must reveal before interpreting an inferred government cost.
@@ -847,5 +873,5 @@ Trade-policy inversion provides a comparison, not a Visa identification theorem 
 :::
 
 ::: {.nav}
-[Return: contribution](#contribution){.button} [Return: conclusion](#next-steps){.button}
+[Return: contribution](#contribution){.button} [Return: conclusion](#next-steps){.button} [Return: literature map](#literature-map){.button}
 :::
