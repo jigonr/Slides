@@ -27,7 +27,7 @@ format:
     date-format: long
 ---
 
-# The economic question
+# The economic question {.section-slide}
 
 ## Governments offer access, costs and rights {#motivation .compact}
 
@@ -60,7 +60,7 @@ format:
 Substantive slide 1/15. Argentina: Decrees 366/2025 and 524/2025 establish category/procedure; 2 October 2026 announcement describes financial terms, not a verified exact application opening. The episode motivates a policy panel displayed through 2025, not an observation inside that window. The earlier UK examples are not reused with unverified historical thresholds. Germany’s exact occupation-targeted episode remains a lead requiring identification, not an asserted causal treatment.
 :::
 
-## How do governments respond to workers and rivals? {#question .compact}
+## How do governments respond to workers and rivals? {#question .compact .emphasis-slide}
 
 [Worker substitution connects visa menus to competition for talent]{.subtitle}
 
@@ -99,7 +99,7 @@ Substantive slide 2/15. Main question recovered from the PhD Review Visa brief a
 Substantive slide 3/15. Do not claim the first policy dataset, third-country response, or visa-induced employer-mobility result. Townsend–Allan concerns within-destination employer options and wage setting; Borusyak et al. domestic region–industry responses under specified shocks. Neither supplies a ready international coefficient or closure. The competing-government model remains a research extension. Cai–Lin–Szeidl is intentionally excluded from this presentation.
 :::
 
-# Data: offers and histories
+# Data: offers and histories {.section-slide}
 
 ## One Atlas, two layers: inventory and characteristics {#atlas .compact}
 
@@ -183,7 +183,7 @@ Passing occupation and education screens is **partial compatibility**, not compl
 Substantive slide 6/15. Official reference hierarchy: 23/98/459/867 major/minor/broad/detailed codes, not measured provider cardinalities. Source support includes military; Atlas grid excludes it. Earlier 11-skilled-group and current four-group gravity restrictions are analytical selections. Complete native vendor hierarchy, fine observed counts and source vintage remain unverified. Salary, sponsor, age, experience and family circumstances can remain unresolved in a putative profile match.
 :::
 
-# Three descriptive facts
+# Three descriptive facts {.section-slide}
 
 ## Recorded active pathways increase over time {#pathway-growth .visual}
 
@@ -277,7 +277,7 @@ Substantive slide 11/15. The broad verified-country adjacency sample contains 83
 Substantive slide 12/15. Six analytical families plus unknown: SOC11–29 management/business/science/arts (including education/legal/healthcare);31–39services;41/43sales/office;45/47/49naturalresources/construction/maintenance;51/53production/transport;55military. Mapping exhausts23major groups and both margins reconcile with full joint counts. Family changes14542762/55618521=26.14734% among known-code events. This is NOT55.19646%SOC2 switching; broad families consolidate many SOC2 moves. Full joint matrix retains113932unknownendpoint events for55732453international events. DomesticSOC2 switch335730244/623487006=53.84719%;countryunresolved7324outsideboth. Repeated events, not distinct people. No rank or upgrading inference.
 :::
 
-# Worker responses and policy incentives
+# Worker responses and policy incentives {.section-slide}
 
 ## Workers choose among the pathways they can access {#worker-demand .compact}
 
@@ -332,7 +332,7 @@ $$
 Substantive slide14/15. No current gravity estimates are presented. N_ot is the origin population at risk and μ is expected flow; expectation averages worker heterogeneity and accessible sets. The expression is an aggregation identity conditional on the illustrative choice model, not a claim that a generic heterogeneous RUM reduces to a linear PPML index. Standard logit/gravity restrictions can supply an aggregate starting point. A zero observed cell can reflect an unavailable route, an unaffordable offer, low preferences, a finite-sample zero or measurement/coverage; never classify every zero as selection. Even positive flows face endogenous characteristics: governments choose rules and rights in response to latent attractiveness/composition, while firms and governments affect wages or net charges. These are distinct from predetermined geography. Destination-time and dyad fixed effects can absorb policy or distance, respectively, rather than identify them automatically. PPML handles count zeros but does not by itself identify unavailable alternatives. Berry–Haile supplies conditional identification/instrument restrictions; Agarwal–Somaini addresses latent choice constraints; Almagro–Sood is a housing comparator with its own set restrictions; Porcher etal separates information frictions and preferences through revealed-preference bounds. These are candidate routes, not an already solved estimator for visa data.
 :::
 
-## Demand elasticities connect design, costs and welfare {#next-steps .compact}
+## Demand elasticities connect design, costs and welfare {#next-steps .compact .emphasis-slide}
 
 [The same demand estimates can discipline a firm model or a government model]{.subtitle}
 
@@ -356,7 +356,7 @@ $$
 Substantive slide15/15. Proposed research sequence, not completed cost or welfare estimates. η denotes worker demand parameters/elasticities; a_d is a country or provider's fee, characteristics and eligibility menu. R is revenue, B other benefits/objective terms and C resource or implementation cost; their arguments and ownership differ for firms and governments. Continuous interior characteristics may yield first-order restrictions; discrete eligibility rules, quotas and political/legal constraints may instead require inequalities or discrete deviations. Demand alone cannot separately identify unrestricted B and C; recover costs only with objectives, market conduct, constraints and parameterisation explicitly specified. Distinguish characteristic marginal costs from fees paid by applicants and from marginal cost per entrant. For a portable visa compare fixed rival offers first, then endogenous firm/wage and government responses under an explicit equilibrium. Welfare includes workers/families, origin and destination residents, firms and fiscal effects; fees are transfers, future rights and participation matter. A demand estimate need not identify welfare without those primitives and population scope. Trade-policy inversion is a methodological comparison, not an identification theorem for visas.
 :::
 
-# Appendix: legal objects and data
+# Appendix: legal objects and data {.section-slide}
 
 ## Admission, residence and citizenship are distinct {#episodes .compact}
 
@@ -604,6 +604,8 @@ Nominal USD, overlapping degree profiles and changing comparable-cell compositio
 
 ## Dominance needs complete, comparable bundles for one applicant {#dominance}
 
+[Compare the same person’s actual alternatives on declared dimensions]{.subtitle}
+
 For declared dimensions, route A weakly dominates B only if A is weakly preferred on every dimension and strictly preferred on at least one.
 
 - Fix citizenship, occupation, education, destination, year and application stage.
@@ -617,7 +619,7 @@ For declared dimensions, route A weakly dominates B only if A is weakly preferre
 [Return: bundles](#bundles){.button}
 :::
 
-# Appendix: group-to-group mobility
+# Appendix: group-to-group mobility {.section-slide}
 
 ## Region-to-region international transition volumes {#region-counts .visual}
 
@@ -702,7 +704,7 @@ For declared dimensions, route A weakly dominates B only if A is weakly preferre
 [Return: occupational transitions](#occupation-transitions){.button} [Taxonomy](#taxonomy){.button}
 :::
 
-# Appendix: estimation and literature
+# Appendix: estimation and literature {.section-slide}
 
 ## MPML normalises the supplied alternatives, not a missing population {#mpml}
 
@@ -722,6 +724,8 @@ $$\ell(\beta,\gamma)=\sum_{r,a}Y_{ra}\log p_{ra}.$$
 :::
 
 ## Fixed effects determine the monetary comparison {#fixed-effects .compact}
+
+[The variation left after conditioning determines what can be estimated]{.subtitle}
 
 | Specification | Conditional row | Additional fixed effects |
 |:--|:--|:--|
@@ -748,7 +752,9 @@ The estimand and fixed effects must leave the relevant policy variation. Dyad ef
 [Return: monetary preliminaries](#cost-preliminaries){.button}
 :::
 
-## Rich histories do not by themselves separate preferences from access {#demand-identification}
+## Rich histories do not by themselves separate preferences from access {#demand-identification .compact .alert-slide}
+
+[Observed choices combine preferences with constraints on available options]{.subtitle}
 
 [@berryNonparametricIdentificationDifferentiated2024; @agarwalDemandAnalysisLatent2025]
 
@@ -763,6 +769,8 @@ The estimand and fixed effects must leave the relevant policy variation. Dyad ef
 :::
 
 ## Fee competition identifies a net marginal object {#government-costs .compact}
+
+[Recovering separate benefits and costs requires additional restrictions]{.subtitle}
 
 $$
 G_d=f_d'n_d(f)+B_d(n_d)-C_d(n_d),\qquad
@@ -782,6 +790,8 @@ Trade-policy inversion provides a comparison, not a Visa identification theorem 
 :::
 
 ## Welfare needs a population and an adjustment mechanism {#welfare}
+
+[Who is affected depends on the scope of the counterfactual]{.subtitle}
 
 - Migrants and families; origin residents; destination residents; employers; governments.
 - Wages, amenities, fiscal effects and housing or other prices may adjust.
