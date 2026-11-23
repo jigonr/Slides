@@ -1122,9 +1122,9 @@ José Ignacio González-Rojas
 </div></div>
 </section>
 <section id="exercise-2-competition-and-innovation-follow-inverted-u" class="slide level2 emphasis-slide">
-<h2><strong>Exercise 2:</strong> Competition and Innovation Follow Inverted-U</h2>
-<h3 id="concave-relationship-shows-optimal-intermediate-competition">Concave Relationship Shows Optimal Intermediate Competition</h3>
-<h4 id="does-competition-monotonically-increase-innovation-or-is-there-an-optimal-level">Does competition monotonically increase innovation, or is there an optimal level?</h4>
+<h2><strong>Exercise 2:</strong> Innovation Rises at a Slower Rate</h2>
+<h3 id="the-fitted-curve-rises-throughout-the-observed-range">The fitted curve rises throughout the observed range</h3>
+<h4 id="does-the-fitted-curve-turn-down-between-0-and-1">Does the fitted curve turn down between 0 and 1?</h4>
 <p><span class="math display">\[\widehat{\text{innovation}}_i = 0.7 + 0.3 \cdot \text{competition}_i - 0.12 \cdot \text{competition}_i^2\]</span></p>
 <p>where competition <span class="math inline">\(\in [0,1]\)</span> by construction</p>
 <h4 id="questions-to-answer">Questions to answer</h4>
@@ -1157,7 +1157,7 @@ José Ignacio González-Rojas
 <h4 id="since-second-derivative-is-negative">Since second derivative is negative</h4>
 <p><span class="math display">\[\frac{\partial^2 \widehat{\text{innovation}}}{\partial \text{competition}^2} = -0.24 &lt; 0\]</span></p>
 <ul>
-<li>Function is <strong>concave</strong> (inverted-U)</li>
+<li>The fitted curve is <strong>concave</strong>: it bends down</li>
 <li>Marginal returns <strong>decrease</strong> with competition</li>
 <li>Consistent with hypothesis</li>
 </ul>
@@ -1179,9 +1179,9 @@ José Ignacio González-Rojas
 </div><div class="column" style="width:50%;">
 <h4 id="e-marginal-effect-always-geq-0.2">(e) Marginal effect always <span class="math inline">\(\geq 0.2\)</span>?</h4>
 <p><strong>No</strong>, falls below 0.2 at high competition levels</p>
-<h4 id="f-fitted-values-do-not-exceed-1">(f) Fitted values do not exceed <span class="math inline">\(&gt; 1\)</span></h4>
+<h4 id="f-are-fitted-values-always-greater-than-1">(f) Are fitted values always greater than 1?</h4>
 <p><span class="math display">\[0.7 + 0.3(1) - 0.12(1)^2 = 0.88 &lt; 1\]</span></p>
-<p><span class="bg">Some competition beneficial, but effect weakens</span></p>
+<p><span class="fg">Fitted innovation keeps rising through 1. There is no interior peak.</span></p>
 </div></div>
 </section>
 <section id="exercise-3-productivity-growth-with-structural-break" class="slide level2">
@@ -1326,7 +1326,7 @@ José Ignacio González-Rojas
 
 </section>
 <section id="exercise-6-competition-reduces-fares-more-on-long-routes" class="slide level2 emphasis-slide">
-<h2><strong>Exercise 6:</strong> Competition Reduces Fares More on Long Routes</h2>
+<h2><strong>Exercise 6:</strong> Competition, Distance and Airfares</h2>
 <h3 id="interaction-between-distance-and-competition">Interaction Between Distance and Competition</h3>
 <h4 id="does-competition-affect-airfares-differently-on-short-vs-long-routes">Does competition affect airfares differently on short vs long routes?</h4>
 <p><span class="math display">\[\begin{align*}
@@ -1345,7 +1345,7 @@ José Ignacio González-Rojas
 <h3 id="taking-partial-derivatives-with-interactions">Taking Partial Derivatives With Interactions</h3>
 <div class="columns">
 <div class="column" style="width:48%;">
-<h4 id="a-marginal-effect-of-competition-increases-with-distance">(a) Marginal Effect of competition increases with distance</h4>
+<h4 id="a-competitions-effect-gets-less-negative-in-these-examples">(a) Competition’s effect gets less negative in these examples</h4>
 <p><span class="math display">\[\begin{align*}
     \frac{\partial \widehat{\log(\text{fare})}}{\partial \text{competition}} &amp;= -0.43 \\
     &amp;+ 0.05 \cdot \log(\text{distance})
@@ -1496,12 +1496,10 @@ José Ignacio González-Rojas
 </ul>
 </div><div class="column" style="width:33%;">
 <p><strong><span class="math inline">\(\hat{\beta}_{\text{merger}} = 0.97\)</span></strong></p>
-<p><strong>Semi-elasticity:</strong></p>
+<p><strong>Change from 0 to 1:</strong></p>
 <ul>
-<li>Merger (0→1)</li>
-<li>Patents increase 97%</li>
-<li>Nearly doubles innovation</li>
-<li>Substantial economic effect</li>
+<li>Fitted log patents: <strong>0.97 log points higher</strong>.</li>
+<li><span class="math inline">\(100(e^{0.97}-1)\approx 164\%\)</span> higher fitted geometric mean of patents, holding other regressors fixed.</li>
 </ul>
 </div></div>
 </section>
